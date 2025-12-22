@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <data noupdate="0">
+    <data noupdate="1">
 
         <!-- Market Pay Types -->
         <record id="pay_type_k1_mh" model="kst.market.pay.type">
@@ -38,635 +38,671 @@
             <field name="sub_group">weekly</field>
         </record>
 
-        <!-- Markets -->
-        <record id="market_bbh" model="kst.market">
-            <field name="code">BBH</field>
-            <field name="name">Bacolod Public Market</field>
-            <field name="address">Bacolod City, Negros Occidental</field>
+        <record id="pay_type_toilet" model="kst.market.pay.type">
+            <field name="code">Toilet</field>
+            <field name="name">Toilet</field>
+            <field name="pay_type_use">water</field>
+            <field name="sub_group">monthly</field>
         </record>
 
+        <!-- Markets -->
         <record id="market_ktc" model="kst.market">
             <field name="code">KTC</field>
-            <field name="name">Kabankalan Town Center</field>
-            <field name="address">Kabankalan City, Negros Occidental</field>
+            <field name="name">Kalayaan Talipapa Corporation</field>
+            <field name="address">Kalayaan Talipapa Corporation</field>
         </record>
 
-        <record id="market_stm" model="kst.market">
-            <field name="code">STM</field>
-            <field name="name">Silay City Market</field>
-            <field name="address">Silay City, Negros Occidental</field>
+        <record id="market_bbh" model="kst.market">
+            <field name="code">BBH</field>
+            <field name="name">Bagong Barrio Hypermarket and Properties</field>
+            <field name="address">Bagong Barrio Hypermarket and Properties</field>
+        </record>
+
+        <record id="market_smt" model="kst.market">
+            <field name="code">SMT</field>
+            <field name="name">Sample Market Text</field>
+            <field name="address">Sample Market Text</field>
         </record>
 
         <!-- Tenants -->
         <record id="tenant_1" model="kst.tenant">
             <field name="name">Juan Dela Cruz</field>
-            <field name="date_started">2024-09-13</field>
+            <field name="date_started">2024-01-11</field>
         </record>
 
         <record id="tenant_2" model="kst.tenant">
             <field name="name">Maria Santos</field>
-            <field name="date_started">2024-12-26</field>
+            <field name="date_started">2025-03-11</field>
         </record>
 
         <record id="tenant_3" model="kst.tenant">
             <field name="name">Pedro Reyes</field>
-            <field name="date_started">2025-04-23</field>
+            <field name="date_started">2024-05-12</field>
         </record>
 
         <record id="tenant_4" model="kst.tenant">
             <field name="name">Ana Garcia</field>
-            <field name="date_started">2025-08-20</field>
+            <field name="date_started">2023-12-26</field>
         </record>
 
         <record id="tenant_5" model="kst.tenant">
             <field name="name">Roberto Tan</field>
-            <field name="date_started">2024-11-18</field>
+            <field name="date_started">2025-02-21</field>
         </record>
 
         <record id="tenant_6" model="kst.tenant">
             <field name="name">Carmen Villanueva</field>
-            <field name="date_started">2025-01-04</field>
+            <field name="date_started">2025-08-07</field>
         </record>
 
         <record id="tenant_7" model="kst.tenant">
             <field name="name">Jose Mendoza</field>
-            <field name="date_started">2024-12-30</field>
+            <field name="date_started">2025-07-12</field>
         </record>
 
         <record id="tenant_8" model="kst.tenant">
             <field name="name">Lourdes Fernandez</field>
-            <field name="date_started">2025-03-26</field>
+            <field name="date_started">2025-08-05</field>
         </record>
 
         <record id="tenant_9" model="kst.tenant">
             <field name="name">Antonio Cruz</field>
-            <field name="date_started">2025-05-13</field>
+            <field name="date_started">2024-09-30</field>
         </record>
 
         <record id="tenant_10" model="kst.tenant">
             <field name="name">Rosa Martinez</field>
-            <field name="date_started">2025-06-21</field>
+            <field name="date_started">2025-03-24</field>
         </record>
 
         <record id="tenant_11" model="kst.tenant">
             <field name="name">Carlos Ramos</field>
-            <field name="date_started">2025-01-24</field>
+            <field name="date_started">2024-04-08</field>
         </record>
 
         <record id="tenant_12" model="kst.tenant">
             <field name="name">Elena Torres</field>
-            <field name="date_started">2024-05-09</field>
+            <field name="date_started">2025-06-03</field>
         </record>
 
         <record id="tenant_13" model="kst.tenant">
             <field name="name">Fernando Lopez</field>
-            <field name="date_started">2024-07-29</field>
+            <field name="date_started">2024-07-20</field>
         </record>
 
         <record id="tenant_14" model="kst.tenant">
             <field name="name">Isabel Gutierrez</field>
-            <field name="date_started">2024-09-13</field>
+            <field name="date_started">2024-03-17</field>
         </record>
 
         <record id="tenant_15" model="kst.tenant">
             <field name="name">Miguel Rodriguez</field>
-            <field name="date_started">2025-01-08</field>
+            <field name="date_started">2025-04-25</field>
         </record>
 
         <record id="tenant_16" model="kst.tenant">
             <field name="name">Patricia Diaz</field>
-            <field name="date_started">2024-05-10</field>
+            <field name="date_started">2025-09-23</field>
         </record>
 
         <record id="tenant_17" model="kst.tenant">
             <field name="name">Ricardo Morales</field>
-            <field name="date_started">2024-02-25</field>
+            <field name="date_started">2024-03-21</field>
         </record>
 
         <record id="tenant_18" model="kst.tenant">
             <field name="name">Sofia Herrera</field>
-            <field name="date_started">2025-08-09</field>
+            <field name="date_started">2025-09-13</field>
         </record>
 
         <record id="tenant_19" model="kst.tenant">
             <field name="name">Victor Jimenez</field>
-            <field name="date_started">2025-02-11</field>
+            <field name="date_started">2024-01-14</field>
         </record>
 
         <record id="tenant_20" model="kst.tenant">
             <field name="name">Teresa Navarro</field>
-            <field name="date_started">2025-07-14</field>
+            <field name="date_started">2025-06-04</field>
         </record>
 
         <!-- Stalls -->
-        <record id="stall_bbh_a_1" model="kst.stall">
-            <field name="market_id" ref="market_bbh"/>
+        <record id="stall_ktc_a_1" model="kst.stall">
+            <field name="market_id" ref="market_ktc"/>
             <field name="code">A-1</field>
             <field name="tenant_id" ref="tenant_1"/>
             <field name="utility_account_id" ref="kst_base.utility_account_meralco_001"/>
-            <field name="rental_rate">1377.50</field>
-            <field name="default_electricity_rate">18.41</field>
-            <field name="default_water_rate">11.22</field>
+            <field name="rental_rate">336.00</field>
+            <field name="default_electricity_rate">21.35</field>
+            <field name="default_water_rate">9.20</field>
             <field name="electric_pay_type_id" ref="pay_type_k1_mh"/>
-            <field name="water_pay_type_id" ref="pay_type_nawasa"/>
-            <field name="rent_collection_type">weekly</field>
+            <field name="water_pay_type_id" ref="pay_type_water_weekly"/>
+            <field name="rent_collection_type">daily</field>
             <field name="is_active">True</field>
-            <field name="need_or">false</field>
-            <field name="meralco_account_number">6517375551</field>
+            <field name="need_or">true</field>
+            <field name="meralco_account_number">6137766775</field>
             <field name="electricity_sub_meter_number">SM-001</field>
         </record>
 
-        <record id="stall_ktc_a_2" model="kst.stall">
-            <field name="market_id" ref="market_ktc"/>
+        <record id="stall_bbh_a_2" model="kst.stall">
+            <field name="market_id" ref="market_bbh"/>
             <field name="code">A-2</field>
             <field name="tenant_id" ref="tenant_2"/>
             <field name="utility_account_id" ref="kst_base.utility_account_meralco_001"/>
-            <field name="rental_rate">834.00</field>
-            <field name="default_electricity_rate">13.90</field>
-            <field name="default_water_rate">9.09</field>
-            <field name="electric_pay_type_id" ref="pay_type_k1_mh"/>
-            <field name="water_pay_type_id" ref="pay_type_water_weekly"/>
-            <field name="rent_collection_type">weekly</field>
+            <field name="rental_rate">6681.00</field>
+            <field name="default_electricity_rate">18.47</field>
+            <field name="default_water_rate">9.44</field>
+            <field name="electric_pay_type_id" ref="pay_type_lg_daily"/>
+            <field name="water_pay_type_id" ref="pay_type_nawasa"/>
+            <field name="rent_collection_type">monthly</field>
             <field name="is_active">True</field>
-            <field name="need_or">false</field>
-            <field name="meralco_account_number">3007586314</field>
+            <field name="need_or">true</field>
+            <field name="meralco_account_number">7716737902</field>
             <field name="electricity_sub_meter_number">SM-002</field>
         </record>
 
-        <record id="stall_stm_a_3" model="kst.stall">
-            <field name="market_id" ref="market_stm"/>
+        <record id="stall_smt_a_3" model="kst.stall">
+            <field name="market_id" ref="market_smt"/>
             <field name="code">A-3</field>
             <field name="tenant_id" ref="tenant_3"/>
             <field name="utility_account_id" ref="kst_base.utility_account_meralco_001"/>
-            <field name="rental_rate">5727.00</field>
-            <field name="default_electricity_rate">18.07</field>
-            <field name="default_water_rate">12.82</field>
+            <field name="rental_rate">1386.00</field>
+            <field name="default_electricity_rate">14.10</field>
+            <field name="default_water_rate">8.01</field>
             <field name="electric_pay_type_id" ref="pay_type_ugs_weekly"/>
-            <field name="water_pay_type_id" ref="pay_type_nawasa"/>
-            <field name="rent_collection_type">monthly</field>
+            <field name="water_pay_type_id" ref="pay_type_water_weekly"/>
+            <field name="rent_collection_type">weekly</field>
             <field name="is_active">True</field>
             <field name="need_or">true</field>
-            <field name="meralco_account_number">9421251772</field>
+            <field name="meralco_account_number">2215948738</field>
             <field name="electricity_sub_meter_number">SM-003</field>
         </record>
 
-        <record id="stall_bbh_a_4" model="kst.stall">
-            <field name="market_id" ref="market_bbh"/>
+        <record id="stall_ktc_a_4" model="kst.stall">
+            <field name="market_id" ref="market_ktc"/>
             <field name="code">A-4</field>
             <field name="tenant_id" ref="tenant_4"/>
             <field name="utility_account_id" ref="kst_base.utility_account_meralco_001"/>
-            <field name="rental_rate">3723.00</field>
-            <field name="default_electricity_rate">14.08</field>
-            <field name="default_water_rate">13.40</field>
-            <field name="electric_pay_type_id" ref="pay_type_ugs_weekly"/>
-            <field name="water_pay_type_id" ref="pay_type_water_weekly"/>
-            <field name="rent_collection_type">monthly</field>
+            <field name="rental_rate">144.82</field>
+            <field name="default_electricity_rate">16.77</field>
+            <field name="default_water_rate">9.42</field>
+            <field name="electric_pay_type_id" ref="pay_type_k1_mh"/>
+            <field name="water_pay_type_id" ref="pay_type_nawasa"/>
+            <field name="rent_collection_type">daily</field>
             <field name="is_active">True</field>
-            <field name="need_or">true</field>
-            <field name="meralco_account_number">1382931963</field>
+            <field name="need_or">false</field>
+            <field name="meralco_account_number">5852031978</field>
             <field name="electricity_sub_meter_number">SM-004</field>
         </record>
 
-        <record id="stall_ktc_a_5" model="kst.stall">
-            <field name="market_id" ref="market_ktc"/>
+        <record id="stall_bbh_a_5" model="kst.stall">
+            <field name="market_id" ref="market_bbh"/>
             <field name="code">A-5</field>
             <field name="tenant_id" ref="tenant_5"/>
             <field name="utility_account_id" ref="kst_base.utility_account_meralco_001"/>
-            <field name="rental_rate">5608.00</field>
-            <field name="default_electricity_rate">14.30</field>
-            <field name="default_water_rate">14.25</field>
-            <field name="electric_pay_type_id" ref="pay_type_k1_mh"/>
+            <field name="rental_rate">321.41</field>
+            <field name="default_electricity_rate">20.38</field>
+            <field name="default_water_rate">11.32</field>
+            <field name="electric_pay_type_id" ref="pay_type_ugs_weekly"/>
             <field name="water_pay_type_id" ref="pay_type_nawasa"/>
-            <field name="rent_collection_type">monthly</field>
+            <field name="rent_collection_type">daily</field>
             <field name="is_active">True</field>
             <field name="need_or">false</field>
-            <field name="meralco_account_number">8669375930</field>
+            <field name="meralco_account_number">4322651075</field>
             <field name="electricity_sub_meter_number">SM-005</field>
         </record>
 
-        <record id="stall_stm_a_6" model="kst.stall">
-            <field name="market_id" ref="market_stm"/>
+        <record id="stall_smt_a_6" model="kst.stall">
+            <field name="market_id" ref="market_smt"/>
             <field name="code">A-6</field>
             <field name="tenant_id" ref="tenant_6"/>
             <field name="utility_account_id" ref="kst_base.utility_account_meralco_002"/>
-            <field name="rental_rate">327.41</field>
-            <field name="default_electricity_rate">15.67</field>
-            <field name="default_water_rate">12.44</field>
+            <field name="rental_rate">7658.00</field>
+            <field name="default_electricity_rate">12.74</field>
+            <field name="default_water_rate">14.01</field>
             <field name="electric_pay_type_id" ref="pay_type_lg_daily"/>
-            <field name="water_pay_type_id" ref="pay_type_nawasa"/>
-            <field name="rent_collection_type">daily</field>
+            <field name="water_pay_type_id" ref="pay_type_water_weekly"/>
+            <field name="rent_collection_type">monthly</field>
             <field name="is_active">True</field>
-            <field name="need_or">false</field>
-            <field name="meralco_account_number">3601263456</field>
+            <field name="need_or">true</field>
+            <field name="meralco_account_number">9071344926</field>
             <field name="electricity_sub_meter_number">SM-006</field>
         </record>
 
-        <record id="stall_bbh_a_7" model="kst.stall">
-            <field name="market_id" ref="market_bbh"/>
+        <record id="stall_ktc_a_7" model="kst.stall">
+            <field name="market_id" ref="market_ktc"/>
             <field name="code">A-7</field>
             <field name="tenant_id" ref="tenant_7"/>
             <field name="utility_account_id" ref="kst_base.utility_account_meralco_002"/>
-            <field name="rental_rate">957.00</field>
-            <field name="default_electricity_rate">16.06</field>
-            <field name="default_water_rate">8.32</field>
+            <field name="rental_rate">4346.00</field>
+            <field name="default_electricity_rate">17.69</field>
+            <field name="default_water_rate">12.82</field>
             <field name="electric_pay_type_id" ref="pay_type_ugs_weekly"/>
-            <field name="water_pay_type_id" ref="pay_type_nawasa"/>
-            <field name="rent_collection_type">weekly</field>
+            <field name="water_pay_type_id" ref="pay_type_water_weekly"/>
+            <field name="rent_collection_type">monthly</field>
             <field name="is_active">True</field>
             <field name="need_or">false</field>
-            <field name="meralco_account_number">6947392631</field>
+            <field name="meralco_account_number">9278675618</field>
             <field name="electricity_sub_meter_number">SM-007</field>
         </record>
 
-        <record id="stall_ktc_a_8" model="kst.stall">
-            <field name="market_id" ref="market_ktc"/>
+        <record id="stall_bbh_a_8" model="kst.stall">
+            <field name="market_id" ref="market_bbh"/>
             <field name="code">A-8</field>
             <field name="tenant_id" ref="tenant_8"/>
             <field name="utility_account_id" ref="kst_base.utility_account_meralco_002"/>
-            <field name="rental_rate">5923.00</field>
-            <field name="default_electricity_rate">21.09</field>
-            <field name="default_water_rate">14.96</field>
-            <field name="electric_pay_type_id" ref="pay_type_k1_mh"/>
-            <field name="water_pay_type_id" ref="pay_type_nawasa"/>
-            <field name="rent_collection_type">monthly</field>
+            <field name="rental_rate">316.64</field>
+            <field name="default_electricity_rate">17.69</field>
+            <field name="default_water_rate">12.06</field>
+            <field name="electric_pay_type_id" ref="pay_type_ugs_weekly"/>
+            <field name="water_pay_type_id" ref="pay_type_water_weekly"/>
+            <field name="rent_collection_type">daily</field>
             <field name="is_active">True</field>
             <field name="need_or">true</field>
-            <field name="meralco_account_number">7950023806</field>
+            <field name="meralco_account_number">8971218549</field>
             <field name="electricity_sub_meter_number">SM-008</field>
         </record>
 
-        <record id="stall_stm_a_9" model="kst.stall">
-            <field name="market_id" ref="market_stm"/>
+        <record id="stall_smt_a_9" model="kst.stall">
+            <field name="market_id" ref="market_smt"/>
             <field name="code">A-9</field>
             <field name="tenant_id" ref="tenant_9"/>
             <field name="utility_account_id" ref="kst_base.utility_account_meralco_002"/>
-            <field name="rental_rate">857.75</field>
-            <field name="default_electricity_rate">20.09</field>
-            <field name="default_water_rate">12.27</field>
-            <field name="electric_pay_type_id" ref="pay_type_k1_mh"/>
+            <field name="rental_rate">1633.00</field>
+            <field name="default_electricity_rate">17.95</field>
+            <field name="default_water_rate">9.83</field>
+            <field name="electric_pay_type_id" ref="pay_type_ugs_weekly"/>
             <field name="water_pay_type_id" ref="pay_type_nawasa"/>
             <field name="rent_collection_type">weekly</field>
             <field name="is_active">True</field>
             <field name="need_or">false</field>
-            <field name="meralco_account_number">3027294114</field>
+            <field name="meralco_account_number">9694674065</field>
             <field name="electricity_sub_meter_number">SM-009</field>
         </record>
 
-        <record id="stall_bbh_a_10" model="kst.stall">
-            <field name="market_id" ref="market_bbh"/>
+        <record id="stall_ktc_a_10" model="kst.stall">
+            <field name="market_id" ref="market_ktc"/>
             <field name="code">A-10</field>
             <field name="tenant_id" ref="tenant_10"/>
             <field name="utility_account_id" ref="kst_base.utility_account_meralco_002"/>
-            <field name="rental_rate">7627.00</field>
-            <field name="default_electricity_rate">20.61</field>
-            <field name="default_water_rate">10.86</field>
+            <field name="rental_rate">297.23</field>
+            <field name="default_electricity_rate">13.60</field>
+            <field name="default_water_rate">11.48</field>
             <field name="electric_pay_type_id" ref="pay_type_ugs_weekly"/>
-            <field name="water_pay_type_id" ref="pay_type_water_weekly"/>
-            <field name="rent_collection_type">monthly</field>
+            <field name="water_pay_type_id" ref="pay_type_nawasa"/>
+            <field name="rent_collection_type">daily</field>
             <field name="is_active">True</field>
             <field name="need_or">false</field>
-            <field name="meralco_account_number">1505552947</field>
+            <field name="meralco_account_number">5477774961</field>
             <field name="electricity_sub_meter_number">SM-010</field>
         </record>
 
-        <record id="stall_ktc_b_1" model="kst.stall">
-            <field name="market_id" ref="market_ktc"/>
+        <record id="stall_bbh_b_1" model="kst.stall">
+            <field name="market_id" ref="market_bbh"/>
             <field name="code">B-1</field>
             <field name="tenant_id" ref="tenant_11"/>
             <field name="utility_account_id" ref="kst_base.utility_account_meralco_003"/>
-            <field name="rental_rate">848.75</field>
-            <field name="default_electricity_rate">13.66</field>
-            <field name="default_water_rate">11.19</field>
-            <field name="electric_pay_type_id" ref="pay_type_k1_mh"/>
+            <field name="rental_rate">5438.00</field>
+            <field name="default_electricity_rate">13.00</field>
+            <field name="default_water_rate">12.97</field>
+            <field name="electric_pay_type_id" ref="pay_type_ugs_weekly"/>
             <field name="water_pay_type_id" ref="pay_type_nawasa"/>
-            <field name="rent_collection_type">weekly</field>
+            <field name="rent_collection_type">monthly</field>
             <field name="is_active">True</field>
             <field name="need_or">false</field>
-            <field name="meralco_account_number">2464170997</field>
+            <field name="meralco_account_number">1222590931</field>
             <field name="electricity_sub_meter_number">SM-011</field>
         </record>
 
-        <record id="stall_stm_b_2" model="kst.stall">
-            <field name="market_id" ref="market_stm"/>
+        <record id="stall_smt_b_2" model="kst.stall">
+            <field name="market_id" ref="market_smt"/>
             <field name="code">B-2</field>
             <field name="tenant_id" ref="tenant_12"/>
             <field name="utility_account_id" ref="kst_base.utility_account_meralco_003"/>
-            <field name="rental_rate">196.95</field>
-            <field name="default_electricity_rate">19.26</field>
-            <field name="default_water_rate">9.06</field>
+            <field name="rental_rate">155.45</field>
+            <field name="default_electricity_rate">14.61</field>
+            <field name="default_water_rate">11.78</field>
             <field name="electric_pay_type_id" ref="pay_type_lg_daily"/>
-            <field name="water_pay_type_id" ref="pay_type_water_weekly"/>
+            <field name="water_pay_type_id" ref="pay_type_nawasa"/>
             <field name="rent_collection_type">daily</field>
             <field name="is_active">True</field>
-            <field name="need_or">true</field>
-            <field name="meralco_account_number">2747145921</field>
+            <field name="need_or">false</field>
+            <field name="meralco_account_number">8368109893</field>
             <field name="electricity_sub_meter_number">SM-012</field>
         </record>
 
-        <record id="stall_bbh_b_3" model="kst.stall">
-            <field name="market_id" ref="market_bbh"/>
+        <record id="stall_ktc_b_3" model="kst.stall">
+            <field name="market_id" ref="market_ktc"/>
             <field name="code">B-3</field>
             <field name="tenant_id" ref="tenant_13"/>
             <field name="utility_account_id" ref="kst_base.utility_account_meralco_003"/>
-            <field name="rental_rate">179.45</field>
-            <field name="default_electricity_rate">16.20</field>
-            <field name="default_water_rate">11.63</field>
-            <field name="electric_pay_type_id" ref="pay_type_ugs_weekly"/>
+            <field name="rental_rate">1526.75</field>
+            <field name="default_electricity_rate">17.47</field>
+            <field name="default_water_rate">13.63</field>
+            <field name="electric_pay_type_id" ref="pay_type_k1_mh"/>
             <field name="water_pay_type_id" ref="pay_type_water_weekly"/>
-            <field name="rent_collection_type">daily</field>
+            <field name="rent_collection_type">weekly</field>
             <field name="is_active">True</field>
-            <field name="need_or">false</field>
-            <field name="meralco_account_number">8983367341</field>
+            <field name="need_or">true</field>
+            <field name="meralco_account_number">9395681083</field>
             <field name="electricity_sub_meter_number">SM-013</field>
         </record>
 
-        <record id="stall_ktc_b_4" model="kst.stall">
-            <field name="market_id" ref="market_ktc"/>
+        <record id="stall_bbh_b_4" model="kst.stall">
+            <field name="market_id" ref="market_bbh"/>
             <field name="code">B-4</field>
             <field name="tenant_id" ref="tenant_14"/>
             <field name="utility_account_id" ref="kst_base.utility_account_meralco_003"/>
-            <field name="rental_rate">4098.00</field>
-            <field name="default_electricity_rate">12.35</field>
-            <field name="default_water_rate">13.57</field>
+            <field name="rental_rate">212.64</field>
+            <field name="default_electricity_rate">20.87</field>
+            <field name="default_water_rate">12.33</field>
             <field name="electric_pay_type_id" ref="pay_type_ugs_weekly"/>
-            <field name="water_pay_type_id" ref="pay_type_water_weekly"/>
-            <field name="rent_collection_type">monthly</field>
+            <field name="water_pay_type_id" ref="pay_type_nawasa"/>
+            <field name="rent_collection_type">daily</field>
             <field name="is_active">True</field>
-            <field name="need_or">false</field>
-            <field name="meralco_account_number">4927509592</field>
+            <field name="need_or">true</field>
+            <field name="meralco_account_number">5738787220</field>
             <field name="electricity_sub_meter_number">SM-014</field>
         </record>
 
-        <record id="stall_stm_b_5" model="kst.stall">
-            <field name="market_id" ref="market_stm"/>
+        <record id="stall_smt_b_5" model="kst.stall">
+            <field name="market_id" ref="market_smt"/>
             <field name="code">B-5</field>
             <field name="tenant_id" ref="tenant_15"/>
             <field name="utility_account_id" ref="kst_base.utility_account_meralco_003"/>
-            <field name="rental_rate">266.27</field>
-            <field name="default_electricity_rate">13.82</field>
-            <field name="default_water_rate">12.67</field>
-            <field name="electric_pay_type_id" ref="pay_type_lg_daily"/>
+            <field name="rental_rate">1040.25</field>
+            <field name="default_electricity_rate">13.35</field>
+            <field name="default_water_rate">8.87</field>
+            <field name="electric_pay_type_id" ref="pay_type_k1_mh"/>
             <field name="water_pay_type_id" ref="pay_type_water_weekly"/>
-            <field name="rent_collection_type">daily</field>
+            <field name="rent_collection_type">weekly</field>
             <field name="is_active">True</field>
-            <field name="need_or">false</field>
-            <field name="meralco_account_number">8884544598</field>
+            <field name="need_or">true</field>
+            <field name="meralco_account_number">7746783238</field>
             <field name="electricity_sub_meter_number">SM-015</field>
         </record>
 
-        <record id="stall_bbh_b_6" model="kst.stall">
-            <field name="market_id" ref="market_bbh"/>
+        <record id="stall_ktc_b_6" model="kst.stall">
+            <field name="market_id" ref="market_ktc"/>
             <field name="code">B-6</field>
             <field name="tenant_id" ref="tenant_16"/>
             <field name="utility_account_id" ref="kst_base.utility_account_water_001"/>
-            <field name="rental_rate">6199.00</field>
-            <field name="default_electricity_rate">20.45</field>
-            <field name="default_water_rate">12.32</field>
+            <field name="rental_rate">1187.25</field>
+            <field name="default_electricity_rate">15.74</field>
+            <field name="default_water_rate">11.41</field>
             <field name="electric_pay_type_id" ref="pay_type_ugs_weekly"/>
-            <field name="water_pay_type_id" ref="pay_type_nawasa"/>
-            <field name="rent_collection_type">monthly</field>
+            <field name="water_pay_type_id" ref="pay_type_water_weekly"/>
+            <field name="rent_collection_type">weekly</field>
             <field name="is_active">True</field>
-            <field name="need_or">false</field>
-            <field name="meralco_account_number">6610312856</field>
+            <field name="need_or">true</field>
+            <field name="meralco_account_number">1331275373</field>
             <field name="electricity_sub_meter_number">SM-016</field>
         </record>
 
-        <record id="stall_ktc_b_7" model="kst.stall">
-            <field name="market_id" ref="market_ktc"/>
+        <record id="stall_bbh_b_7" model="kst.stall">
+            <field name="market_id" ref="market_bbh"/>
             <field name="code">B-7</field>
             <field name="tenant_id" ref="tenant_17"/>
             <field name="utility_account_id" ref="kst_base.utility_account_water_001"/>
-            <field name="rental_rate">3608.00</field>
-            <field name="default_electricity_rate">15.62</field>
-            <field name="default_water_rate">8.03</field>
-            <field name="electric_pay_type_id" ref="pay_type_lg_daily"/>
+            <field name="rental_rate">7626.00</field>
+            <field name="default_electricity_rate">17.25</field>
+            <field name="default_water_rate">9.97</field>
+            <field name="electric_pay_type_id" ref="pay_type_k1_mh"/>
             <field name="water_pay_type_id" ref="pay_type_nawasa"/>
             <field name="rent_collection_type">monthly</field>
             <field name="is_active">True</field>
-            <field name="need_or">false</field>
-            <field name="meralco_account_number">9213986382</field>
+            <field name="need_or">true</field>
+            <field name="meralco_account_number">6576182441</field>
             <field name="electricity_sub_meter_number">SM-017</field>
         </record>
 
-        <record id="stall_stm_b_8" model="kst.stall">
-            <field name="market_id" ref="market_stm"/>
+        <record id="stall_smt_b_8" model="kst.stall">
+            <field name="market_id" ref="market_smt"/>
             <field name="code">B-8</field>
             <field name="tenant_id" ref="tenant_18"/>
             <field name="utility_account_id" ref="kst_base.utility_account_water_001"/>
-            <field name="rental_rate">1336.25</field>
-            <field name="default_electricity_rate">14.68</field>
-            <field name="default_water_rate">12.19</field>
-            <field name="electric_pay_type_id" ref="pay_type_lg_daily"/>
+            <field name="rental_rate">944.00</field>
+            <field name="default_electricity_rate">16.81</field>
+            <field name="default_water_rate">12.67</field>
+            <field name="electric_pay_type_id" ref="pay_type_ugs_weekly"/>
             <field name="water_pay_type_id" ref="pay_type_water_weekly"/>
             <field name="rent_collection_type">weekly</field>
             <field name="is_active">True</field>
             <field name="need_or">false</field>
-            <field name="meralco_account_number">1679283021</field>
+            <field name="meralco_account_number">6977937497</field>
             <field name="electricity_sub_meter_number">SM-018</field>
         </record>
 
-        <record id="stall_bbh_b_9" model="kst.stall">
-            <field name="market_id" ref="market_bbh"/>
+        <record id="stall_ktc_b_9" model="kst.stall">
+            <field name="market_id" ref="market_ktc"/>
             <field name="code">B-9</field>
             <field name="tenant_id" ref="tenant_19"/>
             <field name="utility_account_id" ref="kst_base.utility_account_water_001"/>
-            <field name="rental_rate">303.45</field>
-            <field name="default_electricity_rate">12.86</field>
-            <field name="default_water_rate">12.96</field>
+            <field name="rental_rate">151.64</field>
+            <field name="default_electricity_rate">16.61</field>
+            <field name="default_water_rate">11.25</field>
             <field name="electric_pay_type_id" ref="pay_type_ugs_weekly"/>
-            <field name="water_pay_type_id" ref="pay_type_water_weekly"/>
+            <field name="water_pay_type_id" ref="pay_type_nawasa"/>
             <field name="rent_collection_type">daily</field>
             <field name="is_active">True</field>
-            <field name="need_or">false</field>
-            <field name="meralco_account_number">9620844299</field>
+            <field name="need_or">true</field>
+            <field name="meralco_account_number">4752202058</field>
             <field name="electricity_sub_meter_number">SM-019</field>
         </record>
 
-        <record id="stall_ktc_b_10" model="kst.stall">
-            <field name="market_id" ref="market_ktc"/>
+        <record id="stall_bbh_b_10" model="kst.stall">
+            <field name="market_id" ref="market_bbh"/>
             <field name="code">B-10</field>
             <field name="tenant_id" ref="tenant_20"/>
             <field name="utility_account_id" ref="kst_base.utility_account_water_001"/>
-            <field name="rental_rate">5588.00</field>
-            <field name="default_electricity_rate">18.54</field>
-            <field name="default_water_rate">11.21</field>
+            <field name="rental_rate">241.41</field>
+            <field name="default_electricity_rate">13.74</field>
+            <field name="default_water_rate">12.14</field>
             <field name="electric_pay_type_id" ref="pay_type_ugs_weekly"/>
             <field name="water_pay_type_id" ref="pay_type_water_weekly"/>
-            <field name="rent_collection_type">monthly</field>
+            <field name="rent_collection_type">daily</field>
             <field name="is_active">True</field>
-            <field name="need_or">false</field>
-            <field name="meralco_account_number">9637553927</field>
+            <field name="need_or">true</field>
+            <field name="meralco_account_number">3433462070</field>
             <field name="electricity_sub_meter_number">SM-020</field>
         </record>
 
-        <record id="stall_stm_c_1" model="kst.stall">
-            <field name="market_id" ref="market_stm"/>
+        <record id="stall_smt_c_1" model="kst.stall">
+            <field name="market_id" ref="market_smt"/>
             <field name="code">C-1</field>
             <field name="tenant_id" ref="tenant_1"/>
             <field name="utility_account_id" ref="kst_base.utility_account_water_002"/>
-            <field name="rental_rate">5052.00</field>
-            <field name="default_electricity_rate">19.32</field>
-            <field name="default_water_rate">9.46</field>
-            <field name="electric_pay_type_id" ref="pay_type_lg_daily"/>
-            <field name="water_pay_type_id" ref="pay_type_nawasa"/>
-            <field name="rent_collection_type">monthly</field>
-            <field name="is_active">True</field>
-            <field name="need_or">true</field>
-            <field name="meralco_account_number">6458239496</field>
-            <field name="electricity_sub_meter_number">SM-021</field>
-        </record>
-
-        <record id="stall_bbh_c_2" model="kst.stall">
-            <field name="market_id" ref="market_bbh"/>
-            <field name="code">C-2</field>
-            <field name="tenant_id" ref="tenant_2"/>
-            <field name="utility_account_id" ref="kst_base.utility_account_water_002"/>
-            <field name="rental_rate">7164.00</field>
-            <field name="default_electricity_rate">16.78</field>
-            <field name="default_water_rate">14.57</field>
-            <field name="electric_pay_type_id" ref="pay_type_lg_daily"/>
-            <field name="water_pay_type_id" ref="pay_type_nawasa"/>
-            <field name="rent_collection_type">monthly</field>
-            <field name="is_active">True</field>
-            <field name="need_or">false</field>
-            <field name="meralco_account_number">7818574852</field>
-            <field name="electricity_sub_meter_number">SM-022</field>
-        </record>
-
-        <record id="stall_ktc_c_3" model="kst.stall">
-            <field name="market_id" ref="market_ktc"/>
-            <field name="code">C-3</field>
-            <field name="tenant_id" ref="tenant_3"/>
-            <field name="utility_account_id" ref="kst_base.utility_account_water_002"/>
-            <field name="rental_rate">6240.00</field>
-            <field name="default_electricity_rate">12.76</field>
-            <field name="default_water_rate">9.32</field>
-            <field name="electric_pay_type_id" ref="pay_type_ugs_weekly"/>
-            <field name="water_pay_type_id" ref="pay_type_nawasa"/>
-            <field name="rent_collection_type">monthly</field>
-            <field name="is_active">True</field>
-            <field name="need_or">true</field>
-            <field name="meralco_account_number">5340551491</field>
-            <field name="electricity_sub_meter_number">SM-023</field>
-        </record>
-
-        <record id="stall_stm_c_4" model="kst.stall">
-            <field name="market_id" ref="market_stm"/>
-            <field name="code">C-4</field>
-            <field name="tenant_id" ref="tenant_4"/>
-            <field name="utility_account_id" ref="kst_base.utility_account_water_002"/>
-            <field name="rental_rate">3326.00</field>
-            <field name="default_electricity_rate">14.30</field>
-            <field name="default_water_rate">10.63</field>
-            <field name="electric_pay_type_id" ref="pay_type_lg_daily"/>
-            <field name="water_pay_type_id" ref="pay_type_nawasa"/>
-            <field name="rent_collection_type">monthly</field>
-            <field name="is_active">True</field>
-            <field name="need_or">false</field>
-            <field name="meralco_account_number">8593030321</field>
-            <field name="electricity_sub_meter_number">SM-024</field>
-        </record>
-
-        <record id="stall_bbh_c_5" model="kst.stall">
-            <field name="market_id" ref="market_bbh"/>
-            <field name="code">C-5</field>
-            <field name="tenant_id" ref="tenant_5"/>
-            <field name="utility_account_id" ref="kst_base.utility_account_water_002"/>
-            <field name="rental_rate">3154.00</field>
-            <field name="default_electricity_rate">16.40</field>
-            <field name="default_water_rate">8.76</field>
-            <field name="electric_pay_type_id" ref="pay_type_lg_daily"/>
-            <field name="water_pay_type_id" ref="pay_type_nawasa"/>
-            <field name="rent_collection_type">monthly</field>
-            <field name="is_active">True</field>
-            <field name="need_or">false</field>
-            <field name="meralco_account_number">4479144143</field>
-            <field name="electricity_sub_meter_number">SM-025</field>
-        </record>
-
-        <record id="stall_ktc_c_6" model="kst.stall">
-            <field name="market_id" ref="market_ktc"/>
-            <field name="code">C-6</field>
-            <field name="tenant_id" ref="tenant_6"/>
-            <field name="utility_account_id" ref="kst_base.utility_account_water_003"/>
-            <field name="rental_rate">198.36</field>
-            <field name="default_electricity_rate">12.17</field>
-            <field name="default_water_rate">13.01</field>
-            <field name="electric_pay_type_id" ref="pay_type_ugs_weekly"/>
+            <field name="rental_rate">302.91</field>
+            <field name="default_electricity_rate">14.69</field>
+            <field name="default_water_rate">8.21</field>
+            <field name="electric_pay_type_id" ref="pay_type_k1_mh"/>
             <field name="water_pay_type_id" ref="pay_type_nawasa"/>
             <field name="rent_collection_type">daily</field>
             <field name="is_active">True</field>
-            <field name="need_or">false</field>
-            <field name="meralco_account_number">1533352998</field>
-            <field name="electricity_sub_meter_number">SM-026</field>
+            <field name="need_or">true</field>
+            <field name="meralco_account_number">3731400023</field>
+            <field name="electricity_sub_meter_number">SM-021</field>
         </record>
 
-        <record id="stall_stm_c_7" model="kst.stall">
-            <field name="market_id" ref="market_stm"/>
-            <field name="code">C-7</field>
-            <field name="tenant_id" ref="tenant_7"/>
-            <field name="utility_account_id" ref="kst_base.utility_account_water_003"/>
-            <field name="rental_rate">1353.50</field>
-            <field name="default_electricity_rate">18.23</field>
-            <field name="default_water_rate">11.52</field>
+        <record id="stall_ktc_c_2" model="kst.stall">
+            <field name="market_id" ref="market_ktc"/>
+            <field name="code">C-2</field>
+            <field name="tenant_id" ref="tenant_2"/>
+            <field name="utility_account_id" ref="kst_base.utility_account_water_002"/>
+            <field name="rental_rate">1688.75</field>
+            <field name="default_electricity_rate">19.50</field>
+            <field name="default_water_rate">11.83</field>
             <field name="electric_pay_type_id" ref="pay_type_ugs_weekly"/>
             <field name="water_pay_type_id" ref="pay_type_nawasa"/>
             <field name="rent_collection_type">weekly</field>
             <field name="is_active">True</field>
             <field name="need_or">true</field>
-            <field name="meralco_account_number">9206194067</field>
-            <field name="electricity_sub_meter_number">SM-027</field>
+            <field name="meralco_account_number">6609438189</field>
+            <field name="electricity_sub_meter_number">SM-022</field>
         </record>
 
-        <record id="stall_bbh_c_8" model="kst.stall">
+        <record id="stall_bbh_c_3" model="kst.stall">
             <field name="market_id" ref="market_bbh"/>
-            <field name="code">C-8</field>
-            <field name="tenant_id" ref="tenant_8"/>
-            <field name="utility_account_id" ref="kst_base.utility_account_water_003"/>
-            <field name="rental_rate">3163.00</field>
-            <field name="default_electricity_rate">21.92</field>
-            <field name="default_water_rate">8.94</field>
+            <field name="code">C-3</field>
+            <field name="tenant_id" ref="tenant_3"/>
+            <field name="utility_account_id" ref="kst_base.utility_account_water_002"/>
+            <field name="rental_rate">1017.50</field>
+            <field name="default_electricity_rate">15.14</field>
+            <field name="default_water_rate">13.46</field>
+            <field name="electric_pay_type_id" ref="pay_type_ugs_weekly"/>
+            <field name="water_pay_type_id" ref="pay_type_water_weekly"/>
+            <field name="rent_collection_type">weekly</field>
+            <field name="is_active">True</field>
+            <field name="need_or">false</field>
+            <field name="meralco_account_number">2957772294</field>
+            <field name="electricity_sub_meter_number">SM-023</field>
+        </record>
+
+        <record id="stall_smt_c_4" model="kst.stall">
+            <field name="market_id" ref="market_smt"/>
+            <field name="code">C-4</field>
+            <field name="tenant_id" ref="tenant_4"/>
+            <field name="utility_account_id" ref="kst_base.utility_account_water_002"/>
+            <field name="rental_rate">7084.00</field>
+            <field name="default_electricity_rate">20.56</field>
+            <field name="default_water_rate">8.41</field>
             <field name="electric_pay_type_id" ref="pay_type_k1_mh"/>
+            <field name="water_pay_type_id" ref="pay_type_nawasa"/>
+            <field name="rent_collection_type">monthly</field>
+            <field name="is_active">True</field>
+            <field name="need_or">false</field>
+            <field name="meralco_account_number">3190749999</field>
+            <field name="electricity_sub_meter_number">SM-024</field>
+        </record>
+
+        <record id="stall_ktc_c_5" model="kst.stall">
+            <field name="market_id" ref="market_ktc"/>
+            <field name="code">C-5</field>
+            <field name="tenant_id" ref="tenant_5"/>
+            <field name="utility_account_id" ref="kst_base.utility_account_water_002"/>
+            <field name="rental_rate">4259.00</field>
+            <field name="default_electricity_rate">20.56</field>
+            <field name="default_water_rate">9.14</field>
+            <field name="electric_pay_type_id" ref="pay_type_lg_daily"/>
             <field name="water_pay_type_id" ref="pay_type_water_weekly"/>
             <field name="rent_collection_type">monthly</field>
             <field name="is_active">True</field>
             <field name="need_or">false</field>
-            <field name="meralco_account_number">5915880527</field>
-            <field name="electricity_sub_meter_number">SM-028</field>
+            <field name="meralco_account_number">9929575846</field>
+            <field name="electricity_sub_meter_number">SM-025</field>
         </record>
 
-        <record id="stall_ktc_c_9" model="kst.stall">
-            <field name="market_id" ref="market_ktc"/>
-            <field name="code">C-9</field>
-            <field name="tenant_id" ref="tenant_9"/>
+        <record id="stall_bbh_c_6" model="kst.stall">
+            <field name="market_id" ref="market_bbh"/>
+            <field name="code">C-6</field>
+            <field name="tenant_id" ref="tenant_6"/>
             <field name="utility_account_id" ref="kst_base.utility_account_water_003"/>
-            <field name="rental_rate">6127.00</field>
-            <field name="default_electricity_rate">17.29</field>
-            <field name="default_water_rate">14.77</field>
-            <field name="electric_pay_type_id" ref="pay_type_ugs_weekly"/>
-            <field name="water_pay_type_id" ref="pay_type_nawasa"/>
-            <field name="rent_collection_type">monthly</field>
-            <field name="is_active">True</field>
-            <field name="need_or">true</field>
-            <field name="meralco_account_number">4373534369</field>
-            <field name="electricity_sub_meter_number">SM-029</field>
-        </record>
-
-        <record id="stall_stm_c_10" model="kst.stall">
-            <field name="market_id" ref="market_stm"/>
-            <field name="code">C-10</field>
-            <field name="tenant_id" ref="tenant_10"/>
-            <field name="utility_account_id" ref="kst_base.utility_account_water_003"/>
-            <field name="rental_rate">6181.00</field>
-            <field name="default_electricity_rate">13.34</field>
-            <field name="default_water_rate">9.98</field>
+            <field name="rental_rate">6830.00</field>
+            <field name="default_electricity_rate">12.91</field>
+            <field name="default_water_rate">9.14</field>
             <field name="electric_pay_type_id" ref="pay_type_lg_daily"/>
             <field name="water_pay_type_id" ref="pay_type_nawasa"/>
             <field name="rent_collection_type">monthly</field>
             <field name="is_active">True</field>
             <field name="need_or">true</field>
-            <field name="meralco_account_number">6204889269</field>
+            <field name="meralco_account_number">3522002480</field>
+            <field name="electricity_sub_meter_number">SM-026</field>
+        </record>
+
+        <record id="stall_smt_c_7" model="kst.stall">
+            <field name="market_id" ref="market_smt"/>
+            <field name="code">C-7</field>
+            <field name="tenant_id" ref="tenant_7"/>
+            <field name="utility_account_id" ref="kst_base.utility_account_water_003"/>
+            <field name="rental_rate">292.59</field>
+            <field name="default_electricity_rate">19.58</field>
+            <field name="default_water_rate">14.58</field>
+            <field name="electric_pay_type_id" ref="pay_type_k1_mh"/>
+            <field name="water_pay_type_id" ref="pay_type_water_weekly"/>
+            <field name="rent_collection_type">daily</field>
+            <field name="is_active">True</field>
+            <field name="need_or">false</field>
+            <field name="meralco_account_number">4433984228</field>
+            <field name="electricity_sub_meter_number">SM-027</field>
+        </record>
+
+        <record id="stall_ktc_c_8" model="kst.stall">
+            <field name="market_id" ref="market_ktc"/>
+            <field name="code">C-8</field>
+            <field name="tenant_id" ref="tenant_8"/>
+            <field name="utility_account_id" ref="kst_base.utility_account_water_003"/>
+            <field name="rental_rate">4858.00</field>
+            <field name="default_electricity_rate">13.88</field>
+            <field name="default_water_rate">12.96</field>
+            <field name="electric_pay_type_id" ref="pay_type_k1_mh"/>
+            <field name="water_pay_type_id" ref="pay_type_nawasa"/>
+            <field name="rent_collection_type">monthly</field>
+            <field name="is_active">True</field>
+            <field name="need_or">true</field>
+            <field name="meralco_account_number">7697229330</field>
+            <field name="electricity_sub_meter_number">SM-028</field>
+        </record>
+
+        <record id="stall_bbh_c_9" model="kst.stall">
+            <field name="market_id" ref="market_bbh"/>
+            <field name="code">C-9</field>
+            <field name="tenant_id" ref="tenant_9"/>
+            <field name="utility_account_id" ref="kst_base.utility_account_water_003"/>
+            <field name="rental_rate">818.75</field>
+            <field name="default_electricity_rate">15.43</field>
+            <field name="default_water_rate">11.53</field>
+            <field name="electric_pay_type_id" ref="pay_type_lg_daily"/>
+            <field name="water_pay_type_id" ref="pay_type_nawasa"/>
+            <field name="rent_collection_type">weekly</field>
+            <field name="is_active">True</field>
+            <field name="need_or">true</field>
+            <field name="meralco_account_number">5017407403</field>
+            <field name="electricity_sub_meter_number">SM-029</field>
+        </record>
+
+        <record id="stall_smt_c_10" model="kst.stall">
+            <field name="market_id" ref="market_smt"/>
+            <field name="code">C-10</field>
+            <field name="tenant_id" ref="tenant_10"/>
+            <field name="utility_account_id" ref="kst_base.utility_account_water_003"/>
+            <field name="rental_rate">1509.75</field>
+            <field name="default_electricity_rate">15.00</field>
+            <field name="default_water_rate">8.09</field>
+            <field name="electric_pay_type_id" ref="pay_type_k1_mh"/>
+            <field name="water_pay_type_id" ref="pay_type_nawasa"/>
+            <field name="rent_collection_type">weekly</field>
+            <field name="is_active">True</field>
+            <field name="need_or">false</field>
+            <field name="meralco_account_number">4756718862</field>
             <field name="electricity_sub_meter_number">SM-030</field>
+        </record>
+
+        <!-- Pseudo-Stalls (Toilet and NAWASA) -->
+        <record id="stall_toilet" model="kst.stall">
+            <field name="market_id" ref="market_ktc"/>
+            <field name="code">Toilet</field>
+            <field name="tenant_id" ref="tenant_1"/>
+            <field name="utility_account_id" ref="kst_base.utility_account_water_001"/>
+            <field name="rental_rate">0.00</field>
+            <field name="default_electricity_rate">0.00</field>
+            <field name="default_water_rate">0.00</field>
+            <field name="water_pay_type_id" ref="pay_type_toilet"/>
+            <field name="rent_collection_type">monthly</field>
+            <field name="is_active">True</field>
+            <field name="need_or">false</field>
+        </record>
+
+        <record id="stall_nawasa" model="kst.stall">
+            <field name="market_id" ref="market_ktc"/>
+            <field name="code">NAWASA</field>
+            <field name="tenant_id" ref="tenant_1"/>
+            <field name="utility_account_id" ref="kst_base.utility_account_water_002"/>
+            <field name="rental_rate">0.00</field>
+            <field name="default_electricity_rate">0.00</field>
+            <field name="default_water_rate">0.00</field>
+            <field name="water_pay_type_id" ref="pay_type_nawasa"/>
+            <field name="rent_collection_type">monthly</field>
+            <field name="is_active">True</field>
+            <field name="need_or">false</field>
         </record>
 
     </data>

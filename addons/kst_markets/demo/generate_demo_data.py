@@ -13,9 +13,9 @@ TODAY = datetime.now()
 
 # Market codes
 MARKETS = [
-    ('BBH', 'Bacolod Public Market', 'Bacolod City, Negros Occidental'),
-    ('KTC', 'Kabankalan Town Center', 'Kabankalan City, Negros Occidental'),
-    ('STM', 'Silay City Market', 'Silay City, Negros Occidental'),
+    ('KTC', 'Kalayaan Talipapa Corporation', 'Kalayaan Talipapa Corporation'),
+    ('BBH', 'Bagong Barrio Hypermarket and Properties', 'Bagong Barrio Hypermarket and Properties'),
+    ('SMT', 'Sample Market Text', 'Sample Market Text'),
 ]
 
 # Pay Types
@@ -25,6 +25,7 @@ PAY_TYPES = [
     ('LG Daily', 'LG Daily', 'electricity', 'daily'),
     ('NAWASA', 'NAWASA Monthly', 'water', 'monthly'),
     ('Water Weekly', 'Water Weekly', 'water', 'weekly'),
+    ('Toilet', 'Toilet', 'water', 'monthly'),
 ]
 
 # Utility Accounts (from kst_base - these should exist)
@@ -257,6 +258,57 @@ def generate_xml():
         xml_lines.append(f'            <field name="electricity_sub_meter_number">SM-{str(i+1).zfill(3)}</field>')
         xml_lines.append(f'        </record>')
         xml_lines.append('')
+    
+    # Pseudo-stalls: Toilet and NAWASA (not actual stalls but collected through utilities)
+    xml_lines.append('        <!-- Pseudo-Stalls (Toilet and NAWASA) -->')
+    
+    # Get references for pseudo-stall pay types
+    toilet_pay_type = pay_type_refs['Toilet']
+    nawasa_pay_type = pay_type_refs['NAWASA']
+    
+    # Get first market and first tenant for pseudo-stalls
+    first_market_ref = market_refs[MARKETS[0][0]]
+    first_tenant_ref = tenant_refs[0]
+    
+    # Assign pseudo-stalls to water utility accounts (they don't need electricity)
+    # Find a water utility account that has space
+    water_accounts = [acc for acc, utype in UTILITY_ACCOUNTS if utype == 'water']
+    toilet_account = water_accounts[0] if water_accounts else None
+    nawasa_account = water_accounts[1] if len(water_accounts) > 1 else water_accounts[0] if water_accounts else None
+    
+    # Toilet pseudo-stall
+    xml_lines.append('        <record id="stall_toilet" model="kst.stall">')
+    xml_lines.append(f'            <field name="market_id" ref="{first_market_ref}"/>')
+    xml_lines.append('            <field name="code">Toilet</field>')
+    xml_lines.append(f'            <field name="tenant_id" ref="{first_tenant_ref}"/>')
+    if toilet_account:
+        xml_lines.append(f'            <field name="utility_account_id" ref="{toilet_account}"/>')
+    xml_lines.append('            <field name="rental_rate">0.00</field>')
+    xml_lines.append('            <field name="default_electricity_rate">0.00</field>')
+    xml_lines.append('            <field name="default_water_rate">0.00</field>')
+    xml_lines.append(f'            <field name="water_pay_type_id" ref="{toilet_pay_type}"/>')
+    xml_lines.append('            <field name="rent_collection_type">monthly</field>')
+    xml_lines.append('            <field name="is_active">True</field>')
+    xml_lines.append('            <field name="need_or">false</field>')
+    xml_lines.append('        </record>')
+    xml_lines.append('')
+    
+    # NAWASA pseudo-stall
+    xml_lines.append('        <record id="stall_nawasa" model="kst.stall">')
+    xml_lines.append(f'            <field name="market_id" ref="{first_market_ref}"/>')
+    xml_lines.append('            <field name="code">NAWASA</field>')
+    xml_lines.append(f'            <field name="tenant_id" ref="{first_tenant_ref}"/>')
+    if nawasa_account:
+        xml_lines.append(f'            <field name="utility_account_id" ref="{nawasa_account}"/>')
+    xml_lines.append('            <field name="rental_rate">0.00</field>')
+    xml_lines.append('            <field name="default_electricity_rate">0.00</field>')
+    xml_lines.append('            <field name="default_water_rate">0.00</field>')
+    xml_lines.append(f'            <field name="water_pay_type_id" ref="{nawasa_pay_type}"/>')
+    xml_lines.append('            <field name="rent_collection_type">monthly</field>')
+    xml_lines.append('            <field name="is_active">True</field>')
+    xml_lines.append('            <field name="need_or">false</field>')
+    xml_lines.append('        </record>')
+    xml_lines.append('')
     
     xml_lines.append('    </data>')
     xml_lines.append('</odoo>')

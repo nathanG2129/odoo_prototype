@@ -56,44 +56,6 @@
                         </group>
                     </group>
                     <notebook>
-                        <page string="Payment Summary">
-                            <group>
-                                <group string="Payment Summary">
-                                    <field name="total_paid"/>
-                                    <field name="total_cobp_due"/>
-                                    <field name="last_payment_date"/>
-                                    <field name="next_payment_date"/>
-                                </group>
-                            </group>
-                        </page>
-                        <page string="Payment Ledger">
-                            <field name="ledger_transaction_ids">
-                                <tree>
-                                    <field name="transaction_date"/>
-                                    <field name="rent_collection_type"/>
-                                    <field name="rent"/>
-                                    <field name="rent_paid" sum="Total Paid"/>
-                                    <field name="cobp_paid" sum="Total COBP Paid"/>
-                                    <field name="receipt_number"/>
-                                </tree>
-                            </field>
-                        </page>
-                        <page string="Scheduled Payments">
-                            <group>
-                                <button name="action_generate_scheduled_payments" 
-                                        type="object" 
-                                        string="Generate Scheduled Payments"
-                                        class="btn-primary"/>
-                            </group>
-                            <field name="scheduled_payment_ids">
-                                <tree>
-                                    <field name="scheduled_date"/>
-                                    <field name="rent_collection_type"/>
-                                    <field name="expected_amount" sum="Total Expected"/>
-                                    <field name="status"/>
-                                </tree>
-                            </field>
-                        </page>
                         <page string="All Rent Transactions">
                             <field name="rent_transaction_ids">
                                 <tree>
@@ -111,12 +73,19 @@
                                     <field name="utility_type"/>
                                     <field name="payment_status"/>
                                     <field name="consumption"/>
+                                    <field name="amount_due"/>
                                     <field name="amount_paid"/>
                                 </tree>
                             </field>
                         </page>
                     </notebook>
                     <group>
+                        <group string="Payment Summary">
+                            <field name="total_paid"/>
+                            <field name="total_cobp_due"/>
+                            <field name="last_payment_date"/>
+                            <field name="next_payment_date"/>
+                        </group>
                         <group string="Audit Trail">
                             <field name="create_uid" string="Created By" readonly="1"/>
                             <field name="create_date" string="Created Date" readonly="1"/>

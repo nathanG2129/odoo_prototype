@@ -78,6 +78,7 @@
                                     <field name="current_reading"/>
                                     <field name="consumption" sum="Total Consumption"/>
                                     <field name="applied_rate"/>
+                                    <field name="amount_due" sum="Total Due"/>
                                     <field name="amount_paid" sum="Total Amount"/>
                                 </tree>
                             </field>

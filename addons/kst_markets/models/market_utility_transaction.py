@@ -39,6 +39,8 @@ class MarketUtilityTransaction(models.Model):
                                 help="Rate used for this transaction (derived from bill or default rate). Stored for historical accuracy.")
     
     # Financial Fields
+    amount_due = fields.Float('Amount Due', digits=(12, 2), compute='_compute_amount_due', store=True,
+                              help="Expected amount due based on applied rate or default stall rate")
     amount_paid = fields.Float('Amount Paid', digits=(12, 2), tracking=True)
     
     # Receipt Information
@@ -58,6 +60,78 @@ class MarketUtilityTransaction(models.Model):
                 record.consumption = record.current_reading - record.previous_reading
             else:
                 record.consumption = 0.0
+    
+    @api.onchange('stall_id', 'utility_type')
+    def _onchange_stall_set_default_rate(self):
+        """Set applied_rate to default rate from stall when stall or utility type changes"""
+        for record in self:
+            # Only set if applied_rate is not already set (0 or None)
+            if not record.applied_rate or record.applied_rate == 0:
+                if record.stall_id:
+                    if record.utility_type == 'electricity':
+                        record.applied_rate = record.stall_id.default_electricity_rate or 0.0
+                    elif record.utility_type == 'water':
+                        record.applied_rate = record.stall_id.default_water_rate or 0.0
+                    else:
+                        record.applied_rate = 0.0
+                else:
+                    record.applied_rate = 0.0
+    
+    @api.model_create_multi
+    def create(self, vals_list):
+        """Set applied_rate to default rate when creating new records"""
+        for vals in vals_list:
+            # Only set if applied_rate is not provided or is 0
+            if 'applied_rate' not in vals or not vals.get('applied_rate') or vals.get('applied_rate') == 0:
+                stall_id = vals.get('stall_id')
+                utility_type = vals.get('utility_type')
+                
+                if stall_id and utility_type:
+                    stall = self.env['kst.stall'].browse(stall_id)
+                    if utility_type == 'electricity':
+                        vals['applied_rate'] = stall.default_electricity_rate or 0.0
+                    elif utility_type == 'water':
+                        vals['applied_rate'] = stall.default_water_rate or 0.0
+        
+        return super().create(vals_list)
+    
+    @api.depends('applied_rate', 'consumption', 'previous_reading', 'current_reading', 
+                 'stall_id', 'utility_type', 
+                 'stall_id.default_electricity_rate', 'stall_id.default_water_rate')
+    def _compute_amount_due(self):
+        """Compute amount due based on consumption × rate (if metered) or flat rate"""
+        for record in self:
+            if not record.stall_id:
+                record.amount_due = 0.0
+                continue
+            
+            # Determine the rate to use
+            rate = 0.0
+            if record.applied_rate and record.applied_rate > 0:
+                # Use applied rate if available
+                rate = record.applied_rate
+            else:
+                # Use default rate from stall based on utility type
+                if record.utility_type == 'electricity':
+                    rate = record.stall_id.default_electricity_rate or 0.0
+                elif record.utility_type == 'water':
+                    rate = record.stall_id.default_water_rate or 0.0
+            
+            # Calculate consumption directly from readings (to ensure it's up-to-date when editing inline)
+            consumption = 0.0
+            if record.previous_reading and record.current_reading:
+                consumption = record.current_reading - record.previous_reading
+            elif record.consumption:
+                # Fallback to stored consumption if readings aren't available
+                consumption = record.consumption
+            
+            # Calculate amount due: consumption × rate (if consumption exists), otherwise flat rate
+            if consumption and consumption > 0:
+                # Metered billing: consumption × rate
+                record.amount_due = consumption * rate
+            else:
+                # Flat rate billing: just the rate (no consumption to multiply)
+                record.amount_due = rate
 
     @api.depends('utility_bill_id')
     def _compute_billing_type(self):

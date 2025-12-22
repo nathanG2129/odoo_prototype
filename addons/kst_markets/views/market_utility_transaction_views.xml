@@ -17,6 +17,7 @@
                 <field name="current_reading"/>
                 <field name="consumption" sum="Total Consumption"/>
                 <field name="applied_rate"/>
+                <field name="amount_due" sum="Total Due"/>
                 <field name="amount_paid" sum="Total Amount"/>
                 <field name="receipt_number"/>
                 <field name="create_uid" string="Encoded By"/>
@@ -54,6 +55,7 @@
                             <field name="applied_rate" help="Rate used for this transaction (from bill or default rate)"/>
                         </group>
                         <group string="Financial Information">
+                            <field name="amount_due" readonly="1"/>
                             <field name="amount_paid"/>
                         </group>
                     </group>
@@ -173,5 +175,26 @@
               parent="menu_kst_markets_configuration"
               action="action_market_pay_type"
               sequence="10"/>
+    
+    <!-- Utility Accounts Action (references model from kst_base) -->
+    <record id="action_utility_account_markets" model="ir.actions.act_window">
+        <field name="name">Utility Accounts</field>
+        <field name="res_model">kst.utility.account</field>
+        <field name="view_mode">kanban,tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create your first Utility Account!
+            </p>
+            <p>
+                Utility accounts group stalls under a single billing account from providers like MERALCO or Water companies.
+            </p>
+        </field>
+    </record>
+    
+    <menuitem id="menu_utility_account_markets" 
+              name="Utility Accounts" 
+              parent="menu_kst_markets_masterfiles"
+              action="action_utility_account_markets"
+              sequence="40"/>
 </odoo>
 

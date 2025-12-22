@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Extend Utility Account Form View to show stalls and bills (markets module) -->
+    <record id="view_utility_account_form_markets" model="ir.ui.view">
+        <field name="name">kst.utility.account.form.markets</field>
+        <field name="model">kst.utility.account</field>
+        <field name="inherit_id" ref="kst_base.view_utility_account_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='account_name']" position="after">
+                <field name="stall_count" readonly="1"/>
+                <field name="utility_bill_count" readonly="1"/>
+            </xpath>
+            <xpath expr="//sheet" position="inside">
+                <notebook>
+                    <page string="Associated Stalls" name="stalls">
+                        <field name="stall_ids" nolabel="1">
+                            <tree>
+                                <field name="display_name"/>
+                                <field name="market_id"/>
+                                <field name="tenant_id"/>
+                                <field name="code"/>
+                                <field name="is_active"/>
+                                <field name="electric_pay_type_id"/>
+                                <field name="water_pay_type_id"/>
+                            </tree>
+                        </field>
+                    </page>
+                    <page string="Utility Bills" name="bills">
+                        <field name="utility_bill_ids" nolabel="1">
+                            <tree>
+                                <field name="bill_date"/>
+                                <field name="period_covered_from"/>
+                                <field name="period_covered_to"/>
+                                <field name="total_consumption"/>
+                                <field name="total_bill_amount"/>
+                                <field name="derived_rate"/>
+                                <field name="transaction_count"/>
+                            </tree>
+                        </field>
+                    </page>
+                </notebook>
+            </xpath>
+        </field>
+    </record>
+    
+    <!-- Extend Utility Account Tree View to show stall count -->
+    <record id="view_utility_account_tree_markets" model="ir.ui.view">
+        <field name="name">kst.utility.account.tree.markets</field>
+        <field name="model">kst.utility.account</field>
+        <field name="inherit_id" ref="kst_base.view_utility_account_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='account_name']" position="after">
+                <field name="stall_count"/>
+                <field name="utility_bill_count"/>
+            </xpath>
+        </field>
+    </record>
+    
+    <!-- Extend Utility Account Kanban View to enable create and edit -->
+    <record id="view_utility_account_kanban_markets" model="ir.ui.view">
+        <field name="name">kst.utility.account.kanban.markets</field>
+        <field name="model">kst.utility.account</field>
+        <field name="inherit_id" ref="kst_base.view_utility_account_kanban"/>
+        <field name="arch" type="xml">
+            <xpath expr="//kanban" position="attributes">
+                <attribute name="create">true</attribute>
+                <attribute name="edit">true</attribute>
+            </xpath>
+        </field>
+    </record>
+</odoo>
+

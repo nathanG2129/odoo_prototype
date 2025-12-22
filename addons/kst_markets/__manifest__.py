@@ -30,6 +30,7 @@
         'views/market_rent_transaction_views.xml',
         'views/market_utility_transaction_views.xml',
         'views/utility_bill_views.xml',
+        'views/utility_account_views.xml',
     ],
     'demo': [
         'demo/kst_markets_demo.xml',
