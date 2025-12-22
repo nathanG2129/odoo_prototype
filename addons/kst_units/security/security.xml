@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- User Groups -->
+    <record id="kst_units_group_user" model="res.groups">
+        <field name="name">KST Units User</field>
+        <field name="category_id" ref="kst_base.module_category_kst"/>
+        <field name="implied_ids" eval="[(4, ref('kst_base.kst_base_group_user'))]"/>
+    </record>
+
+    <record id="kst_units_group_manager" model="res.groups">
+        <field name="name">KST Units Manager</field>
+        <field name="category_id" ref="kst_base.module_category_kst"/>
+        <field name="implied_ids" eval="[(4, ref('kst_units_group_user'))]"/>
+    </record>
+</odoo>
+
+

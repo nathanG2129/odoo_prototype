@@ -1,0 +1,110 @@
+<odoo>
+    <!-- Market Pay Type Tree View -->
+    <record id="view_market_pay_type_tree" model="ir.ui.view">
+        <field name="name">kst.market.pay.type.tree</field>
+        <field name="model">kst.market.pay.type</field>
+        <field name="arch" type="xml">
+            <tree string="Pay Types">
+                <field name="code"/>
+                <field name="name"/>
+                <field name="pay_type_use"/>
+                <field name="sub_group"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Market Pay Type Form View -->
+    <record id="view_market_pay_type_form" model="ir.ui.view">
+        <field name="name">kst.market.pay.type.form</field>
+        <field name="model">kst.market.pay.type</field>
+        <field name="arch" type="xml">
+            <form string="Pay Type">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="code"/>
+                            <field name="name"/>
+                        </group>
+                        <group>
+                            <field name="pay_type_use"/>
+                            <field name="sub_group"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Usage Summary">
+                            <group>
+                                <group string="Electricity Usage" attrs="{'invisible': [('pay_type_use', '=', 'water')]}">
+                                    <field name="stall_electric_count" widget="statinfo" string="Stalls"/>
+                                </group>
+                                <group string="Water Usage" attrs="{'invisible': [('pay_type_use', '=', 'electricity')]}">
+                                    <field name="stall_water_count" widget="statinfo" string="Stalls"/>
+                                </group>
+                            </group>
+                        </page>
+                        <page string="Stalls (Electricity)" attrs="{'invisible': [('pay_type_use', '=', 'water')]}">
+                            <field name="stall_electric_ids">
+                                <tree>
+                                    <field name="market_id"/>
+                                    <field name="code"/>
+                                    <field name="tenant_id"/>
+                                    <field name="rental_rate"/>
+                                    <field name="is_active"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Stalls (Water)" attrs="{'invisible': [('pay_type_use', '=', 'electricity')]}">
+                            <field name="stall_water_ids">
+                                <tree>
+                                    <field name="market_id"/>
+                                    <field name="code"/>
+                                    <field name="tenant_id"/>
+                                    <field name="rental_rate"/>
+                                    <field name="is_active"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                    <group>
+                        <group string="Audit Trail">
+                            <field name="create_uid" string="Created By" readonly="1"/>
+                            <field name="create_date" string="Created Date" readonly="1"/>
+                            <field name="write_uid" string="Modified By" readonly="1"/>
+                            <field name="write_date" string="Modified Date" readonly="1"/>
+                        </group>
+                    </group>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="activity_ids" widget="mail_activity"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <!-- Market Pay Type Search View -->
+    <record id="view_market_pay_type_search" model="ir.ui.view">
+        <field name="name">kst.market.pay.type.search</field>
+        <field name="model">kst.market.pay.type</field>
+        <field name="arch" type="xml">
+            <search string="Pay Types">
+                <field name="code"/>
+                <field name="name"/>
+                <filter name="electricity" string="Electricity" domain="[('pay_type_use', 'in', ['electricity', 'both'])]"/>
+                <filter name="water" string="Water" domain="[('pay_type_use', 'in', ['water', 'both'])]"/>
+                <group expand="0">
+                    <filter name="group_by_use" string="Pay Type Use" context="{'group_by':'pay_type_use'}"/>
+                    <filter name="group_by_subgroup" string="Sub-Group" context="{'group_by':'sub_group'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- Market Pay Type Action -->
+    <record id="action_market_pay_type" model="ir.actions.act_window">
+        <field name="name">Pay Types</field>
+        <field name="res_model">kst.market.pay.type</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>
+

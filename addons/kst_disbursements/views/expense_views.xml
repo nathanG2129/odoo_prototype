@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Expense Tree View -->
+    <record id="view_expense_tree" model="ir.ui.view">
+        <field name="name">kst.expense.tree</field>
+        <field name="model">kst.expense</field>
+        <field name="arch" type="xml">
+            <tree string="Expenses">
+                <field name="name"/>
+                <field name="category_id"/>
+                <field name="expense_type"/>
+                <field name="general_group"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Expense Form View -->
+    <record id="view_expense_form" model="ir.ui.view">
+        <field name="name">kst.expense.form</field>
+        <field name="model">kst.expense</field>
+        <field name="arch" type="xml">
+            <form string="Expense">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="category_id"/>
+                        </group>
+                        <group>
+                            <field name="expense_type"/>
+                            <field name="general_group"/>
+                        </group>
+                    </group>
+                    <group>
+                        <group string="Audit Trail">
+                            <field name="create_uid" string="Created By" readonly="1"/>
+                            <field name="create_date" string="Created Date" readonly="1"/>
+                            <field name="write_uid" string="Modified By" readonly="1"/>
+                            <field name="write_date" string="Modified Date" readonly="1"/>
+                        </group>
+                    </group>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="activity_ids" widget="mail_activity"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <!-- Expense Search View -->
+    <record id="view_expense_search" model="ir.ui.view">
+        <field name="name">kst.expense.search</field>
+        <field name="model">kst.expense</field>
+        <field name="arch" type="xml">
+            <search string="Search Expenses">
+                <field name="name"/>
+                <field name="category_id"/>
+                <field name="expense_type"/>
+                <field name="general_group"/>
+                <filter string="Category" name="group_by_category" context="{'group_by': 'category_id'}"/>
+            </search>
+        </field>
+    </record>
+
+    <!-- Expense Action -->
+    <record id="action_expense" model="ir.actions.act_window">
+        <field name="name">Expenses</field>
+        <field name="res_model">kst.expense</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>
+
+
+

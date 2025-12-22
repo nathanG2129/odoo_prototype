@@ -1,0 +1,354 @@
+erDiagram
+    %% General Models
+    Users {
+        int User_ID PK
+        string Username
+        string Full_Name
+        string Access_Group_Role
+        string Email
+        boolean isActive
+        datetime Modified
+    }
+
+    Banks {
+        int Bank_ID PK
+        string Bank_Name
+        string Account_Name
+        string Account_Number
+        int Created_By
+        datetime Created_Date
+        int Modified_By
+        datetime Modified_Date
+    }
+
+    KCode {
+        int KCode_ID PK
+        string KCode
+        int Created_By
+        datetime Created_Date
+        int Modified_By
+        datetime Modified_Date
+    }
+
+    %% Market Rentals Models
+    Markets {
+        int Market_ID PK
+        string Market_Code
+        string Market_Name
+        string Address
+        int Created_By
+        datetime Created_Date
+        int Modified_By
+        datetime Modified_Date
+    }
+
+    Tenants {
+        int Tenant_ID PK
+        string Tenant_Name
+        date Date_Started
+        date Date_End
+        int Created_By
+        datetime Created_Date
+        int Modified_By
+        datetime Modified_Date
+    }
+
+    Stall_Groups {
+        int Stall_Group_ID PK
+        string Stall_Group_Code
+        int Electric_Pay_Type_ID FK
+        int Water_Pay_Type_ID FK
+        int Created_By
+        datetime Created_Date
+        int Modified_By
+        datetime Modified_Date
+    }
+
+    Market_Pay_Types {
+        int Pay_Type_ID PK
+        string Pay_Type_Code
+        string Pay_Type_Name
+        string Pay_Type_Use
+        string Sub_Group
+        int Created_By
+        datetime Created_Date
+        int Modified_By
+        datetime Modified_Date
+    }
+
+    Stalls {
+        int Stall_ID PK
+        int Market_ID FK
+        int Tenant_ID FK
+        int Stall_Group_ID FK
+        string Stall_Code
+        decimal Rental_Rate
+        decimal Electricity_Rate
+        int Electric_Pay_Type_ID FK
+        int Water_Pay_Type_ID FK
+        string Rent_Collection_Type
+        boolean isActive
+        boolean needOR
+        string Meralco_Account_Number
+        string Electricity_Sub_Meter_Number
+        int Created_By
+        datetime Created_Date
+        int Modified_By
+        datetime Modified_Date
+    }
+
+    Market_Rent_Transactions {
+        int Transaction_ID PK
+        int Stall_ID FK
+        date Transaction_Date
+        string Payment_Status
+        decimal Rent_Paid
+        decimal COPB_Due
+        decimal COPB_Paid
+        string Receipt_Number
+        int Encoded_By
+        datetime Encoded_Date
+        int Modified_By
+        datetime Modified_Date
+    }
+
+    Market_Utilities_Transactions {
+        int Transaction_ID PK
+        int Stall_ID FK
+        int Stall_Group_ID FK
+        date Transaction_Date
+        string Payment_Status
+        string Utility_Type
+        decimal Previous_Reading
+        decimal Current_Reading
+        decimal Consumption
+        string Receipt_Number
+        decimal Amount_Paid
+        int Encoded_By
+        datetime Encoded_Date
+        int Modified_By
+        datetime Modified_Date
+    }
+
+    %% Unit Rentals Models
+    Location {
+        int Location_ID PK
+        string Location_Code
+        string Location_Description
+        string Company_Name
+        string Company_Code
+        string Company_Address
+        int Created_By
+        datetime Created_Date
+        int Modified_By
+        datetime Modified_Date
+    }
+
+    Unit_Category {
+        int Category_ID PK
+        string CategoryName
+        int Created_By
+        datetime Created_Date
+        int Modified_By
+        datetime Modified_Date
+    }
+
+    Lessors {
+        int Lessor_ID PK
+        string Lessor_Code
+        string Lessor_Name
+        int Created_By
+        datetime Created_Date
+        int Modified_By
+        datetime Modified_Date
+    }
+
+    Lessees {
+        int Lessee_ID PK
+        string Lessee_Name
+        string Lessee_Address
+        string Lessee_Contact
+        string Lessee_Email
+        int Created_By
+        datetime Created_Date
+        int Modified_By
+        datetime Modified_Date
+    }
+
+    Units {
+        int Unit_ID PK
+        int Lessor_ID FK
+        int Category_ID FK
+        int Location_ID FK
+        int Bank_ID FK
+        int KCode_ID FK
+        string Unit_Specified
+        string Full_Code
+        string Unit_Address
+        string Description
+        decimal Size
+        string SOA_Bank_Account_Number
+        int Created_By
+        datetime Created_Date
+        int Modified_By
+        datetime Modified_Date
+    }
+
+    Contracts {
+        int Contract_ID PK
+        int Unit_ID FK
+        int Lessee_ID FK
+        int Lessor_ID FK
+        string Contract_Number
+        date Period_From
+        date Period_To
+        decimal Basic_Rent
+        decimal eVAT
+        decimal Withholding_Tax
+        decimal MPTR
+        decimal Monthly_Rate
+        decimal CUSA_Rate
+        decimal Escalation_Percentage
+        int Escalation_Date_in_Months
+        string Notes
+        string Status
+        int Filed_By
+        date Filed_Date
+        int Modified_By
+        datetime Modified_Date
+    }
+
+    Unit_Rent_Transactions {
+        int Transaction_ID PK
+        int Contract_ID FK
+        int Bank_ID FK
+        string Payment_Status
+        string Payment_Category
+        string Payment_Type
+        string Payment_Reference
+        decimal AmountDeposited
+        date TransactionDate
+        string Notes
+        boolean isBounced
+        int Encoded_By
+        datetime Encoded_Date
+        int Modified_By
+        datetime Modified_Date
+    }
+
+    %% Disbursements Models
+    Expense_Category {
+        int Expense_Category_ID PK
+        string Expense_Category_Name
+        int Created_By
+        datetime Created_Date
+        int Modified_By
+        datetime Modified_Date
+    }
+
+    Expense_Masterlist {
+        int Expense_ID PK
+        int Expense_Category_ID FK
+        string Expense_Name
+        string Expense_Type
+        string Expense_General_Group
+        int Created_By
+        datetime Created_Date
+        int Modified_By
+        datetime Modified_Date
+    }
+
+    Payee {
+        int Payee_ID PK
+        string Payee_Name
+        string Payee_Address
+        string Payee_TIN
+        int Created_By
+        datetime Created_Date
+        int Modified_By
+        datetime Modified_Date
+    }
+
+    Voucher_Prefix {
+        int Voucher_Prefix_ID PK
+        string Voucher_Prefix_Code
+        string Voucher_Prefix_Name
+        string Voucher_Prefix_Address
+        int Created_By
+        datetime Created_Date
+        int Modified_By
+        datetime Modified_Date
+    }
+
+    Voucher_Header {
+        int Voucher_ID PK
+        int Voucher_Prefix_ID FK
+        int Expense_ID FK
+        int Payee_ID FK
+        int Bank_ID FK
+        int KCode_ID FK
+        string Voucher_Number
+        string Voucher_Code
+        date Voucher_Date
+        string Check_Name
+        date Check_Date
+        string Check_Number
+        decimal Check_Amount
+        string Particulars
+        string Compute
+        string Remarks
+        boolean isPosted
+        date Period_Covered_From
+        date Period_Covered_To
+        int Created_By
+        datetime Created_Date
+        int Modified_By
+        datetime Modified_Date
+    }
+
+    Voucher_Details {
+        int Voucher_Detail_ID PK
+        int Voucher_ID FK
+        string Account_Number
+        string Account_Name
+        decimal BillDue
+        decimal PayDue
+        decimal Consumption
+        string Remarks
+        date Period_Covered_From
+        date Period_Covered_To
+    }
+
+    %% Market Rentals Relationships
+    Markets ||--o{ Stalls : "has"
+    Tenants ||--o{ Stalls : "leases"
+    Stall_Groups ||--o{ Stalls : "groups"
+    Market_Pay_Types ||--o{ Stalls : "electric_pay_type"
+    Market_Pay_Types ||--o{ Stalls : "water_pay_type"
+    Market_Pay_Types ||--o{ Stall_Groups : "electric_pay_type"
+    Market_Pay_Types ||--o{ Stall_Groups : "water_pay_type"
+    Stalls ||--o{ Market_Rent_Transactions : "generates"
+    Stalls ||--o{ Market_Utilities_Transactions : "generates"
+    Stall_Groups ||--o{ Market_Utilities_Transactions : "groups"
+
+    %% Unit Rentals Relationships
+    Lessors ||--o{ Units : "owns"
+    Unit_Category ||--o{ Units : "categorizes"
+    Location ||--o{ Units : "locates"
+    Banks ||--o{ Units : "bank_account"
+    KCode ||--o{ Units : "identifies"
+    Units ||--o{ Contracts : "has"
+    Lessees ||--o{ Contracts : "leases"
+    Lessors ||--o{ Contracts : "contracts_with"
+    Contracts ||--o{ Unit_Rent_Transactions : "generates"
+    Banks ||--o{ Unit_Rent_Transactions : "bank_account"
+
+    %% Disbursements Relationships
+    Expense_Category ||--o{ Expense_Masterlist : "categorizes"
+    Voucher_Prefix ||--o{ Voucher_Header : "prefixes"
+    Expense_Masterlist ||--o{ Voucher_Header : "expense"
+    Payee ||--o{ Voucher_Header : "payee"
+    Banks ||--o{ Voucher_Header : "bank_account"
+    KCode ||--o{ Voucher_Header : "identifies"
+    Voucher_Header ||--o{ Voucher_Details : "has"
+

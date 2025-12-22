@@ -1,0 +1,165 @@
+<odoo>
+    <!-- Unit Rent Transaction Tree View -->
+    <record id="view_unit_rent_transaction_tree" model="ir.ui.view">
+        <field name="name">kst.unit.rent.transaction.tree</field>
+        <field name="model">kst.unit.rent.transaction</field>
+        <field name="arch" type="xml">
+            <tree string="Unit Rent Collections">
+                <field name="transaction_date"/>
+                <field name="contract_id"/>
+                <field name="unit_id"/>
+                <field name="lessee_id"/>
+                <field name="payment_status"/>
+                <field name="payment_category"/>
+                <field name="amount_deposited" sum="Total Amount"/>
+                <field name="is_bounced"/>
+                <field name="create_uid" string="Created By"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Unit Rent Transaction Form View -->
+    <record id="view_unit_rent_transaction_form" model="ir.ui.view">
+        <field name="name">kst.unit.rent.transaction.form</field>
+        <field name="model">kst.unit.rent.transaction</field>
+        <field name="arch" type="xml">
+            <form string="Unit Rent Collection">
+                <sheet>
+                    <group>
+                        <group string="Transaction Details">
+                            <field name="contract_id"/>
+                            <field name="unit_id"/>
+                            <field name="lessee_id"/>
+                            <field name="lessor_id"/>
+                            <field name="transaction_date"/>
+                            <field name="payment_status"/>
+                        </group>
+                        <group string="Payment Information">
+                            <field name="payment_category"/>
+                            <field name="payment_type"/>
+                            <field name="payment_reference"/>
+                            <field name="bank_id"/>
+                            <field name="is_bounced"/>
+                        </group>
+                    </group>
+                    <group>
+                        <group string="Financial Information">
+                            <field name="amount_deposited"/>
+                        </group>
+                    </group>
+                    <group>
+                        <field name="notes" placeholder="Additional transaction notes..."/>
+                    </group>
+                    <group>
+                        <group string="Audit Trail">
+                            <field name="create_uid" string="Created By" readonly="1"/>
+                            <field name="create_date" string="Created Date" readonly="1"/>
+                            <field name="write_uid" string="Modified By" readonly="1"/>
+                            <field name="write_date" string="Modified Date" readonly="1"/>
+                        </group>
+                    </group>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="activity_ids" widget="mail_activity"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <!-- Unit Rent Transaction Search View -->
+    <record id="view_unit_rent_transaction_search" model="ir.ui.view">
+        <field name="name">kst.unit.rent.transaction.search</field>
+        <field name="model">kst.unit.rent.transaction</field>
+        <field name="arch" type="xml">
+            <search string="Unit Rent Collections">
+                <field name="contract_id"/>
+                <field name="unit_id"/>
+                <field name="lessee_id"/>
+                <field name="payment_category"/>
+                <filter name="pending" string="Pending" domain="[('payment_status', '=', 'pending')]"/>
+                <filter name="paid" string="Paid" domain="[('payment_status', '=', 'paid')]"/>
+                <filter name="partial" string="Partial" domain="[('payment_status', '=', 'partial')]"/>
+                <filter name="cancelled" string="Cancelled" domain="[('payment_status', '=', 'cancelled')]"/>
+                <filter name="bounced" string="Bounced" domain="[('is_bounced', '=', True)]"/>
+                <group expand="0">
+                    <filter name="group_by_contract" string="Contract" context="{'group_by':'contract_id'}"/>
+                    <filter name="group_by_unit" string="Unit" context="{'group_by':'unit_id'}"/>
+                    <filter name="group_by_lessee" string="Lessee" context="{'group_by':'lessee_id'}"/>
+                    <filter name="group_by_status" string="Payment Status" context="{'group_by':'payment_status'}"/>
+                    <filter name="group_by_date" string="Transaction Date" context="{'group_by':'transaction_date'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- Unit Rent Transaction Action -->
+    <record id="action_unit_rent_transaction" model="ir.actions.act_window">
+        <field name="name">Unit Rent Collections</field>
+        <field name="res_model">kst.unit.rent.transaction</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Menu Structure -->
+    <!-- Root Menu -->
+    <menuitem id="menu_kst_units_root" 
+              name="KST Units" 
+              sequence="15"/>
+
+    <!-- Transactions Menu -->
+    <menuitem id="menu_kst_units_transactions" 
+              name="Transactions" 
+              parent="menu_kst_units_root"
+              sequence="10"/>
+    
+    <menuitem id="menu_unit_rent_transaction" 
+              name="Unit Rent Collections" 
+              parent="menu_kst_units_transactions"
+              action="action_unit_rent_transaction"
+              sequence="10"/>
+
+    <!-- Masterfiles Menu -->
+    <menuitem id="menu_kst_units_masterfiles" 
+              name="Masterfiles" 
+              parent="menu_kst_units_root"
+              sequence="20"/>
+    
+    <menuitem id="menu_unit" 
+              name="Units" 
+              parent="menu_kst_units_masterfiles"
+              action="action_unit"
+              sequence="10"/>
+    
+    <menuitem id="menu_contract" 
+              name="Contracts" 
+              parent="menu_kst_units_masterfiles"
+              action="action_contract"
+              sequence="20"/>
+    
+    <menuitem id="menu_lessee" 
+              name="Lessees" 
+              parent="menu_kst_units_masterfiles"
+              action="action_lessee"
+              sequence="30"/>
+    
+    <menuitem id="menu_lessor" 
+              name="Lessors" 
+              parent="menu_kst_units_masterfiles"
+              action="action_lessor"
+              sequence="40"/>
+    
+    <menuitem id="menu_location" 
+              name="Locations" 
+              parent="menu_kst_units_masterfiles"
+              action="action_location"
+              sequence="50"/>
+    
+    <menuitem id="menu_unit_category" 
+              name="Unit Categories" 
+              parent="menu_kst_units_masterfiles"
+              action="action_unit_category"
+              sequence="60"/>
+</odoo>
+
+

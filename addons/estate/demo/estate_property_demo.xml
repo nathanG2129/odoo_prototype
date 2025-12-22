@@ -1,0 +1,104 @@
+<?xml version="1.0"?>
+<odoo>
+    <record id="estate_property_1" model="estate.property">
+        <field name="name">Big Villa</field>
+        <field name="state">new</field>
+        <field name="description">A nice and big villa</field>
+        <field name="postcode">12345</field>
+        <field name="date_availability">2020-02-02</field>
+        <field name="expected_price">1600000</field>
+        <field name="bedrooms">6</field>
+        <field name="living_area">100</field>
+        <field name="facades">4</field>
+        <field name="garage">True</field>
+        <field name="garden">True</field>
+        <field name="garden_area">100000</field>
+        <field name="garden_orientation">south</field>
+        <field name="property_type_id" ref="estate_property_type_residential"/>
+    </record>
+
+    <record id="estate_property_2" model="estate.property">
+        <field name="name">Trailer home</field>
+        <field name="state">canceled</field>
+        <field name="description">Home in a trailer park</field>
+        <field name="postcode">54321</field>
+        <field name="date_availability">1970-01-01</field>
+        <field name="expected_price">100000</field>
+        <field name="bedrooms">1</field>
+        <field name="living_area">10</field>
+        <field name="facades">4</field>
+        <field name="garage">False</field>
+        <field name="garden">False</field>
+        <field name="property_type_id" ref="estate_property_type_residential"/>
+    </record>
+
+    <!-- Demo Offers -->
+    <record id="estate_property_offer_1" model="estate.property.offer">
+        <field name="property_id" ref="estate_property_1"/>
+        <field name="partner_id" ref="base.res_partner_1"/><!-- Azure Interior -->
+        <field name="price">10000</field>
+        <field name="validity">14</field>
+        <field name="create_date" eval="(DateTime.now() - timedelta(days=10)).strftime('%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="estate_property_offer_2" model="estate.property.offer">
+        <field name="property_id" ref="estate_property_1"/>
+        <field name="partner_id" ref="base.res_partner_1"/><!-- Azure Interior -->
+        <field name="price">1500000</field>
+        <field name="validity">14</field>
+        <field name="create_date" eval="(DateTime.now() - timedelta(days=5)).strftime('%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="estate_property_offer_3" model="estate.property.offer">
+        <field name="property_id" ref="estate_property_1"/>
+        <field name="partner_id" ref="base.res_partner_2"/><!-- Deco Addict -->
+        <field name="price">1500001</field>
+        <field name="validity">14</field>
+        <field name="create_date" eval="(DateTime.now() - timedelta(days=1)).strftime('%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <!-- Accept the best offer (Deco Addict) and refuse the others -->
+    <function model="estate.property.offer" name="action_accept">
+        <value eval="[ref('estate_property_offer_3')]"/>
+    </function>
+
+    <function model="estate.property.offer" name="action_refuse">
+        <value eval="[ref('estate_property_offer_1'), ref('estate_property_offer_2')]"/>
+    </function>
+
+    <!-- Property with offers created directly inside the One2many field -->
+    <!-- noupdate="1" prevents recreation on upgrades, avoiding validation errors -->
+    <data noupdate="1">
+        <record id="estate_property_3" model="estate.property">
+            <field name="name">Cozy Apartment</field>
+            <field name="description">Modern apartment in the city center</field>
+            <field name="postcode">67890</field>
+            <field name="date_availability" eval="(DateTime.now() + timedelta(days=30)).strftime('%Y-%m-%d')"/>
+            <field name="expected_price">500000</field>
+            <field name="bedrooms">3</field>
+            <field name="living_area">80</field>
+            <field name="facades">2</field>
+            <field name="garage">True</field>
+            <field name="garden">False</field>
+            <field name="property_type_id" ref="estate_property_type_residential"/>
+            <!-- Create offers directly in the offer_ids One2many field using tuple commands -->
+            <field name="offer_ids" eval="[
+                (0, 0, {
+                    'price': 450000,
+                    'partner_id': ref('base.res_partner_1'),
+                    'validity': 7,
+                }),
+                (0, 0, {
+                    'price': 480000,
+                    'partner_id': ref('base.res_partner_2'),
+                    'validity': 10,
+                }),
+                (0, 0, {
+                    'price': 490000,
+                    'partner_id': ref('base.res_partner_3'),
+                    'validity': 14,
+                }),
+            ]"/>
+        </record>
+    </data>
+</odoo>

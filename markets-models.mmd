@@ -1,0 +1,112 @@
+erDiagram
+    Markets {
+        int Market_ID PK
+        string Market_Code
+        string Market_Name
+        string Address
+        int Created_By
+        datetime Created_Date
+        int Modified_By
+        datetime Modified_Date
+    }
+
+    Tenants {
+        int Tenant_ID PK
+        string Tenant_Name
+        date Date_Started
+        date Date_End
+        int Created_By
+        datetime Created_Date
+        int Modified_By
+        datetime Modified_Date
+    }
+
+    Stall_Groups {
+        int Stall_Group_ID PK
+        string Stall_Group_Code
+        int Electric_Pay_Type_ID FK
+        int Water_Pay_Type_ID FK
+        int Created_By
+        datetime Created_Date
+        int Modified_By
+        datetime Modified_Date
+    }
+
+    Market_Pay_Types {
+        int Pay_Type_ID PK
+        string Pay_Type_Code
+        string Pay_Type_Name
+        string Pay_Type_Use
+        string Sub_Group
+        int Created_By
+        datetime Created_Date
+        int Modified_By
+        datetime Modified_Date
+    }
+
+    Stalls {
+        int Stall_ID PK
+        int Market_ID FK
+        int Tenant_ID FK
+        int Stall_Group_ID FK
+        string Stall_Code
+        decimal Rental_Rate
+        decimal Electricity_Rate
+        int Electric_Pay_Type_ID FK
+        int Water_Pay_Type_ID FK
+        string Rent_Collection_Type
+        boolean isActive
+        boolean needOR
+        string Meralco_Account_Number
+        string Electricity_Sub_Meter_Number
+        int Created_By
+        datetime Created_Date
+        int Modified_By
+        datetime Modified_Date
+    }
+
+    Market_Rent_Transactions {
+        int Transaction_ID PK
+        int Stall_ID FK
+        date Transaction_Date
+        string Payment_Status
+        decimal Rent_Paid
+        decimal COPB_Due
+        decimal COPB_Paid
+        string Receipt_Number
+        int Encoded_By
+        datetime Encoded_Date
+        int Modified_By
+        datetime Modified_Date
+    }
+
+    Market_Utilities_Transactions {
+        int Transaction_ID PK
+        int Stall_ID FK
+        int Stall_Group_ID FK
+        date Transaction_Date
+        string Payment_Status
+        string Utility_Type
+        decimal Previous_Reading
+        decimal Current_Reading
+        decimal Consumption
+        string Receipt_Number
+        decimal Amount_Paid
+        int Encoded_By
+        datetime Encoded_Date
+        int Modified_By
+        datetime Modified_Date
+    }
+
+    %% Relationships
+    Markets ||--o{ Stalls : "has"
+    Tenants ||--o{ Stalls : "leases"
+    Stall_Groups ||--o{ Stalls : "groups"
+    Market_Pay_Types ||--o{ Stalls : "electric_pay_type"
+    Market_Pay_Types ||--o{ Stalls : "water_pay_type"
+    Market_Pay_Types ||--o{ Stall_Groups : "electric_pay_type"
+    Market_Pay_Types ||--o{ Stall_Groups : "water_pay_type"
+    Stalls ||--o{ Market_Rent_Transactions : "generates"
+    Stalls ||--o{ Market_Utilities_Transactions : "generates"
+    Stall_Groups ||--o{ Market_Utilities_Transactions : "groups"
+

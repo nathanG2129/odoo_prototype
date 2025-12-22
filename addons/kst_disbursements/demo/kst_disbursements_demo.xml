@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <!-- Demo Expense Categories -->
+        <record id="expense_category_opex" model="kst.expense.category">
+            <field name="name">OPEX (Operational Expenses)</field>
+        </record>
+        <record id="expense_category_capex" model="kst.expense.category">
+            <field name="name">CAPEX (Capital Expenses)</field>
+        </record>
+        <record id="expense_category_administrative" model="kst.expense.category">
+            <field name="name">Administrative</field>
+        </record>
+
+        <!-- Demo Expenses -->
+        <record id="expense_electricity" model="kst.expense">
+            <field name="category_id" ref="expense_category_opex"/>
+            <field name="name">Electricity Bill</field>
+            <field name="expense_type">Utilities</field>
+            <field name="general_group">Operations</field>
+        </record>
+        <record id="expense_water" model="kst.expense">
+            <field name="category_id" ref="expense_category_opex"/>
+            <field name="name">Water Bill</field>
+            <field name="expense_type">Utilities</field>
+            <field name="general_group">Operations</field>
+        </record>
+        <record id="expense_rent" model="kst.expense">
+            <field name="category_id" ref="expense_category_opex"/>
+            <field name="name">Office Rent</field>
+            <field name="expense_type">Rent</field>
+            <field name="general_group">Operations</field>
+        </record>
+        <record id="expense_maintenance" model="kst.expense">
+            <field name="category_id" ref="expense_category_opex"/>
+            <field name="name">Maintenance and Repairs</field>
+            <field name="expense_type">Maintenance</field>
+            <field name="general_group">Operations</field>
+        </record>
+        <record id="expense_supplies" model="kst.expense">
+            <field name="category_id" ref="expense_category_administrative"/>
+            <field name="name">Office Supplies</field>
+            <field name="expense_type">Supplies</field>
+            <field name="general_group">Administration</field>
+        </record>
+        <record id="expense_equipment" model="kst.expense">
+            <field name="category_id" ref="expense_category_capex"/>
+            <field name="name">Equipment Purchase</field>
+            <field name="expense_type">Equipment</field>
+            <field name="general_group">Capital</field>
+        </record>
+        <record id="expense_renovation" model="kst.expense">
+            <field name="category_id" ref="expense_category_capex"/>
+            <field name="name">Building Renovation</field>
+            <field name="expense_type">Construction</field>
+            <field name="general_group">Capital</field>
+        </record>
+
+        <!-- Demo Payees -->
+        <record id="payee_meralco" model="kst.payee">
+            <field name="name">Manila Electric Company (MERALCO)</field>
+            <field name="address">Lopez Building, Meralco Center, Ortigas Avenue, Pasig City</field>
+            <field name="tin">000-390-189-000</field>
+        </record>
+        <record id="payee_maynilad" model="kst.payee">
+            <field name="name">Maynilad Water Services</field>
+            <field name="address">MWSS Compound, 489 Katipunan Road, Balara, Quezon City</field>
+            <field name="tin">005-761-534-000</field>
+        </record>
+        <record id="payee_ace_hardware" model="kst.payee">
+            <field name="name">Ace Hardware Philippines</field>
+            <field name="address">Ace Hardware Building, E. Rodriguez Jr. Avenue, Quezon City</field>
+            <field name="tin">007-123-456-000</field>
+        </record>
+        <record id="payee_sm_office" model="kst.payee">
+            <field name="name">SM Office Supplies</field>
+            <field name="address">SM Megamall, EDSA corner J. Vargas Avenue, Mandaluyong City</field>
+            <field name="tin">008-234-567-000</field>
+        </record>
+
+        <!-- Demo Voucher Prefixes -->
+        <record id="voucher_prefix_bbhcv" model="kst.voucher.prefix">
+            <field name="code">BBHCV</field>
+            <field name="name">Bantay Bata House Check Voucher</field>
+            <field name="address">Bantay Bata Complex, Quezon City</field>
+        </record>
+        <record id="voucher_prefix_kstcv" model="kst.voucher.prefix">
+            <field name="code">KSTCV</field>
+            <field name="name">KST Main Office Check Voucher</field>
+            <field name="address">KST Building, Makati City</field>
+        </record>
+        <record id="voucher_prefix_ktccv" model="kst.voucher.prefix">
+            <field name="code">KTCCV</field>
+            <field name="name">KTC Market Check Voucher</field>
+            <field name="address">KTC Market Complex, Manila</field>
+        </record>
+
+        <!-- Demo Voucher Headers with Details -->
+        <record id="voucher_header_001" model="kst.voucher.header">
+            <field name="prefix_id" ref="voucher_prefix_bbhcv"/>
+            <field name="expense_id" ref="expense_electricity"/>
+            <field name="payee_id" ref="payee_meralco"/>
+            <field name="voucher_number">006350</field>
+            <field name="voucher_date">2024-11-15</field>
+            <field name="check_name">BDO Check</field>
+            <field name="check_date">2024-11-15</field>
+            <field name="check_number">123456</field>
+            <field name="check_amount">15250.50</field>
+            <field name="particulars">Payment for electricity consumption for November 2024</field>
+            <field name="compute">15250.50</field>
+            <field name="is_posted">True</field>
+            <field name="period_from">2024-10-01</field>
+            <field name="period_to">2024-10-31</field>
+        </record>
+
+        <record id="voucher_detail_001_01" model="kst.voucher.detail">
+            <field name="voucher_id" ref="voucher_header_001"/>
+            <field name="account_number">1234-5678-90</field>
+            <field name="account_name">MERALCO Main Office</field>
+            <field name="bill_due">15250.50</field>
+            <field name="pay_due">15250.50</field>
+            <field name="consumption">1250.5</field>
+            <field name="remarks">Main office consumption</field>
+            <field name="period_from">2024-10-01</field>
+            <field name="period_to">2024-10-31</field>
+        </record>
+
+        <record id="voucher_header_002" model="kst.voucher.header">
+            <field name="prefix_id" ref="voucher_prefix_kstcv"/>
+            <field name="expense_id" ref="expense_water"/>
+            <field name="payee_id" ref="payee_maynilad"/>
+            <field name="voucher_number">000125</field>
+            <field name="voucher_date">2024-11-20</field>
+            <field name="check_name">BPI Check</field>
+            <field name="check_date">2024-11-20</field>
+            <field name="check_number">789012</field>
+            <field name="check_amount">3450.00</field>
+            <field name="particulars">Water bill payment for November 2024</field>
+            <field name="compute">3450.00</field>
+            <field name="is_posted">True</field>
+            <field name="period_from">2024-10-01</field>
+            <field name="period_to">2024-10-31</field>
+        </record>
+
+        <record id="voucher_detail_002_01" model="kst.voucher.detail">
+            <field name="voucher_id" ref="voucher_header_002"/>
+            <field name="account_number">WATER-001</field>
+            <field name="account_name">Maynilad KST Main</field>
+            <field name="bill_due">3450.00</field>
+            <field name="pay_due">3450.00</field>
+            <field name="consumption">85.5</field>
+            <field name="remarks">Main office water usage</field>
+            <field name="period_from">2024-10-01</field>
+            <field name="period_to">2024-10-31</field>
+        </record>
+
+        <record id="voucher_header_003" model="kst.voucher.header">
+            <field name="prefix_id" ref="voucher_prefix_ktccv"/>
+            <field name="expense_id" ref="expense_maintenance"/>
+            <field name="payee_id" ref="payee_ace_hardware"/>
+            <field name="voucher_number">002450</field>
+            <field name="voucher_date">2024-11-25</field>
+            <field name="check_name">Metrobank Check</field>
+            <field name="check_date">2024-11-25</field>
+            <field name="check_number">345678</field>
+            <field name="check_amount">8750.00</field>
+            <field name="particulars">Hardware supplies for market repairs</field>
+            <field name="compute">8750.00</field>
+            <field name="is_posted">False</field>
+        </record>
+
+        <record id="voucher_detail_003_01" model="kst.voucher.detail">
+            <field name="voucher_id" ref="voucher_header_003"/>
+            <field name="account_number">N/A</field>
+            <field name="account_name">Maintenance Supplies</field>
+            <field name="bill_due">8750.00</field>
+            <field name="pay_due">8750.00</field>
+            <field name="remarks">Cement, paint, electrical supplies</field>
+        </record>
+
+        <record id="voucher_header_004" model="kst.voucher.header">
+            <field name="prefix_id" ref="voucher_prefix_kstcv"/>
+            <field name="expense_id" ref="expense_supplies"/>
+            <field name="payee_id" ref="payee_sm_office"/>
+            <field name="voucher_number">000126</field>
+            <field name="voucher_date">2024-12-01</field>
+            <field name="check_name">BDO Check</field>
+            <field name="check_date">2024-12-01</field>
+            <field name="check_number">901234</field>
+            <field name="check_amount">2500.00</field>
+            <field name="particulars">Monthly office supplies replenishment</field>
+            <field name="compute">2500.00</field>
+            <field name="is_posted">False</field>
+        </record>
+
+        <record id="voucher_detail_004_01" model="kst.voucher.detail">
+            <field name="voucher_id" ref="voucher_header_004"/>
+            <field name="account_number">N/A</field>
+            <field name="account_name">Office Supplies</field>
+            <field name="bill_due">2500.00</field>
+            <field name="pay_due">2500.00</field>
+            <field name="remarks">Paper, pens, folders, printer ink</field>
+        </record>
+
+        <record id="voucher_header_005" model="kst.voucher.header">
+            <field name="prefix_id" ref="voucher_prefix_bbhcv"/>
+            <field name="expense_id" ref="expense_electricity"/>
+            <field name="payee_id" ref="payee_meralco"/>
+            <field name="voucher_number">006351</field>
+            <field name="voucher_date">2024-12-05</field>
+            <field name="check_name">BPI Check</field>
+            <field name="check_date">2024-12-05</field>
+            <field name="check_number">567890</field>
+            <field name="check_amount">16780.25</field>
+            <field name="particulars">December 2024 electricity payment</field>
+            <field name="compute">16780.25</field>
+            <field name="is_posted">False</field>
+            <field name="period_from">2024-11-05</field>
+            <field name="period_to">2024-12-05</field>
+        </record>
+
+        <record id="voucher_detail_005_01" model="kst.voucher.detail">
+            <field name="voucher_id" ref="voucher_header_005"/>
+            <field name="account_number">1234-5678-90</field>
+            <field name="account_name">MERALCO Main Office</field>
+            <field name="bill_due">16780.25</field>
+            <field name="pay_due">16780.25</field>
+            <field name="consumption">1380.75</field>
+            <field name="remarks">December consumption - higher due to holiday operations</field>
+            <field name="period_from">2024-11-05</field>
+            <field name="period_to">2024-12-05</field>
+        </record>
+    </data>
+</odoo>
+

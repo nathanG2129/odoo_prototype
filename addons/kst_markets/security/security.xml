@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- KST Markets Category -->
+    <record id="module_category_kst" model="ir.module.category">
+        <field name="name">KST</field>
+        <field name="description">KST Statistics Modules</field>
+        <field name="sequence">100</field>
+    </record>
+
+    <!-- KST Markets User Group -->
+    <record id="kst_markets_group_user" model="res.groups">
+        <field name="name">KST Markets / User</field>
+        <field name="category_id" ref="module_category_kst"/>
+        <field name="comment">Users can view and create market transactions</field>
+    </record>
+
+    <!-- KST Markets Manager Group -->
+    <record id="kst_markets_group_manager" model="res.groups">
+        <field name="name">KST Markets / Manager</field>
+        <field name="category_id" ref="module_category_kst"/>
+        <field name="implied_ids" eval="[(4, ref('kst_markets_group_user'))]"/>
+        <field name="comment">Managers have full access to all markets data including masterfiles</field>
+    </record>
+</odoo>
+

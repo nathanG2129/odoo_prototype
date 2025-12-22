@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Voucher Prefix Tree View -->
+    <record id="view_voucher_prefix_tree" model="ir.ui.view">
+        <field name="name">kst.voucher.prefix.tree</field>
+        <field name="model">kst.voucher.prefix</field>
+        <field name="arch" type="xml">
+            <tree string="Voucher Prefixes">
+                <field name="code"/>
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Voucher Prefix Form View -->
+    <record id="view_voucher_prefix_form" model="ir.ui.view">
+        <field name="name">kst.voucher.prefix.form</field>
+        <field name="model">kst.voucher.prefix</field>
+        <field name="arch" type="xml">
+            <form string="Voucher Prefix">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="code"/>
+                            <field name="name"/>
+                        </group>
+                        <group string="Audit Trail">
+                            <field name="create_uid" string="Created By" readonly="1"/>
+                            <field name="create_date" string="Created Date" readonly="1"/>
+                            <field name="write_uid" string="Modified By" readonly="1"/>
+                            <field name="write_date" string="Modified Date" readonly="1"/>
+                        </group>
+                    </group>
+                    <group>
+                        <field name="address" placeholder="Enter company address..."/>
+                    </group>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="activity_ids" widget="mail_activity"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <!-- Voucher Prefix Search View -->
+    <record id="view_voucher_prefix_search" model="ir.ui.view">
+        <field name="name">kst.voucher.prefix.search</field>
+        <field name="model">kst.voucher.prefix</field>
+        <field name="arch" type="xml">
+            <search string="Search Voucher Prefixes">
+                <field name="code"/>
+                <field name="name"/>
+            </search>
+        </field>
+    </record>
+
+    <!-- Voucher Prefix Action -->
+    <record id="action_voucher_prefix" model="ir.actions.act_window">
+        <field name="name">Voucher Prefixes</field>
+        <field name="res_model">kst.voucher.prefix</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>
+
+
+

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Demo Data for KST Base Module -->
+    
+    <!-- Banks -->
+    <record id="bank_bdo" model="kst.bank">
+        <field name="bank_name">BDO</field>
+        <field name="account_name">KST Operations Account</field>
+        <field name="account_number">1234567890</field>
+    </record>
+
+    <record id="bank_bpi" model="kst.bank">
+        <field name="bank_name">BPI</field>
+        <field name="account_name">KST Collection Account</field>
+        <field name="account_number">9876543210</field>
+    </record>
+
+    <record id="bank_metrobank" model="kst.bank">
+        <field name="bank_name">Metrobank</field>
+        <field name="account_name">KST Payroll Account</field>
+        <field name="account_number">5555666677</field>
+    </record>
+
+    <!-- KCodes -->
+    <record id="kcode_ret" model="kst.kcode">
+        <field name="code">RET</field>
+    </record>
+
+    <record id="kcode_bgc" model="kst.kcode">
+        <field name="code">BGC</field>
+    </record>
+
+    <record id="kcode_bbh" model="kst.kcode">
+        <field name="code">BBH</field>
+    </record>
+
+    <record id="kcode_ktc" model="kst.kcode">
+        <field name="code">KTC</field>
+    </record>
+
+    <!-- Utility Accounts -->
+    <record id="utility_account_meralco_001" model="kst.utility.account">
+        <field name="utility_account_number">C0993194020</field>
+        <field name="utility_type">electricity</field>
+        <field name="account_name">KST BBH Cluster</field>
+    </record>
+
+    <record id="utility_account_meralco_002" model="kst.utility.account">
+        <field name="utility_account_number">C1234567890</field>
+        <field name="utility_type">electricity</field>
+        <field name="account_name">KST RET Main</field>
+    </record>
+
+    <record id="utility_account_water_001" model="kst.utility.account">
+        <field name="utility_account_number">W9876543210</field>
+        <field name="utility_type">water</field>
+        <field name="account_name">KST BBH Water</field>
+    </record>
+
+    <record id="utility_account_water_002" model="kst.utility.account">
+        <field name="utility_account_number">W5555666677</field>
+        <field name="utility_type">water</field>
+        <field name="account_name">KST RET Water</field>
+    </record>
+</odoo>
+
+
+

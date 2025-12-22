@@ -1,0 +1,87 @@
+<odoo>
+    <!-- Location Tree View -->
+    <record id="view_location_tree" model="ir.ui.view">
+        <field name="name">kst.location.tree</field>
+        <field name="model">kst.location</field>
+        <field name="arch" type="xml">
+            <tree string="Locations">
+                <field name="code"/>
+                <field name="description"/>
+                <field name="company_name"/>
+                <field name="unit_count"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Location Form View -->
+    <record id="view_location_form" model="ir.ui.view">
+        <field name="name">kst.location.form</field>
+        <field name="model">kst.location</field>
+        <field name="arch" type="xml">
+            <form string="Location">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="code"/>
+                            <field name="description"/>
+                            <field name="company_name"/>
+                        </group>
+                        <group>
+                            <field name="company_code"/>
+                            <field name="unit_count"/>
+                        </group>
+                    </group>
+                    <group>
+                        <field name="company_address" placeholder="Enter company address..."/>
+                    </group>
+                    <notebook>
+                        <page string="Units">
+                            <field name="unit_ids">
+                                <tree>
+                                    <field name="full_code"/>
+                                    <field name="lessor_id"/>
+                                    <field name="category_id"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                    <group>
+                        <group string="Audit Trail">
+                            <field name="create_uid" string="Created By" readonly="1"/>
+                            <field name="create_date" string="Created Date" readonly="1"/>
+                            <field name="write_uid" string="Modified By" readonly="1"/>
+                            <field name="write_date" string="Modified Date" readonly="1"/>
+                        </group>
+                    </group>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="activity_ids" widget="mail_activity"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <!-- Location Search View -->
+    <record id="view_location_search" model="ir.ui.view">
+        <field name="name">kst.location.search</field>
+        <field name="model">kst.location</field>
+        <field name="arch" type="xml">
+            <search string="Locations">
+                <field name="code"/>
+                <field name="description"/>
+                <field name="company_name"/>
+            </search>
+        </field>
+    </record>
+
+    <!-- Location Action -->
+    <record id="action_location" model="ir.actions.act_window">
+        <field name="name">Locations</field>
+        <field name="res_model">kst.location</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>
+
+

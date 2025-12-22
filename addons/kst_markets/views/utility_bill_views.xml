@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Tree View -->
+    <record id="view_utility_bill_tree" model="ir.ui.view">
+        <field name="name">kst.utility.bill.tree</field>
+        <field name="model">kst.utility.bill</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="bill_date"/>
+                <field name="utility_account_id"/>
+                <field name="utility_type"/>
+                <field name="period_covered_from"/>
+                <field name="period_covered_to"/>
+                <field name="total_consumption"/>
+                <field name="total_bill_amount"/>
+                <field name="derived_rate"/>
+                <field name="due_date"/>
+                <field name="transaction_count"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Form View -->
+    <record id="view_utility_bill_form" model="ir.ui.view">
+        <field name="name">kst.utility.bill.form</field>
+        <field name="model">kst.utility.bill</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="action_generate_transactions" type="object" string="Generate Transactions" 
+                            class="oe_highlight"
+                            confirm="This will generate transactions for all stalls assigned to this utility account. Existing transactions will be skipped. Continue?"
+                            help="Automatically generate utility transactions for all stalls assigned to this utility account based on their payment frequencies (daily/weekly/monthly)"/>
+                </header>
+                <sheet>
+                    <group>
+                        <group string="Utility Account">
+                            <field name="utility_account_id"/>
+                            <field name="utility_account_number" readonly="1"/>
+                            <field name="utility_type" readonly="1"/>
+                        </group>
+                        <group string="Bill Information">
+                            <field name="bill_date"/>
+                            <field name="due_date"/>
+                        </group>
+                    </group>
+                    <group string="Billing Period">
+                        <group>
+                            <field name="period_covered_from"/>
+                            <field name="period_covered_to"/>
+                        </group>
+                        <group>
+                            <!-- Empty group for layout -->
+                        </group>
+                    </group>
+                    <group string="Billing Details">
+                        <group>
+                            <field name="total_consumption"/>
+                            <field name="total_bill_amount"/>
+                        </group>
+                        <group>
+                            <field name="derived_rate" readonly="1"/>
+                            <field name="transaction_count" readonly="1"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Utility Transactions" name="transactions">
+                            <field name="transaction_ids" nolabel="1">
+                                <tree>
+                                    <field name="transaction_date"/>
+                                    <field name="stall_id"/>
+                                    <field name="market_id"/>
+                                    <field name="tenant_id"/>
+                                    <field name="utility_type"/>
+                                    <field name="payment_status"/>
+                                    <field name="previous_reading"/>
+                                    <field name="current_reading"/>
+                                    <field name="consumption" sum="Total Consumption"/>
+                                    <field name="applied_rate"/>
+                                    <field name="amount_paid" sum="Total Amount"/>
+                                    <field name="receipt_number"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                    <group string="Audit Information">
+                        <group>
+                            <field name="create_uid" string="Created By" readonly="1"/>
+                            <field name="create_date" string="Created Date" readonly="1"/>
+                        </group>
+                        <group>
+                            <field name="write_uid" string="Modified By" readonly="1"/>
+                            <field name="write_date" string="Modified Date" readonly="1"/>
+                        </group>
+                    </group>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+
+    <!-- Search View -->
+    <record id="view_utility_bill_search" model="ir.ui.view">
+        <field name="name">kst.utility.bill.search</field>
+        <field name="model">kst.utility.bill</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="utility_account_id"/>
+                <field name="utility_account_number"/>
+                <field name="bill_date"/>
+                <filter string="Electricity" name="filter_electricity" domain="[('utility_type', '=', 'electricity')]"/>
+                <filter string="Water" name="filter_water" domain="[('utility_type', '=', 'water')]"/>
+                <filter string="This Month" name="filter_this_month" domain="[('bill_date', '&gt;=', (context_today() - relativedelta(day=1)).strftime('%Y-%m-%d'))]"/>
+                <group expand="0" string="Group By">
+                    <filter string="Utility Account" name="group_utility_account" context="{'group_by': 'utility_account_id'}"/>
+                    <filter string="Utility Type" name="group_utility_type" context="{'group_by': 'utility_type'}"/>
+                    <filter string="Bill Date" name="group_bill_date" context="{'group_by': 'bill_date'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- Action -->
+    <record id="action_utility_bill" model="ir.actions.act_window">
+        <field name="name">Utility Bills</field>
+        <field name="res_model">kst.utility.bill</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create your first Utility Bill!
+            </p>
+            <p>
+                Utility bills represent invoices from providers (MERALCO, Water companies) and are used to calculate derived rates for stall billing.
+            </p>
+        </field>
+    </record>
+
+    <!-- Menu Item -->
+    <menuitem id="menu_utility_bill"
+              name="Utility Bills"
+              parent="menu_kst_markets_transactions"
+              action="action_utility_bill"
+              sequence="30"/>
+</odoo>
+

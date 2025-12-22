@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Category -->
+    <record id="module_category_kst" model="ir.module.category">
+        <field name="name">KST</field>
+        <field name="description">KST Statistics System</field>
+        <field name="sequence">10</field>
+    </record>
+
+    <!-- User Groups -->
+    <record id="kst_base_group_user" model="res.groups">
+        <field name="name">KST User</field>
+        <field name="category_id" ref="module_category_kst"/>
+        <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+    </record>
+
+    <record id="kst_base_group_manager" model="res.groups">
+        <field name="name">KST Manager</field>
+        <field name="category_id" ref="module_category_kst"/>
+        <field name="implied_ids" eval="[(4, ref('kst_base_group_user'))]"/>
+    </record>
+</odoo>
+
+

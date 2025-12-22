@@ -1,0 +1,87 @@
+<odoo>
+    <!-- Lessee Tree View -->
+    <record id="view_lessee_tree" model="ir.ui.view">
+        <field name="name">kst.lessee.tree</field>
+        <field name="model">kst.lessee</field>
+        <field name="arch" type="xml">
+            <tree string="Lessees">
+                <field name="name"/>
+                <field name="contact"/>
+                <field name="email"/>
+                <field name="contract_count"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Lessee Form View -->
+    <record id="view_lessee_form" model="ir.ui.view">
+        <field name="name">kst.lessee.form</field>
+        <field name="model">kst.lessee</field>
+        <field name="arch" type="xml">
+            <form string="Lessee">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="contact"/>
+                        </group>
+                        <group>
+                            <field name="email"/>
+                            <field name="contract_count"/>
+                        </group>
+                    </group>
+                    <group>
+                        <field name="address" placeholder="Enter lessee address..."/>
+                    </group>
+                    <notebook>
+                        <page string="Contracts">
+                            <field name="contract_ids">
+                                <tree>
+                                    <field name="contract_number"/>
+                                    <field name="unit_id"/>
+                                    <field name="lessor_id"/>
+                                    <field name="status"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                    <group>
+                        <group string="Audit Trail">
+                            <field name="create_uid" string="Created By" readonly="1"/>
+                            <field name="create_date" string="Created Date" readonly="1"/>
+                            <field name="write_uid" string="Modified By" readonly="1"/>
+                            <field name="write_date" string="Modified Date" readonly="1"/>
+                        </group>
+                    </group>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="activity_ids" widget="mail_activity"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <!-- Lessee Search View -->
+    <record id="view_lessee_search" model="ir.ui.view">
+        <field name="name">kst.lessee.search</field>
+        <field name="model">kst.lessee</field>
+        <field name="arch" type="xml">
+            <search string="Lessees">
+                <field name="name"/>
+                <field name="contact"/>
+                <field name="email"/>
+            </search>
+        </field>
+    </record>
+
+    <!-- Lessee Action -->
+    <record id="action_lessee" model="ir.actions.act_window">
+        <field name="name">Lessees</field>
+        <field name="res_model">kst.lessee</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>
+
+

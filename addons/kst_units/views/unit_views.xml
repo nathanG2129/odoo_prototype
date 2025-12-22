@@ -1,0 +1,115 @@
+<odoo>
+    <!-- Unit Tree View -->
+    <record id="view_unit_tree" model="ir.ui.view">
+        <field name="name">kst.unit.tree</field>
+        <field name="model">kst.unit</field>
+        <field name="arch" type="xml">
+            <tree string="Units">
+                <field name="full_code"/>
+                <field name="lessor_id"/>
+                <field name="category_id"/>
+                <field name="location_id"/>
+                <field name="contract_count"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Unit Form View -->
+    <record id="view_unit_form" model="ir.ui.view">
+        <field name="name">kst.unit.form</field>
+        <field name="model">kst.unit</field>
+        <field name="arch" type="xml">
+            <form string="Unit">
+                <sheet>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="full_code" readonly="1"/>
+                        </h1>
+                    </div>
+                    <group>
+                        <group string="Identification">
+                            <field name="kcode_id"/>
+                            <field name="unit_specified"/>
+                            <field name="lessor_id"/>
+                            <field name="category_id"/>
+                        </group>
+                        <group string="Location">
+                            <field name="location_id"/>
+                            <field name="size"/>
+                        </group>
+                    </group>
+                    <group>
+                        <group string="Financial">
+                            <field name="bank_id"/>
+                            <field name="soa_bank_account_number"/>
+                        </group>
+                        <group string="Contract Information">
+                            <field name="contract_count"/>
+                        </group>
+                    </group>
+                    <group>
+                        <field name="address" placeholder="Enter unit address..."/>
+                    </group>
+                    <group>
+                        <field name="description" placeholder="Type of use or additional notes..."/>
+                    </group>
+                    <notebook>
+                        <page string="Contracts">
+                            <field name="contract_ids">
+                                <tree>
+                                    <field name="contract_number"/>
+                                    <field name="lessee_id"/>
+                                    <field name="period_from"/>
+                                    <field name="period_to"/>
+                                    <field name="monthly_rate" sum="Total Monthly Rate"/>
+                                    <field name="status"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                    <group>
+                        <group string="Audit Trail">
+                            <field name="create_uid" string="Created By" readonly="1"/>
+                            <field name="create_date" string="Created Date" readonly="1"/>
+                            <field name="write_uid" string="Modified By" readonly="1"/>
+                            <field name="write_date" string="Modified Date" readonly="1"/>
+                        </group>
+                    </group>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="activity_ids" widget="mail_activity"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <!-- Unit Search View -->
+    <record id="view_unit_search" model="ir.ui.view">
+        <field name="name">kst.unit.search</field>
+        <field name="model">kst.unit</field>
+        <field name="arch" type="xml">
+            <search string="Units">
+                <field name="full_code"/>
+                <field name="kcode_id"/>
+                <field name="lessor_id"/>
+                <field name="category_id"/>
+                <field name="location_id"/>
+                <group expand="0">
+                    <filter name="group_by_lessor" string="Lessor" context="{'group_by':'lessor_id'}"/>
+                    <filter name="group_by_category" string="Category" context="{'group_by':'category_id'}"/>
+                    <filter name="group_by_location" string="Location" context="{'group_by':'location_id'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- Unit Action -->
+    <record id="action_unit" model="ir.actions.act_window">
+        <field name="name">Units</field>
+        <field name="res_model">kst.unit</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>
+

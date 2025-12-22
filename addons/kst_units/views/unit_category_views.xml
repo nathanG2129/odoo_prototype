@@ -1,0 +1,75 @@
+<odoo>
+    <!-- Unit Category Tree View -->
+    <record id="view_unit_category_tree" model="ir.ui.view">
+        <field name="name">kst.unit.category.tree</field>
+        <field name="model">kst.unit.category</field>
+        <field name="arch" type="xml">
+            <tree string="Unit Categories">
+                <field name="name"/>
+                <field name="unit_count"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Unit Category Form View -->
+    <record id="view_unit_category_form" model="ir.ui.view">
+        <field name="name">kst.unit.category.form</field>
+        <field name="model">kst.unit.category</field>
+        <field name="arch" type="xml">
+            <form string="Unit Category">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="unit_count"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Units">
+                            <field name="unit_ids">
+                                <tree>
+                                    <field name="full_code"/>
+                                    <field name="lessor_id"/>
+                                    <field name="location_id"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                    <group>
+                        <group string="Audit Trail">
+                            <field name="create_uid" string="Created By" readonly="1"/>
+                            <field name="create_date" string="Created Date" readonly="1"/>
+                            <field name="write_uid" string="Modified By" readonly="1"/>
+                            <field name="write_date" string="Modified Date" readonly="1"/>
+                        </group>
+                    </group>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="activity_ids" widget="mail_activity"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <!-- Unit Category Search View -->
+    <record id="view_unit_category_search" model="ir.ui.view">
+        <field name="name">kst.unit.category.search</field>
+        <field name="model">kst.unit.category</field>
+        <field name="arch" type="xml">
+            <search string="Unit Categories">
+                <field name="name"/>
+            </search>
+        </field>
+    </record>
+
+    <!-- Unit Category Action -->
+    <record id="action_unit_category" model="ir.actions.act_window">
+        <field name="name">Unit Categories</field>
+        <field name="res_model">kst.unit.category</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>
+
+

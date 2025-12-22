@@ -1,0 +1,112 @@
+erDiagram
+    Expense_Category {
+        int Expense_Category_ID PK
+        string Expense_Category_Name
+        int Created_By
+        datetime Created_Date
+        int Modified_By
+        datetime Modified_Date
+    }
+
+    Expense_Masterlist {
+        int Expense_ID PK
+        int Expense_Category_ID FK
+        string Expense_Name
+        string Expense_Type
+        string Expense_General_Group
+        int Created_By
+        datetime Created_Date
+        int Modified_By
+        datetime Modified_Date
+    }
+
+    Payee {
+        int Payee_ID PK
+        string Payee_Name
+        string Payee_Address
+        string Payee_TIN
+        int Created_By
+        datetime Created_Date
+        int Modified_By
+        datetime Modified_Date
+    }
+
+    Voucher_Prefix {
+        int Voucher_Prefix_ID PK
+        string Voucher_Prefix_Code
+        string Voucher_Prefix_Name
+        string Voucher_Prefix_Address
+        int Created_By
+        datetime Created_Date
+        int Modified_By
+        datetime Modified_Date
+    }
+
+    Voucher_Header {
+        int Voucher_ID PK
+        int Voucher_Prefix_ID FK
+        int Expense_ID FK
+        int Payee_ID FK
+        int Bank_ID FK
+        int KCode_ID FK
+        string Voucher_Number
+        string Voucher_Code
+        date Voucher_Date
+        string Check_Name
+        date Check_Date
+        string Check_Number
+        decimal Check_Amount
+        string Particulars
+        string Compute
+        string Remarks
+        boolean isPosted
+        date Period_Covered_From
+        date Period_Covered_To
+        int Created_By
+        datetime Created_Date
+        int Modified_By
+        datetime Modified_Date
+    }
+
+    Voucher_Details {
+        int Voucher_Detail_ID PK
+        int Voucher_ID FK
+        string Account_Number
+        string Account_Name
+        decimal BillDue
+        decimal PayDue
+        decimal Consumption
+        string Remarks
+        date Period_Covered_From
+        date Period_Covered_To
+    }
+
+    Banks {
+        int Bank_ID PK
+        string Bank_Name
+        string Account_Name
+        string Account_Number
+        int Created_By
+        datetime Created_Date
+        int Modified_By
+        datetime Modified_Date
+    }
+
+    KCode {
+        int KCode_ID PK
+        string KCode
+        int Created_By
+        datetime Created_Date
+        int Modified_By
+        datetime Modified_Date
+    }
+
+    %% Relationships
+    Expense_Category ||--o{ Expense_Masterlist : "categorizes"
+    Voucher_Prefix ||--o{ Voucher_Header : "prefixes"
+    Expense_Masterlist ||--o{ Voucher_Header : "expense"
+    Payee ||--o{ Voucher_Header : "payee"
+    Banks ||--o{ Voucher_Header : "bank_account"
+    KCode ||--o{ Voucher_Header : "identifies"
+    Voucher_Header ||--o{ Voucher_Details : "has"
+

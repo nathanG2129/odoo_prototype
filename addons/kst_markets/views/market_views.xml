@@ -1,0 +1,124 @@
+<odoo>
+    <!-- Market Tree View -->
+    <record id="view_market_tree" model="ir.ui.view">
+        <field name="name">kst.market.tree</field>
+        <field name="model">kst.market</field>
+        <field name="arch" type="xml">
+            <tree string="Markets">
+                <field name="code"/>
+                <field name="name"/>
+                <field name="address"/>
+                <field name="stall_count"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Market Form View -->
+    <record id="view_market_form" model="ir.ui.view">
+        <field name="name">kst.market.form</field>
+        <field name="model">kst.market</field>
+        <field name="arch" type="xml">
+            <form string="Market">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="code"/>
+                            <field name="name"/>
+                        </group>
+                        <group>
+                            <field name="stall_count"/>
+                        </group>
+                    </group>
+                    <group>
+                        <field name="address" placeholder="Enter market address..."/>
+                    </group>
+                    <notebook>
+                        <page string="Stalls">
+                            <field name="stall_ids">
+                                <tree>
+                                    <field name="code"/>
+                                    <field name="tenant_id"/>
+                                    <field name="rental_rate"/>
+                                    <field name="is_active"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                    <group>
+                        <group string="Audit Trail">
+                            <field name="create_uid" string="Created By" readonly="1"/>
+                            <field name="create_date" string="Created Date" readonly="1"/>
+                            <field name="write_uid" string="Modified By" readonly="1"/>
+                            <field name="write_date" string="Modified Date" readonly="1"/>
+                        </group>
+                    </group>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="activity_ids" widget="mail_activity"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <!-- Market Search View -->
+    <record id="view_market_search" model="ir.ui.view">
+        <field name="name">kst.market.search</field>
+        <field name="model">kst.market</field>
+        <field name="arch" type="xml">
+            <search string="Markets">
+                <field name="code"/>
+                <field name="name"/>
+                <field name="address"/>
+            </search>
+        </field>
+    </record>
+
+    <!-- Market Kanban View -->
+    <record id="view_market_kanban" model="ir.ui.view">
+        <field name="name">kst.market.kanban</field>
+        <field name="model">kst.market</field>
+        <field name="arch" type="xml">
+            <kanban class="o_kanban_dashboard">
+                <field name="code"/>
+                <field name="name"/>
+                <field name="stall_count"/>
+                <templates>
+                    <t t-name="kanban-box">
+                        <div class="oe_kanban_card oe_kanban_global_click">
+                            <div class="oe_kanban_content">
+                                <div class="o_kanban_record_top">
+                                    <div class="o_kanban_record_headings">
+                                        <strong class="o_kanban_record_title">
+                                            <field name="code"/> - <field name="name"/>
+                                        </strong>
+                                    </div>
+                                </div>
+                                <div class="o_kanban_record_body">
+                                    <div>
+                                        <span class="text-muted">Stalls:</span>
+                                        <strong><field name="stall_count"/></strong>
+                                    </div>
+                                    <div class="mt-2" t-if="record.address.raw_value">
+                                        <small class="text-muted">
+                                            <field name="address"/>
+                                        </small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+    <!-- Market Action -->
+    <record id="action_market" model="ir.actions.act_window">
+        <field name="name">Markets</field>
+        <field name="res_model">kst.market</field>
+        <field name="view_mode">kanban,tree,form</field>
+    </record>
+</odoo>
+

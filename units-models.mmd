@@ -1,0 +1,138 @@
+erDiagram
+    Location {
+        int Location_ID PK
+        string Location_Code
+        string Location_Description
+        string Company_Name
+        string Company_Code
+        string Company_Address
+        int Created_By
+        datetime Created_Date
+        int Modified_By
+        datetime Modified_Date
+    }
+
+    Unit_Category {
+        int Category_ID PK
+        string CategoryName
+        int Created_By
+        datetime Created_Date
+        int Modified_By
+        datetime Modified_Date
+    }
+
+    Lessors {
+        int Lessor_ID PK
+        string Lessor_Code
+        string Lessor_Name
+        int Created_By
+        datetime Created_Date
+        int Modified_By
+        datetime Modified_Date
+    }
+
+    Lessees {
+        int Lessee_ID PK
+        string Lessee_Name
+        string Lessee_Address
+        string Lessee_Contact
+        string Lessee_Email
+        int Created_By
+        datetime Created_Date
+        int Modified_By
+        datetime Modified_Date
+    }
+
+    Units {
+        int Unit_ID PK
+        int Lessor_ID FK
+        int Category_ID FK
+        int Location_ID FK
+        int Bank_ID FK
+        int KCode_ID FK
+        string Unit_Specified
+        string Full_Code
+        string Unit_Address
+        string Description
+        decimal Size
+        string SOA_Bank_Account_Number
+        int Created_By
+        datetime Created_Date
+        int Modified_By
+        datetime Modified_Date
+    }
+
+    Contracts {
+        int Contract_ID PK
+        int Unit_ID FK
+        int Lessee_ID FK
+        int Lessor_ID FK
+        string Contract_Number
+        date Period_From
+        date Period_To
+        decimal Basic_Rent
+        decimal eVAT
+        decimal Withholding_Tax
+        decimal MPTR
+        decimal Monthly_Rate
+        decimal CUSA_Rate
+        decimal Escalation_Percentage
+        int Escalation_Date_in_Months
+        string Notes
+        string Status
+        int Filed_By
+        date Filed_Date
+        int Modified_By
+        datetime Modified_Date
+    }
+
+    Unit_Rent_Transactions {
+        int Transaction_ID PK
+        int Contract_ID FK
+        int Bank_ID FK
+        string Payment_Status
+        string Payment_Category
+        string Payment_Type
+        string Payment_Reference
+        decimal AmountDeposited
+        date TransactionDate
+        string Notes
+        boolean isBounced
+        int Encoded_By
+        datetime Encoded_Date
+        int Modified_By
+        datetime Modified_Date
+    }
+
+    Banks {
+        int Bank_ID PK
+        string Bank_Name
+        string Account_Name
+        string Account_Number
+        int Created_By
+        datetime Created_Date
+        int Modified_By
+        datetime Modified_Date
+    }
+
+    KCode {
+        int KCode_ID PK
+        string KCode
+        int Created_By
+        datetime Created_Date
+        int Modified_By
+        datetime Modified_Date
+    }
+
+    %% Relationships
+    Lessors ||--o{ Units : "owns"
+    Unit_Category ||--o{ Units : "categorizes"
+    Location ||--o{ Units : "locates"
+    Banks ||--o{ Units : "bank_account"
+    KCode ||--o{ Units : "identifies"
+    Units ||--o{ Contracts : "has"
+    Lessees ||--o{ Contracts : "leases"
+    Lessors ||--o{ Contracts : "contracts_with"
+    Contracts ||--o{ Unit_Rent_Transactions : "generates"
+    Banks ||--o{ Unit_Rent_Transactions : "bank_account"
+

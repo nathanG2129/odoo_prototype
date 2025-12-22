@@ -1,0 +1,94 @@
+<odoo>
+    <!-- Market Rent Transaction Tree View -->
+    <record id="view_market_rent_transaction_tree" model="ir.ui.view">
+        <field name="name">kst.market.rent.transaction.tree</field>
+        <field name="model">kst.market.rent.transaction</field>
+        <field name="arch" type="xml">
+            <tree string="Rent Collections">
+                <field name="transaction_date"/>
+                <field name="stall_id"/>
+                <field name="market_id"/>
+                <field name="tenant_id"/>
+                <field name="rent_collection_type"/>
+                <field name="rent"/>
+                <field name="rent_paid" sum="Total Amount"/>
+                <field name="cobp_due" sum="Total COBP Due"/>
+                <field name="cobp_paid" sum="Total COBP Paid"/>
+                <field name="receipt_number"/>
+                <field name="create_uid" string="Created By"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Market Rent Transaction Form View -->
+    <record id="view_market_rent_transaction_form" model="ir.ui.view">
+        <field name="name">kst.market.rent.transaction.form</field>
+        <field name="model">kst.market.rent.transaction</field>
+        <field name="arch" type="xml">
+            <form string="Rent Collection">
+                <sheet>
+                    <group>
+                        <group string="Transaction Details">
+                            <field name="stall_id"/>
+                            <field name="market_id"/>
+                            <field name="tenant_id"/>
+                            <field name="transaction_date"/>
+                            <field name="payment_status"/>
+                        </group>
+                        <group string="Financial Information">
+                            <field name="rent_paid"/>
+                            <field name="cobp_due"/>
+                            <field name="cobp_paid"/>
+                            <field name="receipt_number"/>
+                        </group>
+                    </group>
+                    <group>
+                        <group string="Audit Trail">
+                            <field name="create_uid" string="Created By" readonly="1"/>
+                            <field name="create_date" string="Created Date" readonly="1"/>
+                            <field name="write_uid" string="Modified By" readonly="1"/>
+                            <field name="write_date" string="Modified Date" readonly="1"/>
+                        </group>
+                    </group>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="activity_ids" widget="mail_activity"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <!-- Market Rent Transaction Search View -->
+    <record id="view_market_rent_transaction_search" model="ir.ui.view">
+        <field name="name">kst.market.rent.transaction.search</field>
+        <field name="model">kst.market.rent.transaction</field>
+        <field name="arch" type="xml">
+            <search string="Rent Collections">
+                <field name="stall_id"/>
+                <field name="market_id"/>
+                <field name="tenant_id"/>
+                <field name="receipt_number"/>
+                <filter name="pending" string="Pending" domain="[('payment_status', '=', 'pending')]"/>
+                <filter name="paid" string="Paid" domain="[('payment_status', '=', 'paid')]"/>
+                <filter name="partial" string="Partial" domain="[('payment_status', '=', 'partial')]"/>
+                <filter name="cancelled" string="Cancelled" domain="[('payment_status', '=', 'cancelled')]"/>
+                <group expand="0">
+                    <filter name="group_by_market" string="Market" context="{'group_by':'market_id'}"/>
+                    <filter name="group_by_tenant" string="Tenant" context="{'group_by':'tenant_id'}"/>
+                    <filter name="group_by_status" string="Payment Status" context="{'group_by':'payment_status'}"/>
+                    <filter name="group_by_date" string="Transaction Date" context="{'group_by':'transaction_date'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- Market Rent Transaction Action -->
+    <record id="action_market_rent_transaction" model="ir.actions.act_window">
+        <field name="name">Rent Collections</field>
+        <field name="res_model">kst.market.rent.transaction</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>
+

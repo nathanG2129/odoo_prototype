@@ -1,0 +1,92 @@
+<odoo>
+    <!-- Lessor Tree View -->
+    <record id="view_lessor_tree" model="ir.ui.view">
+        <field name="name">kst.lessor.tree</field>
+        <field name="model">kst.lessor</field>
+        <field name="arch" type="xml">
+            <tree string="Lessors">
+                <field name="code"/>
+                <field name="name"/>
+                <field name="unit_count"/>
+                <field name="contract_count"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Lessor Form View -->
+    <record id="view_lessor_form" model="ir.ui.view">
+        <field name="name">kst.lessor.form</field>
+        <field name="model">kst.lessor</field>
+        <field name="arch" type="xml">
+            <form string="Lessor">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="code"/>
+                            <field name="name"/>
+                        </group>
+                        <group>
+                            <field name="unit_count"/>
+                            <field name="contract_count"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Units">
+                            <field name="unit_ids">
+                                <tree>
+                                    <field name="full_code"/>
+                                    <field name="category_id"/>
+                                    <field name="location_id"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Contracts">
+                            <field name="contract_ids">
+                                <tree>
+                                    <field name="contract_number"/>
+                                    <field name="unit_id"/>
+                                    <field name="lessee_id"/>
+                                    <field name="status"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                    <group>
+                        <group string="Audit Trail">
+                            <field name="create_uid" string="Created By" readonly="1"/>
+                            <field name="create_date" string="Created Date" readonly="1"/>
+                            <field name="write_uid" string="Modified By" readonly="1"/>
+                            <field name="write_date" string="Modified Date" readonly="1"/>
+                        </group>
+                    </group>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="activity_ids" widget="mail_activity"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <!-- Lessor Search View -->
+    <record id="view_lessor_search" model="ir.ui.view">
+        <field name="name">kst.lessor.search</field>
+        <field name="model">kst.lessor</field>
+        <field name="arch" type="xml">
+            <search string="Lessors">
+                <field name="code"/>
+                <field name="name"/>
+            </search>
+        </field>
+    </record>
+
+    <!-- Lessor Action -->
+    <record id="action_lessor" model="ir.actions.act_window">
+        <field name="name">Lessors</field>
+        <field name="res_model">kst.lessor</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>
+
+
