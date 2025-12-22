@@ -29,14 +29,14 @@ PAY_TYPES = [
 
 # Utility Accounts (from kst_base - these should exist)
 # 6 accounts total: 3 electricity + 3 water (for 30 stalls, max 5 per account)
-# Note: Using record IDs without module prefix since kst_base is a dependency
+# Using full external ID format: module.record_id
 UTILITY_ACCOUNTS = [
-    ('utility_account_meralco_001', 'electricity'),
-    ('utility_account_meralco_002', 'electricity'),
-    ('utility_account_meralco_003', 'electricity'),
-    ('utility_account_water_001', 'water'),
-    ('utility_account_water_002', 'water'),
-    ('utility_account_water_003', 'water'),
+    ('kst_base.utility_account_meralco_001', 'electricity'),
+    ('kst_base.utility_account_meralco_002', 'electricity'),
+    ('kst_base.utility_account_meralco_003', 'electricity'),
+    ('kst_base.utility_account_water_001', 'water'),
+    ('kst_base.utility_account_water_002', 'water'),
+    ('kst_base.utility_account_water_003', 'water'),
 ]
 
 # Generate tenant names
