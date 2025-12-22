@@ -70,7 +70,7 @@
                     <notebook>
                         <page string="Utility Transactions" name="transactions">
                             <field name="transaction_ids" nolabel="1">
-                                <tree>
+                                <tree editable="bottom">
                                     <field name="transaction_date"/>
                                     <field name="stall_id"/>
                                     <field name="payment_status"/>
@@ -94,7 +94,11 @@
                         </group>
                     </group>
                 </sheet>
-                <chatter/>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="activity_ids" widget="mail_activity"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
             </form>
         </field>
     </record>

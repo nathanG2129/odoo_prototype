@@ -106,7 +106,7 @@ def generate_xml():
     xml_lines = [
         '<?xml version="1.0" encoding="utf-8"?>',
         '<odoo>',
-        '    <data noupdate="0">',
+        '    <data noupdate="1">',
         '',
         '        <!-- Market Pay Types -->',
     ]
