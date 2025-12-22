@@ -38,6 +38,12 @@ class UtilityBill(models.Model):
     transaction_ids = fields.One2many('kst.market.utility.transaction', 'utility_bill_id', 
                                      string='Utility Transactions')
     transaction_count = fields.Integer('Transaction Count', compute='_compute_transaction_count')
+    
+    # Pay Type Information (computed from associated stalls)
+    pay_type_summary = fields.Text('Pay Type Summary', compute='_compute_pay_type_summary', store=False,
+                                   help="Breakdown of pay types used by stalls in this utility account")
+    stall_count = fields.Integer('Stall Count', compute='_compute_stall_count', store=False,
+                                 help="Number of active stalls assigned to this utility account")
 
     @api.depends('total_bill_amount', 'total_consumption')
     def _compute_derived_rate(self):
@@ -51,6 +57,61 @@ class UtilityBill(models.Model):
     def _compute_transaction_count(self):
         for record in self:
             record.transaction_count = len(record.transaction_ids)
+    
+    @api.depends('utility_account_id')
+    def _compute_stall_count(self):
+        for record in self:
+            if record.utility_account_id:
+                # Access stalls through reverse relationship
+                stalls = self.env['kst.stall'].search([
+                    ('utility_account_id', '=', record.utility_account_id.id),
+                    ('is_active', '=', True)
+                ])
+                record.stall_count = len(stalls)
+            else:
+                record.stall_count = 0
+    
+    @api.depends('utility_account_id', 'utility_type')
+    def _compute_pay_type_summary(self):
+        """Compute summary of pay types used by stalls in this utility account"""
+        for record in self:
+            if not record.utility_account_id or not record.utility_type:
+                record.pay_type_summary = ''
+                continue
+            
+            # Get all active stalls for this utility account (through reverse relationship)
+            stalls = self.env['kst.stall'].search([
+                ('utility_account_id', '=', record.utility_account_id.id),
+                ('is_active', '=', True)
+            ])
+            
+            # Determine which pay type field to check based on utility type
+            if record.utility_type == 'electricity':
+                pay_type_field = 'electric_pay_type_id'
+            elif record.utility_type == 'water':
+                pay_type_field = 'water_pay_type_id'
+            else:
+                record.pay_type_summary = ''
+                continue
+            
+            # Count stalls by pay type
+            pay_type_counts = {}
+            for stall in stalls:
+                pay_type = getattr(stall, pay_type_field, False)
+                if pay_type:
+                    pay_type_name = pay_type.display_name or pay_type.code
+                    frequency = pay_type.sub_group or 'N/A'
+                    key = f"{pay_type_name} ({frequency})"
+                    pay_type_counts[key] = pay_type_counts.get(key, 0) + 1
+            
+            # Format summary
+            if pay_type_counts:
+                summary_lines = []
+                for pay_type_name, count in sorted(pay_type_counts.items()):
+                    summary_lines.append(f"• {pay_type_name}: {count} stall(s)")
+                record.pay_type_summary = '\n'.join(summary_lines)
+            else:
+                record.pay_type_summary = 'No pay types assigned to stalls.'
 
     @api.constrains('total_bill_amount', 'total_consumption')
     def _check_amounts(self):
@@ -193,23 +254,25 @@ class UtilityBill(models.Model):
         
         if transaction_vals_list:
             self.env['kst.market.utility.transaction'].create(transaction_vals_list)
+            message = f'Generated {len(transaction_vals_list)} utility transactions for {len(stalls)} stalls.'
             return {
                 'type': 'ir.actions.client',
                 'tag': 'display_notification',
                 'params': {
                     'title': 'Transactions Generated',
-                    'message': f'Generated {len(transaction_vals_list)} utility transactions for {len(stalls)} stalls.',
+                    'message': message,
                     'type': 'success',
                     'sticky': False,
                 }
             }
         else:
+            message = 'All transactions already exist for the selected stalls.'
             return {
                 'type': 'ir.actions.client',
                 'tag': 'display_notification',
                 'params': {
                     'title': 'No Transactions Generated',
-                    'message': 'All transactions already exist for the selected stalls.',
+                    'message': message,
                     'type': 'warning',
                     'sticky': False,
                 }

@@ -62,6 +62,18 @@
         <field name="utility_type">water</field>
         <field name="account_name">KST RET Water</field>
     </record>
+
+    <record id="utility_account_meralco_003" model="kst.utility.account">
+        <field name="utility_account_number">C1111222233</field>
+        <field name="utility_type">electricity</field>
+        <field name="account_name">KST KTC Cluster</field>
+    </record>
+
+    <record id="utility_account_water_003" model="kst.utility.account">
+        <field name="utility_account_number">W4444555566</field>
+        <field name="utility_type">water</field>
+        <field name="account_name">KST KTC Water</field>
+    </record>
 </odoo>
 
 

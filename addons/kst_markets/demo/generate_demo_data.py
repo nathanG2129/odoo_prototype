@@ -28,11 +28,15 @@ PAY_TYPES = [
 ]
 
 # Utility Accounts (from kst_base - these should exist)
+# 6 accounts total: 3 electricity + 3 water (for 30 stalls, max 5 per account)
+# Note: Using record IDs without module prefix since kst_base is a dependency
 UTILITY_ACCOUNTS = [
-    ('kst_base.utility_account_meralco_001', 'electricity'),
-    ('kst_base.utility_account_meralco_002', 'electricity'),
-    ('kst_base.utility_account_water_001', 'water'),
-    ('kst_base.utility_account_water_002', 'water'),
+    ('utility_account_meralco_001', 'electricity'),
+    ('utility_account_meralco_002', 'electricity'),
+    ('utility_account_meralco_003', 'electricity'),
+    ('utility_account_water_001', 'water'),
+    ('utility_account_water_002', 'water'),
+    ('utility_account_water_003', 'water'),
 ]
 
 # Generate tenant names
@@ -146,58 +150,31 @@ def generate_xml():
         xml_lines.append(f'        </record>')
         xml_lines.append('')
     
-    # Utility Bills (sample bills for demo)
-    xml_lines.append('        <!-- Utility Bills -->')
-    utility_bill_refs = []
-    monthly_dates = generate_monthly_dates(TODAY, MONTHS_HISTORY)
-    electricity_accounts = []  # Track which accounts have bills
-    for i, (account_ref, utility_type) in enumerate(UTILITY_ACCOUNTS):
-        if utility_type == 'electricity':
-            electricity_accounts.append(account_ref)
-            # Generate one bill per month for electricity accounts
-            for j, bill_date in enumerate(monthly_dates[:3]):  # Last 3 months
-                bill_id = f"utility_bill_{account_ref.split('.')[-1]}_{j+1}"
-                period_from = bill_date - timedelta(days=30)
-                period_to = bill_date
-                # Store: (bill_id, account_ref, bill_date, utility_type, period_from, period_to)
-                utility_bill_refs.append((bill_id, account_ref, bill_date, utility_type, period_from, period_to))
-                xml_lines.append(f'        <record id="{bill_id}" model="kst.utility.bill">')
-                xml_lines.append(f'            <field name="utility_account_id" ref="{account_ref}"/>')
-                xml_lines.append(f'            <field name="bill_date">{generate_date_string(bill_date)}</field>')
-                xml_lines.append(f'            <field name="due_date">{generate_date_string(bill_date + timedelta(days=20))}</field>')
-                xml_lines.append(f'            <field name="period_covered_from">{generate_date_string(period_from)}</field>')
-                xml_lines.append(f'            <field name="period_covered_to">{generate_date_string(period_to)}</field>')
-                xml_lines.append(f'            <field name="total_consumption">{random.randint(10000, 20000)}.00</field>')
-                xml_lines.append(f'            <field name="total_bill_amount">{random.randint(120000, 240000)}.00</field>')
-                xml_lines.append(f'        </record>')
-                xml_lines.append('')
+    # Utility Bills - No bills in demo data (bills are transactional, user will create them)
+    # xml_lines.append('        <!-- Utility Bills -->')
+    # No bills generated - user will create bills manually for testing
     
     # Stalls
     xml_lines.append('        <!-- Stalls -->')
     stall_refs = []
     
-    # Distribute stalls across utility accounts that have bills
-    # Target: 4-7 stalls per account (most common), with some outliers at 10-11
+    # Distribute stalls across utility accounts
+    # Target: Maximum 5 stalls per account, distribute all 30 stalls across 6 accounts
     # Create a distribution plan for stalls per account
     account_stall_distribution = {}
-    if electricity_accounts:
-        if len(electricity_accounts) == 2:
-            # Distribute: Account 1 gets 5 stalls, Account 2 gets 6 stalls (typical)
-            # Or Account 1 gets 10 stalls (outlier), Account 2 gets 5 stalls
-            if random.random() < 0.2:  # 20% chance of outlier
-                account_stall_distribution[electricity_accounts[0]] = 10  # Outlier
-                account_stall_distribution[electricity_accounts[1]] = 5
-            else:
-                account_stall_distribution[electricity_accounts[0]] = random.randint(4, 7)
-                account_stall_distribution[electricity_accounts[1]] = random.randint(4, 7)
-        else:
-            # For other cases, distribute evenly with 4-7 stalls per account
-            stalls_per_account = random.randint(4, 7)
-            for account in electricity_accounts:
-                account_stall_distribution[account] = stalls_per_account
+    all_accounts = [account_ref for account_ref, _ in UTILITY_ACCOUNTS]
+    
+    if all_accounts:
+        # Distribute all stalls evenly: 30 stalls / 6 accounts = 5 stalls per account
+        stalls_per_account = NUM_STALLS // len(all_accounts)  # 5 stalls per account
+        remainder = NUM_STALLS % len(all_accounts)  # 0 extra stalls (30 / 6 = 5 exactly)
+        
+        for i, account in enumerate(all_accounts):
+            # Each account gets exactly 5 stalls
+            account_stall_distribution[account] = stalls_per_account + (1 if i < remainder else 0)
     
     # Track how many stalls assigned to each account
-    account_stall_count = {account: 0 for account in electricity_accounts}
+    account_stall_count = {account: 0 for account in all_accounts}
     
     for i in range(NUM_STALLS):
         market_code = MARKETS[i % len(MARKETS)][0]
@@ -209,15 +186,20 @@ def generate_xml():
         tenant_idx = i % len(TENANT_NAMES)
         tenant_ref = tenant_refs[tenant_idx]
         
-        # Assign utility account based on distribution plan
+        # Assign utility account based on distribution plan (max 5 stalls per account)
         utility_account_ref = None
-        if electricity_accounts and account_stall_distribution:
-            # Find an account that hasn't reached its target yet
-            for account in electricity_accounts:
+        if all_accounts and account_stall_distribution:
+            # Find an account that hasn't reached its target yet (max 5 stalls)
+            for account in all_accounts:
                 if account_stall_count[account] < account_stall_distribution.get(account, 0):
                     utility_account_ref = account
                     account_stall_count[account] += 1
                     break
+        
+        # Ensure all stalls get assigned (fallback to first available account)
+        if not utility_account_ref and all_accounts:
+            utility_account_ref = all_accounts[0]
+            account_stall_count[all_accounts[0]] += 1
         
         # Determine rent collection frequency (30% daily, 30% weekly, 40% monthly)
         rent_freq_rand = random.random()

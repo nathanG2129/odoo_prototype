@@ -61,7 +61,11 @@
                         <group>
                             <field name="derived_rate" readonly="1"/>
                             <field name="transaction_count" readonly="1"/>
+                            <field name="stall_count" readonly="1"/>
                         </group>
+                    </group>
+                    <group string="Pay Type Breakdown">
+                        <field name="pay_type_summary" nolabel="1" readonly="1" widget="text"/>
                     </group>
                     <notebook>
                         <page string="Utility Transactions" name="transactions">
@@ -69,16 +73,12 @@
                                 <tree>
                                     <field name="transaction_date"/>
                                     <field name="stall_id"/>
-                                    <field name="market_id"/>
-                                    <field name="tenant_id"/>
-                                    <field name="utility_type"/>
                                     <field name="payment_status"/>
                                     <field name="previous_reading"/>
                                     <field name="current_reading"/>
                                     <field name="consumption" sum="Total Consumption"/>
                                     <field name="applied_rate"/>
                                     <field name="amount_paid" sum="Total Amount"/>
-                                    <field name="receipt_number"/>
                                 </tree>
                             </field>
                         </page>
