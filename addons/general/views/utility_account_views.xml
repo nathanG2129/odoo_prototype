@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Tree View -->
+    <record id="view_utility_account_tree" model="ir.ui.view">
+        <field name="name">kst.utility.account.tree</field>
+        <field name="model">kst.utility.account</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="utility_account_number"/>
+                <field name="utility_type"/>
+                <field name="account_name"/>
+                <field name="create_uid" string="Created By"/>
+                <field name="create_date" string="Created Date"/>
+                <field name="write_uid" string="Modified By"/>
+                <field name="write_date" string="Modified Date"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Form View -->
+    <record id="view_utility_account_form" model="ir.ui.view">
+        <field name="name">kst.utility.account.form</field>
+        <field name="model">kst.utility.account</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="utility_account_number"/>
+                            <field name="utility_type"/>
+                        </group>
+                        <group>
+                            <field name="account_name"/>
+                        </group>
+                    </group>
+                    <group string="Audit Information">
+                        <group>
+                            <field name="create_uid" string="Created By" readonly="1"/>
+                            <field name="create_date" string="Created Date" readonly="1"/>
+                        </group>
+                        <group>
+                            <field name="write_uid" string="Modified By" readonly="1"/>
+                            <field name="write_date" string="Modified Date" readonly="1"/>
+                        </group>
+                    </group>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+
+    <!-- Search View -->
+    <record id="view_utility_account_search" model="ir.ui.view">
+        <field name="name">kst.utility.account.search</field>
+        <field name="model">kst.utility.account</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="utility_account_number"/>
+                <field name="account_name"/>
+                <filter string="Electricity" name="filter_electricity" domain="[('utility_type', '=', 'electricity')]"/>
+                <filter string="Water" name="filter_water" domain="[('utility_type', '=', 'water')]"/>
+                <group expand="0" string="Group By">
+                    <filter string="Utility Type" name="group_utility_type" context="{'group_by': 'utility_type'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- Kanban View -->
+    <record id="view_utility_account_kanban" model="ir.ui.view">
+        <field name="name">kst.utility.account.kanban</field>
+        <field name="model">kst.utility.account</field>
+        <field name="arch" type="xml">
+            <kanban class="o_kanban_mobile" create="false" edit="false">
+                <field name="id"/>
+                <field name="utility_account_number"/>
+                <field name="utility_type"/>
+                <field name="account_name"/>
+                <templates>
+                    <t t-name="kanban-box">
+                        <div class="oe_kanban_global_click">
+                            <div class="o_kanban_record_top">
+                                <div class="o_kanban_record_headings">
+                                    <strong class="o_kanban_record_title">
+                                        <field name="utility_account_number"/>
+                                    </strong>
+                                </div>
+                            </div>
+                            <div class="o_kanban_record_body">
+                                <field name="utility_type"/>
+                                <span t-if="record.account_name.raw_value"> - <field name="account_name"/></span>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+    <!-- Action -->
+    <record id="action_utility_account" model="ir.actions.act_window">
+        <field name="name">Utility Accounts</field>
+        <field name="res_model">kst.utility.account</field>
+        <field name="view_mode">kanban,tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create your first Utility Account!
+            </p>
+            <p>
+                Utility accounts group stalls under a single billing account from providers like MERALCO or Water companies.
+            </p>
+        </field>
+    </record>
+
+    <!-- Menu Item -->
+    <menuitem id="menu_utility_account"
+              name="Utility Accounts"
+              parent="menu_general_config"
+              action="action_utility_account"
+              sequence="30"/>
+</odoo>
+

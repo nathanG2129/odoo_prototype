@@ -1,0 +1,11 @@
+﻿code,paytype,sub-group
+FR,Fixed-Rate,M
+K1MH,K1MH,W
+LG,LG Weekly,W
+MO,Monthly,M
+NW,NAWASA,W
+PT,Per-Day,W
+SM,Sub-Meter,M
+TL,Toilet,W
+UGPM,UGP GS - Monthly,M
+UGPW,UGP GS - Weekly,W

@@ -1,0 +1,86 @@
+<odoo>
+    <!-- Bank Tree View -->
+    <record id="view_bank_tree" model="ir.ui.view">
+        <field name="name">kst.bank.tree</field>
+        <field name="model">kst.bank</field>
+        <field name="arch" type="xml">
+            <tree string="Banks">
+                <field name="bank_name"/>
+                <field name="account_name"/>
+                <field name="account_number"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Bank Form View -->
+    <record id="view_bank_form" model="ir.ui.view">
+        <field name="name">kst.bank.form</field>
+        <field name="model">kst.bank</field>
+        <field name="arch" type="xml">
+            <form string="Bank">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="bank_name"/>
+                            <field name="account_name"/>
+                        </group>
+                        <group>
+                            <field name="account_number"/>
+                        </group>
+                    </group>
+                    <group>
+                        <group string="Audit Trail">
+                            <field name="create_uid" string="Created By" readonly="1"/>
+                            <field name="create_date" string="Created Date" readonly="1"/>
+                            <field name="write_uid" string="Modified By" readonly="1"/>
+                            <field name="write_date" string="Modified Date" readonly="1"/>
+                        </group>
+                    </group>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="activity_ids" widget="mail_activity"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <!-- Bank Search View -->
+    <record id="view_bank_search" model="ir.ui.view">
+        <field name="name">kst.bank.search</field>
+        <field name="model">kst.bank</field>
+        <field name="arch" type="xml">
+            <search string="Banks">
+                <field name="bank_name"/>
+                <field name="account_name"/>
+                <field name="account_number"/>
+            </search>
+        </field>
+    </record>
+
+    <!-- Bank Action -->
+    <record id="action_bank" model="ir.actions.act_window">
+        <field name="name">Banks</field>
+        <field name="res_model">kst.bank</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Menu -->
+    <menuitem id="menu_general_root" 
+              name="General" 
+              sequence="5"/>
+    
+    <menuitem id="menu_general_config" 
+              name="Configuration" 
+              parent="menu_general_root"
+              sequence="100"/>
+    
+    <menuitem id="menu_bank" 
+              name="Banks" 
+              parent="menu_general_config"
+              action="action_bank"
+              sequence="10"/>
+</odoo>
+
+

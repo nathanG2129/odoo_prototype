@@ -1,0 +1,4563 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <!-- Standardized Stall Master Data -->
+        <!-- Generated from fmStall.csv and fmStall_Electricity.csv -->
+        
+    <!-- bbh Market Stalls -->
+    <record id="stall_bbh_0001" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">1A</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_bbh_0002" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">1B</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_bbh_0003" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">2F-2A</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="default_water_rate">112.34</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">KST PROPERTIES INC. PP2A</field>
+        <field name="electricity_sub_meter_number">191759432-5</field>
+    </record>
+
+    <record id="stall_bbh_0004" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">2F-2B</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="default_water_rate">112.34</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">KST PROPERTIES INC.2B</field>
+        <field name="electricity_sub_meter_number">191760000-8</field>
+    </record>
+
+    <record id="stall_bbh_0005" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">2F-2C</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="default_water_rate">112.34</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">KST PROPERTIES INC.PP 2C</field>
+        <field name="electricity_sub_meter_number">191760406-8</field>
+    </record>
+
+    <record id="stall_bbh_0006" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">2F-2D</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="default_water_rate">112.34</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">KST PROPERTIES INC. PP-2D</field>
+        <field name="electricity_sub_meter_number">191760521-1</field>
+    </record>
+
+    <record id="stall_bbh_0007" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">2F-A</field>
+        <field name="rental_rate">1500.00</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_bbh_0008" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">2F-B</field>
+        <field name="rental_rate">3500.00</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">LAURENCITO RAGAS TIU</field>
+    </record>
+
+    <record id="stall_bbh_0009" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">3F-3A</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">KST PROPERTIES INC. PP3A</field>
+        <field name="electricity_sub_meter_number">191760638-4</field>
+    </record>
+
+    <record id="stall_bbh_0010" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">3F-3B</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">KST PROPERTIES INC. PP3B</field>
+        <field name="electricity_sub_meter_number">191760737-6</field>
+    </record>
+
+    <record id="stall_bbh_0011" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">3F-3C</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">KST PROPERTIES INC.  PP3C</field>
+        <field name="electricity_sub_meter_number">191761481-5</field>
+    </record>
+
+    <record id="stall_bbh_0012" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">3F-3D</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">KST PROPERTIES INC.  PP3D</field>
+        <field name="electricity_sub_meter_number">191761610-5</field>
+    </record>
+
+    <record id="stall_bbh_0013" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">3F-A</field>
+        <field name="rental_rate">2500.00</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">LAURENCITO RAGAS TIU</field>
+    </record>
+
+    <record id="stall_bbh_0014" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">3F-B</field>
+        <field name="rental_rate">3000.00</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">LAURENCITO RAGAS TIU</field>
+    </record>
+
+    <record id="stall_bbh_0015" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">3F-B PD</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="default_electricity_rate">15.00</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">LAURENCITO RAGAS TIU</field>
+    </record>
+
+    <record id="stall_bbh_0016" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">3F-B-n</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="default_electricity_rate">15.00</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">LAURENCITO RAGAS TIU</field>
+    </record>
+
+    <record id="stall_bbh_0017" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">4-BLDG-1</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">KST PROPERTIES INC. - ADMIN</field>
+        <field name="electricity_sub_meter_number">187098177-8</field>
+    </record>
+
+    <record id="stall_bbh_0018" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">4-BLDG-2</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">KST PROPERTIES INC. - ADMIN</field>
+        <field name="electricity_sub_meter_number">187098177-8</field>
+    </record>
+
+    <record id="stall_bbh_0019" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">4F-4A</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">KST PROPERTIES INC. - PP4A</field>
+        <field name="electricity_sub_meter_number">191761727-8</field>
+    </record>
+
+    <record id="stall_bbh_0020" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">4F-4B</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">KST PROPERTIES INC.- PP1B</field>
+        <field name="electricity_sub_meter_number">191761826-1</field>
+    </record>
+
+    <record id="stall_bbh_0021" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">4F-4C</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_bbh_0022" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">4F-4CE</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">KST PROPERTIES INC. PP4C</field>
+        <field name="electricity_sub_meter_number">191762014-4</field>
+    </record>
+
+    <record id="stall_bbh_0023" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">4F-4D</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_bbh_0024" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">4F-4DE</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">KST PROPERTIES INC. PP4D</field>
+        <field name="electricity_sub_meter_number">191762329-2</field>
+    </record>
+
+    <record id="stall_bbh_0025" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">A-1</field>
+        <field name="rental_rate">30446.10</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="true"/>
+    </record>
+
+    <record id="stall_bbh_0026" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">A-10</field>
+        <field name="rental_rate">121.00</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">BAGONG BARRIO HYPERMARKET &amp; PROPERTIES CORP.</field>
+    </record>
+
+    <record id="stall_bbh_0027" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">A-1A</field>
+        <field name="rental_rate">106.15</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="true"/>
+        <field name="meralco_account_number">BAGONG BARRIO HYPERMARKET &amp; PROPERTIES CORP.</field>
+    </record>
+
+    <record id="stall_bbh_0028" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">A-2</field>
+        <field name="rental_rate">111.10</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">BAGONG BARRIO HYPERMARKET &amp; PROPERTIES CORP.</field>
+    </record>
+
+    <record id="stall_bbh_0029" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">A-2 PD 1</field>
+        <field name="rental_rate">111.10</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_bbh_0030" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">A-2PD</field>
+        <field name="rental_rate">101.00</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_bbh_0031" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">A-3</field>
+        <field name="rental_rate">133.10</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="true"/>
+        <field name="meralco_account_number">BAGONG BARRIO HYPERMARKET &amp; PROPERTIES CORP.</field>
+    </record>
+
+    <record id="stall_bbh_0032" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">A-4</field>
+        <field name="rental_rate">133.10</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="true"/>
+        <field name="meralco_account_number">BAGONG BARRIO HYPERMARKET &amp; PROPERTIES CORP.</field>
+    </record>
+
+    <record id="stall_bbh_0033" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">A-4 PD</field>
+        <field name="rental_rate">121.00</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_bbh_0034" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">A-5</field>
+        <field name="rental_rate">3000.00</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_bbh_0035" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">A-6</field>
+        <field name="rental_rate">133.10</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">BAGONG BARRIO HYPERMARKET &amp; PROPERTIES CORP.</field>
+    </record>
+
+    <record id="stall_bbh_0036" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">A-7</field>
+        <field name="rental_rate">133.10</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="true"/>
+    </record>
+
+    <record id="stall_bbh_0037" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">A-7/8</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="default_electricity_rate">15.00</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">BAGONG BARRIO HYPERMARKET &amp; PROPERTIES CORP.</field>
+    </record>
+
+    <record id="stall_bbh_0038" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">A-8</field>
+        <field name="rental_rate">133.10</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="true"/>
+    </record>
+
+    <record id="stall_bbh_0039" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">A-9</field>
+        <field name="rental_rate">121.00</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="true"/>
+    </record>
+
+    <record id="stall_bbh_0040" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">A-9 PD</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_bbh_0041" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">B-1</field>
+        <field name="rental_rate">205.70</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_bbh_0042" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">B-2</field>
+        <field name="rental_rate">165.00</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">BAGONG BARRIO HYPERMARKET &amp; PROPERT</field>
+    </record>
+
+    <record id="stall_bbh_0043" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">B-2 PD</field>
+        <field name="rental_rate">165.00</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">LAURENCITO RAGAS TIU</field>
+    </record>
+
+    <record id="stall_bbh_0044" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">B-2A</field>
+        <field name="rental_rate">242.00</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">LAURENCITO RAGAS TIU</field>
+    </record>
+
+    <record id="stall_bbh_0045" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">B-3</field>
+        <field name="rental_rate">146.30</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">BAGONG BARRIO HYPERMARKET &amp; PROPERTIES CORP.</field>
+    </record>
+
+    <record id="stall_bbh_0046" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">B-3 PD</field>
+        <field name="rental_rate">133.00</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_bbh_0047" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">B-3 PD 1</field>
+        <field name="rental_rate">146.30</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="true"/>
+    </record>
+
+    <record id="stall_bbh_0048" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">B-4</field>
+        <field name="rental_rate">133.10</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="true"/>
+    </record>
+
+    <record id="stall_bbh_0049" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">B-4/6</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="default_electricity_rate">15.00</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">BAGONG BARRIO HYPERMARKET &amp; PROPERTIES CORP.</field>
+    </record>
+
+    <record id="stall_bbh_0050" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">B-5</field>
+        <field name="rental_rate">133.10</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">BAGONG BARRIO HYPERMARKET &amp; PROPERTIES CORP.</field>
+    </record>
+
+    <record id="stall_bbh_0051" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">B-5 PD</field>
+        <field name="rental_rate">121.00</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_bbh_0052" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">B-5 PD 1</field>
+        <field name="rental_rate">133.10</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="true"/>
+    </record>
+
+    <record id="stall_bbh_0053" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">B-6</field>
+        <field name="rental_rate">133.10</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="true"/>
+    </record>
+
+    <record id="stall_bbh_0054" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">B-7</field>
+        <field name="rental_rate">133.10</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="true"/>
+    </record>
+
+    <record id="stall_bbh_0055" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">B-8</field>
+        <field name="rental_rate">88.00</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_bbh_0056" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">BUKO</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_bbh_0057" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">C-1</field>
+        <field name="rental_rate">321.20</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">BAGONG BARRIO HYPERMARKET &amp; PROPERTIES CORP.</field>
+    </record>
+
+    <record id="stall_bbh_0058" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">C-2</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">BAGONG BARRIO HYPERMARKET &amp; PROPERTIES CORP.</field>
+    </record>
+
+    <record id="stall_bbh_0059" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">C-3</field>
+        <field name="rental_rate">172.00</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="true"/>
+        <field name="meralco_account_number">BAGONG BARRIO HYPERMARKET &amp; PROPERTIES CORP.</field>
+    </record>
+
+    <record id="stall_bbh_0060" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">C-3PD</field>
+        <field name="rental_rate">157.00</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_bbh_0061" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">C-4</field>
+        <field name="rental_rate">145.20</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">BAGONG BARRIO HYPERMARKET &amp; PROPERT</field>
+    </record>
+
+    <record id="stall_bbh_0062" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">C-5</field>
+        <field name="rental_rate">133.10</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">BAGONG BARRIO HYPERMARKET &amp; PROPERTIES CORP.</field>
+    </record>
+
+    <record id="stall_bbh_0063" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">D-1</field>
+        <field name="rental_rate">332.75</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="true"/>
+        <field name="meralco_account_number">BAGONG BARRIO HYPERMARKET &amp; PROPERTIES CORP.</field>
+    </record>
+
+    <record id="stall_bbh_0064" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">D-2</field>
+        <field name="rental_rate">186.45</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="true"/>
+        <field name="meralco_account_number">BAGONG BARRIO HYPERMARKET &amp; PROPERTIES CORP.</field>
+    </record>
+
+    <record id="stall_bbh_0065" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">D-3</field>
+        <field name="rental_rate">172.70</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="true"/>
+        <field name="meralco_account_number">BAGONG BARRIO HYPERMARKET &amp; PROPERTIES CORP.</field>
+    </record>
+
+    <record id="stall_bbh_0066" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">D-4</field>
+        <field name="rental_rate">159.50</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="true"/>
+        <field name="meralco_account_number">BAGONG BARRIO HYPERMARKET &amp; PROPERTIES CORP.</field>
+    </record>
+
+    <record id="stall_bbh_0067" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">D-5</field>
+        <field name="rental_rate">133.10</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_bbh_0068" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">D-6</field>
+        <field name="rental_rate">133.10</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="true"/>
+        <field name="meralco_account_number">BAGONG BARRIO HYPERMARKET &amp; PROPERTIES CORP.</field>
+    </record>
+
+    <record id="stall_bbh_0069" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">D-7</field>
+        <field name="rental_rate">3000.00</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_bbh_0070" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">E-1</field>
+        <field name="rental_rate">452.65</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="true"/>
+        <field name="meralco_account_number">BAGONG BARRIO HYPERMARKET &amp; PROPERTIES CORP.</field>
+    </record>
+
+    <record id="stall_bbh_0071" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">E-2</field>
+        <field name="rental_rate">181.50</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">BAGONG BARRIO HYPERMARKET &amp; PROPERTIES CORP.</field>
+    </record>
+
+    <record id="stall_bbh_0072" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">E-3</field>
+        <field name="rental_rate">181.50</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">BAGONG BARRIO HYPERMARKET &amp; PROPERTIES CORP.</field>
+    </record>
+
+    <record id="stall_bbh_0073" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">E-4</field>
+        <field name="rental_rate">181.50</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">BAGONG BARRIO HYPERMARKET &amp; PROPERTIES CORP.</field>
+    </record>
+
+    <record id="stall_bbh_0074" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">E-5</field>
+        <field name="rental_rate">181.50</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_bbh_0075" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">E-6</field>
+        <field name="rental_rate">199.65</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="true"/>
+        <field name="meralco_account_number">BAGONG BARRIO HYPERMARKET &amp; PROPERTIES CORP.</field>
+    </record>
+
+    <record id="stall_bbh_0076" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">E-7</field>
+        <field name="rental_rate">181.50</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">BAGONG BARRIO HYPERMARKET &amp; PROPERTIES CORP.</field>
+    </record>
+
+    <record id="stall_bbh_0077" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">F- 8 PD</field>
+        <field name="rental_rate">96.50</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="default_water_rate">10.00</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_bbh_0078" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">F-1</field>
+        <field name="rental_rate">133.10</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="true"/>
+    </record>
+
+    <record id="stall_bbh_0079" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">F-1 PD</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_bbh_0080" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">F-1/2/3</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="default_electricity_rate">15.00</field>
+        <field name="default_water_rate">20.00</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">BAGONG BARRIO HYPERMARKET &amp; PROPERTIES CORP.</field>
+    </record>
+
+    <record id="stall_bbh_0081" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">F-10</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_bbh_0082" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">F-11</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_bbh_0083" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">F-12</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_bbh_0084" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">F-14</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_bbh_0085" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">F-15</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_bbh_0086" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">F-16</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_bbh_0087" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">F-2</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="true"/>
+    </record>
+
+    <record id="stall_bbh_0088" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">F-3</field>
+        <field name="rental_rate">119.90</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="true"/>
+    </record>
+
+    <record id="stall_bbh_0089" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">F-3 PD</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_bbh_0090" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">F-4</field>
+        <field name="rental_rate">106.15</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="default_water_rate">20.00</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="true"/>
+        <field name="meralco_account_number">BAGONG BARRIO HYPERMARKET &amp; PROPERTIES CORP.</field>
+    </record>
+
+    <record id="stall_bbh_0091" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">F-4 PD</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="default_water_rate">20.00</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_bbh_0092" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">F-4-PD</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="default_electricity_rate">20.00</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">BAGONG BARRIO HYPERMARKET &amp; PROPERTIES CORP.</field>
+    </record>
+
+    <record id="stall_bbh_0093" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">F-5</field>
+        <field name="rental_rate">106.15</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="default_water_rate">20.00</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="true"/>
+        <field name="meralco_account_number">BAGONG BARRIO HYPERMARKET &amp; PROPERTIES CORP.</field>
+    </record>
+
+    <record id="stall_bbh_0094" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">F-6</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="true"/>
+        <field name="meralco_account_number">BAGONG BARRIO HYPERMARKET &amp; PROPERTIES CORP.</field>
+    </record>
+
+    <record id="stall_bbh_0095" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">F-7</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">BAGONG BARRIO HYPERMARKET &amp; PROPERTIES CORP.</field>
+    </record>
+
+    <record id="stall_bbh_0096" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">F-8</field>
+        <field name="rental_rate">106.15</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="default_water_rate">10.00</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="true"/>
+    </record>
+
+    <record id="stall_bbh_0097" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">F-8/9</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="default_electricity_rate">10.00</field>
+        <field name="default_water_rate">20.00</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">BAGONG BARRIO HYPERMARKET &amp; PROPERTIES CORP.</field>
+    </record>
+
+    <record id="stall_bbh_0098" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">F-9</field>
+        <field name="rental_rate">106.15</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="default_water_rate">10.00</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="true"/>
+    </record>
+
+    <record id="stall_bbh_0099" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">F-9 PD</field>
+        <field name="rental_rate">96.50</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="default_water_rate">10.00</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_bbh_0100" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">G-1</field>
+        <field name="rental_rate">133.10</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="true"/>
+    </record>
+
+    <record id="stall_bbh_0101" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">G-1/4/5</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="default_electricity_rate">15.00</field>
+        <field name="default_water_rate">25.00</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">BAGONG BARRIO HYPERMARKET &amp; PROPERTIES CORP.</field>
+    </record>
+
+    <record id="stall_bbh_0102" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">G-10</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="default_water_rate">40.00</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">BAGONG BARRIO HYPERMARKET &amp; PROPERTIES CORP.</field>
+    </record>
+
+    <record id="stall_bbh_0103" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">G-11</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">BAGONG BARRIO HYPERMARKET &amp; PROPERTIES CORP.</field>
+    </record>
+
+    <record id="stall_bbh_0104" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">G-12</field>
+        <field name="rental_rate">79.75</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="true"/>
+    </record>
+
+    <record id="stall_bbh_0105" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">G-12/14</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="default_electricity_rate">15.00</field>
+        <field name="default_water_rate">25.00</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">BAGONG BARRIO HYPERMARKET &amp; PROPERTIES CORP.</field>
+    </record>
+
+    <record id="stall_bbh_0106" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">G-12/14-n</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="default_electricity_rate">15.00</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">BAGONG BARRIO HYPERMARKET &amp; PROPERTIES CORP.</field>
+    </record>
+
+    <record id="stall_bbh_0107" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">G-14</field>
+        <field name="rental_rate">79.75</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="true"/>
+    </record>
+
+    <record id="stall_bbh_0108" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">G-15</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_bbh_0109" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">G-16</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_bbh_0110" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">G-2</field>
+        <field name="rental_rate">839.50</field>
+        <field name="rent_collection_type">weekly</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="true"/>
+    </record>
+
+    <record id="stall_bbh_0111" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">G-2/3</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="default_electricity_rate">15.00</field>
+        <field name="default_water_rate">15.00</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">BAGONG BARRIO HYPERMARKET &amp; PROPERTIES CORP.</field>
+    </record>
+
+    <record id="stall_bbh_0112" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">G-3</field>
+        <field name="rental_rate">839.50</field>
+        <field name="rent_collection_type">weekly</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="true"/>
+    </record>
+
+    <record id="stall_bbh_0113" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">G-4</field>
+        <field name="rental_rate">106.15</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="true"/>
+    </record>
+
+    <record id="stall_bbh_0114" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">G-5</field>
+        <field name="rental_rate">106.15</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="true"/>
+    </record>
+
+    <record id="stall_bbh_0115" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">G-6</field>
+        <field name="rental_rate">106.15</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_bbh_0116" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">G-6 PD</field>
+        <field name="rental_rate">96.80</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_bbh_0117" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">G-6 PD 1</field>
+        <field name="rental_rate">106.15</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_bbh_0118" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">G-6/7</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="default_electricity_rate">15.00</field>
+        <field name="default_water_rate">11.00</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">BAGONG BARRIO HYPERMARKET &amp; PROPERTIES CORP.</field>
+    </record>
+
+    <record id="stall_bbh_0119" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">G-7</field>
+        <field name="rental_rate">96.80</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_bbh_0120" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">G-8</field>
+        <field name="rental_rate">106.15</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="default_water_rate">40.00</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">BAGONG BARRIO HYPERMARKET &amp; PROPERTIES CORP.</field>
+    </record>
+
+    <record id="stall_bbh_0121" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">G-9</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="default_electricity_rate">40.00</field>
+        <field name="default_water_rate">11.00</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_bbh_0122" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">G-9A</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_bbh_0123" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">G-9B</field>
+        <field name="rental_rate">96.50</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_bbh_0124" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">G6</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="default_electricity_rate">40.00</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_bbh_0125" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">GF-1A</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="default_water_rate">112.34</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">KST PROPERTIES INC. PP -1B</field>
+        <field name="electricity_sub_meter_number">191062672-8</field>
+    </record>
+
+    <record id="stall_bbh_0126" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">GF-1A-AD</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">KST PROPERTIES INC. - ADMIN</field>
+        <field name="electricity_sub_meter_number">187098177-8</field>
+    </record>
+
+    <record id="stall_bbh_0127" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">GF-1B</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="default_water_rate">112.34</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">KST PROPERTIES INC. PP 1A</field>
+        <field name="electricity_sub_meter_number">191051360-4</field>
+    </record>
+
+    <record id="stall_bbh_0128" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">GF-1B-AD</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">KST PROERTIES PP 1A</field>
+        <field name="electricity_sub_meter_number">187098177-8</field>
+    </record>
+
+    <record id="stall_bbh_0129" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">H-1</field>
+        <field name="rental_rate">133.15</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="true"/>
+        <field name="meralco_account_number">BAGONG BARRIO HYPERMARKET &amp; PROPERTIES CORP.</field>
+    </record>
+
+    <record id="stall_bbh_0130" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">H-10</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="default_water_rate">40.00</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">BAGONG BARRIO HYPERMARKET &amp; PROPERTIES CORP.</field>
+    </record>
+
+    <record id="stall_bbh_0131" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">H-11</field>
+        <field name="rental_rate">106.15</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="default_water_rate">40.00</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="true"/>
+        <field name="meralco_account_number">BAGONG BARRIO HYPERMARKET &amp; PROPERTIES CORP.</field>
+    </record>
+
+    <record id="stall_bbh_0132" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">H-12</field>
+        <field name="rental_rate">181.50</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">BAGONG BARRIO HYPERMARKET &amp; PROPERTIES CORP.</field>
+    </record>
+
+    <record id="stall_bbh_0133" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">H-14</field>
+        <field name="rental_rate">181.50</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">BAGONG BARRIO HYPERMARKET &amp; PROPERTIES CORP.</field>
+    </record>
+
+    <record id="stall_bbh_0134" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">H-2</field>
+        <field name="rental_rate">119.90</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="true"/>
+    </record>
+
+    <record id="stall_bbh_0135" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">H-2/3</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="default_electricity_rate">15.00</field>
+        <field name="default_water_rate">11.00</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">BAGONG BARRIO HYPERMARKET &amp; PROPERTIES CORP.</field>
+    </record>
+
+    <record id="stall_bbh_0136" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">H-3</field>
+        <field name="rental_rate">119.90</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="true"/>
+    </record>
+
+    <record id="stall_bbh_0137" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">H-4</field>
+        <field name="rental_rate">106.15</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="true"/>
+    </record>
+
+    <record id="stall_bbh_0138" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">H-4/5/6</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="default_electricity_rate">15.00</field>
+        <field name="default_water_rate">11.00</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">BAGONG BARRIO HYPERMARKET &amp; PROPERTIES CORP.</field>
+    </record>
+
+    <record id="stall_bbh_0139" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">H-5</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="true"/>
+    </record>
+
+    <record id="stall_bbh_0140" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">H-6</field>
+        <field name="rental_rate">96.50</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="true"/>
+    </record>
+
+    <record id="stall_bbh_0141" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">H-7</field>
+        <field name="rental_rate">96.50</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="default_water_rate">20.00</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">BAGONG BARRIO HYPERMARKET &amp; PROPERTIES CORP.</field>
+    </record>
+
+    <record id="stall_bbh_0142" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">H-8</field>
+        <field name="rental_rate">106.15</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="default_water_rate">40.00</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="true"/>
+        <field name="meralco_account_number">BAGONG BARRIO HYPERMARKET &amp; PROPERTIES CORP.</field>
+    </record>
+
+    <record id="stall_bbh_0143" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">H-9</field>
+        <field name="rental_rate">96.50</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="default_water_rate">40.00</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="true"/>
+        <field name="meralco_account_number">BAGONG BARRIO HYPERMARKET &amp; PROPERTIES CORP.</field>
+    </record>
+
+    <record id="stall_bbh_0144" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">H-9A</field>
+        <field name="rental_rate">96.50</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="default_water_rate">40.00</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="true"/>
+    </record>
+
+    <record id="stall_bbh_0145" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">I-1</field>
+        <field name="rental_rate">931.75</field>
+        <field name="rent_collection_type">weekly</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="true"/>
+    </record>
+
+    <record id="stall_bbh_0146" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">I-1/2/3</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="default_electricity_rate">15.00</field>
+        <field name="default_water_rate">11.00</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">BAGONG BARRIO HYPERMARKET &amp; PROPERTIES CORP.</field>
+    </record>
+
+    <record id="stall_bbh_0147" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">I-10</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_bbh_0148" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">I-11</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_bbh_0149" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">I-2</field>
+        <field name="rental_rate">839.50</field>
+        <field name="rent_collection_type">weekly</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="true"/>
+    </record>
+
+    <record id="stall_bbh_0150" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">I-3</field>
+        <field name="rental_rate">839.50</field>
+        <field name="rent_collection_type">weekly</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="true"/>
+    </record>
+
+    <record id="stall_bbh_0151" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">I-4</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_bbh_0152" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">I-5</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_bbh_0153" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">I-6</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_bbh_0154" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">I-7</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_bbh_0155" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">I-8</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_bbh_0156" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">I-9</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_bbh_0157" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">J-1</field>
+        <field name="rental_rate">452.65</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="true"/>
+    </record>
+
+    <record id="stall_bbh_0158" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">J-1/2</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="default_electricity_rate">15.00</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">BAGONG BARRIO HYPERMARKET &amp; PROPERTIES CORP.</field>
+    </record>
+
+    <record id="stall_bbh_0159" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">J-2</field>
+        <field name="rental_rate">106.15</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="true"/>
+    </record>
+
+    <record id="stall_bbh_0160" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">J-3</field>
+        <field name="rental_rate">181.50</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="true"/>
+    </record>
+
+    <record id="stall_bbh_0161" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">J-3-PD</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_bbh_0162" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">J-3a</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_bbh_0163" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">J-4</field>
+        <field name="rental_rate">199.65</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="true"/>
+        <field name="meralco_account_number">BAGONG BARRIO HYPERMARKET &amp; PROPERTIES CORP.</field>
+    </record>
+
+    <record id="stall_bbh_0164" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">J-5</field>
+        <field name="rental_rate">96.80</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">BAGONG BARRIO HYPERMARKET &amp; PROPERTIES CORP.</field>
+    </record>
+
+    <record id="stall_bbh_0165" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">J-6</field>
+        <field name="rental_rate">133.10</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_bbh_0166" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">J-7</field>
+        <field name="rental_rate">199.65</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="true"/>
+    </record>
+
+    <record id="stall_bbh_0167" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">K - 16</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_bbh_0168" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">K-1</field>
+        <field name="rental_rate">66.55</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="true"/>
+    </record>
+
+    <record id="stall_bbh_0169" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">K-1 PD</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="true"/>
+    </record>
+
+    <record id="stall_bbh_0170" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">K-1/2</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_bbh_0171" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">K-10</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_bbh_0172" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">K-11</field>
+        <field name="rental_rate">67.65</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_bbh_0173" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">K-11 PD</field>
+        <field name="rental_rate">66.55</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_bbh_0174" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">K-11A</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_bbh_0175" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">K-12</field>
+        <field name="rental_rate">66.55</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="true"/>
+    </record>
+
+    <record id="stall_bbh_0176" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">K-14</field>
+        <field name="rental_rate">66.55</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_bbh_0177" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">K-15</field>
+        <field name="rental_rate">66.55</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="true"/>
+        <field name="meralco_account_number">BAGONG BARRIO HYPERMARKET &amp; PROPERTIES CORP.</field>
+    </record>
+
+    <record id="stall_bbh_0178" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">K-16</field>
+        <field name="rental_rate">66.55</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="true"/>
+    </record>
+
+    <record id="stall_bbh_0179" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">K-16B</field>
+        <field name="rental_rate">66.55</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="true"/>
+    </record>
+
+    <record id="stall_bbh_0180" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">K-16a</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="true"/>
+    </record>
+
+    <record id="stall_bbh_0181" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">K-17</field>
+        <field name="rental_rate">66.55</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="true"/>
+    </record>
+
+    <record id="stall_bbh_0182" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">K-18</field>
+        <field name="rental_rate">66.55</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="true"/>
+    </record>
+
+    <record id="stall_bbh_0183" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">K-19</field>
+        <field name="rental_rate">66.55</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="true"/>
+    </record>
+
+    <record id="stall_bbh_0184" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">K-2</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="true"/>
+    </record>
+
+    <record id="stall_bbh_0185" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">K-20</field>
+        <field name="rental_rate">66.55</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="true"/>
+    </record>
+
+    <record id="stall_bbh_0186" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">K-20/21</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_bbh_0187" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">K-21</field>
+        <field name="rental_rate">66.55</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="true"/>
+    </record>
+
+    <record id="stall_bbh_0188" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">K-22</field>
+        <field name="rental_rate">66.55</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="true"/>
+    </record>
+
+    <record id="stall_bbh_0189" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">K-22 PD</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_bbh_0190" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">K-22 PD 1</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="default_water_rate">60.50</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_bbh_0191" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">K-22/23</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="default_electricity_rate">40.00</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">BAGONG BARRIO HYPERMARKET &amp; PROPERTIES CORP.</field>
+    </record>
+
+    <record id="stall_bbh_0192" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">K-23</field>
+        <field name="rental_rate">66.55</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="true"/>
+    </record>
+
+    <record id="stall_bbh_0193" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">K-23 PD</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_bbh_0194" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">K-23 PD 1</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="default_water_rate">60.50</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_bbh_0195" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">K-24</field>
+        <field name="rental_rate">66.55</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="true"/>
+    </record>
+
+    <record id="stall_bbh_0196" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">K-24 PD</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_bbh_0197" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">K-24 PD 1</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="default_water_rate">60.50</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_bbh_0198" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">K-24/25</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_bbh_0199" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">K-25</field>
+        <field name="rental_rate">66.55</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="true"/>
+    </record>
+
+    <record id="stall_bbh_0200" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">K-25 PD</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_bbh_0201" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">K-25 PD 1</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="default_water_rate">60.50</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_bbh_0202" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">K-26</field>
+        <field name="rental_rate">72.60</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_bbh_0203" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">K-27</field>
+        <field name="rental_rate">67.65</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_bbh_0204" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">K-27 PD</field>
+        <field name="rental_rate">67.65</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_bbh_0205" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">K-3</field>
+        <field name="rental_rate">66.55</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="true"/>
+    </record>
+
+    <record id="stall_bbh_0206" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">K-3/4</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_bbh_0207" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">K-4</field>
+        <field name="rental_rate">66.55</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="true"/>
+    </record>
+
+    <record id="stall_bbh_0208" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">K-5</field>
+        <field name="rental_rate">60.50</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_bbh_0209" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">K-5/6</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="default_electricity_rate">40.00</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">BAGONG BARRIO HYPERMARKET &amp; PROPERTIES CORP.</field>
+    </record>
+
+    <record id="stall_bbh_0210" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">K-6</field>
+        <field name="rental_rate">60.50</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_bbh_0211" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">K-7</field>
+        <field name="rental_rate">60.50</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_bbh_0212" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">K-8</field>
+        <field name="rental_rate">66.55</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_bbh_0213" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">K-9</field>
+        <field name="rental_rate">66.55</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="true"/>
+    </record>
+
+    <record id="stall_bbh_0214" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">K-9 PD</field>
+        <field name="rental_rate">66.55</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="true"/>
+    </record>
+
+    <record id="stall_bbh_0215" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">K1</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="default_electricity_rate">20.00</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_bbh_0216" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">L- 1</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="default_electricity_rate">15.00</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">BAGONG BARRIO HYPERMARKET &amp; PROPERT</field>
+    </record>
+
+    <record id="stall_bbh_0217" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">L-1</field>
+        <field name="rental_rate">27500.00</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_bbh_0218" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">L-1 PD</field>
+        <field name="rental_rate">27500.00</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_bbh_0219" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">L-3</field>
+        <field name="rental_rate">25410.00</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">INDEX HAIR &amp; BODY SALON</field>
+    </record>
+
+    <record id="stall_bbh_0220" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">L-3-PARK</field>
+        <field name="rental_rate">3500.00</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_bbh_0221" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">LUGAW</field>
+        <field name="rental_rate">110.00</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="default_water_rate">25.00</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">BAGONG BARRIO HYPERMARKET &amp; PROPERTIES CORP.</field>
+    </record>
+
+    <record id="stall_bbh_0222" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">M-1</field>
+        <field name="rental_rate">110.00</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">BAGONG BARRIO HYPERMARKET &amp; PROPERTIES CORP.</field>
+    </record>
+
+    <record id="stall_bbh_0223" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">M-10</field>
+        <field name="rental_rate">266.20</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="true"/>
+        <field name="meralco_account_number">BAGONG BARRIO HYPERMARKET &amp; PROPERTIES CORP.</field>
+    </record>
+
+    <record id="stall_bbh_0224" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">M-2</field>
+        <field name="rental_rate">121.00</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">BAGONG BARRIO HYPERMARKET &amp; PROPERTIES CORP.</field>
+    </record>
+
+    <record id="stall_bbh_0225" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">M-3</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">BAGONG BARRIO HYPERMARKET &amp; PROPERTIES CORP.</field>
+    </record>
+
+    <record id="stall_bbh_0226" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">M-3/4</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="default_electricity_rate">15.00</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">BAGONG BARRIO HYPERMARKET &amp; PROPERTIES CORP.</field>
+    </record>
+
+    <record id="stall_bbh_0227" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">M-4</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_bbh_0228" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">M-4 PD</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_bbh_0229" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">M-5</field>
+        <field name="rental_rate">121.00</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">BAGONG BARRIO HYPERMARKET &amp; PROPERTIES CORP.</field>
+    </record>
+
+    <record id="stall_bbh_0230" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">M-5 PD</field>
+        <field name="rental_rate">121.00</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">BAGONG BARRIO HYPERMARKET &amp; PROPERTIES CORP.</field>
+    </record>
+
+    <record id="stall_bbh_0231" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">M-6</field>
+        <field name="rental_rate">121.00</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">BAGONG BARRIO HYPERMARKET &amp; PROPERTIES CORP.</field>
+    </record>
+
+    <record id="stall_bbh_0232" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">M-6 PD</field>
+        <field name="rental_rate">3300.00</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_bbh_0233" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">M-6 PD1</field>
+        <field name="rental_rate">3630.00</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_bbh_0234" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">M-7</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">BAGONG BARRIO HYPERMARKET &amp; PROPERTIES CORP.</field>
+    </record>
+
+    <record id="stall_bbh_0235" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">M-8</field>
+        <field name="rental_rate">121.00</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">BAGONG BARRIO HYPERMARKET &amp; PROPERTIES CORP.</field>
+    </record>
+
+    <record id="stall_bbh_0236" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">M-8 PD</field>
+        <field name="rental_rate">121.00</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_bbh_0237" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">M-9</field>
+        <field name="rental_rate">121.00</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">BAGONG BARRIO HYPERMARKET &amp; PROPERTIES CORP.</field>
+    </record>
+
+    <record id="stall_bbh_0238" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">M-9 PD</field>
+        <field name="rental_rate">121.00</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_bbh_0239" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">M-9 PD 1</field>
+        <field name="rental_rate">121.00</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_bbh_0240" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">NAWASA</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_bbh_0241" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">P-1</field>
+        <field name="rental_rate">1800.00</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_bbh_0242" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">P-2</field>
+        <field name="rental_rate">1800.00</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_bbh_0243" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">P-3</field>
+        <field name="rental_rate">1800.00</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_bbh_0244" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">P-4</field>
+        <field name="rental_rate">1800.00</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_bbh_0245" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">P-5</field>
+        <field name="rental_rate">1800.00</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_bbh_0246" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">PARKING</field>
+        <field name="rental_rate">4000.00</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_bbh_0247" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">PINYA</field>
+        <field name="rental_rate">110.00</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_bbh_0248" model="kst.stall">
+        <field name="market_id" ref="market_bbh"/>
+        <field name="code">TOILET</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <!-- ktc Market Stalls -->
+    <record id="stall_ktc_0249" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">2F - B</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">KALAYAAN TALIPAPA COR</field>
+    </record>
+
+    <record id="stall_ktc_0250" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">2F - D</field>
+        <field name="rental_rate">130.00</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_ktc_0251" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">2F - F PD</field>
+        <field name="rental_rate">160.00</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_ktc_0252" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">2F - NOPQ</field>
+        <field name="rental_rate">16000.00</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_ktc_0253" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">2F - R</field>
+        <field name="rental_rate">8500.00</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_ktc_0254" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">2F -N</field>
+        <field name="rental_rate">5000.00</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_ktc_0255" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">2F -Q</field>
+        <field name="rental_rate">3000.00</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_ktc_0256" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">2F A</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="default_electricity_rate">17.00</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">KALAYAAN TALIPAPA COR</field>
+    </record>
+
+    <record id="stall_ktc_0257" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">2F B</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="default_electricity_rate">17.00</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">KALAYAAN TALIPAPA COR</field>
+    </record>
+
+    <record id="stall_ktc_0258" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">2F F- PD1</field>
+        <field name="rental_rate">160.00</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_ktc_0259" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">2F R</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="default_electricity_rate">17.00</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">KALAYAAN TALIPAPA COR</field>
+    </record>
+
+    <record id="stall_ktc_0260" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">2F- F</field>
+        <field name="rental_rate">5000.00</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_ktc_0261" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">2F- I</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="default_electricity_rate">17.00</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="true"/>
+        <field name="meralco_account_number">KALAYAAN TALIPAPA CORP.</field>
+    </record>
+
+    <record id="stall_ktc_0262" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">2F- P</field>
+        <field name="rental_rate">3000.00</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_ktc_0263" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">2F- P PD</field>
+        <field name="rental_rate">5000.00</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_ktc_0264" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">2F-A/B</field>
+        <field name="rental_rate">3000.00</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_ktc_0265" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">2F-A/B-2</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">KALAYAAN TALIPAPA CORP.</field>
+    </record>
+
+    <record id="stall_ktc_0266" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">2F-A/B/O</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="default_electricity_rate">17.00</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">KALAYAAN TALIPAPA CORP.</field>
+    </record>
+
+    <record id="stall_ktc_0267" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">2F-D</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="default_electricity_rate">17.00</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">KALAYAAN TALIPAPA CORP.</field>
+    </record>
+
+    <record id="stall_ktc_0268" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">2F-E</field>
+        <field name="rental_rate">266.25</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">KALAYAAN TALIPAPA CORP.</field>
+    </record>
+
+    <record id="stall_ktc_0269" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">2F-F</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="default_electricity_rate">17.00</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">KALAYAAN TALIPAPA CORP.</field>
+    </record>
+
+    <record id="stall_ktc_0270" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">2F-F PD</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="default_electricity_rate">17.00</field>
+        <field name="default_water_rate">23.00</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="true"/>
+        <field name="meralco_account_number">KALAYAAN TALIPAPA CORP.</field>
+    </record>
+
+    <record id="stall_ktc_0271" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">2F-FGH</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="true"/>
+        <field name="meralco_account_number">KALAYAAN TALIPAPA CORP.</field>
+    </record>
+
+    <record id="stall_ktc_0272" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">2F-FGHI</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="default_water_rate">28.00</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="true"/>
+    </record>
+
+    <record id="stall_ktc_0273" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">2F-FGHI-PD</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_ktc_0274" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">2F-G</field>
+        <field name="rental_rate">121.00</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">KALAYAAN TALIPAPA CORP.</field>
+    </record>
+
+    <record id="stall_ktc_0275" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">2F-H</field>
+        <field name="rental_rate">121.00</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">KALAYAAN TALIPAPA CORP.</field>
+    </record>
+
+    <record id="stall_ktc_0276" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">2F-I</field>
+        <field name="rental_rate">199.65</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="true"/>
+        <field name="meralco_account_number">KALAYAAN TALIPAPA CORP.</field>
+    </record>
+
+    <record id="stall_ktc_0277" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">2F-J</field>
+        <field name="rental_rate">202.13</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">KALAYAAN TALIPAPA CORP.</field>
+    </record>
+
+    <record id="stall_ktc_0278" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">2F-K</field>
+        <field name="rental_rate">7700.00</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">KALAYAAN TALIPAPA CORP.</field>
+    </record>
+
+    <record id="stall_ktc_0279" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">2F-L/M</field>
+        <field name="rental_rate">11000.00</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">KALAYAAN TALIPAPA CORP.</field>
+    </record>
+
+    <record id="stall_ktc_0280" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">2F-N</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">KALAYAAN TALIPAPA CORP.</field>
+    </record>
+
+    <record id="stall_ktc_0281" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">2F-N/O</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="default_electricity_rate">1320.00</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">KALAYAAN TALIPAPA COR</field>
+    </record>
+
+    <record id="stall_ktc_0282" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">2F-N/O/P/Q</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="default_electricity_rate">17.00</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">KALAYAAN TALIPAPA COR</field>
+    </record>
+
+    <record id="stall_ktc_0283" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">2F-NO</field>
+        <field name="rental_rate">500.00</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_ktc_0284" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">2F-O</field>
+        <field name="rental_rate">5000.00</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_ktc_0285" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">2F-O PD</field>
+        <field name="rental_rate">7000.00</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_ktc_0286" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">2F-O-1</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">KALAYAAN TALIPAPA CORP.</field>
+    </record>
+
+    <record id="stall_ktc_0287" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">2F-O-2</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">KALAYAAN TALIPAPA CORP.</field>
+    </record>
+
+    <record id="stall_ktc_0288" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">2F-O-3</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">KALAYAAN TALIPAPA CORP.</field>
+    </record>
+
+    <record id="stall_ktc_0289" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">2F-P</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="default_electricity_rate">17.00</field>
+        <field name="default_water_rate">13.00</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">KALAYAAN TALIPAPA CORP.</field>
+    </record>
+
+    <record id="stall_ktc_0290" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">3F</field>
+        <field name="rental_rate">30800.00</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">KALAYAAN TALIPAPA CORP.</field>
+    </record>
+
+    <record id="stall_ktc_0291" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">ADMI</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_ktc_0292" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">ADMIN</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">KALAYAAN TALIPAPA CORP.</field>
+    </record>
+
+    <record id="stall_ktc_0293" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">BSE</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_ktc_0294" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">BSE-1</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="default_electricity_rate">17.00</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">KALAYAAN TALIPAPA CORP.</field>
+    </record>
+
+    <record id="stall_ktc_0295" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">BSE-2</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="default_electricity_rate">17.00</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">KALAYAAN TALIPAPA CORP.</field>
+    </record>
+
+    <record id="stall_ktc_0296" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">BSE-6</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="default_electricity_rate">17.00</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">KALAYAAN TALIPAPA COR</field>
+    </record>
+
+    <record id="stall_ktc_0297" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">LG 41</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="default_water_rate">28.00</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">0459814792</field>
+    </record>
+
+    <record id="stall_ktc_0298" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">LG-1</field>
+        <field name="rental_rate">124.58</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="true"/>
+    </record>
+
+    <record id="stall_ktc_0299" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">LG-1,2</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="default_electricity_rate">85.00</field>
+        <field name="default_water_rate">28.00</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">0459814792</field>
+    </record>
+
+    <record id="stall_ktc_0300" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">LG-10</field>
+        <field name="rental_rate">110.00</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_ktc_0301" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">LG-11</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_ktc_0302" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">LG-12</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_ktc_0303" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">LG-13</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">0459814792</field>
+    </record>
+
+    <record id="stall_ktc_0304" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">LG-14</field>
+        <field name="rental_rate">73.15</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_ktc_0305" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">LG-14,15,1</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="default_electricity_rate">55.00</field>
+        <field name="default_water_rate">28.00</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">0459814792</field>
+    </record>
+
+    <record id="stall_ktc_0306" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">LG-15</field>
+        <field name="rental_rate">73.15</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_ktc_0307" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">LG-16</field>
+        <field name="rental_rate">73.15</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_ktc_0308" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">LG-17</field>
+        <field name="rental_rate">73.15</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_ktc_0309" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">LG-18</field>
+        <field name="rental_rate">73.15</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_ktc_0310" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">LG-19</field>
+        <field name="rental_rate">73.15</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_ktc_0311" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">LG-2</field>
+        <field name="rental_rate">110.00</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="true"/>
+    </record>
+
+    <record id="stall_ktc_0312" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">LG-20</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_ktc_0313" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">LG-21</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_ktc_0314" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">LG-22</field>
+        <field name="rental_rate">351.45</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="true"/>
+        <field name="meralco_account_number">0459814792</field>
+    </record>
+
+    <record id="stall_ktc_0315" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">LG-23</field>
+        <field name="rental_rate">319.00</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">0459814792</field>
+    </record>
+
+    <record id="stall_ktc_0316" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">LG-26</field>
+        <field name="rental_rate">264.00</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="true"/>
+    </record>
+
+    <record id="stall_ktc_0317" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">LG-26,27</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="default_electricity_rate">185.00</field>
+        <field name="default_water_rate">28.00</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">0459814792</field>
+    </record>
+
+    <record id="stall_ktc_0318" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">LG-27</field>
+        <field name="rental_rate">124.58</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="true"/>
+    </record>
+
+    <record id="stall_ktc_0319" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">LG-28</field>
+        <field name="rental_rate">264.00</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="true"/>
+        <field name="meralco_account_number">0459814792</field>
+    </record>
+
+    <record id="stall_ktc_0320" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">LG-29</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_ktc_0321" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">LG-3</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_ktc_0322" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">LG-31</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_ktc_0323" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">LG-33</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_ktc_0324" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">LG-34</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_ktc_0325" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">LG-35</field>
+        <field name="rental_rate">79.75</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_ktc_0326" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">LG-35,36</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="default_electricity_rate">79.00</field>
+        <field name="default_water_rate">28.00</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">0459814792</field>
+    </record>
+
+    <record id="stall_ktc_0327" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">LG-36</field>
+        <field name="rental_rate">146.30</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="true"/>
+    </record>
+
+    <record id="stall_ktc_0328" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">LG-37</field>
+        <field name="rental_rate">110.00</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_ktc_0329" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">LG-37,38,3</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="default_electricity_rate">80.00</field>
+        <field name="default_water_rate">28.00</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">0459814792</field>
+    </record>
+
+    <record id="stall_ktc_0330" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">LG-38</field>
+        <field name="rental_rate">110.00</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_ktc_0331" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">LG-39</field>
+        <field name="rental_rate">124.58</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_ktc_0332" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">LG-39 PD</field>
+        <field name="rental_rate">113.25</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_ktc_0333" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">LG-4</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_ktc_0334" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">LG-40</field>
+        <field name="rental_rate">124.58</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_ktc_0335" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">LG-41</field>
+        <field name="rental_rate">220.00</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_ktc_0336" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">LG-42</field>
+        <field name="rental_rate">165.00</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_ktc_0337" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">LG-43</field>
+        <field name="rental_rate">200.00</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">0459814792</field>
+    </record>
+
+    <record id="stall_ktc_0338" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">LG-44</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_ktc_0339" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">LG-45</field>
+        <field name="rental_rate">100.00</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_ktc_0340" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">LG-45,47</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="default_electricity_rate">40.00</field>
+        <field name="default_water_rate">28.00</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_ktc_0341" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">LG-46</field>
+        <field name="rental_rate">110.00</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_ktc_0342" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">LG-46,48</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="default_electricity_rate">40.00</field>
+        <field name="default_water_rate">28.00</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_ktc_0343" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">LG-46PD</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_ktc_0344" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">LG-47</field>
+        <field name="rental_rate">113.25</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_ktc_0345" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">LG-48</field>
+        <field name="rental_rate">124.58</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_ktc_0346" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">LG-48PD</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_ktc_0347" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">LG-49</field>
+        <field name="rental_rate">73.15</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_ktc_0348" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">LG-49,51,5</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="default_electricity_rate">55.00</field>
+        <field name="default_water_rate">28.00</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">0459814792</field>
+    </record>
+
+    <record id="stall_ktc_0349" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">LG-5</field>
+        <field name="rental_rate">124.58</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="true"/>
+    </record>
+
+    <record id="stall_ktc_0350" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">LG-5 PD</field>
+        <field name="rental_rate">113.25</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_ktc_0351" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">LG-5,6,7,8</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="default_electricity_rate">60.00</field>
+        <field name="default_water_rate">28.00</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">0459814792</field>
+    </record>
+
+    <record id="stall_ktc_0352" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">LG-50</field>
+        <field name="rental_rate">73.15</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_ktc_0353" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">LG-50,52,5</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="default_electricity_rate">55.00</field>
+        <field name="default_water_rate">28.00</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">0459814792</field>
+    </record>
+
+    <record id="stall_ktc_0354" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">LG-51</field>
+        <field name="rental_rate">73.15</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_ktc_0355" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">LG-52</field>
+        <field name="rental_rate">73.15</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_ktc_0356" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">LG-53</field>
+        <field name="rental_rate">73.15</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_ktc_0357" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">LG-54</field>
+        <field name="rental_rate">73.15</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_ktc_0358" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">LG-55</field>
+        <field name="rental_rate">73.15</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_ktc_0359" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">LG-56</field>
+        <field name="rental_rate">73.15</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_ktc_0360" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">LG-57</field>
+        <field name="rental_rate">73.15</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_ktc_0361" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">LG-58</field>
+        <field name="rental_rate">73.15</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_ktc_0362" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">LG-59</field>
+        <field name="rental_rate">73.15</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_ktc_0363" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">LG-6</field>
+        <field name="rental_rate">110.00</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="true"/>
+    </record>
+
+    <record id="stall_ktc_0364" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">LG-6 PD</field>
+        <field name="rental_rate">100.00</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_ktc_0365" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">LG-60</field>
+        <field name="rental_rate">73.15</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_ktc_0366" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">LG-61</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_ktc_0367" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">LG-62</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_ktc_0368" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">LG-63</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_ktc_0369" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">LG-64</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_ktc_0370" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">LG-7</field>
+        <field name="rental_rate">124.58</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_ktc_0371" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">LG-71</field>
+        <field name="rental_rate">117.43</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="true"/>
+    </record>
+
+    <record id="stall_ktc_0372" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">LG-71-74</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="default_electricity_rate">100.00</field>
+        <field name="default_water_rate">28.00</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">0459814792</field>
+    </record>
+
+    <record id="stall_ktc_0373" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">LG-72</field>
+        <field name="rental_rate">117.43</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="true"/>
+    </record>
+
+    <record id="stall_ktc_0374" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">LG-73</field>
+        <field name="rental_rate">117.43</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="true"/>
+    </record>
+
+    <record id="stall_ktc_0375" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">LG-74</field>
+        <field name="rental_rate">117.43</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="true"/>
+    </record>
+
+    <record id="stall_ktc_0376" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">LG-75</field>
+        <field name="rental_rate">124.58</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_ktc_0377" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">LG-75 PD</field>
+        <field name="rental_rate">124.58</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_ktc_0378" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">LG-75/76/7</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="default_electricity_rate">80.00</field>
+        <field name="default_water_rate">28.00</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">0459814792</field>
+    </record>
+
+    <record id="stall_ktc_0379" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">LG-76</field>
+        <field name="rental_rate">110.00</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_ktc_0380" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">LG-76 PD</field>
+        <field name="rental_rate">110.00</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_ktc_0381" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">LG-77A</field>
+        <field name="rental_rate">55.00</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_ktc_0382" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">LG-77A PD</field>
+        <field name="rental_rate">55.00</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_ktc_0383" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">LG-77B</field>
+        <field name="rental_rate">55.00</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">0459814792</field>
+    </record>
+
+    <record id="stall_ktc_0384" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">LG-78</field>
+        <field name="rental_rate">124.58</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="true"/>
+    </record>
+
+    <record id="stall_ktc_0385" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">LG-79</field>
+        <field name="rental_rate">124.58</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="true"/>
+    </record>
+
+    <record id="stall_ktc_0386" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">LG-79/80/8</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="default_electricity_rate">63.00</field>
+        <field name="default_water_rate">28.00</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="true"/>
+        <field name="meralco_account_number">0459814792</field>
+    </record>
+
+    <record id="stall_ktc_0387" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">LG-8</field>
+        <field name="rental_rate">110.00</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_ktc_0388" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">LG-80</field>
+        <field name="rental_rate">110.00</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="true"/>
+    </record>
+
+    <record id="stall_ktc_0389" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">LG-81</field>
+        <field name="rental_rate">110.00</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="true"/>
+        <field name="meralco_account_number">0459814792</field>
+    </record>
+
+    <record id="stall_ktc_0390" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">LG-82</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_ktc_0391" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">LG-83</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_ktc_0392" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">LG-84</field>
+        <field name="rental_rate">99.83</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="true"/>
+    </record>
+
+    <record id="stall_ktc_0393" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">LG-84/85</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="default_electricity_rate">36.00</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="true"/>
+        <field name="meralco_account_number">0459814792</field>
+    </record>
+
+    <record id="stall_ktc_0394" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">LG-85</field>
+        <field name="rental_rate">99.83</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="true"/>
+    </record>
+
+    <record id="stall_ktc_0395" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">LG-86</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_ktc_0396" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">LG-87</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_ktc_0397" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">LG-88</field>
+        <field name="rental_rate">124.58</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="true"/>
+    </record>
+
+    <record id="stall_ktc_0398" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">LG-88/89/9</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="default_electricity_rate">200.00</field>
+        <field name="default_water_rate">28.00</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="true"/>
+        <field name="meralco_account_number">0459814792</field>
+    </record>
+
+    <record id="stall_ktc_0399" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">LG-89</field>
+        <field name="rental_rate">124.58</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="true"/>
+    </record>
+
+    <record id="stall_ktc_0400" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">LG-9</field>
+        <field name="rental_rate">124.58</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_ktc_0401" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">LG-9-12</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="default_electricity_rate">60.00</field>
+        <field name="default_water_rate">28.00</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">0459814792</field>
+    </record>
+
+    <record id="stall_ktc_0402" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">LG-90</field>
+        <field name="rental_rate">110.00</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="true"/>
+    </record>
+
+    <record id="stall_ktc_0403" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">LG-91</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_ktc_0404" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">LG-96</field>
+        <field name="rental_rate">220.00</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">DW</field>
+    </record>
+
+    <record id="stall_ktc_0405" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">LG-96 PD</field>
+        <field name="rental_rate">165.00</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_ktc_0406" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">P6</field>
+        <field name="rental_rate">40.75</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_ktc_0407" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">TOILET2</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_ktc_0408" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">UG-2.7</field>
+        <field name="rental_rate">3300.00</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_ktc_0409" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">UG-2/7</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="default_electricity_rate">750.00</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">KALAYAAN TALIPAPA CORP.</field>
+    </record>
+
+    <record id="stall_ktc_0410" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">UG-3</field>
+        <field name="rental_rate">66.55</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_ktc_0411" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">UG-3 PD</field>
+        <field name="rental_rate">60.50</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">KALAYAAN TALIPAPA CORP.</field>
+    </record>
+
+    <record id="stall_ktc_0412" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">UG-3 PD 1</field>
+        <field name="rental_rate">66.55</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_ktc_0413" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">UG-3/6</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">KALAYAAN TALIPAPA COR</field>
+    </record>
+
+    <record id="stall_ktc_0414" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">UG-4</field>
+        <field name="rental_rate">66.55</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_ktc_0415" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">UG-4/5</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="default_electricity_rate">750.00</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">KALAYAAN TALIPAPA CORP.</field>
+    </record>
+
+    <record id="stall_ktc_0416" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">UG-5</field>
+        <field name="rental_rate">66.55</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_ktc_0417" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">UG-6</field>
+        <field name="rental_rate">66.55</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_ktc_0418" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">UG-6 PD</field>
+        <field name="rental_rate">60.50</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_ktc_0419" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">UG-6 PD 1</field>
+        <field name="rental_rate">66.55</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_ktc_0420" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">UG-A</field>
+        <field name="rental_rate">887.70</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="true"/>
+        <field name="meralco_account_number">KALAYAAN TALIPAPA CORP.</field>
+    </record>
+
+    <record id="stall_ktc_0421" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">UG-B</field>
+        <field name="rental_rate">133.10</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">KALAYAAN TALIPAPA CORP.</field>
+    </record>
+
+    <record id="stall_ktc_0422" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">UG-C</field>
+        <field name="rental_rate">133.10</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">KALAYAAN TALIPAPA COR</field>
+    </record>
+
+    <record id="stall_ktc_0423" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">UG-C PD</field>
+        <field name="rental_rate">133.10</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">KALAYAAN TALIPAPA CORP.</field>
+    </record>
+
+    <record id="stall_ktc_0424" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">UG-D</field>
+        <field name="rental_rate">133.10</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">KALAYAAN TALIPAPA COR</field>
+    </record>
+
+    <record id="stall_ktc_0425" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">UG-D PD</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">KALAYAAN TALIPAPA CORP.</field>
+    </record>
+
+    <record id="stall_ktc_0426" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">UG-D PD 1</field>
+        <field name="rental_rate">133.10</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_ktc_0427" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">UG-E</field>
+        <field name="rental_rate">133.10</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">KALAYAAN TALIPAPA CORP.</field>
+    </record>
+
+    <record id="stall_ktc_0428" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">UG-E PD</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_ktc_0429" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">UG-E/F/G</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="default_electricity_rate">17.00</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">KALAYAAN TALIPAPA COR</field>
+    </record>
+
+    <record id="stall_ktc_0430" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">UG-F</field>
+        <field name="rental_rate">133.10</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">KALAYAAN TALIPAPA CORP.</field>
+    </record>
+
+    <record id="stall_ktc_0431" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">UG-G</field>
+        <field name="rental_rate">133.10</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="true"/>
+        <field name="meralco_account_number">KALAYAAN TALIPAPA CORP.</field>
+    </record>
+
+    <record id="stall_ktc_0432" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">UG-G PD</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_ktc_0433" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">UG-H</field>
+        <field name="rental_rate">133.10</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">KALAYAAN TALIPAPA CORP.</field>
+    </record>
+
+    <record id="stall_ktc_0434" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">UG-H PD</field>
+        <field name="rental_rate">121.00</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_ktc_0435" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">UG-H PD A</field>
+        <field name="rental_rate">121.00</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="true"/>
+    </record>
+
+    <record id="stall_ktc_0436" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">UG-I</field>
+        <field name="rental_rate">200.00</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">KALAYAAN TALIPAPA COR</field>
+    </record>
+
+    <record id="stall_ktc_0437" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">UG-I/J</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="default_electricity_rate">750.00</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">KALAYAAN TALIPAPA CORP.</field>
+    </record>
+
+    <record id="stall_ktc_0438" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">UG-I/J P</field>
+        <field name="rental_rate">367.00</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="default_water_rate">367.00</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_ktc_0439" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">UG-I/J PD</field>
+        <field name="rental_rate">367.00</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_ktc_0440" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">UG-J</field>
+        <field name="rental_rate">133.33</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_ktc_0441" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">UG-K</field>
+        <field name="rental_rate">113.30</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_ktc_0442" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">UG-K/L</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="default_electricity_rate">17.00</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">KALAYAAN TALIPAPA CORP.</field>
+    </record>
+
+    <record id="stall_ktc_0443" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">UG-L</field>
+        <field name="rental_rate">133.10</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_ktc_0444" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">UG-M</field>
+        <field name="rental_rate">161.70</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">KALAYAAN TALIPAPA CORP.</field>
+    </record>
+
+    <record id="stall_ktc_0445" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">UG-N</field>
+        <field name="rental_rate">133.10</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">KALAYAAN TALIPAPA CORP.</field>
+    </record>
+
+    <record id="stall_ktc_0446" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">UG-O</field>
+        <field name="rental_rate">133.10</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_ktc_0447" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">UG-O/P</field>
+        <field name="rental_rate">3300.00</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">KALAYAAN TALIPAPA CORP.</field>
+    </record>
+
+    <record id="stall_ktc_0448" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">UG-P</field>
+        <field name="rental_rate">133.10</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_ktc_0449" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">UG-Q</field>
+        <field name="rental_rate">133.10</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_ktc_0450" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">UG-Q/R</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="default_electricity_rate">750.00</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">KALAYAAN TALIPAPA CORP.</field>
+    </record>
+
+    <record id="stall_ktc_0451" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">UG-R</field>
+        <field name="rental_rate">93.23</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_ktc_0452" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">UG-S</field>
+        <field name="rental_rate">177.93</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">KALAYAAN TALIPAPA CORP.</field>
+    </record>
+
+    <record id="stall_ktc_0453" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">UG-SPD</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_ktc_0454" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">UG-SPD A</field>
+        <field name="rental_rate">161.75</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_ktc_0455" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">UG-T</field>
+        <field name="rental_rate">177.93</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">KALAYAAN TALIPAPA CORP.</field>
+    </record>
+
+    <record id="stall_ktc_0456" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">UG-T PD</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_ktc_0457" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">UG-U</field>
+        <field name="rental_rate">282.75</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">KALAYAAN TALIPAPA COR</field>
+    </record>
+
+    <record id="stall_ktc_0458" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">UG-U PD</field>
+        <field name="rental_rate">282.75</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">KALAYAAN TALIPAPA CORP.</field>
+    </record>
+
+    <record id="stall_ktc_0459" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">UG-U-PD</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_ktc_0460" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">UG-V</field>
+        <field name="rental_rate">133.10</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">KALAYAAN TALIPAPA CORP.</field>
+    </record>
+
+    <record id="stall_ktc_0461" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">UG-V PD</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_ktc_0462" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">UGP-1</field>
+        <field name="rental_rate">176.00</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="true"/>
+        <field name="meralco_account_number">0274602522</field>
+    </record>
+
+    <record id="stall_ktc_0463" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">UGP-2</field>
+        <field name="rental_rate">146.30</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="true"/>
+        <field name="meralco_account_number">0274602522</field>
+    </record>
+
+    <record id="stall_ktc_0464" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">UGP-3</field>
+        <field name="rental_rate">146.30</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="true"/>
+        <field name="meralco_account_number">0274602522</field>
+    </record>
+
+    <record id="stall_ktc_0465" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">UGP-4</field>
+        <field name="rental_rate">176.00</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="true"/>
+        <field name="meralco_account_number">0274602522</field>
+    </record>
+
+    <record id="stall_ktc_0466" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">UGP-5</field>
+        <field name="rental_rate">176.00</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="true"/>
+        <field name="meralco_account_number">0274602522</field>
+    </record>
+
+    <record id="stall_ktc_0467" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">UGP-6</field>
+        <field name="rental_rate">146.30</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="true"/>
+        <field name="meralco_account_number">0274602522</field>
+    </record>
+
+    <record id="stall_ktc_0468" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">UGP-7</field>
+        <field name="rental_rate">146.30</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="true"/>
+        <field name="meralco_account_number">0274602522</field>
+    </record>
+
+    <record id="stall_ktc_0469" model="kst.stall">
+        <field name="market_id" ref="market_ktc"/>
+        <field name="code">UGP-8</field>
+        <field name="rental_rate">146.30</field>
+        <field name="rent_collection_type">daily</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">0274602522</field>
+    </record>
+
+    <!-- smt Market Stalls -->
+    <record id="stall_smt_0470" model="kst.stall">
+        <field name="market_id" ref="market_smt"/>
+        <field name="code">01</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_smt_0471" model="kst.stall">
+        <field name="market_id" ref="market_smt"/>
+        <field name="code">02</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_smt_0472" model="kst.stall">
+        <field name="market_id" ref="market_smt"/>
+        <field name="code">03</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_smt_0473" model="kst.stall">
+        <field name="market_id" ref="market_smt"/>
+        <field name="code">AST-</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">Magsaysay Commercial Complex</field>
+    </record>
+
+    <record id="stall_smt_0474" model="kst.stall">
+        <field name="market_id" ref="market_smt"/>
+        <field name="code">AST- 2</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+    </record>
+
+    <record id="stall_smt_0475" model="kst.stall">
+        <field name="market_id" ref="market_smt"/>
+        <field name="code">AST-1</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">Magsaysay Commercial Complex</field>
+    </record>
+
+    <record id="stall_smt_0476" model="kst.stall">
+        <field name="market_id" ref="market_smt"/>
+        <field name="code">AST-2</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">Magsaysay Commercial Complex</field>
+    </record>
+
+    <record id="stall_smt_0477" model="kst.stall">
+        <field name="market_id" ref="market_smt"/>
+        <field name="code">BLDG</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">Magsaysay Commercial Complex</field>
+    </record>
+
+    <record id="stall_smt_0478" model="kst.stall">
+        <field name="market_id" ref="market_smt"/>
+        <field name="code">JM-SIOCHI</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">Magsaysay Commercial Complex</field>
+    </record>
+
+    <record id="stall_smt_0479" model="kst.stall">
+        <field name="market_id" ref="market_smt"/>
+        <field name="code">KALYE</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">Magsaysay Commercial Complex</field>
+    </record>
+
+    <record id="stall_smt_0480" model="kst.stall">
+        <field name="market_id" ref="market_smt"/>
+        <field name="code">KSTORE</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">Magsaysay Commercial Complex</field>
+    </record>
+
+    <record id="stall_smt_0481" model="kst.stall">
+        <field name="market_id" ref="market_smt"/>
+        <field name="code">KSTORE-1</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">Magsaysay Commercial Complex</field>
+    </record>
+
+    <record id="stall_smt_0482" model="kst.stall">
+        <field name="market_id" ref="market_smt"/>
+        <field name="code">LBC</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">Magsaysay Commercial Complex</field>
+    </record>
+
+    <record id="stall_smt_0483" model="kst.stall">
+        <field name="market_id" ref="market_smt"/>
+        <field name="code">MCC</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">Magsaysay Commercial Complex</field>
+    </record>
+
+    <record id="stall_smt_0484" model="kst.stall">
+        <field name="market_id" ref="market_smt"/>
+        <field name="code">MCC STP</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">Magsaysay Commercial Complex</field>
+    </record>
+
+    <record id="stall_smt_0485" model="kst.stall">
+        <field name="market_id" ref="market_smt"/>
+        <field name="code">MCC STP NM</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">Magsaysay Commercial Complex</field>
+    </record>
+
+    <record id="stall_smt_0486" model="kst.stall">
+        <field name="market_id" ref="market_smt"/>
+        <field name="code">MCC-2F-01</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">Magsaysay Commercial Complex</field>
+    </record>
+
+    <record id="stall_smt_0487" model="kst.stall">
+        <field name="market_id" ref="market_smt"/>
+        <field name="code">NAGAYO</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">Magsaysay Commercial Complex</field>
+    </record>
+
+    <record id="stall_smt_0488" model="kst.stall">
+        <field name="market_id" ref="market_smt"/>
+        <field name="code">VAPE</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">Magsaysay Commercial Complex</field>
+    </record>
+
+    <record id="stall_smt_0489" model="kst.stall">
+        <field name="market_id" ref="market_smt"/>
+        <field name="code">WARGODS</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">Magsaysay Commercial Complex</field>
+    </record>
+
+    <record id="stall_smt_0490" model="kst.stall">
+        <field name="market_id" ref="market_smt"/>
+        <field name="code">WARGODS1</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="is_active" eval="false"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">Magsaysay Commercial Complex</field>
+    </record>
+
+    <record id="stall_smt_0491" model="kst.stall">
+        <field name="market_id" ref="market_smt"/>
+        <field name="code">ZAGU</field>
+        <field name="rent_collection_type">monthly</field>
+        <field name="is_active" eval="true"/>
+        <field name="need_or" eval="false"/>
+        <field name="meralco_account_number">Magsaysay Commercial Complex</field>
+    </record>
+
+    </data>
+</odoo>

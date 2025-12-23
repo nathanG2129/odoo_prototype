@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <!-- Markets -->
+        <record id="market_ktc" model="kst.market">
+            <field name="code">KTC</field>
+            <field name="name">Kalayaan Talipapa Corporation</field>
+            <field name="address">Kalayaan Talipapa Corporation</field>
+        </record>
+
+        <record id="market_bbh" model="kst.market">
+            <field name="code">BBH</field>
+            <field name="name">Bagong Barrio Hypermarket and Properties</field>
+            <field name="address">Bagong Barrio Hypermarket and Properties</field>
+        </record>
+
+        <record id="market_smt" model="kst.market">
+            <field name="code">SMT</field>
+            <field name="name">Sample Market Text</field>
+            <field name="address">Sample Market Address</field>
+        </record>
+    </data>
+</odoo>
+

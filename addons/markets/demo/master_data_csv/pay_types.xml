@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+    <!-- Pay Types from fmPayType.csv -->
+
+    <record id="pay_type_fr" model="kst.market.pay.type">
+        <field name="code">FR</field>
+        <field name="name">Fixed-Rate</field>
+        <field name="pay_type_use">both</field>
+        <field name="sub_group">monthly</field>
+    </record>
+
+    <record id="pay_type_k1mh" model="kst.market.pay.type">
+        <field name="code">K1MH</field>
+        <field name="name">K1MH</field>
+        <field name="pay_type_use">electricity</field>
+        <field name="sub_group">weekly</field>
+    </record>
+
+    <record id="pay_type_lg" model="kst.market.pay.type">
+        <field name="code">LG</field>
+        <field name="name">LG Weekly</field>
+        <field name="pay_type_use">electricity</field>
+        <field name="sub_group">weekly</field>
+    </record>
+
+    <record id="pay_type_mo" model="kst.market.pay.type">
+        <field name="code">MO</field>
+        <field name="name">Monthly</field>
+        <field name="pay_type_use">both</field>
+        <field name="sub_group">monthly</field>
+    </record>
+
+    <record id="pay_type_nw" model="kst.market.pay.type">
+        <field name="code">NW</field>
+        <field name="name">NAWASA</field>
+        <field name="pay_type_use">water</field>
+        <field name="sub_group">weekly</field>
+    </record>
+
+    <record id="pay_type_pt" model="kst.market.pay.type">
+        <field name="code">PT</field>
+        <field name="name">Per-Day</field>
+        <field name="pay_type_use">both</field>
+        <field name="sub_group">weekly</field>
+    </record>
+
+    <record id="pay_type_sm" model="kst.market.pay.type">
+        <field name="code">SM</field>
+        <field name="name">Sub-Meter</field>
+        <field name="pay_type_use">both</field>
+        <field name="sub_group">monthly</field>
+    </record>
+
+    <record id="pay_type_tl" model="kst.market.pay.type">
+        <field name="code">TL</field>
+        <field name="name">Toilet</field>
+        <field name="pay_type_use">water</field>
+        <field name="sub_group">weekly</field>
+    </record>
+
+    <record id="pay_type_ugpm" model="kst.market.pay.type">
+        <field name="code">UGPM</field>
+        <field name="name">UGP GS - Monthly</field>
+        <field name="pay_type_use">electricity</field>
+        <field name="sub_group">monthly</field>
+    </record>
+
+    <record id="pay_type_ugpw" model="kst.market.pay.type">
+        <field name="code">UGPW</field>
+        <field name="name">UGP GS - Weekly</field>
+        <field name="pay_type_use">electricity</field>
+        <field name="sub_group">weekly</field>
+    </record>
+    </data>
+</odoo>

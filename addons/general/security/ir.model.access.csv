@@ -1,0 +1,10 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_kst_bank_user,kst.bank.user,model_kst_bank,general_group_user,1,1,1,0
+access_kst_bank_manager,kst.bank.manager,model_kst_bank,general_group_manager,1,1,1,1
+access_kst_kcode_user,kst.kcode.user,model_kst_kcode,general_group_user,1,1,1,0
+access_kst_kcode_manager,kst.kcode.manager,model_kst_kcode,general_group_manager,1,1,1,1
+access_kst_utility_account_user,kst.utility.account.user,model_kst_utility_account,general_group_user,1,1,1,0
+access_kst_utility_account_manager,kst.utility.account.manager,model_kst_utility_account,general_group_manager,1,1,1,1
+
+
+

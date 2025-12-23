@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Demo Data for Units Module -->
+    
+    <!-- Locations -->
+    <record id="location_retiro" model="kst.location">
+        <field name="code">RET</field>
+        <field name="description">Retiro Complex</field>
+        <field name="company_name">Retiro Property Management</field>
+        <field name="company_code">RPM</field>
+        <field name="company_address">123 Retiro Street, Manila</field>
+    </record>
+
+    <record id="location_bgc" model="kst.location">
+        <field name="code">BGC</field>
+        <field name="description">BGC Office Tower</field>
+        <field name="company_name">BGC Properties Inc.</field>
+        <field name="company_code">BGCP</field>
+        <field name="company_address">456 BGC Avenue, Taguig</field>
+    </record>
+
+    <!-- Unit Categories -->
+    <record id="category_residential_condo" model="kst.unit.category">
+        <field name="name">Residential (Condo)</field>
+    </record>
+
+    <record id="category_commercial" model="kst.unit.category">
+        <field name="name">Commercial</field>
+    </record>
+
+    <record id="category_residential" model="kst.unit.category">
+        <field name="name">Residential</field>
+    </record>
+
+    <!-- Lessors -->
+    <record id="lessor_smith" model="kst.lessor">
+        <field name="code">SMT</field>
+        <field name="name">John Smith Properties</field>
+    </record>
+
+    <record id="lessor_garcia" model="kst.lessor">
+        <field name="code">GRC</field>
+        <field name="name">Garcia Real Estate Corp.</field>
+    </record>
+
+    <!-- Lessees -->
+    <record id="lessee_abc_corp" model="kst.lessee">
+        <field name="name">ABC Corporation</field>
+        <field name="address">789 Business Park, Makati</field>
+        <field name="contact">+63 2 1234 5678</field>
+        <field name="email">contact@abccorp.com</field>
+    </record>
+
+    <record id="lessee_maria_santos" model="kst.lessee">
+        <field name="name">Maria Santos</field>
+        <field name="address">321 Residential St., Quezon City</field>
+        <field name="contact">+63 917 123 4567</field>
+        <field name="email">maria.santos@email.com</field>
+    </record>
+
+    <!-- Units -->
+    <record id="unit_ret_1" model="kst.unit">
+        <field name="lessor_id" ref="lessor_smith"/>
+        <field name="category_id" ref="category_residential_condo"/>
+        <field name="location_id" ref="location_retiro"/>
+        <field name="kcode_id" ref="general.kcode_ret"/>
+        <field name="unit_specified">1</field>
+        <field name="address">Unit 1, Tower A, Retiro Complex</field>
+        <field name="description">2-bedroom condominium unit</field>
+        <field name="size">85.5</field>
+    </record>
+
+    <record id="unit_ret_2" model="kst.unit">
+        <field name="lessor_id" ref="lessor_smith"/>
+        <field name="category_id" ref="category_residential_condo"/>
+        <field name="location_id" ref="location_retiro"/>
+        <field name="kcode_id" ref="general.kcode_ret"/>
+        <field name="unit_specified">2</field>
+        <field name="address">Unit 2, Tower A, Retiro Complex</field>
+        <field name="description">1-bedroom condominium unit</field>
+        <field name="size">55.0</field>
+    </record>
+
+    <record id="unit_bgc_101" model="kst.unit">
+        <field name="lessor_id" ref="lessor_garcia"/>
+        <field name="category_id" ref="category_commercial"/>
+        <field name="location_id" ref="location_bgc"/>
+        <field name="kcode_id" ref="general.kcode_bgc"/>
+        <field name="unit_specified">101</field>
+        <field name="address">Unit 101, 1st Floor, BGC Office Tower</field>
+        <field name="description">Commercial office space</field>
+        <field name="size">120.0</field>
+    </record>
+
+    <!-- Contracts -->
+    <record id="contract_ret1_santos" model="kst.contract">
+        <field name="unit_id" ref="unit_ret_1"/>
+        <field name="lessee_id" ref="lessee_maria_santos"/>
+        <field name="lessor_id" ref="lessor_smith"/>
+        <field name="contract_number">CNT-2024-001</field>
+        <field name="period_from">2024-01-01</field>
+        <field name="period_to">2024-12-31</field>
+        <field name="basic_rent">25000.00</field>
+        <field name="evat">3000.00</field>
+        <field name="withholding_tax">750.00</field>
+        <field name="mptr">0.00</field>
+        <field name="cusa_rate">1500.00</field>
+        <field name="escalation_percentage">5.0</field>
+        <field name="escalation_date_months">12</field>
+        <field name="status">active</field>
+        <field name="filed_by">Admin User</field>
+        <field name="filed_date">2023-12-15</field>
+        <field name="notes">Standard residential lease</field>
+    </record>
+
+    <record id="contract_ret2_abc" model="kst.contract">
+        <field name="unit_id" ref="unit_ret_2"/>
+        <field name="lessee_id" ref="lessee_abc_corp"/>
+        <field name="lessor_id" ref="lessor_smith"/>
+        <field name="contract_number">CNT-2024-002</field>
+        <field name="period_from">2024-03-01</field>
+        <field name="period_to">2025-02-28</field>
+        <field name="basic_rent">18000.00</field>
+        <field name="evat">2160.00</field>
+        <field name="withholding_tax">540.00</field>
+        <field name="mptr">0.00</field>
+        <field name="cusa_rate">1000.00</field>
+        <field name="escalation_percentage">3.0</field>
+        <field name="escalation_date_months">12</field>
+        <field name="status">active</field>
+        <field name="filed_by">Admin User</field>
+        <field name="filed_date">2024-02-20</field>
+    </record>
+
+    <record id="contract_bgc101_abc" model="kst.contract">
+        <field name="unit_id" ref="unit_bgc_101"/>
+        <field name="lessee_id" ref="lessee_abc_corp"/>
+        <field name="lessor_id" ref="lessor_garcia"/>
+        <field name="contract_number">CNT-2024-003</field>
+        <field name="period_from">2024-01-01</field>
+        <field name="period_to">2026-12-31</field>
+        <field name="basic_rent">50000.00</field>
+        <field name="evat">6000.00</field>
+        <field name="withholding_tax">1500.00</field>
+        <field name="mptr">0.00</field>
+        <field name="cusa_rate">3000.00</field>
+        <field name="escalation_percentage">10.0</field>
+        <field name="escalation_date_months">24</field>
+        <field name="status">active</field>
+        <field name="filed_by">Admin User</field>
+        <field name="filed_date">2023-12-01</field>
+        <field name="notes">3-year commercial lease with biennial escalation</field>
+    </record>
+
+    <!-- Unit Rent Transactions -->
+    <record id="transaction_ret1_jan" model="kst.unit.rent.transaction">
+        <field name="contract_id" ref="contract_ret1_santos"/>
+        <field name="transaction_date">2024-01-05</field>
+        <field name="payment_status">paid</field>
+        <field name="payment_category">UNIT RENTAL</field>
+        <field name="payment_type">Bank Transfer</field>
+        <field name="payment_reference">BT-2024-001</field>
+        <field name="amount_deposited">28750.00</field>
+        <field name="is_bounced" eval="False"/>
+        <field name="notes">January 2024 rent payment</field>
+    </record>
+
+    <record id="transaction_ret1_feb" model="kst.unit.rent.transaction">
+        <field name="contract_id" ref="contract_ret1_santos"/>
+        <field name="transaction_date">2024-02-03</field>
+        <field name="payment_status">paid</field>
+        <field name="payment_category">UNIT RENTAL</field>
+        <field name="payment_type">Check</field>
+        <field name="payment_reference">CHK-123456</field>
+        <field name="amount_deposited">28750.00</field>
+        <field name="is_bounced" eval="False"/>
+        <field name="notes">February 2024 rent payment</field>
+    </record>
+
+    <record id="transaction_bgc_security" model="kst.unit.rent.transaction">
+        <field name="contract_id" ref="contract_bgc101_abc"/>
+        <field name="transaction_date">2023-12-20</field>
+        <field name="payment_status">paid</field>
+        <field name="payment_category">SECURITY DEPOSIT</field>
+        <field name="payment_type">Check</field>
+        <field name="payment_reference">CHK-999888</field>
+        <field name="amount_deposited">115000.00</field>
+        <field name="is_bounced" eval="False"/>
+        <field name="notes">Two months security deposit</field>
+    </record>
+
+    <record id="transaction_bgc_jan" model="kst.unit.rent.transaction">
+        <field name="contract_id" ref="contract_bgc101_abc"/>
+        <field name="transaction_date">2024-01-02</field>
+        <field name="payment_status">paid</field>
+        <field name="payment_category">UNIT RENTAL</field>
+        <field name="payment_type">Bank Transfer</field>
+        <field name="payment_reference">BT-2024-BGC-001</field>
+        <field name="amount_deposited">57500.00</field>
+        <field name="is_bounced" eval="False"/>
+        <field name="notes">January 2024 rent payment</field>
+    </record>
+</odoo>
+

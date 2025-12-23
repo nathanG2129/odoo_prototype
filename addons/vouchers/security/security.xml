@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Vouchers Groups -->
+        <record id="vouchers_group_user" model="res.groups">
+            <field name="name">Vouchers / User</field>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+        </record>
+
+        <record id="vouchers_group_manager" model="res.groups">
+            <field name="name">Vouchers / Manager</field>
+            <field name="implied_ids" eval="[(4, ref('vouchers_group_user'))]"/>
+        </record>
+    </data>
+</odoo>
+

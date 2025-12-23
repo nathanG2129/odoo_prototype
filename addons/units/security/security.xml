@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- User Groups -->
+    <record id="units_group_user" model="res.groups">
+        <field name="name">Units User</field>
+        <field name="category_id" ref="general.module_category_kst"/>
+        <field name="implied_ids" eval="[(4, ref('general.general_group_user'))]"/>
+    </record>
+
+    <record id="units_group_manager" model="res.groups">
+        <field name="name">Units Manager</field>
+        <field name="category_id" ref="general.module_category_kst"/>
+        <field name="implied_ids" eval="[(4, ref('units_group_user'))]"/>
+    </record>
+</odoo>
+
+
