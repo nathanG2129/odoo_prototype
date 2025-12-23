@@ -215,8 +215,8 @@ def generate_odoo_xml(stalls_dict):
         '<?xml version="1.0" encoding="utf-8"?>',
         '<odoo>',
         '    <data noupdate="1">',
-        '    <!-- Standardized Stall Master Data -->',
-        '    <!-- Generated from fmStall.csv and fmStall_Electricity.csv -->',
+        '        <!-- Standardized Stall Master Data -->',
+        '        <!-- Generated from fmStall.csv and fmStall_Electricity.csv -->',
         ''
     ]
     
@@ -272,10 +272,10 @@ def generate_odoo_xml(stalls_dict):
                 xml_lines.append(f'            <field name="default_water_rate">{stall_data["WaterDailyRate"]:.2f}</field>')
             
             # Status flags
-            is_active_val = str(stall_data.get('isActive', True)).lower()
-            need_or_val = str(stall_data.get('isOR', False)).lower()
-            xml_lines.append(f'            <field name="is_active" eval="{is_active_val}"/>')
-            xml_lines.append(f'            <field name="need_or" eval="{need_or_val}"/>')
+            is_active_val = stall_data.get('isActive', True)
+            need_or_val = stall_data.get('isOR', False)
+            xml_lines.append(f'            <field name="is_active" eval="{str(is_active_val)}"/>')
+            xml_lines.append(f'            <field name="need_or" eval="{str(need_or_val)}"/>')
             
             # Utility account info - escape XML
             if stall_data.get('MeterNumber'):
