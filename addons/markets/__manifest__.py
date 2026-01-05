@@ -28,6 +28,7 @@
         'views/market_pay_type_views.xml',
         'views/stall_views.xml',
         'views/market_rent_transaction_views.xml',
+        'views/market_rent_batch_views.xml',
         'views/market_utility_transaction_views.xml',
         'views/utility_bill_views.xml',
         'views/utility_account_views.xml',

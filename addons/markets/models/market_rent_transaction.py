@@ -15,7 +15,20 @@ class MarketRentTransaction(models.Model):
     # - message_main_attachment_id (Many2one to ir.attachment)
 
     # Foreign Keys
-    stall_id = fields.Many2one('kst.stall', string='Stall', required=True, ondelete='restrict', tracking=True)
+    stall_id = fields.Many2one(
+        'kst.stall',
+        string='Stall',
+        required=True,
+        ondelete='restrict',
+        tracking=True,
+    )
+    rent_batch_id = fields.Many2one(
+        'kst.market.rent.batch',
+        string='Rent Batch',
+        ondelete='restrict',
+        tracking=True,
+        help="Rent batch (Market + Date + Collection Type) that this transaction belongs to.",
+    )
     
     # Transaction Information
     transaction_date = fields.Date('Transaction Date', required=True, default=fields.Date.today, tracking=True)
