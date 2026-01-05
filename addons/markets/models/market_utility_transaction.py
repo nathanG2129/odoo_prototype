@@ -23,6 +23,19 @@ class MarketUtilityTransaction(models.Model):
         ('cancelled', 'Cancelled'),
     ], string='Payment Status', default='pending', required=True, tracking=True)
     
+    # Verification Status (for manager review)
+    verification_status = fields.Selection([
+        ('pending', 'Pending Review'),
+        ('verified', 'Verified'),
+        ('check_bounced', 'Check Bounced'),
+        ('rejected', 'Rejected'),
+    ], string='Verification Status', default='pending', required=True, tracking=True,
+       help="Manager verification status for payment review")
+    
+    # Absence Toggle (for flat rate utilities)
+    is_absent = fields.Boolean('Absent', default=False, tracking=True,
+                               help="Mark as absent to exclude from flat rate billing")
+    
     # Utility Information
     utility_type = fields.Selection([
         ('electricity', 'Electricity'),
@@ -124,11 +137,18 @@ class MarketUtilityTransaction(models.Model):
         return super().create(vals_list)
     
     @api.depends('applied_rate', 'consumption', 'previous_reading', 'current_reading', 
-                 'stall_id', 'utility_type', 
+                 'stall_id', 'utility_type', 'is_absent',
                  'stall_id.default_electricity_rate', 'stall_id.default_water_rate')
     def _compute_amount_due(self):
-        """Compute amount due based on consumption × rate (if metered) or flat rate"""
+        """Compute amount due based on consumption × rate (if metered) or flat rate.
+        If is_absent is True, amount_due is 0 (excluded from billing).
+        """
         for record in self:
+            # If absent, amount due is 0
+            if record.is_absent:
+                record.amount_due = 0.0
+                continue
+            
             if not record.stall_id:
                 record.amount_due = 0.0
                 continue
@@ -190,6 +210,57 @@ class MarketUtilityTransaction(models.Model):
             if record.amount_paid < 0:
                 raise ValidationError("Amount paid cannot be negative!")
 
+    def action_verify(self):
+        """Mark transaction as verified by manager"""
+        self.ensure_one()
+        if self.verification_status != 'pending':
+            raise ValidationError("Only pending transactions can be verified!")
+        self.verification_status = 'verified'
+        return {
+            'type': 'ir.actions.client',
+            'tag': 'display_notification',
+            'params': {
+                'title': 'Transaction Verified',
+                'message': 'Payment has been verified.',
+                'type': 'success',
+                'sticky': False,
+            }
+        }
+    
+    def action_check_bounced(self):
+        """Mark transaction as check bounced"""
+        self.ensure_one()
+        if self.verification_status != 'pending':
+            raise ValidationError("Only pending transactions can be marked as check bounced!")
+        self.verification_status = 'check_bounced'
+        return {
+            'type': 'ir.actions.client',
+            'tag': 'display_notification',
+            'params': {
+                'title': 'Check Bounced',
+                'message': 'Payment has been marked as check bounced.',
+                'type': 'warning',
+                'sticky': False,
+            }
+        }
+    
+    def action_reject(self):
+        """Reject the transaction"""
+        self.ensure_one()
+        if self.verification_status != 'pending':
+            raise ValidationError("Only pending transactions can be rejected!")
+        self.verification_status = 'rejected'
+        return {
+            'type': 'ir.actions.client',
+            'tag': 'display_notification',
+            'params': {
+                'title': 'Transaction Rejected',
+                'message': 'Payment has been rejected.',
+                'type': 'warning',
+                'sticky': False,
+            }
+        }
+    
     def action_generate_soa(self):
         """Prototype action to 'generate' an SOA for a single transaction.
 

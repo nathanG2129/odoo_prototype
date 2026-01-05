@@ -13,6 +13,8 @@
                 <field name="tenant_id"/>
                 <field name="utility_type"/>
                 <field name="payment_status"/>
+                <field name="verification_status" widget="badge" decoration-success="verification_status == 'verified'" decoration-warning="verification_status == 'check_bounced'" decoration-danger="verification_status == 'rejected'"/>
+                <field name="is_absent"/>
                 <field name="previous_reading"/>
                 <field name="current_reading"/>
                 <field name="consumption" sum="Total Consumption"/>
@@ -32,12 +34,29 @@
         <field name="arch" type="xml">
             <form string="Utility Collection">
                 <header>
+                    <button name="action_verify"
+                            type="object"
+                            string="Verify"
+                            class="oe_highlight"
+                            attrs="{'invisible': [('verification_status', '!=', 'pending')]}"
+                            help="Mark transaction as verified by manager"/>
+                    <button name="action_check_bounced"
+                            type="object"
+                            string="Check Bounced"
+                            attrs="{'invisible': [('verification_status', '!=', 'pending')]}"
+                            help="Mark transaction as check bounced"/>
+                    <button name="action_reject"
+                            type="object"
+                            string="Reject"
+                            attrs="{'invisible': [('verification_status', '!=', 'pending')]}"
+                            help="Reject the transaction"/>
                     <button name="action_generate_soa"
                             type="object"
                             string="Generate SOA"
                             class="btn-secondary"
                             attrs="{'invisible': [('soa_issuable', '=', False)]}"
                             help="Generate a Statement of Account for this underpaid transaction (prototype)"/>
+                    <field name="verification_status" widget="statusbar" statusbar_visible="pending,verified"/>
                 </header>
                 <sheet>
                     <group>
@@ -52,6 +71,7 @@
                             <field name="transaction_date"/>
                             <field name="utility_type"/>
                             <field name="payment_status"/>
+                            <field name="is_absent"/>
                             <field name="receipt_number"/>
                         </group>
                     </group>
@@ -61,6 +81,7 @@
                             <field name="current_reading"/>
                             <field name="consumption" readonly="1"/>
                             <field name="applied_rate" help="Rate used for this transaction (from bill or default rate)"/>
+                            <field name="is_absent" help="Mark as absent to exclude from flat rate billing"/>
                         </group>
                         <group string="Financial Information">
                             <field name="amount_due" readonly="1"/>
@@ -106,11 +127,18 @@
                 <filter name="paid" string="Paid" domain="[('payment_status', '=', 'paid')]"/>
                 <filter name="partial" string="Partial" domain="[('payment_status', '=', 'partial')]"/>
                 <filter name="cancelled" string="Cancelled" domain="[('payment_status', '=', 'cancelled')]"/>
+                <separator/>
+                <filter name="verification_pending" string="Pending Review" domain="[('verification_status', '=', 'pending')]"/>
+                <filter name="verification_verified" string="Verified" domain="[('verification_status', '=', 'verified')]"/>
+                <filter name="verification_bounced" string="Check Bounced" domain="[('verification_status', '=', 'check_bounced')]"/>
+                <filter name="verification_rejected" string="Rejected" domain="[('verification_status', '=', 'rejected')]"/>
+                <filter name="absent" string="Absent" domain="[('is_absent', '=', True)]"/>
                 <group expand="0">
                     <filter name="group_by_utility" string="Utility Type" context="{'group_by':'utility_type'}"/>
                     <filter name="group_by_market" string="Market" context="{'group_by':'market_id'}"/>
                     <filter name="group_by_tenant" string="Tenant" context="{'group_by':'tenant_id'}"/>
                     <filter name="group_by_status" string="Payment Status" context="{'group_by':'payment_status'}"/>
+                    <filter name="group_by_verification" string="Verification Status" context="{'group_by':'verification_status'}"/>
                     <filter name="group_by_date" string="Transaction Date" context="{'group_by':'transaction_date'}"/>
                     <filter name="group_by_bill" string="Utility Bill" context="{'group_by':'utility_bill_id'}"/>
                 </group>

@@ -34,6 +34,16 @@ class UtilityBill(models.Model):
     utility_account_number = fields.Char(related='utility_account_id.utility_account_number', 
                                         string='Account Number', store=True, readonly=True)
     
+    # Collection Status Workflow
+    collection_status = fields.Selection([
+        ('draft', 'Draft'),
+        ('published', 'Published'),
+        ('verified', 'Verified'),
+        ('check_bounced', 'Check Bounced'),
+        ('rejected', 'Rejected'),
+    ], string='Collection Status', default='draft', required=True, tracking=True,
+       help="Workflow status: Draft > Published > Verified/Bounced/Rejected")
+    
     # One2many relationship to transactions
     transaction_ids = fields.One2many('kst.market.utility.transaction', 'utility_bill_id', 
                                      string='Utility Transactions')
@@ -92,6 +102,74 @@ class UtilityBill(models.Model):
             record.total_amount_paid = total_paid
             record.profit_loss = total_paid - record.total_bill_amount
 
+    def action_publish(self):
+        """Publish the utility bill for collection"""
+        self.ensure_one()
+        if self.collection_status != 'draft':
+            raise ValidationError("Only draft bills can be published!")
+        self.collection_status = 'published'
+        return {
+            'type': 'ir.actions.client',
+            'tag': 'display_notification',
+            'params': {
+                'title': 'Bill Published',
+                'message': 'Utility bill has been published and is ready for collection.',
+                'type': 'success',
+                'sticky': False,
+            }
+        }
+    
+    def action_verify(self):
+        """Verify the utility bill after all payments are collected"""
+        self.ensure_one()
+        if self.collection_status != 'published':
+            raise ValidationError("Only published bills can be verified!")
+        self.collection_status = 'verified'
+        return {
+            'type': 'ir.actions.client',
+            'tag': 'display_notification',
+            'params': {
+                'title': 'Bill Verified',
+                'message': 'Utility bill has been verified.',
+                'type': 'success',
+                'sticky': False,
+            }
+        }
+    
+    def action_check_bounced(self):
+        """Mark bill as check bounced"""
+        self.ensure_one()
+        if self.collection_status != 'published':
+            raise ValidationError("Only published bills can be marked as check bounced!")
+        self.collection_status = 'check_bounced'
+        return {
+            'type': 'ir.actions.client',
+            'tag': 'display_notification',
+            'params': {
+                'title': 'Check Bounced',
+                'message': 'Utility bill has been marked as check bounced.',
+                'type': 'warning',
+                'sticky': False,
+            }
+        }
+    
+    def action_reject(self):
+        """Reject the utility bill"""
+        self.ensure_one()
+        if self.collection_status != 'published':
+            raise ValidationError("Only published bills can be rejected!")
+        self.collection_status = 'rejected'
+        return {
+            'type': 'ir.actions.client',
+            'tag': 'display_notification',
+            'params': {
+                'title': 'Bill Rejected',
+                'message': 'Utility bill has been rejected.',
+                'type': 'warning',
+                'sticky': False,
+            }
+        }
+    
     def action_generate_soa(self):
         """Prototype: trigger SOA generation placeholder.
 
