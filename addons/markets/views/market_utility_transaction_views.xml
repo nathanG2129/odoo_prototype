@@ -159,22 +159,25 @@
               name="Markets" 
               sequence="10"/>
 
-    <!-- Transactions Menu -->
+    <!-- Transactions Menu (Managers only - cashiers work through billing views) -->
     <menuitem id="menu_markets_transactions" 
               name="Transactions" 
               parent="menu_markets_root"
+              groups="markets.markets_group_manager"
               sequence="10"/>
     
     <menuitem id="menu_market_rent_transaction" 
               name="Rent Collections" 
               parent="menu_markets_transactions"
               action="action_market_rent_transaction"
+              groups="markets.markets_group_manager"
               sequence="10"/>
     
     <menuitem id="menu_market_utility_transaction" 
               name="Utility Collections" 
               parent="menu_markets_transactions"
               action="action_market_utility_transaction"
+              groups="markets.markets_group_manager"
               sequence="20"/>
 
     <!-- Masterfiles Menu -->

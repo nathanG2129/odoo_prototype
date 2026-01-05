@@ -171,11 +171,11 @@
         </field>
     </record>
 
-    <!-- Menu Item -->
+    <!-- Menu Item (Visible to both cashiers and managers) -->
     <menuitem id="menu_utility_bill"
               name="Utility Bills"
-              parent="menu_markets_transactions"
+              parent="menu_markets_root"
               action="action_utility_bill"
-              sequence="30"/>
+              sequence="15"/>
 </odoo>
 

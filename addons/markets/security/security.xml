@@ -7,11 +7,18 @@
         <field name="sequence">100</field>
     </record>
 
-    <!-- Markets User Group -->
+    <!-- Markets Cashier Group -->
+    <record id="markets_group_cashier" model="res.groups">
+        <field name="name">Markets / Cashier</field>
+        <field name="category_id" ref="module_category_kst"/>
+        <field name="comment">Cashiers can encode payments through billing views (Utility Bills). No direct access to transaction menus.</field>
+    </record>
+
+    <!-- Markets User Group (Read-only) -->
     <record id="markets_group_user" model="res.groups">
         <field name="name">Markets / User</field>
         <field name="category_id" ref="module_category_kst"/>
-        <field name="comment">Users can view and create market transactions</field>
+        <field name="comment">Users can view market data (read-only access)</field>
     </record>
 
     <!-- Markets Manager Group -->
@@ -19,7 +26,7 @@
         <field name="name">Markets / Manager</field>
         <field name="category_id" ref="module_category_kst"/>
         <field name="implied_ids" eval="[(4, ref('markets_group_user'))]"/>
-        <field name="comment">Managers have full access to all markets data including masterfiles</field>
+        <field name="comment">Managers have full access to all markets data including masterfiles, transactions, and verification</field>
     </record>
 </odoo>
 
