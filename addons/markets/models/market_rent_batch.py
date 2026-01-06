@@ -209,4 +209,28 @@ class MarketRentBatch(models.Model):
         self.collection_status = 'verified'
         return True
 
+    def name_get(self):
+        """Format batch name as: Market - Date - Collection Type"""
+        result = []
+        for record in self:
+            # Format market name
+            market_name = record.market_id.display_name or record.market_id.code or 'Unknown Market' if record.market_id else 'No Market'
+            
+            # Format date
+            date_str = record.collection_date.strftime('%Y-%m-%d') if record.collection_date else 'No Date'
+            
+            # Format collection type (capitalize first letter)
+            collection_type_map = {
+                'daily': 'Daily',
+                'weekly': 'Weekly',
+                'monthly': 'Monthly',
+            }
+            type_str = collection_type_map.get(record.collection_type, record.collection_type or 'Unknown')
+            
+            # Format: "KTC - 2025-01-05 - Daily"
+            name = f"{market_name} - {date_str} - {type_str}"
+            result.append((record.id, name))
+        return result
+
+
 
