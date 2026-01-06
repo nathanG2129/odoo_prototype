@@ -82,7 +82,7 @@
                     <group>
                         <group string="Payment Summary">
                             <field name="total_paid"/>
-                            <field name="total_cobp_due"/>
+                            <field name="total_copb_due"/>
                             <field name="last_payment_date"/>
                             <field name="next_payment_date"/>
                         </group>
@@ -163,15 +163,15 @@
                                         <strong>₱<field name="rental_rate"/></strong>
                                         <span class="text-muted ml-2">(<field name="rent_collection_type"/>)</span>
                                     </div>
-                                    <div class="mt-2" t-if="record.total_paid.raw_value or record.total_cobp_due.raw_value">
+                                    <div class="mt-2" t-if="record.total_paid.raw_value or record.total_copb_due.raw_value">
                                         <div>
                                             <small class="text-muted">Paid: </small>
                                             <strong class="text-success">₱<field name="total_paid"/></strong>
                                         </div>
                                         <div>
-                                            <small class="text-muted">COBP Due: </small>
-                                            <strong class="text-danger" t-if="record.total_cobp_due.raw_value > 0">₱<field name="total_cobp_due"/></strong>
-                                            <strong class="text-success" t-if="record.total_cobp_due.raw_value == 0">₱0.00</strong>
+                                            <small class="text-muted">COPB Due: </small>
+                                            <strong class="text-danger" t-if="record.total_copb_due.raw_value > 0">₱<field name="total_copb_due"/></strong>
+                                            <strong class="text-success" t-if="record.total_copb_due.raw_value == 0">₱0.00</strong>
                                         </div>
                                     </div>
                                 </div>

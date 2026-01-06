@@ -35,7 +35,7 @@ class MarketRentBatch(models.Model):
         help="Rent collection type for this batch. Only stalls with matching rent collection type are included.",
     )
 
-    # Workflow status (mirrors utility bill pattern, but simpler for now)
+    # Workflow status (simplified: Draft > Published > Verified)
     collection_status = fields.Selection(
         [
             ('draft', 'Draft'),
@@ -174,7 +174,7 @@ class MarketRentBatch(models.Model):
                 'stall_id': stall.id,
                 'transaction_date': self.collection_date,
                 'payment_status': 'pending',
-                # Financial fields (rent, COBP) will be encoded by cashier
+                # Financial fields (rent, COPB) will be encoded by cashier
             })
 
         if vals_list:
@@ -207,7 +207,16 @@ class MarketRentBatch(models.Model):
         if self.collection_status != 'published':
             raise ValidationError("Only published batches can be verified.")
         self.collection_status = 'verified'
-        return True
+        return {
+            'type': 'ir.actions.client',
+            'tag': 'display_notification',
+            'params': {
+                'title': 'Rent Batch Verified',
+                'message': 'The rent batch has been verified.',
+                'type': 'success',
+                'sticky': False,
+            }
+        }
 
     def name_get(self):
         """Format batch name as: Market - Date - Collection Type"""

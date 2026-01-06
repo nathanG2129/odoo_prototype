@@ -54,7 +54,7 @@ class Stall(models.Model):
     
     # Computed fields for payment summary
     total_paid = fields.Float('Total Paid', compute='_compute_payment_summary', store=False)
-    total_cobp_due = fields.Float('Total COBP Due', compute='_compute_payment_summary', store=False)
+    total_copb_due = fields.Float('Total COPB Due', compute='_compute_payment_summary', store=False)
     last_payment_date = fields.Date('Last Payment Date', compute='_compute_payment_summary', store=False)
     next_payment_date = fields.Date('Next Payment Date', compute='_compute_next_payment_date', store=False)
     ledger_count = fields.Integer('Ledger Count', compute='_compute_ledger_count', store=False)
@@ -87,7 +87,7 @@ class Stall(models.Model):
                     raise ValidationError(f"Stall code '{record.code}' already exists in market '{record.market_id.name}'!")
 
     @api.depends('rent_transaction_ids', 'rent_transaction_ids.payment_status', 
-                 'rent_transaction_ids.rent_paid', 'rent_transaction_ids.cobp_due',
+                 'rent_transaction_ids.rent_paid', 'rent_transaction_ids.copb_due',
                  'rent_transaction_ids.transaction_date')
     def _compute_payment_summary(self):
         for record in self:
@@ -96,12 +96,12 @@ class Stall(models.Model):
             )
             record.total_paid = sum(paid_transactions.mapped('rent_paid'))
             
-            # Get latest COBP Due from most recent transaction
+            # Get latest COPB Due from most recent transaction
             if record.rent_transaction_ids:
                 latest_trans = record.rent_transaction_ids.sorted('transaction_date', reverse=True)[0]
-                record.total_cobp_due = latest_trans.cobp_due
+                record.total_copb_due = latest_trans.copb_due
             else:
-                record.total_cobp_due = 0.0
+                record.total_copb_due = 0.0
             
             # Get last payment date
             if paid_transactions:

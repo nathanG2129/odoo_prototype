@@ -39,10 +39,18 @@ class MarketRentTransaction(models.Model):
         ('cancelled', 'Cancelled'),
     ], string='Payment Status', default='pending', required=True, tracking=True)
     
+    # Verification Status (for manager review)
+    verification_status = fields.Selection([
+        ('pending', 'Pending Review'),
+        ('verified', 'Verified'),
+        ('rejected', 'Rejected'),
+    ], string='Verification Status', default='pending', required=True, tracking=True,
+       help="Manager verification status for payment review")
+    
     # Financial Fields
     rent_paid = fields.Float('Rent Paid', digits=(12, 2), tracking=True)
-    cobp_due = fields.Float('COBP Due', digits=(12, 2), help="Cash on Billing Period Due", tracking=True)
-    cobp_paid = fields.Float('COBP Paid', digits=(12, 2), help="Cash on Billing Period Paid", tracking=True)
+    copb_due = fields.Float('COPB Due', digits=(12, 2), help="Collection on Previous Balance Due", tracking=True)
+    copb_paid = fields.Float('COPB Paid', digits=(12, 2), help="Collection on Previous Balance Paid", tracking=True)
     
     # Receipt Information
     receipt_number = fields.Char('Receipt Number', tracking=True)
@@ -60,15 +68,49 @@ class MarketRentTransaction(models.Model):
     ], related='stall_id.rent_collection_type', string='Rent Collection Type', store=True, readonly=True)
     rent = fields.Float(related='stall_id.rental_rate', string='Rent', store=True, readonly=True, digits=(12, 2))
 
-    @api.constrains('rent_paid', 'cobp_due', 'cobp_paid')
+    @api.constrains('rent_paid', 'copb_due', 'copb_paid')
     def _check_amounts(self):
         for record in self:
             if record.rent_paid < 0:
                 raise ValidationError("Rent paid cannot be negative!")
-            if record.cobp_due < 0:
-                raise ValidationError("COBP Due cannot be negative!")
-            if record.cobp_paid < 0:
-                raise ValidationError("COBP Paid cannot be negative!")
+            if record.copb_due < 0:
+                raise ValidationError("COPB Due cannot be negative!")
+            if record.copb_paid < 0:
+                raise ValidationError("COPB Paid cannot be negative!")
+
+    def action_verify(self):
+        """Verify the payment transaction."""
+        self.ensure_one()
+        if self.verification_status != 'pending':
+            raise ValidationError("Only pending transactions can be verified!")
+        self.verification_status = 'verified'
+        return {
+            'type': 'ir.actions.client',
+            'tag': 'display_notification',
+            'params': {
+                'title': 'Payment Verified',
+                'message': 'The payment has been verified.',
+                'type': 'success',
+                'sticky': False,
+            }
+        }
+
+    def action_reject(self):
+        """Reject the payment transaction."""
+        self.ensure_one()
+        if self.verification_status != 'pending':
+            raise ValidationError("Only pending transactions can be rejected!")
+        self.verification_status = 'rejected'
+        return {
+            'type': 'ir.actions.client',
+            'tag': 'display_notification',
+            'params': {
+                'title': 'Payment Rejected',
+                'message': 'The payment has been rejected.',
+                'type': 'danger',
+                'sticky': False,
+            }
+        }
 
     def name_get(self):
         result = []

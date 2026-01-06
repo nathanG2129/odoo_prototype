@@ -41,12 +41,6 @@
                             class="oe_highlight"
                             attrs="{'invisible': [('collection_status', '!=', 'published')]}"
                             help="Verify the utility bill after all payments are collected"/>
-                    <button name="action_check_bounced" type="object" string="Check Bounced" 
-                            attrs="{'invisible': [('collection_status', '!=', 'published')]}"
-                            help="Mark bill as check bounced"/>
-                    <button name="action_reject" type="object" string="Reject" 
-                            attrs="{'invisible': [('collection_status', '!=', 'published')]}"
-                            help="Reject the utility bill"/>
                     <field name="collection_status" widget="statusbar" statusbar_visible="draft,published,verified"/>
                 </header>
                 <sheet>
