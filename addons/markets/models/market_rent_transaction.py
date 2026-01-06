@@ -32,12 +32,6 @@ class MarketRentTransaction(models.Model):
     
     # Transaction Information
     transaction_date = fields.Date('Transaction Date', required=True, default=fields.Date.today, tracking=True)
-    payment_status = fields.Selection([
-        ('pending', 'Pending'),
-        ('partial', 'Partial'),
-        ('paid', 'Paid'),
-        ('cancelled', 'Cancelled'),
-    ], string='Payment Status', default='pending', required=True, tracking=True)
     
     # Verification Status (for manager review)
     verification_status = fields.Selection([

@@ -46,10 +46,10 @@ class Stall(models.Model):
     rent_transaction_ids = fields.One2many('kst.market.rent.transaction', 'stall_id', string='Rent Transactions')
     utility_transaction_ids = fields.One2many('kst.market.utility.transaction', 'stall_id', string='Utility Transactions')
     
-    # Payment Ledger (confirmed/paid transactions)
+    # Payment Ledger (verified transactions)
     ledger_transaction_ids = fields.One2many('kst.market.rent.transaction', 'stall_id', 
                                              string='Payment Ledger', 
-                                             domain=[('payment_status', 'in', ['paid', 'partial'])],
+                                             domain=[('verification_status', '=', 'verified')],
                                              readonly=True)
     
     # Computed fields for payment summary
@@ -86,15 +86,13 @@ class Stall(models.Model):
                 if existing:
                     raise ValidationError(f"Stall code '{record.code}' already exists in market '{record.market_id.name}'!")
 
-    @api.depends('rent_transaction_ids', 'rent_transaction_ids.payment_status', 
+    @api.depends('rent_transaction_ids', 
                  'rent_transaction_ids.rent_paid', 'rent_transaction_ids.copb_due',
                  'rent_transaction_ids.transaction_date')
     def _compute_payment_summary(self):
         for record in self:
-            paid_transactions = record.rent_transaction_ids.filtered(
-                lambda t: t.payment_status in ['paid', 'partial']
-            )
-            record.total_paid = sum(paid_transactions.mapped('rent_paid'))
+            # Sum all rent_paid amounts (no payment_status filter)
+            record.total_paid = sum(record.rent_transaction_ids.mapped('rent_paid'))
             
             # Get latest COPB Due from most recent transaction
             if record.rent_transaction_ids:
@@ -103,9 +101,12 @@ class Stall(models.Model):
             else:
                 record.total_copb_due = 0.0
             
-            # Get last payment date
-            if paid_transactions:
-                record.last_payment_date = max(paid_transactions.mapped('transaction_date'))
+            # Get last payment date (from transactions with rent_paid > 0)
+            transactions_with_payment = record.rent_transaction_ids.filtered(
+                lambda t: t.rent_paid and t.rent_paid > 0
+            )
+            if transactions_with_payment:
+                record.last_payment_date = max(transactions_with_payment.mapped('transaction_date'))
             else:
                 record.last_payment_date = False
     
@@ -304,8 +305,8 @@ class Stall(models.Model):
             'type': 'ir.actions.act_window',
             'res_model': 'kst.market.rent.transaction',
             'view_mode': 'tree,form',
-            'domain': [('stall_id', '=', self.id), ('payment_status', 'in', ['paid', 'partial'])],
-            'context': {'default_stall_id': self.id, 'search_default_paid': 1},
+            'domain': [('stall_id', '=', self.id), ('verification_status', '=', 'verified')],
+            'context': {'default_stall_id': self.id},
         }
     
 

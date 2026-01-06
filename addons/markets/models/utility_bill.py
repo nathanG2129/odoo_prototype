@@ -290,7 +290,6 @@ class UtilityBill(models.Model):
                         'utility_bill_id': self.id,
                         'transaction_date': trans_date,
                         'utility_type': utility_type,
-                        'payment_status': 'pending',
                         # Leave empty: previous_reading, current_reading, consumption, 
                         # applied_rate, amount_paid, receipt_number
                     })

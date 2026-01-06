@@ -89,7 +89,6 @@
                                     <field name="transaction_date"/>
                                     <field name="stall_id"/>
                                     <field name="pay_type_frequency" string="Frequency"/>
-                                    <field name="payment_status"/>
                                     <field name="verification_status" widget="badge" decoration-success="verification_status == 'verified'" decoration-warning="verification_status == 'check_bounced'" decoration-danger="verification_status == 'rejected'"/>
                                     <field name="is_absent"/>
                                     <field name="previous_reading"/>

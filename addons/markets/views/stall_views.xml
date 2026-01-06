@@ -60,7 +60,6 @@
                             <field name="rent_transaction_ids">
                                 <tree>
                                     <field name="transaction_date"/>
-                                    <field name="payment_status"/>
                                     <field name="rent_paid"/>
                                     <field name="receipt_number"/>
                                 </tree>
@@ -71,7 +70,6 @@
                                 <tree>
                                     <field name="transaction_date"/>
                                     <field name="utility_type"/>
-                                    <field name="payment_status"/>
                                     <field name="consumption"/>
                                     <field name="amount_due"/>
                                     <field name="amount_paid"/>
@@ -138,7 +136,7 @@
                 <field name="is_active"/>
                 <field name="rent_collection_type"/>
                 <field name="total_paid"/>
-                <field name="total_cobp_due"/>
+                <field name="total_copb_due"/>
                 <templates>
                     <t t-name="kanban-box">
                         <div class="oe_kanban_card oe_kanban_global_click">

@@ -70,7 +70,6 @@
                                     <field name="rent_paid" sum="Total Rent Paid"/>
                                     <field name="copb_due" sum="Total COPB Due"/>
                                     <field name="copb_paid" sum="Total COPB Paid"/>
-                                    <field name="payment_status"/>
                                     <field name="receipt_number"/>
                                 </tree>
                             </field>

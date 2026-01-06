@@ -173,7 +173,6 @@ class MarketRentBatch(models.Model):
                 'rent_batch_id': self.id,
                 'stall_id': stall.id,
                 'transaction_date': self.collection_date,
-                'payment_status': 'pending',
                 # Financial fields (rent, COPB) will be encoded by cashier
             })
 
