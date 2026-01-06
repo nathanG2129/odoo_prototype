@@ -5,6 +5,5 @@ access_kst_kcode_user,kst.kcode.user,model_kst_kcode,general_group_user,1,1,1,0
 access_kst_kcode_manager,kst.kcode.manager,model_kst_kcode,general_group_manager,1,1,1,1
 access_kst_utility_account_user,kst.utility.account.user,model_kst_utility_account,general_group_user,1,1,1,0
 access_kst_utility_account_manager,kst.utility.account.manager,model_kst_utility_account,general_group_manager,1,1,1,1
-
-
-
+access_kst_payment_attachment_user,kst.payment.attachment.user,model_kst_payment_attachment,general_group_user,1,1,1,0
+access_kst_payment_attachment_manager,kst.payment.attachment.manager,model_kst_payment_attachment,general_group_manager,1,1,1,1

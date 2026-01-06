@@ -27,6 +27,7 @@
         'views/tenant_views.xml',
         'views/market_pay_type_views.xml',
         'views/stall_views.xml',
+        'views/payment_attachment_views.xml',
         'views/market_rent_transaction_views.xml',
         'views/market_rent_batch_views.xml',
         'views/market_utility_transaction_views.xml',

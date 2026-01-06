@@ -49,6 +49,15 @@ class MarketRentTransaction(models.Model):
     # Receipt Information
     receipt_number = fields.Char('Receipt Number', tracking=True)
     
+    # Payment Attachments (receipts, deposit slips, etc.)
+    attachment_ids = fields.One2many(
+        'kst.payment.attachment',
+        'rent_transaction_id',
+        string='Attachments',
+        help="Upload payment receipts, deposit slips, GCash/Maya screenshots, etc."
+    )
+    attachment_count = fields.Integer('Attachment Count', compute='_compute_attachment_count', store=False)
+    
     # Note: Odoo automatically provides create_uid, create_date, write_uid, write_date
     # No need for custom encoded_by/encoded_date fields
     
@@ -60,6 +69,11 @@ class MarketRentTransaction(models.Model):
         ('weekly', 'Weekly'),
     ], related='stall_id.rent_collection_type', string='Rent Collection Type', store=True, readonly=True)
     rent = fields.Float(related='stall_id.rental_rate', string='Rent', store=True, readonly=True, digits=(12, 2))
+
+    @api.depends('attachment_ids')
+    def _compute_attachment_count(self):
+        for record in self:
+            record.attachment_count = len(record.attachment_ids)
 
     @api.constrains('rent_paid', 'copb_due', 'copb_paid')
     def _check_amounts(self):

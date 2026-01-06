@@ -21,6 +21,7 @@
                 <field name="amount_due" sum="Total Due"/>
                 <field name="amount_paid" sum="Total Amount"/>
                 <field name="receipt_number"/>
+                <field name="attachment_count" string="📎"/>
                 <field name="create_uid" string="Encoded By"/>
             </tree>
         </field>
@@ -88,6 +89,19 @@
                     </group>
                     <!-- Hidden helper for header attrs -->
                     <field name="soa_issuable" invisible="1"/>
+                    <notebook>
+                        <page string="Attachments" name="attachments">
+                            <field name="attachment_ids" nolabel="1">
+                                <tree editable="bottom">
+                                    <field name="name"/>
+                                    <field name="payment_method"/>
+                                    <field name="attachment_file" filename="attachment_filename" widget="binary"/>
+                                    <field name="attachment_filename" invisible="1"/>
+                                    <field name="notes"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
                     <group>
                         <group string="Audit Trail">
                             <field name="create_uid" string="Encoded By" readonly="1"/>

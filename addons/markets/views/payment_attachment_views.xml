@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Extend Payment Attachment Tree View to show market transaction reference -->
+    <record id="view_payment_attachment_tree_markets" model="ir.ui.view">
+        <field name="name">kst.payment.attachment.tree.markets</field>
+        <field name="model">kst.payment.attachment</field>
+        <field name="inherit_id" ref="general.view_payment_attachment_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='attachment_filename']" position="after">
+                <field name="market_transaction_reference" string="Market Transaction"/>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- Extend Payment Attachment Form View to show market transaction fields -->
+    <record id="view_payment_attachment_form_markets" model="ir.ui.view">
+        <field name="name">kst.payment.attachment.form.markets</field>
+        <field name="model">kst.payment.attachment</field>
+        <field name="inherit_id" ref="general.view_payment_attachment_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='notes']" position="before">
+                <group string="Market Transaction">
+                    <field name="rent_transaction_id" attrs="{'invisible': [('utility_transaction_id', '!=', False)]}"/>
+                    <field name="utility_transaction_id" attrs="{'invisible': [('rent_transaction_id', '!=', False)]}"/>
+                </group>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- Market-specific Payment Attachment Action (filtered to market transactions) -->
+    <record id="action_payment_attachment_markets" model="ir.actions.act_window">
+        <field name="name">Market Payment Attachments</field>
+        <field name="res_model">kst.payment.attachment</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">['|', ('rent_transaction_id', '!=', False), ('utility_transaction_id', '!=', False)]</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                No market payment attachments yet
+            </p>
+            <p>
+                Payment attachments are added through rent or utility transactions.
+            </p>
+        </field>
+    </record>
+</odoo>
+

@@ -54,6 +54,15 @@ class MarketUtilityTransaction(models.Model):
     
     # Receipt Information
     receipt_number = fields.Char('Receipt Number', tracking=True)
+    
+    # Payment Attachments (receipts, deposit slips, etc.)
+    attachment_ids = fields.One2many(
+        'kst.payment.attachment',
+        'utility_transaction_id',
+        string='Attachments',
+        help="Upload payment receipts, deposit slips, GCash/Maya screenshots, etc."
+    )
+    attachment_count = fields.Integer('Attachment Count', compute='_compute_attachment_count', store=False)
 
     # Related Fields for convenience
     market_id = fields.Many2one('kst.market', related='stall_id.market_id', string='Market', store=True, readonly=True)
@@ -65,6 +74,11 @@ class MarketUtilityTransaction(models.Model):
     
     # Computed field to show billing type
     billing_type = fields.Char('Billing Type', compute='_compute_billing_type')
+    
+    @api.depends('attachment_ids')
+    def _compute_attachment_count(self):
+        for record in self:
+            record.attachment_count = len(record.attachment_ids)
     
     @api.depends('stall_id', 'utility_type', 'stall_id.electric_pay_type_id', 'stall_id.water_pay_type_id',
                  'stall_id.electric_pay_type_id.sub_group', 'stall_id.water_pay_type_id.sub_group')

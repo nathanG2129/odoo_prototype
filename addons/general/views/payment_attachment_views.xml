@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Payment Attachment Tree View -->
+    <record id="view_payment_attachment_tree" model="ir.ui.view">
+        <field name="name">kst.payment.attachment.tree</field>
+        <field name="model">kst.payment.attachment</field>
+        <field name="arch" type="xml">
+            <tree string="Payment Attachments">
+                <field name="name"/>
+                <field name="payment_method"/>
+                <field name="attachment_filename"/>
+                <field name="create_date" string="Uploaded"/>
+                <field name="create_uid" string="Uploaded By"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Payment Attachment Form View -->
+    <record id="view_payment_attachment_form" model="ir.ui.view">
+        <field name="name">kst.payment.attachment.form</field>
+        <field name="model">kst.payment.attachment</field>
+        <field name="arch" type="xml">
+            <form string="Payment Attachment">
+                <sheet>
+                    <group>
+                        <group string="Attachment Details">
+                            <field name="name"/>
+                            <field name="payment_method"/>
+                            <field name="attachment_file" filename="attachment_filename"/>
+                            <field name="attachment_filename" invisible="1"/>
+                        </group>
+                        <group string="Audit">
+                            <field name="create_uid" string="Uploaded By" readonly="1"/>
+                            <field name="create_date" string="Upload Date" readonly="1"/>
+                        </group>
+                    </group>
+                    <group>
+                        <field name="notes"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Payment Attachment Action -->
+    <record id="action_payment_attachment" model="ir.actions.act_window">
+        <field name="name">Payment Attachments</field>
+        <field name="res_model">kst.payment.attachment</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                No attachments yet
+            </p>
+            <p>
+                Payment attachments are typically added through transaction records in other modules.
+            </p>
+        </field>
+    </record>
+</odoo>
+
