@@ -12,8 +12,8 @@
             </xpath>
             <xpath expr="//sheet" position="inside">
                 <notebook>
-                    <page string="Associated Stalls" name="stalls">
-                        <field name="stall_ids" nolabel="1">
+                    <page string="Electricity Stalls" name="electricity_stalls" attrs="{'invisible': [('utility_type', '!=', 'electricity')]}">
+                        <field name="electricity_stall_ids" nolabel="1">
                             <tree>
                                 <field name="display_name"/>
                                 <field name="market_id"/>
@@ -21,6 +21,17 @@
                                 <field name="code"/>
                                 <field name="is_active"/>
                                 <field name="electric_pay_type_id"/>
+                            </tree>
+                        </field>
+                    </page>
+                    <page string="Water Stalls" name="water_stalls" attrs="{'invisible': [('utility_type', '!=', 'water')]}">
+                        <field name="water_stall_ids" nolabel="1">
+                            <tree>
+                                <field name="display_name"/>
+                                <field name="market_id"/>
+                                <field name="tenant_id"/>
+                                <field name="code"/>
+                                <field name="is_active"/>
                                 <field name="water_pay_type_id"/>
                             </tree>
                         </field>

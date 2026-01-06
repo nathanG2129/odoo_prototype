@@ -27,7 +27,6 @@ class MarketRentBatch(models.Model):
         [
             ('daily', 'Daily'),
             ('weekly', 'Weekly'),
-            ('monthly', 'Monthly'),
         ],
         string='Collection Type',
         required=True,
@@ -105,7 +104,6 @@ class MarketRentBatch(models.Model):
         This mirrors the legacy behavior:
         - Daily: weekdays (Mon-Fri)
         - Weekly: specific weekday (use Monday for now)
-        - Monthly: first day of the month
         """
         if not stall.rent_collection_type:
             return False
@@ -117,10 +115,6 @@ class MarketRentBatch(models.Model):
         # Weekly: Mondays (can be adjusted later if needed)
         if stall.rent_collection_type == 'weekly':
             return date.weekday() == 0  # Monday
-
-        # Monthly: first day of the month
-        if stall.rent_collection_type == 'monthly':
-            return date.day == 1
 
         return False
 
@@ -231,7 +225,6 @@ class MarketRentBatch(models.Model):
             collection_type_map = {
                 'daily': 'Daily',
                 'weekly': 'Weekly',
-                'monthly': 'Monthly',
             }
             type_str = collection_type_map.get(record.collection_type, record.collection_type or 'Unknown')
             

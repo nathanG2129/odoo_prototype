@@ -79,15 +79,23 @@ class UtilityBill(models.Model):
                 for t in record.transaction_ids
             )
     
-    @api.depends('utility_account_id')
+    @api.depends('utility_account_id', 'utility_type')
     def _compute_stall_count(self):
         for record in self:
-            if record.utility_account_id:
-                # Access stalls through reverse relationship
-                stalls = self.env['kst.stall'].search([
-                    ('utility_account_id', '=', record.utility_account_id.id),
-                    ('is_active', '=', True)
-                ])
+            if record.utility_account_id and record.utility_type:
+                # Access stalls through reverse relationship based on utility type
+                if record.utility_type == 'electricity':
+                    stalls = self.env['kst.stall'].search([
+                        ('electricity_utility_account_id', '=', record.utility_account_id.id),
+                        ('is_active', '=', True)
+                    ])
+                elif record.utility_type == 'water':
+                    stalls = self.env['kst.stall'].search([
+                        ('water_utility_account_id', '=', record.utility_account_id.id),
+                        ('is_active', '=', True)
+                    ])
+                else:
+                    stalls = self.env['kst.stall']
                 record.stall_count = len(stalls)
             else:
                 record.stall_count = 0
@@ -237,11 +245,20 @@ class UtilityBill(models.Model):
         if not self.period_covered_from or not self.period_covered_to:
             raise ValidationError("Period coverage dates must be set to generate transactions!")
         
-        # Find all stalls with this utility account
-        stalls = self.env['kst.stall'].search([
-            ('utility_account_id', '=', self.utility_account_id.id),
-            ('is_active', '=', True)
-        ])
+        # Find all stalls with this utility account (based on utility type)
+        utility_type = self.utility_type
+        if utility_type == 'electricity':
+            stalls = self.env['kst.stall'].search([
+                ('electricity_utility_account_id', '=', self.utility_account_id.id),
+                ('is_active', '=', True)
+            ])
+        elif utility_type == 'water':
+            stalls = self.env['kst.stall'].search([
+                ('water_utility_account_id', '=', self.utility_account_id.id),
+                ('is_active', '=', True)
+            ])
+        else:
+            stalls = self.env['kst.stall']
         
         if not stalls:
             raise ValidationError(f"No active stalls found for utility account {self.utility_account_id.display_name}!")

@@ -58,7 +58,6 @@ class MarketRentTransaction(models.Model):
     rent_collection_type = fields.Selection([
         ('daily', 'Daily'),
         ('weekly', 'Weekly'),
-        ('monthly', 'Monthly'),
     ], related='stall_id.rent_collection_type', string='Rent Collection Type', store=True, readonly=True)
     rent = fields.Float(related='stall_id.rental_rate', string='Rent', store=True, readonly=True, digits=(12, 2))
 

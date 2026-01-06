@@ -202,14 +202,12 @@ def generate_xml():
             utility_account_ref = all_accounts[0]
             account_stall_count[all_accounts[0]] += 1
         
-        # Determine rent collection frequency (30% daily, 30% weekly, 40% monthly)
+        # Determine rent collection frequency (50% daily, 50% weekly - no monthly)
         rent_freq_rand = random.random()
-        if rent_freq_rand < 0.3:
+        if rent_freq_rand < 0.5:
             rent_collection_type = 'daily'
-        elif rent_freq_rand < 0.6:
-            rent_collection_type = 'weekly'
         else:
-            rent_collection_type = 'monthly'
+            rent_collection_type = 'weekly'
         
         # Determine pay types (random selection)
         elec_choice = random.choice(['LG Daily', 'UGS Weekly', 'K1-MH'])
@@ -228,24 +226,30 @@ def generate_xml():
         else:
             water_freq = 'weekly'
         
-        # Calculate rental rate based on frequency
+        # Calculate rental rate based on frequency (no monthly)
         monthly_rent = random.randint(3000, 8000)
         if rent_collection_type == 'daily':
             rental_rate = round(monthly_rent / 22, 2)  # ~22 working days per month
-        elif rent_collection_type == 'weekly':
+        else:  # weekly
             rental_rate = round(monthly_rent / 4, 2)  # ~4 weeks per month
-        else:  # monthly
-            rental_rate = monthly_rent
         
         default_electricity_rate = round(random.uniform(12.0, 22.0), 2)
         default_water_rate = round(random.uniform(8.0, 15.0), 2)
+        
+        # Find electricity and water accounts for this stall
+        elec_accounts = [acc for acc, utype in UTILITY_ACCOUNTS if utype == 'electricity']
+        water_accounts_list = [acc for acc, utype in UTILITY_ACCOUNTS if utype == 'water']
+        elec_account_ref = elec_accounts[i % len(elec_accounts)] if elec_accounts else None
+        water_account_ref = water_accounts_list[i % len(water_accounts_list)] if water_accounts_list else None
         
         xml_lines.append(f'        <record id="{ref_id}" model="kst.stall">')
         xml_lines.append(f'            <field name="market_id" ref="{market_ref}"/>')
         xml_lines.append(f'            <field name="code">{stall_code}</field>')
         xml_lines.append(f'            <field name="tenant_id" ref="{tenant_ref}"/>')
-        if utility_account_ref:
-            xml_lines.append(f'            <field name="utility_account_id" ref="{utility_account_ref}"/>')
+        if elec_account_ref:
+            xml_lines.append(f'            <field name="electricity_utility_account_id" ref="{elec_account_ref}"/>')
+        if water_account_ref:
+            xml_lines.append(f'            <field name="water_utility_account_id" ref="{water_account_ref}"/>')
         xml_lines.append(f'            <field name="rental_rate">{rental_rate:.2f}</field>')
         xml_lines.append(f'            <field name="default_electricity_rate">{default_electricity_rate:.2f}</field>')
         xml_lines.append(f'            <field name="default_water_rate">{default_water_rate:.2f}</field>')
@@ -282,12 +286,12 @@ def generate_xml():
     xml_lines.append('            <field name="code">Toilet</field>')
     xml_lines.append(f'            <field name="tenant_id" ref="{first_tenant_ref}"/>')
     if toilet_account:
-        xml_lines.append(f'            <field name="utility_account_id" ref="{toilet_account}"/>')
+        xml_lines.append(f'            <field name="water_utility_account_id" ref="{toilet_account}"/>')
     xml_lines.append('            <field name="rental_rate">0.00</field>')
     xml_lines.append('            <field name="default_electricity_rate">0.00</field>')
     xml_lines.append('            <field name="default_water_rate">0.00</field>')
     xml_lines.append(f'            <field name="water_pay_type_id" ref="{toilet_pay_type}"/>')
-    xml_lines.append('            <field name="rent_collection_type">monthly</field>')
+    xml_lines.append('            <field name="rent_collection_type">daily</field>')
     xml_lines.append('            <field name="is_active">True</field>')
     xml_lines.append('            <field name="need_or">false</field>')
     xml_lines.append('        </record>')
@@ -299,12 +303,12 @@ def generate_xml():
     xml_lines.append('            <field name="code">NAWASA</field>')
     xml_lines.append(f'            <field name="tenant_id" ref="{first_tenant_ref}"/>')
     if nawasa_account:
-        xml_lines.append(f'            <field name="utility_account_id" ref="{nawasa_account}"/>')
+        xml_lines.append(f'            <field name="water_utility_account_id" ref="{nawasa_account}"/>')
     xml_lines.append('            <field name="rental_rate">0.00</field>')
     xml_lines.append('            <field name="default_electricity_rate">0.00</field>')
     xml_lines.append('            <field name="default_water_rate">0.00</field>')
     xml_lines.append(f'            <field name="water_pay_type_id" ref="{nawasa_pay_type}"/>')
-    xml_lines.append('            <field name="rent_collection_type">monthly</field>')
+    xml_lines.append('            <field name="rent_collection_type">weekly</field>')
     xml_lines.append('            <field name="is_active">True</field>')
     xml_lines.append('            <field name="need_or">false</field>')
     xml_lines.append('        </record>')

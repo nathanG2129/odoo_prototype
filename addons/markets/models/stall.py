@@ -12,9 +12,14 @@ class Stall(models.Model):
     # Foreign Keys
     market_id = fields.Many2one('kst.market', string='Market', required=True, ondelete='restrict', tracking=True)
     tenant_id = fields.Many2one('kst.tenant', string='Tenant', ondelete='restrict', tracking=True)
-    utility_account_id = fields.Many2one('kst.utility.account', string='Utility Account', 
+    electricity_utility_account_id = fields.Many2one('kst.utility.account', string='Electricity Utility Account', 
                                         ondelete='restrict', tracking=True,
-                                        help="Utility account that groups stalls under one billing account")
+                                        domain=[('utility_type', '=', 'electricity')],
+                                        help="Electricity utility account (MERALCO) for metered billing")
+    water_utility_account_id = fields.Many2one('kst.utility.account', string='Water Utility Account', 
+                                        ondelete='restrict', tracking=True,
+                                        domain=[('utility_type', '=', 'water')],
+                                        help="Water utility account for metered billing")
     electric_pay_type_id = fields.Many2one('kst.market.pay.type', string='Electric Pay Type',
                                            domain=[('pay_type_use', 'in', ['electricity', 'both'])], tracking=True)
     water_pay_type_id = fields.Many2one('kst.market.pay.type', string='Water Pay Type',
@@ -30,8 +35,7 @@ class Stall(models.Model):
     rent_collection_type = fields.Selection([
         ('daily', 'Daily'),
         ('weekly', 'Weekly'),
-        ('monthly', 'Monthly'),
-    ], string='Rent Collection Type', default='monthly', tracking=True)
+    ], string='Rent Collection Type', default='daily', tracking=True)
     is_active = fields.Boolean('Active', default=True, tracking=True)
     need_or = fields.Boolean('Need OR', default=False, help="Needs Official Receipt", tracking=True)
     

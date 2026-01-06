@@ -8,7 +8,8 @@
                 <field name="market_id"/>
                 <field name="code"/>
                 <field name="tenant_id"/>
-                <field name="utility_account_id"/>
+                <field name="electricity_utility_account_id"/>
+                <field name="water_utility_account_id"/>
                 <field name="rental_rate"/>
                 <field name="default_electricity_rate"/>
                 <field name="default_water_rate"/>
@@ -34,7 +35,6 @@
                             <field name="market_id"/>
                             <field name="code"/>
                             <field name="tenant_id"/>
-                            <field name="utility_account_id"/>
                             <field name="is_active"/>
                             <field name="need_or"/>
                         </group>
@@ -46,13 +46,15 @@
                         </group>
                     </group>
                     <group>
-                        <group string="Utility Pay Types">
+                        <group string="Electricity Utility">
+                            <field name="electricity_utility_account_id"/>
                             <field name="electric_pay_type_id"/>
-                            <field name="water_pay_type_id"/>
-                        </group>
-                        <group string="Utility Information">
                             <field name="meralco_account_number"/>
                             <field name="electricity_sub_meter_number"/>
+                        </group>
+                        <group string="Water Utility">
+                            <field name="water_utility_account_id"/>
+                            <field name="water_pay_type_id"/>
                         </group>
                     </group>
                     <notebook>
@@ -110,13 +112,15 @@
                 <field name="code"/>
                 <field name="market_id"/>
                 <field name="tenant_id"/>
-                <field name="utility_account_id"/>
+                <field name="electricity_utility_account_id"/>
+                <field name="water_utility_account_id"/>
                 <filter name="active" string="Active" domain="[('is_active', '=', True)]"/>
                 <filter name="inactive" string="Inactive" domain="[('is_active', '=', False)]"/>
                 <group expand="0">
                     <filter name="group_by_market" string="Market" context="{'group_by':'market_id'}"/>
                     <filter name="group_by_tenant" string="Tenant" context="{'group_by':'tenant_id'}"/>
-                    <filter name="group_by_utility_account" string="Utility Account" context="{'group_by':'utility_account_id'}"/>
+                    <filter name="group_by_electricity_account" string="Electricity Account" context="{'group_by':'electricity_utility_account_id'}"/>
+                    <filter name="group_by_water_account" string="Water Account" context="{'group_by':'water_utility_account_id'}"/>
                 </group>
             </search>
         </field>
