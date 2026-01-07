@@ -18,13 +18,6 @@
                     <field name="collection_status" widget="statusbar" statusbar_visible="draft,published,verified"/>
                 </header>
                 <sheet>
-                    <div class="oe_button_box" name="button_box">
-                        <button name="%(units.action_unit_utility_transaction)d" type="action" 
-                                class="oe_stat_button" icon="fa-list"
-                                context="{'default_utility_bill_id': active_id}">
-                            <field name="transaction_count" widget="statinfo" string="Transactions"/>
-                        </button>
-                    </div>
                     <div class="oe_title">
                         <h1>
                             <field name="utility_type" readonly="1"/>

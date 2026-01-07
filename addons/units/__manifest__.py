@@ -36,6 +36,7 @@ This module manages:
     ],
     'demo': [
         'demo/units_demo.xml',
+        'demo/masterfiles_demo.xml',
     ],
 }
 

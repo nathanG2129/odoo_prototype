@@ -1,0 +1,2487 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Masterfiles Demo Data -->
+    <!-- Generated from extracted CSV files -->
+    <!-- Lessors and Lessees extracted from legacy database -->
+
+    <!-- Lessors (from extracted CSV) -->
+    <record id="lessor_bbh" model="kst.lessor">
+        <field name="code">BBH</field>
+        <field name="name">BBH</field>
+    </record>
+
+    <record id="lessor_k1" model="kst.lessor">
+        <field name="code">K1</field>
+        <field name="name">KST - K1</field>
+    </record>
+
+    <record id="lessor_k2" model="kst.lessor">
+        <field name="code">K2</field>
+        <field name="name">K2</field>
+    </record>
+
+    <record id="lessor_k3" model="kst.lessor">
+        <field name="code">K3</field>
+        <field name="name">K3</field>
+    </record>
+
+    <record id="lessor_k4" model="kst.lessor">
+        <field name="code">K4</field>
+        <field name="name">K4</field>
+    </record>
+
+    <record id="lessor_kst" model="kst.lessor">
+        <field name="code">KST</field>
+        <field name="name">KST</field>
+    </record>
+
+    <record id="lessor_kstk3" model="kst.lessor">
+        <field name="code">KSTK3</field>
+        <field name="name">KST - K3</field>
+    </record>
+
+    <record id="lessor_kstvb" model="kst.lessor">
+        <field name="code">KSTVB</field>
+        <field name="name">KST - VB</field>
+    </record>
+
+    <record id="lessor_ktc" model="kst.lessor">
+        <field name="code">KTC</field>
+        <field name="name">KTC</field>
+    </record>
+
+    <record id="lessor_lrt" model="kst.lessor">
+        <field name="code">LRT</field>
+        <field name="name">LRT</field>
+    </record>
+
+    <record id="lessor_mccbu" model="kst.lessor">
+        <field name="code">MCCBU</field>
+        <field name="name">MCC.V. BUNO</field>
+    </record>
+
+    <record id="lessor_mgy" model="kst.lessor">
+        <field name="code">MGY</field>
+        <field name="name">STA. MARTHA</field>
+    </record>
+
+    <record id="lessor_tst" model="kst.lessor">
+        <field name="code">TST</field>
+        <field name="name">THERESITA S. TIU</field>
+    </record>
+
+    <record id="lessor_vmb" model="kst.lessor">
+        <field name="code">VMB</field>
+        <field name="name">VMB</field>
+    </record>
+
+    <!-- Lessees (from extracted CSV) -->
+    <record id="lessee_alejandro_tupas_iii" model="kst.lessee">
+        <field name="name">ALEJANDRO TUPAS III</field>
+    </record>
+
+    <record id="lessee_acc_1226_corp_alain_c_corros" model="kst.lessee">
+        <field name="name">ACC 1226 CORP. / ALAIN C. CORROS</field>
+    </record>
+
+    <record id="lessee_accurate_security_-_nomer_pineda" model="kst.lessee">
+        <field name="name">ACCURATE SECURITY - NOMER PINEDA</field>
+    </record>
+
+    <record id="lessee_accurate_security_-_nomer_pineda_suzie" model="kst.lessee">
+        <field name="name">ACCURATE SECURITY - NOMER PINEDA / SUZIE</field>
+    </record>
+
+    <record id="lessee_aces_charm_bingo_corp_mike_ong_chua" model="kst.lessee">
+        <field name="name">ACES CHARM BINGO CORP. / MIKE ONG CHUA</field>
+    </record>
+
+    <record id="lessee_adrian_acosta" model="kst.lessee">
+        <field name="name">ADRIAN ACOSTA</field>
+    </record>
+
+    <record id="lessee_adto_group_of_companies_tong_chen" model="kst.lessee">
+        <field name="name">ADTO GROUP OF COMPANIES/ TONG CHEN</field>
+    </record>
+
+    <record id="lessee_aileen_rosario_dawa_hernandez" model="kst.lessee">
+        <field name="name">AILEEN ROSARIO DAWA HERNANDEZ</field>
+    </record>
+
+    <record id="lessee_airen_abobo" model="kst.lessee">
+        <field name="name">AIREN ABOBO</field>
+    </record>
+
+    <record id="lessee_alexander_esteban" model="kst.lessee">
+        <field name="name">ALEXANDER ESTEBAN</field>
+    </record>
+
+    <record id="lessee_alexis_p_pizarro" model="kst.lessee">
+        <field name="name">ALEXIS P. PIZARRO</field>
+    </record>
+
+    <record id="lessee_alfamart" model="kst.lessee">
+        <field name="name">ALFAMART</field>
+    </record>
+
+    <record id="lessee_alfredo_veloria" model="kst.lessee">
+        <field name="name">ALFREDO VELORIA</field>
+    </record>
+
+    <record id="lessee_alicia_k_jacob" model="kst.lessee">
+        <field name="name">ALICIA K. JACOB</field>
+    </record>
+
+    <record id="lessee_allain_corros" model="kst.lessee">
+        <field name="name">ALLAIN CORROS</field>
+    </record>
+
+    <record id="lessee_alma_bombita" model="kst.lessee">
+        <field name="name">ALMA BOMBITA</field>
+    </record>
+
+    <record id="lessee_alvin_pagas" model="kst.lessee">
+        <field name="name">ALVIN PAGAS</field>
+    </record>
+
+    <record id="lessee_alyaahna_transportation_incorporated_sean_rhey_jac" model="kst.lessee">
+        <field name="name">ALYAAHNA TRANSPORTATION INCORPORATED | SEAN RHEY JACOB KOH</field>
+    </record>
+
+    <record id="lessee_ameter_hardware_sykai" model="kst.lessee">
+        <field name="name">AMETER HARDWARE/SYKAI</field>
+    </record>
+
+    <record id="lessee_amily_b_cesista" model="kst.lessee">
+        <field name="name">AMILY B. CESISTA</field>
+    </record>
+
+    <record id="lessee_ana_marie_cahayag" model="kst.lessee">
+        <field name="name">ANA MARIE CAHAYAG</field>
+    </record>
+
+    <record id="lessee_angelica_lyn_yumil" model="kst.lessee">
+        <field name="name">ANGELICA LYN YUMIL</field>
+    </record>
+
+    <record id="lessee_angelica_lyn_yumul" model="kst.lessee">
+        <field name="name">ANGELICA LYN YUMUL</field>
+    </record>
+
+    <record id="lessee_angelyn_e_pisngot" model="kst.lessee">
+        <field name="name">ANGELYN E. PISNGOT</field>
+    </record>
+
+    <record id="lessee_angelyn_n_pisngot" model="kst.lessee">
+        <field name="name">ANGELYN N. PISNGOT</field>
+    </record>
+
+    <record id="lessee_angelyn_pisngot" model="kst.lessee">
+        <field name="name">ANGELYN PISNGOT</field>
+    </record>
+
+    <record id="lessee_aniceta_pagas" model="kst.lessee">
+        <field name="name">ANICETA PAGAS</field>
+    </record>
+
+    <record id="lessee_anita_sta_ana" model="kst.lessee">
+        <field name="name">ANITA STA.ANA</field>
+    </record>
+
+    <record id="lessee_ansherina_a_dela_vega" model="kst.lessee">
+        <field name="name">ANSHERINA A. DELA VEGA</field>
+    </record>
+
+    <record id="lessee_anson_du" model="kst.lessee">
+        <field name="name">ANSON DU</field>
+    </record>
+
+    <record id="lessee_anthony_royupa" model="kst.lessee">
+        <field name="name">ANTHONY ROYUPA</field>
+    </record>
+
+    <record id="lessee_ardcorp_federico_baldovino_jr" model="kst.lessee">
+        <field name="name">ARDCORP / FEDERICO BALDOVINO, JR</field>
+    </record>
+
+    <record id="lessee_ardcorp_federico_baldovino_jr" model="kst.lessee">
+        <field name="name">ARDCORP / FEDERICO BALDOVINO, JR.</field>
+    </record>
+
+    <record id="lessee_ardcorp_noracion_dela_rosa_reyes" model="kst.lessee">
+        <field name="name">ARDCORP / NORACION DELA ROSA REYES</field>
+    </record>
+
+    <record id="lessee_ardcorp_federico_baldovino_jr" model="kst.lessee">
+        <field name="name">ARDCORP/ FEDERICO BALDOVINO, JR.</field>
+    </record>
+
+    <record id="lessee_ardcorp_noracion_dela_rosa_reyes" model="kst.lessee">
+        <field name="name">ARDCORP/ NORACION DELA ROSA REYES</field>
+    </record>
+
+    <record id="lessee_arianne_f_almera" model="kst.lessee">
+        <field name="name">ARIANNE F. ALMERA</field>
+    </record>
+
+    <record id="lessee_aries_alvares" model="kst.lessee">
+        <field name="name">ARIES ALVARES</field>
+    </record>
+
+    <record id="lessee_aries_detuya" model="kst.lessee">
+        <field name="name">ARIES DETUYA</field>
+    </record>
+
+    <record id="lessee_arlene_f_tagud" model="kst.lessee">
+        <field name="name">ARLENE F. TAGUD</field>
+    </record>
+
+    <record id="lessee_armelle_vivian_dawa_hernandez_bambi" model="kst.lessee">
+        <field name="name">ARMELLE VIVIAN DAWA HERNANDEZ &quot;BAMBI&quot;</field>
+    </record>
+
+    <record id="lessee_arnold_santisteban" model="kst.lessee">
+        <field name="name">ARNOLD SANTISTEBAN</field>
+    </record>
+
+    <record id="lessee_arthur_piller" model="kst.lessee">
+        <field name="name">ARTHUR PILLER</field>
+    </record>
+
+    <record id="lessee_arturo_villarama_griego" model="kst.lessee">
+        <field name="name">ARTURO VILLARAMA GRIEGO</field>
+    </record>
+
+    <record id="lessee_arzel_delos_reyes" model="kst.lessee">
+        <field name="name">ARZEL DELOS REYES</field>
+    </record>
+
+    <record id="lessee_asec_development_and_construction_corp" model="kst.lessee">
+        <field name="name">ASEC DEVELOPMENT AND CONSTRUCTION CORP.</field>
+    </record>
+
+    <record id="lessee_ashly_jane_bautista" model="kst.lessee">
+        <field name="name">ASHLY JANE BAUTISTA</field>
+    </record>
+
+    <record id="lessee_astrotel_hotel_silver_meadows_-_r_masangcay" model="kst.lessee">
+        <field name="name">ASTROTEL HOTEL/SILVER MEADOWS - R. MASANGCAY</field>
+    </record>
+
+    <record id="lessee_avelino_l_mon_jr" model="kst.lessee">
+        <field name="name">AVELINO L. MON JR.</field>
+    </record>
+
+    <record id="lessee_babby_magpia" model="kst.lessee">
+        <field name="name">BABBY MAGPIA</field>
+    </record>
+
+    <record id="lessee_baby_shan_dry_goods_trading" model="kst.lessee">
+        <field name="name">BABY SHAN DRY GOODS TRADING</field>
+    </record>
+
+    <record id="lessee_bagong_barrio_hypermart" model="kst.lessee">
+        <field name="name">BAGONG BARRIO HYPERMART</field>
+    </record>
+
+    <record id="lessee_beach_head_guns_ammo_-_nomer_pineda" model="kst.lessee">
+        <field name="name">BEACH HEAD &amp; GUNS AMMO - NOMER PINEDA</field>
+    </record>
+
+    <record id="lessee_beach_head_and_guns_ammo" model="kst.lessee">
+        <field name="name">BEACH HEAD AND GUNS AMMO</field>
+    </record>
+
+    <record id="lessee_bebelinda_polleros" model="kst.lessee">
+        <field name="name">BEBELINDA POLLEROS</field>
+    </record>
+
+    <record id="lessee_bell_pepper_company_inc_virginia_garcia" model="kst.lessee">
+        <field name="name">BELL PEPPER COMPANY INC | VIRGINIA GARCIA</field>
+    </record>
+
+    <record id="lessee_bell_pepper_inc_-_virginia_e_garcia" model="kst.lessee">
+        <field name="name">BELL PEPPER INC. - VIRGINIA E. GARCIA</field>
+    </record>
+
+    <record id="lessee_benedick_r_tolentino" model="kst.lessee">
+        <field name="name">BENEDICK R. TOLENTINO</field>
+    </record>
+
+    <record id="lessee_bianca_chia_castro" model="kst.lessee">
+        <field name="name">BIANCA CHIA CASTRO</field>
+    </record>
+
+    <record id="lessee_billy_joe_joven" model="kst.lessee">
+        <field name="name">BILLY JOE JOVEN</field>
+    </record>
+
+    <record id="lessee_bob_dalida" model="kst.lessee">
+        <field name="name">BOB DALIDA</field>
+    </record>
+
+    <record id="lessee_bob_s_pizza_food_store" model="kst.lessee">
+        <field name="name">BOB&apos;S PIZZA FOOD STORE</field>
+    </record>
+
+    <record id="lessee_bobby_magpia" model="kst.lessee">
+        <field name="name">BOBBY MAGPIA</field>
+    </record>
+
+    <record id="lessee_bonifacio_cadagas" model="kst.lessee">
+        <field name="name">BONIFACIO CADAGAS</field>
+    </record>
+
+    <record id="lessee_bonifacio_cagadas" model="kst.lessee">
+        <field name="name">BONIFACIO CAGADAS</field>
+    </record>
+
+    <record id="lessee_bonnie_villanueva" model="kst.lessee">
+        <field name="name">BONNIE VILLANUEVA</field>
+    </record>
+
+    <record id="lessee_bountry_agro_ventures_inc" model="kst.lessee">
+        <field name="name">BOUNTRY AGRO VENTURES INC.</field>
+    </record>
+
+    <record id="lessee_bounty_agro_ventures_inc" model="kst.lessee">
+        <field name="name">BOUNTY AGRO VENTURES INC.</field>
+    </record>
+
+    <record id="lessee_brian_r_pineda" model="kst.lessee">
+        <field name="name">BRIAN R. PINEDA</field>
+    </record>
+
+    <record id="lessee_brooksbrother_heavy_lift_and_transport_services_in" model="kst.lessee">
+        <field name="name">BROOKSBROTHER HEAVY LIFT AND TRANSPORT SERVICES INC.</field>
+    </record>
+
+    <record id="lessee_camille_jasmine_g_dela_cruz" model="kst.lessee">
+        <field name="name">CAMILLE JASMINE G. DELA CRUZ</field>
+    </record>
+
+    <record id="lessee_candidoskie_berdin" model="kst.lessee">
+        <field name="name">CANDIDOSKIE BERDIN</field>
+    </record>
+
+    <record id="lessee_candidoskie_berdin_abel_berdin" model="kst.lessee">
+        <field name="name">CANDIDOSKIE BERDIN / ABEL BERDIN</field>
+    </record>
+
+    <record id="lessee_candidoskie_berdin_ii" model="kst.lessee">
+        <field name="name">CANDIDOSKIE BERDIN II</field>
+    </record>
+
+    <record id="lessee_candidoskie_p_berdin_ii" model="kst.lessee">
+        <field name="name">CANDIDOSKIE P. BERDIN II</field>
+    </record>
+
+    <record id="lessee_candisa_olaybar" model="kst.lessee">
+        <field name="name">CANDISA OLAYBAR</field>
+    </record>
+
+    <record id="lessee_carlo_bermudez" model="kst.lessee">
+        <field name="name">CARLO BERMUDEZ</field>
+    </record>
+
+    <record id="lessee_carlo_teo" model="kst.lessee">
+        <field name="name">CARLO TEO</field>
+    </record>
+
+    <record id="lessee_caroline_bayona" model="kst.lessee">
+        <field name="name">CAROLINE BAYONA</field>
+    </record>
+
+    <record id="lessee_catherine_lacuna_balabbo" model="kst.lessee">
+        <field name="name">CATHERINE LACUNA BALABBO</field>
+    </record>
+
+    <record id="lessee_catherine_nayanga" model="kst.lessee">
+        <field name="name">CATHERINE NAYANGA</field>
+    </record>
+
+    <record id="lessee_cb_prado_engineering_services" model="kst.lessee">
+        <field name="name">CB PRADO ENGINEERING SERVICES</field>
+    </record>
+
+    <record id="lessee_cb_prado_engineering_services_chito_b_prado" model="kst.lessee">
+        <field name="name">CB PRADO ENGINEERING SERVICES / CHITO B. PRADO</field>
+    </record>
+
+    <record id="lessee_cb_prado_engineering_services_chito_b_prado" model="kst.lessee">
+        <field name="name">CB PRADO ENGINEERING SERVICES/ CHITO B. PRADO</field>
+    </record>
+
+    <record id="lessee_cebu_famous_bakery_and_foods_inc_anthony_paul_tan" model="kst.lessee">
+        <field name="name">CEBU FAMOUS BAKERY AND FOODS INC./ANTHONY PAUL TAN</field>
+    </record>
+
+    <record id="lessee_cebuana_lhuillier" model="kst.lessee">
+        <field name="name">CEBUANA LHUILLIER</field>
+    </record>
+
+    <record id="lessee_cesar_decena" model="kst.lessee">
+        <field name="name">CESAR DECENA</field>
+    </record>
+
+    <record id="lessee_cesar_sevilla" model="kst.lessee">
+        <field name="name">CESAR SEVILLA</field>
+    </record>
+
+    <record id="lessee_charisse_anne_hilario_tolosa" model="kst.lessee">
+        <field name="name">CHARISSE ANNE HILARIO TOLOSA</field>
+    </record>
+
+    <record id="lessee_charles_quiambao" model="kst.lessee">
+        <field name="name">CHARLES QUIAMBAO</field>
+    </record>
+
+    <record id="lessee_cheenie_laine_yumul" model="kst.lessee">
+        <field name="name">CHEENIE LAINE YUMUL</field>
+    </record>
+
+    <record id="lessee_chefs_arcor_foods_corporation_carlo_antonio_cortez" model="kst.lessee">
+        <field name="name">CHEFS ARCOR FOODS CORPORATION / CARLO ANTONIO CORTEZ</field>
+    </record>
+
+    <record id="lessee_cheliza_lea_mapula" model="kst.lessee">
+        <field name="name">CHELIZA LEA MAPULA</field>
+    </record>
+
+    <record id="lessee_cheliza_lea_s_mapula" model="kst.lessee">
+        <field name="name">CHELIZA LEA S. MAPULA</field>
+    </record>
+
+    <record id="lessee_cherish_tarasona" model="kst.lessee">
+        <field name="name">CHERISH TARASONA</field>
+    </record>
+
+    <record id="lessee_cherish_tarasona_hernando" model="kst.lessee">
+        <field name="name">CHERISH TARASONA HERNANDO</field>
+    </record>
+
+    <record id="lessee_cherrylyn_alfaro" model="kst.lessee">
+        <field name="name">CHERRYLYN ALFARO</field>
+    </record>
+
+    <record id="lessee_cheyenne_amayma_p_yu" model="kst.lessee">
+        <field name="name">CHEYENNE AMAYMA P. YU</field>
+    </record>
+
+    <record id="lessee_chezzka_kates_soria" model="kst.lessee">
+        <field name="name">CHEZZKA KATES SORIA</field>
+    </record>
+
+    <record id="lessee_chik_ni_otit_franchising_corporation_gerson_l_pari" model="kst.lessee">
+        <field name="name">CHIK NI OTIT FRANCHISING CORPORATION | GERSON L. PARIN</field>
+    </record>
+
+    <record id="lessee_chito_prado" model="kst.lessee">
+        <field name="name">CHITO PRADO</field>
+    </record>
+
+    <record id="lessee_chooks_to_go_inc" model="kst.lessee">
+        <field name="name">CHOOKS TO GO INC.</field>
+    </record>
+
+    <record id="lessee_christ_international_fellowship" model="kst.lessee">
+        <field name="name">CHRIST INTERNATIONAL FELLOWSHIP</field>
+    </record>
+
+    <record id="lessee_christ_intl_fellowship" model="kst.lessee">
+        <field name="name">CHRIST INTL FELLOWSHIP</field>
+    </record>
+
+    <record id="lessee_christopher_martin_garcia" model="kst.lessee">
+        <field name="name">CHRISTOPHER MARTIN GARCIA</field>
+    </record>
+
+    <record id="lessee_christopher_p_badon" model="kst.lessee">
+        <field name="name">CHRISTOPHER P. BADON</field>
+    </record>
+
+    <record id="lessee_christopher_padilla_mathieu_delwin_padilla" model="kst.lessee">
+        <field name="name">CHRISTOPHER PADILLA/MATHIEU DELWIN PADILLA</field>
+    </record>
+
+    <record id="lessee_cibl_tourist_transpo" model="kst.lessee">
+        <field name="name">CIBL TOURIST TRANSPO</field>
+    </record>
+
+    <record id="lessee_cizco_pureza" model="kst.lessee">
+        <field name="name">CIZCO PUREZA</field>
+    </record>
+
+    <record id="lessee_claire_aplasca" model="kst.lessee">
+        <field name="name">CLAIRE APLASCA</field>
+    </record>
+
+    <record id="lessee_clarisse_b_taladtad" model="kst.lessee">
+        <field name="name">CLARISSE B. TALADTAD</field>
+    </record>
+
+    <record id="lessee_connie_lumyeb_-_crown_printing" model="kst.lessee">
+        <field name="name">CONNIE LUMYEB - CROWN PRINTING</field>
+    </record>
+
+    <record id="lessee_cris_mark_rivamonte" model="kst.lessee">
+        <field name="name">CRIS MARK RIVAMONTE</field>
+    </record>
+
+    <record id="lessee_cut_encarnacion_salon" model="kst.lessee">
+        <field name="name">CUT ENCARNACION SALON</field>
+    </record>
+
+    <record id="lessee_daisy_fernandez" model="kst.lessee">
+        <field name="name">DAISY FERNANDEZ</field>
+    </record>
+
+    <record id="lessee_dan_vir_andrew_f_calanoga" model="kst.lessee">
+        <field name="name">DAN VIR ANDREW F. CALANOGA</field>
+    </record>
+
+    <record id="lessee_daniel_jungco" model="kst.lessee">
+        <field name="name">DANIEL JUNGCO</field>
+    </record>
+
+    <record id="lessee_danielyn_maquiling" model="kst.lessee">
+        <field name="name">DANIELYN  MAQUILING</field>
+    </record>
+
+    <record id="lessee_danilo_tayer" model="kst.lessee">
+        <field name="name">DANILO TAYER</field>
+    </record>
+
+    <record id="lessee_dannicel_arciga_salazar" model="kst.lessee">
+        <field name="name">DANNICEL ARCIGA SALAZAR</field>
+    </record>
+
+    <record id="lessee_darlene_mapula" model="kst.lessee">
+        <field name="name">DARLENE MAPULA</field>
+    </record>
+
+    <record id="lessee_darwin_j_lomentigar" model="kst.lessee">
+        <field name="name">DARWIN J. LOMENTIGAR</field>
+    </record>
+
+    <record id="lessee_darzen_vape_shop_lounge" model="kst.lessee">
+        <field name="name">DARZEN VAPE SHOP &amp; LOUNGE</field>
+    </record>
+
+    <record id="lessee_david_christ_doronila_iii" model="kst.lessee">
+        <field name="name">DAVID CHRIST DORONILA III</field>
+    </record>
+
+    <record id="lessee_delia_m_doctolero" model="kst.lessee">
+        <field name="name">DELIA M. DOCTOLERO</field>
+    </record>
+
+    <record id="lessee_dennis_del_rosario_yatco" model="kst.lessee">
+        <field name="name">DENNIS DEL ROSARIO YATCO</field>
+    </record>
+
+    <record id="lessee_dennis_p_soliman" model="kst.lessee">
+        <field name="name">DENNIS P. SOLIMAN</field>
+    </record>
+
+    <record id="lessee_dental_clinic" model="kst.lessee">
+        <field name="name">DENTAL CLINIC</field>
+    </record>
+
+    <record id="lessee_desnibel_enterprises" model="kst.lessee">
+        <field name="name">DESNIBEL ENTERPRISES</field>
+    </record>
+
+    <record id="lessee_diana_marie_n_de_guzman" model="kst.lessee">
+        <field name="name">DIANA MARIE N. DE GUZMAN</field>
+    </record>
+
+    <record id="lessee_dianez_lora_bacasmas" model="kst.lessee">
+        <field name="name">DIANEZ LORA BACASMAS</field>
+    </record>
+
+    <record id="lessee_dominador_balleta" model="kst.lessee">
+        <field name="name">DOMINADOR BALLETA</field>
+    </record>
+
+    <record id="lessee_dominador_j_co" model="kst.lessee">
+        <field name="name">DOMINADOR J. CO</field>
+    </record>
+
+    <record id="lessee_donabel_t_balingit" model="kst.lessee">
+        <field name="name">DONABEL T. BALINGIT</field>
+    </record>
+
+    <record id="lessee_donnalyn_morales" model="kst.lessee">
+        <field name="name">DONNALYN MORALES</field>
+    </record>
+
+    <record id="lessee_drezela_marie_ricare" model="kst.lessee">
+        <field name="name">DREZELA MARIE RICARE</field>
+    </record>
+
+    <record id="lessee_e_-_manage" model="kst.lessee">
+        <field name="name">E - MANAGE</field>
+    </record>
+
+    <record id="lessee_e-manage" model="kst.lessee">
+        <field name="name">E-MANAGE</field>
+    </record>
+
+    <record id="lessee_edilberto_jr_borden_yauder" model="kst.lessee">
+        <field name="name">EDILBERTO JR. BORDEN YAUDER</field>
+    </record>
+
+    <record id="lessee_edward_evan_p_justo" model="kst.lessee">
+        <field name="name">EDWARD EVAN P. JUSTO</field>
+    </record>
+
+    <record id="lessee_efren_cabangunay" model="kst.lessee">
+        <field name="name">EFREN CABANGUNAY</field>
+    </record>
+
+    <record id="lessee_ehsel_abela" model="kst.lessee">
+        <field name="name">EHSEL ABELA</field>
+    </record>
+
+    <record id="lessee_elbert_r_lumanlan" model="kst.lessee">
+        <field name="name">ELBERT R. LUMANLAN</field>
+    </record>
+
+    <record id="lessee_elegant_shuttle_services_inc_alicia_jacob" model="kst.lessee">
+        <field name="name">ELEGANT SHUTTLE SERVICES INC. / ALICIA JACOB</field>
+    </record>
+
+    <record id="lessee_elegant_shuttle_services_inc_alicia_k_jacob" model="kst.lessee">
+        <field name="name">ELEGANT SHUTTLE SERVICES INC. / ALICIA K. JACOB</field>
+    </record>
+
+    <record id="lessee_elegant_shuttle_services_inc_crispin_callejo_cc_a_" model="kst.lessee">
+        <field name="name">ELEGANT SHUTTLE SERVICES INC. / CRISPIN CALLEJO CC. A. JACOB</field>
+    </record>
+
+    <record id="lessee_elena_t_sagario" model="kst.lessee">
+        <field name="name">ELENA T. SAGARIO</field>
+    </record>
+
+    <record id="lessee_eliza_sayo" model="kst.lessee">
+        <field name="name">ELIZA SAYO</field>
+    </record>
+
+    <record id="lessee_emma_demiar" model="kst.lessee">
+        <field name="name">EMMA DEMIAR</field>
+    </record>
+
+    <record id="lessee_emmalyn_a_sacdalan" model="kst.lessee">
+        <field name="name">EMMALYN A. SACDALAN</field>
+    </record>
+
+    <record id="lessee_emmanuel_duhig" model="kst.lessee">
+        <field name="name">EMMANUEL DUHIG</field>
+    </record>
+
+    <record id="lessee_energy_equipment_tech_corporation" model="kst.lessee">
+        <field name="name">ENERGY EQUIPMENT TECH CORPORATION</field>
+    </record>
+
+    <record id="lessee_engr_cris_mark_rivamonte_mec" model="kst.lessee">
+        <field name="name">ENGR. CRIS MARK RIVAMONTE (MEC)</field>
+    </record>
+
+    <record id="lessee_enviro_one_solutions_opc" model="kst.lessee">
+        <field name="name">ENVIRO ONE SOLUTIONS OPC.</field>
+    </record>
+
+    <record id="lessee_eric_cadag" model="kst.lessee">
+        <field name="name">ERIC CADAG</field>
+    </record>
+
+    <record id="lessee_eric_cadag_jr" model="kst.lessee">
+        <field name="name">ERIC CADAG JR.</field>
+    </record>
+
+    <record id="lessee_eric_m_cadag" model="kst.lessee">
+        <field name="name">ERIC M. CADAG</field>
+    </record>
+
+    <record id="lessee_erika_jane_elaco_sablay" model="kst.lessee">
+        <field name="name">ERIKA JANE ELACO SABLAY</field>
+    </record>
+
+    <record id="lessee_ernesto_enrico_s_jamora_iii" model="kst.lessee">
+        <field name="name">ERNESTO ENRICO S. JAMORA III</field>
+    </record>
+
+    <record id="lessee_ervp_consumer_goods_trading" model="kst.lessee">
+        <field name="name">ERVP CONSUMER GOODS TRADING</field>
+    </record>
+
+    <record id="lessee_erwin_john_sablay" model="kst.lessee">
+        <field name="name">ERWIN JOHN SABLAY</field>
+    </record>
+
+    <record id="lessee_ethan_justin_d_olalo" model="kst.lessee">
+        <field name="name">ETHAN JUSTIN D. OLALO</field>
+    </record>
+
+    <record id="lessee_eugene_escobar" model="kst.lessee">
+        <field name="name">EUGENE ESCOBAR</field>
+    </record>
+
+    <record id="lessee_evangeline_orias" model="kst.lessee">
+        <field name="name">EVANGELINE ORIAS</field>
+    </record>
+
+    <record id="lessee_evangeline_orias_patulot" model="kst.lessee">
+        <field name="name">EVANGELINE ORIAS PATULOT</field>
+    </record>
+
+    <record id="lessee_evangeline_patulot" model="kst.lessee">
+        <field name="name">EVANGELINE PATULOT</field>
+    </record>
+
+    <record id="lessee_evelyn_gavino_inid" model="kst.lessee">
+        <field name="name">EVELYN GAVINO INID</field>
+    </record>
+
+    <record id="lessee_everwell_hardware_co" model="kst.lessee">
+        <field name="name">EVERWELL HARDWARE CO.</field>
+    </record>
+
+    <record id="lessee_evita_perez_santos" model="kst.lessee">
+        <field name="name">EVITA PEREZ SANTOS</field>
+    </record>
+
+    <record id="lessee_farrah_mae_nodalo" model="kst.lessee">
+        <field name="name">FARRAH MAE NODALO</field>
+    </record>
+
+    <record id="lessee_fatima_r_constantino" model="kst.lessee">
+        <field name="name">FATIMA R. CONSTANTINO</field>
+    </record>
+
+    <record id="lessee_faye_marie_zamora" model="kst.lessee">
+        <field name="name">FAYE MARIE ZAMORA</field>
+    </record>
+
+    <record id="lessee_felix_r_ledda" model="kst.lessee">
+        <field name="name">FELIX R. LEDDA</field>
+    </record>
+
+    <record id="lessee_ferdinand_hipolito" model="kst.lessee">
+        <field name="name">FERDINAND HIPOLITO</field>
+    </record>
+
+    <record id="lessee_ferlyn_may_chiquito" model="kst.lessee">
+        <field name="name">FERLYN MAY CHIQUITO</field>
+    </record>
+
+    <record id="lessee_floserfida_coros" model="kst.lessee">
+        <field name="name">FLOSERFIDA COROS</field>
+    </record>
+
+    <record id="lessee_francheska_payment_center" model="kst.lessee">
+        <field name="name">FRANCHESKA PAYMENT CENTER</field>
+    </record>
+
+    <record id="lessee_francis_palen_dadobo" model="kst.lessee">
+        <field name="name">FRANCIS PALEN DADOBO</field>
+    </record>
+
+    <record id="lessee_franz_david" model="kst.lessee">
+        <field name="name">FRANZ DAVID</field>
+    </record>
+
+    <record id="lessee_franz_dominic_david" model="kst.lessee">
+        <field name="name">FRANZ DOMINIC DAVID</field>
+    </record>
+
+    <record id="lessee_franz_dominic_v_david" model="kst.lessee">
+        <field name="name">FRANZ DOMINIC V. DAVID</field>
+    </record>
+
+    <record id="lessee_g_mendoza" model="kst.lessee">
+        <field name="name">G. MENDOZA</field>
+    </record>
+
+    <record id="lessee_gabriel_a_reyes" model="kst.lessee">
+        <field name="name">GABRIEL A. REYES</field>
+    </record>
+
+    <record id="lessee_gabriel_m_romanban" model="kst.lessee">
+        <field name="name">GABRIEL M. ROMANBAN</field>
+    </record>
+
+    <record id="lessee_gabriel_romanban" model="kst.lessee">
+        <field name="name">GABRIEL ROMANBAN</field>
+    </record>
+
+    <record id="lessee_gaudencio_perez" model="kst.lessee">
+        <field name="name">GAUDENCIO PEREZ</field>
+    </record>
+
+    <record id="lessee_genalyn_s_infeliz" model="kst.lessee">
+        <field name="name">GENALYN S. INFELIZ</field>
+    </record>
+
+    <record id="lessee_generoso_sta_juan_jr" model="kst.lessee">
+        <field name="name">GENEROSO STA. JUAN JR.</field>
+    </record>
+
+    <record id="lessee_generoso_sta_juana_jr" model="kst.lessee">
+        <field name="name">GENEROSO STA. JUANA JR.</field>
+    </record>
+
+    <record id="lessee_gesila_marie_octit" model="kst.lessee">
+        <field name="name">GESILA MARIE OCTIT</field>
+    </record>
+
+    <record id="lessee_ghemalyn_p_catada" model="kst.lessee">
+        <field name="name">GHEMALYN P. CATADA</field>
+    </record>
+
+    <record id="lessee_giannina_roma_l_aguado" model="kst.lessee">
+        <field name="name">GIANNINA ROMA L. AGUADO</field>
+    </record>
+
+    <record id="lessee_gina_biagtan" model="kst.lessee">
+        <field name="name">GINA BIAGTAN</field>
+    </record>
+
+    <record id="lessee_gina_dadobo" model="kst.lessee">
+        <field name="name">GINA DADOBO</field>
+    </record>
+
+    <record id="lessee_gina_remandaban" model="kst.lessee">
+        <field name="name">GINA REMANDABAN</field>
+    </record>
+
+    <record id="lessee_gina_v_caras" model="kst.lessee">
+        <field name="name">GINA V. CARAS</field>
+    </record>
+
+    <record id="lessee_giner_beri_a" model="kst.lessee">
+        <field name="name">GINER BERIÑA</field>
+    </record>
+
+    <record id="lessee_glenn_fulgar" model="kst.lessee">
+        <field name="name">GLENN FULGAR</field>
+    </record>
+
+    <record id="lessee_global_technological_trading_inc" model="kst.lessee">
+        <field name="name">GLOBAL TECHNOLOGICAL TRADING, INC.</field>
+    </record>
+
+    <record id="lessee_gloria_autentico" model="kst.lessee">
+        <field name="name">GLORIA AUTENTICO</field>
+    </record>
+
+    <record id="lessee_gloria_bahia" model="kst.lessee">
+        <field name="name">GLORIA BAHIA</field>
+    </record>
+
+    <record id="lessee_gloria_moleta_garde" model="kst.lessee">
+        <field name="name">GLORIA MOLETA GARDE</field>
+    </record>
+
+    <record id="lessee_green_crescent_manpower_recruitment_inc" model="kst.lessee">
+        <field name="name">GREEN CRESCENT MANPOWER RECRUITMENT INC.</field>
+    </record>
+
+    <record id="lessee_green_crescent_manpower_recruitment_inc_amelia_c_c" model="kst.lessee">
+        <field name="name">GREEN CRESCENT MANPOWER RECRUITMENT INC./AMELIA C. CASTILLO</field>
+    </record>
+
+    <record id="lessee_green_crescent_manpowr_recruitment_inc" model="kst.lessee">
+        <field name="name">GREEN CRESCENT MANPOWR RECRUITMENT INC.</field>
+    </record>
+
+    <record id="lessee_green_palm_realty_corporation_juan_tuerez_iii" model="kst.lessee">
+        <field name="name">GREEN PALM REALTY CORPORATION / JUAN TUEREZ III</field>
+    </record>
+
+    <record id="lessee_growide_international_manpower_agency_co" model="kst.lessee">
+        <field name="name">GROWIDE INTERNATIONAL MANPOWER AGENCY CO.,</field>
+    </record>
+
+    <record id="lessee_growide_international_manpower_agency_co_esmeralda" model="kst.lessee">
+        <field name="name">GROWIDE INTERNATIONAL MANPOWER AGENCY CO., / ESMERALDA A. BELTRAN</field>
+    </record>
+
+    <record id="lessee_guirly_gomba" model="kst.lessee">
+        <field name="name">GUIRLY GOMBA</field>
+    </record>
+
+    <record id="lessee_glaidel_nu_ez" model="kst.lessee">
+        <field name="name">Glaidel Nuñez</field>
+    </record>
+
+    <record id="lessee_hannah_fashion_accessories_shop" model="kst.lessee">
+        <field name="name">HANNAH FASHION ACCESSORIES SHOP</field>
+    </record>
+
+    <record id="lessee_harold_jamisola" model="kst.lessee">
+        <field name="name">HAROLD JAMISOLA</field>
+    </record>
+
+    <record id="lessee_hassan_p_panandigan" model="kst.lessee">
+        <field name="name">HASSAN P. PANANDIGAN</field>
+    </record>
+
+    <record id="lessee_heidi_a_alvarez-layugan" model="kst.lessee">
+        <field name="name">HEIDI A. ALVAREZ-LAYUGAN</field>
+    </record>
+
+    <record id="lessee_henolano_soldivillo" model="kst.lessee">
+        <field name="name">HENOLANO SOLDIVILLO</field>
+    </record>
+
+    <record id="lessee_i_am_worldwide_ibcitaly_administrative_services_ja" model="kst.lessee">
+        <field name="name">I AM WORLDWIDE IBCITALY ADMINISTRATIVE SERVICES | JASMINE M. RAMOS</field>
+    </record>
+
+    <record id="lessee_ian_francis_chavez" model="kst.lessee">
+        <field name="name">IAN FRANCIS CHAVEZ</field>
+    </record>
+
+    <record id="lessee_ian_francis_chavez_cris_mark_rivamonte" model="kst.lessee">
+        <field name="name">IAN FRANCIS CHAVEZ / CRIS MARK RIVAMONTE</field>
+    </record>
+
+    <record id="lessee_ian_giron" model="kst.lessee">
+        <field name="name">IAN GIRON</field>
+    </record>
+
+    <record id="lessee_ian_sherwin_h_canaya" model="kst.lessee">
+        <field name="name">IAN SHERWIN H. CANAYA</field>
+    </record>
+
+    <record id="lessee_imelda_de_dios" model="kst.lessee">
+        <field name="name">IMELDA DE DIOS</field>
+    </record>
+
+    <record id="lessee_infotouch_systems_inc" model="kst.lessee">
+        <field name="name">INFOTOUCH SYSTEMS, INC.</field>
+    </record>
+
+    <record id="lessee_irm_evangelical_church" model="kst.lessee">
+        <field name="name">IRM EVANGELICAL CHURCH</field>
+    </record>
+
+    <record id="lessee_jan_derraco_teodoro" model="kst.lessee">
+        <field name="name">JAN DERRACO TEODORO</field>
+    </record>
+
+    <record id="lessee_janell_b_lacson" model="kst.lessee">
+        <field name="name">JANELL B. LACSON</field>
+    </record>
+
+    <record id="lessee_janine_cristobal" model="kst.lessee">
+        <field name="name">JANINE CRISTOBAL</field>
+    </record>
+
+    <record id="lessee_janno_alejandrino" model="kst.lessee">
+        <field name="name">JANNO ALEJANDRINO</field>
+    </record>
+
+    <record id="lessee_janno_t_alejandrino" model="kst.lessee">
+        <field name="name">JANNO T. ALEJANDRINO</field>
+    </record>
+
+    <record id="lessee_japhet_camu" model="kst.lessee">
+        <field name="name">JAPHET CAMU</field>
+    </record>
+
+    <record id="lessee_jasmine_m_ramos" model="kst.lessee">
+        <field name="name">JASMINE M. RAMOS</field>
+    </record>
+
+    <record id="lessee_jayar_v_novilla" model="kst.lessee">
+        <field name="name">JAYAR V. NOVILLA</field>
+    </record>
+
+    <record id="lessee_jaypee_michael_joven" model="kst.lessee">
+        <field name="name">JAYPEE MICHAEL JOVEN</field>
+    </record>
+
+    <record id="lessee_jayzel_gabriel_banastao" model="kst.lessee">
+        <field name="name">JAYZEL GABRIEL BANASTAO</field>
+    </record>
+
+    <record id="lessee_jean_infeliz" model="kst.lessee">
+        <field name="name">JEAN INFELIZ</field>
+    </record>
+
+    <record id="lessee_jean_kyle_ramos" model="kst.lessee">
+        <field name="name">JEAN KYLE RAMOS</field>
+    </record>
+
+    <record id="lessee_jeanefer_kaye_fetalino_forca" model="kst.lessee">
+        <field name="name">JEANEFER KAYE FETALINO FORCA</field>
+    </record>
+
+    <record id="lessee_jember_lee_avendano" model="kst.lessee">
+        <field name="name">JEMBER LEE AVENDANO</field>
+    </record>
+
+    <record id="lessee_jemon_l_reoyan" model="kst.lessee">
+        <field name="name">JEMON L. REOYAN</field>
+    </record>
+
+    <record id="lessee_jemuel_m_baldomar" model="kst.lessee">
+        <field name="name">JEMUEL M. BALDOMAR</field>
+    </record>
+
+    <record id="lessee_jen_jen_e_griego" model="kst.lessee">
+        <field name="name">JEN JEN E. GRIEGO</field>
+    </record>
+
+    <record id="lessee_jennalyn_e_tibig" model="kst.lessee">
+        <field name="name">JENNALYN E. TIBIG</field>
+    </record>
+
+    <record id="lessee_jennica_paguyo_mec" model="kst.lessee">
+        <field name="name">JENNICA PAGUYO (MEC)</field>
+    </record>
+
+    <record id="lessee_jennika_france_jacob" model="kst.lessee">
+        <field name="name">JENNIKA FRANCE JACOB</field>
+    </record>
+
+    <record id="lessee_jennika_france_jacob-lomeda" model="kst.lessee">
+        <field name="name">JENNIKA FRANCE JACOB-LOMEDA</field>
+    </record>
+
+    <record id="lessee_jennylyn_manganti" model="kst.lessee">
+        <field name="name">JENNYLYN MANGANTI</field>
+    </record>
+
+    <record id="lessee_jermie_f_infeliz" model="kst.lessee">
+        <field name="name">JERMIE F. INFELIZ</field>
+    </record>
+
+    <record id="lessee_jerry_infeliz" model="kst.lessee">
+        <field name="name">JERRY INFELIZ</field>
+    </record>
+
+    <record id="lessee_jersey_gabriel" model="kst.lessee">
+        <field name="name">JERSEY GABRIEL</field>
+    </record>
+
+    <record id="lessee_jessa_yauder" model="kst.lessee">
+        <field name="name">JESSA YAUDER</field>
+    </record>
+
+    <record id="lessee_jesse_chito_bangon_lazado" model="kst.lessee">
+        <field name="name">JESSE CHITO BANGON LAZADO</field>
+    </record>
+
+    <record id="lessee_jesse_pelingon" model="kst.lessee">
+        <field name="name">JESSE PELINGON</field>
+    </record>
+
+    <record id="lessee_jesus_m_basco" model="kst.lessee">
+        <field name="name">JESUS M. BASCO</field>
+    </record>
+
+    <record id="lessee_jhoanzel_l_cadangan" model="kst.lessee">
+        <field name="name">JHOANZEL L. CADANGAN</field>
+    </record>
+
+    <record id="lessee_jianfeng_chen" model="kst.lessee">
+        <field name="name">JIANFENG CHEN</field>
+    </record>
+
+    <record id="lessee_jing_l_recurreccion" model="kst.lessee">
+        <field name="name">JING L. RECURRECCION</field>
+    </record>
+
+    <record id="lessee_jm_siochi_food_service" model="kst.lessee">
+        <field name="name">JM SIOCHI FOOD SERVICE</field>
+    </record>
+
+    <record id="lessee_jm_siochi_mini_mart" model="kst.lessee">
+        <field name="name">JM SIOCHI MINI MART</field>
+    </record>
+
+    <record id="lessee_jo-ann_b_sa_o" model="kst.lessee">
+        <field name="name">JO-ANN B. SAÑO</field>
+    </record>
+
+    <record id="lessee_joan_alejandrino" model="kst.lessee">
+        <field name="name">JOAN ALEJANDRINO</field>
+    </record>
+
+    <record id="lessee_joan_alejandrino_mec" model="kst.lessee">
+        <field name="name">JOAN ALEJANDRINO (MEC)</field>
+    </record>
+
+    <record id="lessee_joan_s_micu" model="kst.lessee">
+        <field name="name">JOAN S. MICU</field>
+    </record>
+
+    <record id="lessee_joan_sto_domingo" model="kst.lessee">
+        <field name="name">JOAN STO. DOMINGO</field>
+    </record>
+
+    <record id="lessee_joanna_lou_bautista" model="kst.lessee">
+        <field name="name">JOANNA LOU BAUTISTA</field>
+    </record>
+
+    <record id="lessee_jocelyn_balmores_dandan" model="kst.lessee">
+        <field name="name">JOCELYN BALMORES DANDAN</field>
+    </record>
+
+    <record id="lessee_jocelyn_m_tan" model="kst.lessee">
+        <field name="name">JOCELYN M. TAN</field>
+    </record>
+
+    <record id="lessee_joe-ann_resquir" model="kst.lessee">
+        <field name="name">JOE-ANN RESQUIR</field>
+    </record>
+
+    <record id="lessee_joel_david" model="kst.lessee">
+        <field name="name">JOEL DAVID</field>
+    </record>
+
+    <record id="lessee_joevell_majomot" model="kst.lessee">
+        <field name="name">JOEVELL MAJOMOT</field>
+    </record>
+
+    <record id="lessee_john_anthony_generoso" model="kst.lessee">
+        <field name="name">JOHN ANTHONY GENEROSO</field>
+    </record>
+
+    <record id="lessee_john_carlo_del_rio" model="kst.lessee">
+        <field name="name">JOHN CARLO DEL RIO</field>
+    </record>
+
+    <record id="lessee_john_carlo_del_rio_mec" model="kst.lessee">
+        <field name="name">JOHN CARLO DEL RIO (MEC)</field>
+    </record>
+
+    <record id="lessee_john_carlo_lodripas" model="kst.lessee">
+        <field name="name">JOHN CARLO LODRIPAS</field>
+    </record>
+
+    <record id="lessee_john_generoso" model="kst.lessee">
+        <field name="name">JOHN GENEROSO</field>
+    </record>
+
+    <record id="lessee_john_patrick_d_sayas" model="kst.lessee">
+        <field name="name">JOHN PATRICK D. SAYAS</field>
+    </record>
+
+    <record id="lessee_john_patrick_d_sayas_mec" model="kst.lessee">
+        <field name="name">JOHN PATRICK D. SAYAS (MEC)</field>
+    </record>
+
+    <record id="lessee_john_paul_beltran" model="kst.lessee">
+        <field name="name">JOHN PAUL BELTRAN</field>
+    </record>
+
+    <record id="lessee_john_vincent_de_mesa_magno_vito_s_chef" model="kst.lessee">
+        <field name="name">JOHN VINCENT DE MESA MAGNO (VITO&apos;S CHEF)</field>
+    </record>
+
+    <record id="lessee_jomer_a_para_al" model="kst.lessee">
+        <field name="name">JOMER A. PARAÑAL</field>
+    </record>
+
+    <record id="lessee_jomer_a_para_al_mec" model="kst.lessee">
+        <field name="name">JOMER A. PARAÑAL (MEC)</field>
+    </record>
+
+    <record id="lessee_jose_j_maitem" model="kst.lessee">
+        <field name="name">JOSE J. MAITEM</field>
+    </record>
+
+    <record id="lessee_jose_tagle" model="kst.lessee">
+        <field name="name">JOSE TAGLE</field>
+    </record>
+
+    <record id="lessee_joselito_nelia_aldea_alday" model="kst.lessee">
+        <field name="name">JOSELITO &amp; NELIA ALDEA ALDAY</field>
+    </record>
+
+    <record id="lessee_joselito_patron" model="kst.lessee">
+        <field name="name">JOSELITO PATRON</field>
+    </record>
+
+    <record id="lessee_joseph_francisco_r_ortega" model="kst.lessee">
+        <field name="name">JOSEPH FRANCISCO R. ORTEGA</field>
+    </record>
+
+    <record id="lessee_josephine_jasmin_cordoba" model="kst.lessee">
+        <field name="name">JOSEPHINE JASMIN CORDOBA</field>
+    </record>
+
+    <record id="lessee_josh-jul_s_fashion_shop_julius_de_jesus" model="kst.lessee">
+        <field name="name">JOSH-JUL&apos;S FASHION SHOP / JULIUS DE JESUS</field>
+    </record>
+
+    <record id="lessee_jovanie_ventura" model="kst.lessee">
+        <field name="name">JOVANIE VENTURA</field>
+    </record>
+
+    <record id="lessee_jovie_s_micu" model="kst.lessee">
+        <field name="name">JOVIE S. MICU</field>
+    </record>
+
+    <record id="lessee_joy_arianne_solis" model="kst.lessee">
+        <field name="name">JOY ARIANNE SOLIS</field>
+    </record>
+
+    <record id="lessee_joy_pascua" model="kst.lessee">
+        <field name="name">JOY PASCUA</field>
+    </record>
+
+    <record id="lessee_joyce_anne_villanueva" model="kst.lessee">
+        <field name="name">JOYCE ANNE VILLANUEVA</field>
+    </record>
+
+    <record id="lessee_joyce_c_guillermo" model="kst.lessee">
+        <field name="name">JOYCE C. GUILLERMO</field>
+    </record>
+
+    <record id="lessee_judith_aejandrino_villa" model="kst.lessee">
+        <field name="name">JUDITH AEJANDRINO VILLA</field>
+    </record>
+
+    <record id="lessee_judith_alejandrino" model="kst.lessee">
+        <field name="name">JUDITH ALEJANDRINO</field>
+    </record>
+
+    <record id="lessee_judith_m_mayuga" model="kst.lessee">
+        <field name="name">JUDITH M. MAYUGA</field>
+    </record>
+
+    <record id="lessee_judith_santos" model="kst.lessee">
+        <field name="name">JUDITH SANTOS</field>
+    </record>
+
+    <record id="lessee_julius_de_jesus" model="kst.lessee">
+        <field name="name">JULIUS DE JESUS</field>
+    </record>
+
+    <record id="lessee_julius_lumayad" model="kst.lessee">
+        <field name="name">JULIUS LUMAYAD</field>
+    </record>
+
+    <record id="lessee_jun_saturno" model="kst.lessee">
+        <field name="name">JUN SATURNO</field>
+    </record>
+
+    <record id="lessee_juna_may_diaz" model="kst.lessee">
+        <field name="name">JUNA MAY DIAZ</field>
+    </record>
+
+    <record id="lessee_junar_ricio" model="kst.lessee">
+        <field name="name">JUNAR RICIO</field>
+    </record>
+
+    <record id="lessee_justine_dimakiling" model="kst.lessee">
+        <field name="name">JUSTINE DIMAKILING</field>
+    </record>
+
+    <record id="lessee_juvie_lautingco" model="kst.lessee">
+        <field name="name">JUVIE LAUTINGCO</field>
+    </record>
+
+    <record id="lessee_jaerelle_p_hernandez" model="kst.lessee">
+        <field name="name">Jaerelle P. Hernandez</field>
+    </record>
+
+    <record id="lessee_k_p_l_enterprise_espiritu_v_pe_a" model="kst.lessee">
+        <field name="name">K.P.L. ENTERPRISE/ ESPIRITU V. PEÑA</field>
+    </record>
+
+    <record id="lessee_kalayaan_talipapa_corporation" model="kst.lessee">
+        <field name="name">KALAYAAN TALIPAPA CORPORATION</field>
+    </record>
+
+    <record id="lessee_kalye_pinoy_street_food" model="kst.lessee">
+        <field name="name">KALYE PINOY STREET FOOD</field>
+    </record>
+
+    <record id="lessee_kasargo_cue_sports" model="kst.lessee">
+        <field name="name">KASARGO CUE SPORTS</field>
+    </record>
+
+    <record id="lessee_kathleen_b_casa" model="kst.lessee">
+        <field name="name">KATHLEEN B. CASA</field>
+    </record>
+
+    <record id="lessee_kathleen_b_casa_mec" model="kst.lessee">
+        <field name="name">KATHLEEN B. CASA (MEC)</field>
+    </record>
+
+    <record id="lessee_kayrole_abobo" model="kst.lessee">
+        <field name="name">KAYROLE ABOBO</field>
+    </record>
+
+    <record id="lessee_kdm_esports_caf_clark_karoll_landrito" model="kst.lessee">
+        <field name="name">KDM ESPORTS CAFÉ | CLARK KAROLL LANDRITO</field>
+    </record>
+
+    <record id="lessee_kdm_workers" model="kst.lessee">
+        <field name="name">KDM WORKERS</field>
+    </record>
+
+    <record id="lessee_keren_grace_arnesto" model="kst.lessee">
+        <field name="name">KEREN GRACE ARNESTO</field>
+    </record>
+
+    <record id="lessee_kevin_s_manguerra" model="kst.lessee">
+        <field name="name">KEVIN S. MANGUERRA</field>
+    </record>
+
+    <record id="lessee_kharem_s_international_service_provider_corp" model="kst.lessee">
+        <field name="name">KHAREM&apos;S INTERNATIONAL SERVICE PROVIDER CORP.</field>
+    </record>
+
+    <record id="lessee_kim_v_almazan" model="kst.lessee">
+        <field name="name">KIM V. ALMAZAN</field>
+    </record>
+
+    <record id="lessee_kim_v_almazan_mec-nurse" model="kst.lessee">
+        <field name="name">KIM V. ALMAZAN (MEC-NURSE)</field>
+    </record>
+
+    <record id="lessee_king_sisig_royal_foods_corporation" model="kst.lessee">
+        <field name="name">KING SISIG ROYAL FOODS CORPORATION</field>
+    </record>
+
+    <record id="lessee_klint_m_de_leon" model="kst.lessee">
+        <field name="name">KLINT M. DE LEON</field>
+    </record>
+
+    <record id="lessee_kmk_international_manpower_agency_corp_ramel_m_amp" model="kst.lessee">
+        <field name="name">KMK INTERNATIONAL MANPOWER AGENCY CORP./RAMEL M. AMPATIN</field>
+    </record>
+
+    <record id="lessee_kris_store" model="kst.lessee">
+        <field name="name">KRIS STORE</field>
+    </record>
+
+    <record id="lessee_krisheela_perez" model="kst.lessee">
+        <field name="name">KRISHEELA PEREZ</field>
+    </record>
+
+    <record id="lessee_kristine_jayme" model="kst.lessee">
+        <field name="name">KRISTINE JAYME</field>
+    </record>
+
+    <record id="lessee_krizzha_charisse_de_jesus" model="kst.lessee">
+        <field name="name">KRIZZHA CHARISSE DE JESUS</field>
+    </record>
+
+    <record id="lessee_ksk_international_manpower_services_inc_anita_c_sa" model="kst.lessee">
+        <field name="name">KSK INTERNATIONAL MANPOWER SERVICES, INC./ANITA C. SAZON</field>
+    </record>
+
+    <record id="lessee_kst_properties_inc_malate" model="kst.lessee">
+        <field name="name">KST PROPERTIES INC (MALATE)</field>
+    </record>
+
+    <record id="lessee_kyle_jyren_s_imperial" model="kst.lessee">
+        <field name="name">KYLE JYREN S. IMPERIAL</field>
+    </record>
+
+    <record id="lessee_kyran_jade_delos_reyes_dolor_mec" model="kst.lessee">
+        <field name="name">KYRAN JADE DELOS REYES DOLOR (MEC)</field>
+    </record>
+
+    <record id="lessee_l_hussain" model="kst.lessee">
+        <field name="name">L. HUSSAIN</field>
+    </record>
+
+    <record id="lessee_laarni_a_solomon" model="kst.lessee">
+        <field name="name">LAARNI A. SOLOMON</field>
+    </record>
+
+    <record id="lessee_laarni_b_atienza" model="kst.lessee">
+        <field name="name">LAARNI B. ATIENZA</field>
+    </record>
+
+    <record id="lessee_lanie_h_hussain" model="kst.lessee">
+        <field name="name">LANIE H.  HUSSAIN</field>
+    </record>
+
+    <record id="lessee_lanie_hussain" model="kst.lessee">
+        <field name="name">LANIE HUSSAIN</field>
+    </record>
+
+    <record id="lessee_larry_a_braza" model="kst.lessee">
+        <field name="name">LARRY A. BRAZA</field>
+    </record>
+
+    <record id="lessee_larry_dapetillo" model="kst.lessee">
+        <field name="name">LARRY DAPETILLO</field>
+    </record>
+
+    <record id="lessee_lauta_integrite_farm_ent_inc" model="kst.lessee">
+        <field name="name">LAUTA INTEGRITE FARM ENT INC</field>
+    </record>
+
+    <record id="lessee_lawrence_judes_beringuela_magbuhos" model="kst.lessee">
+        <field name="name">LAWRENCE JUDES BERINGUELA MAGBUHOS</field>
+    </record>
+
+    <record id="lessee_lbc_express" model="kst.lessee">
+        <field name="name">LBC EXPRESS</field>
+    </record>
+
+    <record id="lessee_leah_mae_rozaliz" model="kst.lessee">
+        <field name="name">LEAH MAE ROZALIZ</field>
+    </record>
+
+    <record id="lessee_leslie_rioveros" model="kst.lessee">
+        <field name="name">LESLIE RIOVEROS</field>
+    </record>
+
+    <record id="lessee_leslie_solite" model="kst.lessee">
+        <field name="name">LESLIE SOLITE</field>
+    </record>
+
+    <record id="lessee_leung_business_dev_corp" model="kst.lessee">
+        <field name="name">LEUNG BUSINESS DEV. CORP.</field>
+    </record>
+
+    <record id="lessee_lexus_kaye_castillo_isiderio_vito_s_bbq" model="kst.lessee">
+        <field name="name">LEXUS KAYE CASTILLO ISIDERIO (VITO&apos;S BBQ)</field>
+    </record>
+
+    <record id="lessee_liberty_inlong" model="kst.lessee">
+        <field name="name">LIBERTY INLONG</field>
+    </record>
+
+    <record id="lessee_litz_v_photo_studio_and_digital_photo_services" model="kst.lessee">
+        <field name="name">LITZ V PHOTO STUDIO AND DIGITAL PHOTO SERVICES</field>
+    </record>
+
+    <record id="lessee_litz_v_photo_studio_and_digital_services" model="kst.lessee">
+        <field name="name">LITZ V PHOTO STUDIO AND DIGITAL SERVICES</field>
+    </record>
+
+    <record id="lessee_liza_marie_arriola" model="kst.lessee">
+        <field name="name">LIZA MARIE ARRIOLA</field>
+    </record>
+
+    <record id="lessee_lolita_barcelona" model="kst.lessee">
+        <field name="name">LOLITA BARCELONA</field>
+    </record>
+
+    <record id="lessee_lorraine_reyes" model="kst.lessee">
+        <field name="name">LORRAINE REYES</field>
+    </record>
+
+    <record id="lessee_lowell_arquizo" model="kst.lessee">
+        <field name="name">LOWELL ARQUIZO</field>
+    </record>
+
+    <record id="lessee_lue_michelle_rogador" model="kst.lessee">
+        <field name="name">LUE MICHELLE ROGADOR</field>
+    </record>
+
+    <record id="lessee_luzel_detorio_jr" model="kst.lessee">
+        <field name="name">LUZEL DETORIO JR.</field>
+    </record>
+
+    <record id="lessee_lyka_celina_s_tolentino" model="kst.lessee">
+        <field name="name">LYKA CELINA S. TOLENTINO</field>
+    </record>
+
+    <record id="lessee_m_p_kagaoan_enterprises_inc" model="kst.lessee">
+        <field name="name">M. P KAGAOAN ENTERPRISES INC.</field>
+    </record>
+
+    <record id="lessee_m_p_kagaoan_enterprises_inc" model="kst.lessee">
+        <field name="name">M.P. KAGAOAN ENTERPRISES INC.</field>
+    </record>
+
+    <record id="lessee_ma_riya_argel" model="kst.lessee">
+        <field name="name">MA&apos;RIYA ARGEL</field>
+    </record>
+
+    <record id="lessee_ma_cecilia_cervantes" model="kst.lessee">
+        <field name="name">MA. CECILIA CERVANTES</field>
+    </record>
+
+    <record id="lessee_ma_cristina_r_legaspi" model="kst.lessee">
+        <field name="name">MA. CRISTINA R. LEGASPI</field>
+    </record>
+
+    <record id="lessee_ma_elena_m_santiago" model="kst.lessee">
+        <field name="name">MA. ELENA M. SANTIAGO</field>
+    </record>
+
+    <record id="lessee_ma_eunice_d_papa" model="kst.lessee">
+        <field name="name">MA. EUNICE D. PAPA</field>
+    </record>
+
+    <record id="lessee_ma_isabel_wenceslao_soldivillo" model="kst.lessee">
+        <field name="name">MA. ISABEL WENCESLAO SOLDIVILLO</field>
+    </record>
+
+    <record id="lessee_ma_jackie_lou_fabunan_espina" model="kst.lessee">
+        <field name="name">MA. JACKIE LOU FABUNAN ESPINA</field>
+    </record>
+
+    <record id="lessee_ma_lovely_b_moreno_kst" model="kst.lessee">
+        <field name="name">MA. LOVELY B. MORENO (KST)</field>
+    </record>
+
+    <record id="lessee_macferi_opc" model="kst.lessee">
+        <field name="name">MACFERI OPC</field>
+    </record>
+
+    <record id="lessee_manning_a_alawi" model="kst.lessee">
+        <field name="name">MANNING A. ALAWI</field>
+    </record>
+
+    <record id="lessee_maria_celeste_a_de_guzman" model="kst.lessee">
+        <field name="name">MARIA CELESTE A. DE GUZMAN</field>
+    </record>
+
+    <record id="lessee_maria_cheryl_b_samson" model="kst.lessee">
+        <field name="name">MARIA CHERYL B. SAMSON</field>
+    </record>
+
+    <record id="lessee_maria_jackie_lou_f_fabunan" model="kst.lessee">
+        <field name="name">MARIA JACKIE LOU F. FABUNAN</field>
+    </record>
+
+    <record id="lessee_maria_paz_razon" model="kst.lessee">
+        <field name="name">MARIA PAZ RAZON</field>
+    </record>
+
+    <record id="lessee_maria_rosabelle_k_magsino" model="kst.lessee">
+        <field name="name">MARIA ROSABELLE K. MAGSINO</field>
+    </record>
+
+    <record id="lessee_maria_theresa_bacug" model="kst.lessee">
+        <field name="name">MARIA THERESA BACUG</field>
+    </record>
+
+    <record id="lessee_maria_zita_miranda" model="kst.lessee">
+        <field name="name">MARIA ZITA MIRANDA</field>
+    </record>
+
+    <record id="lessee_marian_alexandra_r_lugtu" model="kst.lessee">
+        <field name="name">MARIAN ALEXANDRA R. LUGTU</field>
+    </record>
+
+    <record id="lessee_mariane_ponce" model="kst.lessee">
+        <field name="name">MARIANE PONCE</field>
+    </record>
+
+    <record id="lessee_marie_car_peralta" model="kst.lessee">
+        <field name="name">MARIE CAR PERALTA</field>
+    </record>
+
+    <record id="lessee_marieta_v_pilapil" model="kst.lessee">
+        <field name="name">MARIETA V. PILAPIL</field>
+    </record>
+
+    <record id="lessee_mario_s_hilario" model="kst.lessee">
+        <field name="name">MARIO S. HILARIO</field>
+    </record>
+
+    <record id="lessee_marisel_s_tulud" model="kst.lessee">
+        <field name="name">MARISEL S. TULUD</field>
+    </record>
+
+    <record id="lessee_marjorie_g_origines" model="kst.lessee">
+        <field name="name">MARJORIE G. ORIGINES</field>
+    </record>
+
+    <record id="lessee_mark_angelo_melivo" model="kst.lessee">
+        <field name="name">MARK ANGELO MELIVO</field>
+    </record>
+
+    <record id="lessee_mark_anthony_francisco" model="kst.lessee">
+        <field name="name">MARK ANTHONY FRANCISCO</field>
+    </record>
+
+    <record id="lessee_mark_anthony_meriales" model="kst.lessee">
+        <field name="name">MARK ANTHONY MERIALES</field>
+    </record>
+
+    <record id="lessee_mark_anthony_s_bayona" model="kst.lessee">
+        <field name="name">MARK ANTHONY S. BAYONA</field>
+    </record>
+
+    <record id="lessee_mark_g_antonio" model="kst.lessee">
+        <field name="name">MARK G. ANTONIO</field>
+    </record>
+
+    <record id="lessee_mark_joseph_o_molaan" model="kst.lessee">
+        <field name="name">MARK JOSEPH O. MOLAAN</field>
+    </record>
+
+    <record id="lessee_marlon_regente" model="kst.lessee">
+        <field name="name">MARLON REGENTE</field>
+    </record>
+
+    <record id="lessee_marvin_regente" model="kst.lessee">
+        <field name="name">MARVIN REGENTE</field>
+    </record>
+
+    <record id="lessee_marvin_san_jose" model="kst.lessee">
+        <field name="name">MARVIN SAN JOSE</field>
+    </record>
+
+    <record id="lessee_mary_grace_r_medina" model="kst.lessee">
+        <field name="name">MARY GRACE R. MEDINA</field>
+    </record>
+
+    <record id="lessee_mary_jane_bondame" model="kst.lessee">
+        <field name="name">MARY JANE BONDAME</field>
+    </record>
+
+    <record id="lessee_mary_jane_mopera" model="kst.lessee">
+        <field name="name">MARY JANE MOPERA</field>
+    </record>
+
+    <record id="lessee_mary_jane_perera" model="kst.lessee">
+        <field name="name">MARY JANE PERERA</field>
+    </record>
+
+    <record id="lessee_mary_joan_razon" model="kst.lessee">
+        <field name="name">MARY JOAN RAZON</field>
+    </record>
+
+    <record id="lessee_mary_lyn_frongoso_yen" model="kst.lessee">
+        <field name="name">MARY LYN FRONGOSO (YEN)</field>
+    </record>
+
+    <record id="lessee_mary_lyn_frongoso_yen_vito_s_bbq" model="kst.lessee">
+        <field name="name">MARY LYN FRONGOSO (YEN) | VITO&apos;S BBQ</field>
+    </record>
+
+    <record id="lessee_mathieu_delwin_padilla" model="kst.lessee">
+        <field name="name">MATHIEU DELWIN PADILLA</field>
+    </record>
+
+    <record id="lessee_maya_hostel" model="kst.lessee">
+        <field name="name">MAYA HOSTEL</field>
+    </record>
+
+    <record id="lessee_mayeth_acaso_becamon_vito_s_bbq" model="kst.lessee">
+        <field name="name">MAYETH ACASO BECAMON (VITO&apos;S BBQ)</field>
+    </record>
+
+    <record id="lessee_mec_-_8_benitez" model="kst.lessee">
+        <field name="name">MEC -  8 BENITEZ</field>
+    </record>
+
+    <record id="lessee_mec_-_manhattan_barracks" model="kst.lessee">
+        <field name="name">MEC -  MANHATTAN BARRACKS</field>
+    </record>
+
+    <record id="lessee_mec_-_7th_avenue_road_construction_phase_1-a_barra" model="kst.lessee">
+        <field name="name">MEC - 7TH AVENUE ROAD CONSTRUCTION PHASE 1-A (BARRACKS)</field>
+    </record>
+
+    <record id="lessee_mec_-_grand_view_tower_barracks" model="kst.lessee">
+        <field name="name">MEC - GRAND VIEW TOWER (BARRACKS)</field>
+    </record>
+
+    <record id="lessee_mec_-_h_o_parking" model="kst.lessee">
+        <field name="name">MEC - H.O. PARKING</field>
+    </record>
+
+    <record id="lessee_mec_-_kartport_building_retrofitting_works_barrack" model="kst.lessee">
+        <field name="name">MEC - KARTPORT BUILDING RETROFITTING WORKS (BARRACKS)</field>
+    </record>
+
+    <record id="lessee_mec_-_toyota_global_bgc" model="kst.lessee">
+        <field name="name">MEC - TOYOTA GLOBAL BGC</field>
+    </record>
+
+    <record id="lessee_mec_-_vista_gl_barracks" model="kst.lessee">
+        <field name="name">MEC - VISTA GL (BARRACKS)</field>
+    </record>
+
+    <record id="lessee_mec_h_o_parking" model="kst.lessee">
+        <field name="name">MEC H. O. PARKING</field>
+    </record>
+
+    <record id="lessee_megasonic_manpower_services_co_arlene_c_lim" model="kst.lessee">
+        <field name="name">MEGASONIC MANPOWER SERVICES CO., / ARLENE C. LIM</field>
+    </record>
+
+    <record id="lessee_mel_j_document_facilitator_services_imelda_jamora_" model="kst.lessee">
+        <field name="name">MEL J. DOCUMENT FACILITATOR SERVICES (IMELDA JAMORA CILA)</field>
+    </record>
+
+    <record id="lessee_melchor_buena_cortez" model="kst.lessee">
+        <field name="name">MELCHOR BUENA CORTEZ</field>
+    </record>
+
+    <record id="lessee_melvin_izon" model="kst.lessee">
+        <field name="name">MELVIN IZON</field>
+    </record>
+
+    <record id="lessee_melvin_l_izon" model="kst.lessee">
+        <field name="name">MELVIN L. IZON</field>
+    </record>
+
+    <record id="lessee_mercedita_lucero" model="kst.lessee">
+        <field name="name">MERCEDITA LUCERO</field>
+    </record>
+
+    <record id="lessee_mercy_c_ducusin" model="kst.lessee">
+        <field name="name">MERCY C. DUCUSIN</field>
+    </record>
+
+    <record id="lessee_merie_carolynn_a_inlong" model="kst.lessee">
+        <field name="name">MERIE CAROLYNN A. INLONG</field>
+    </record>
+
+    <record id="lessee_merlinda_c_rafal" model="kst.lessee">
+        <field name="name">MERLINDA C. RAFAL</field>
+    </record>
+
+    <record id="lessee_miguel_isabelo_librojo" model="kst.lessee">
+        <field name="name">MIGUEL ISABELO LIBROJO</field>
+    </record>
+
+    <record id="lessee_miguelito_olaybar" model="kst.lessee">
+        <field name="name">MIGUELITO OLAYBAR</field>
+    </record>
+
+    <record id="lessee_millenium_erectors_corporation" model="kst.lessee">
+        <field name="name">MILLENIUM ERECTORS CORPORATION</field>
+    </record>
+
+    <record id="lessee_millennium_corporation" model="kst.lessee">
+        <field name="name">MILLENNIUM CORPORATION</field>
+    </record>
+
+    <record id="lessee_millennium_erectors_corporation" model="kst.lessee">
+        <field name="name">MILLENNIUM ERECTORS CORPORATION</field>
+    </record>
+
+    <record id="lessee_millennium_erectors_corporation_-_manhattan_barrac" model="kst.lessee">
+        <field name="name">MILLENNIUM ERECTORS CORPORATION - MANHATTAN BARRACKS</field>
+    </record>
+
+    <record id="lessee_mingrina_food_concepts_inc_zagu" model="kst.lessee">
+        <field name="name">MINGRINA FOOD CONCEPTS, INC. (ZAGU)</field>
+    </record>
+
+    <record id="lessee_mishari_ed_sunga_cusay" model="kst.lessee">
+        <field name="name">MISHARI ED SUNGA CUSAY</field>
+    </record>
+
+    <record id="lessee_monica_del_rosario" model="kst.lessee">
+        <field name="name">MONICA DEL ROSARIO</field>
+    </record>
+
+    <record id="lessee_montana_feliciano" model="kst.lessee">
+        <field name="name">MONTANA/FELICIANO</field>
+    </record>
+
+    <record id="lessee_mranzieto_b_delos_santos" model="kst.lessee">
+        <field name="name">MRANZIETO B. DELOS SANTOS</field>
+    </record>
+
+    <record id="lessee_mrz_transpo_inc" model="kst.lessee">
+        <field name="name">MRZ TRANSPO INC</field>
+    </record>
+
+    <record id="lessee_mrz_transpo_inc" model="kst.lessee">
+        <field name="name">MRZ TRANSPO INC.</field>
+    </record>
+
+    <record id="lessee_mrz_transpo_inc_steeve_james_m_mago" model="kst.lessee">
+        <field name="name">MRZ TRANSPO INC. / STEEVE JAMES M.  MAGO</field>
+    </record>
+
+    <record id="lessee_mrz_transpo_inc_steeve_james_m_mago" model="kst.lessee">
+        <field name="name">MRZ TRANSPO INC. / STEEVE JAMES M. MAGO</field>
+    </record>
+
+    <record id="lessee_mrz_transpo_inc_rodolfo_j_mago" model="kst.lessee">
+        <field name="name">MRZ TRANSPO INC./ RODOLFO J. MAGO</field>
+    </record>
+
+    <record id="lessee_mrz_transpo_inc_rodolfo_mago" model="kst.lessee">
+        <field name="name">MRZ TRANSPO INC./ RODOLFO MAGO</field>
+    </record>
+
+    <record id="lessee_mrz_transpo_inc_steeve_james_m_mago" model="kst.lessee">
+        <field name="name">MRZ TRANSPO INC./ STEEVE JAMES M. MAGO</field>
+    </record>
+
+    <record id="lessee_mrz_transpo_inc_steeve_james_m_mago" model="kst.lessee">
+        <field name="name">MRZ TRANSPO INC./STEEVE JAMES M. MAGO</field>
+    </record>
+
+    <record id="lessee_mvp_prime_foods_inc_cm-ybt" model="kst.lessee">
+        <field name="name">MVP PRIME FOODS INC. (CM-YBT)</field>
+    </record>
+
+    <record id="lessee_myra_f_fruto" model="kst.lessee">
+        <field name="name">MYRA F. FRUTO</field>
+    </record>
+
+    <record id="lessee_myra_oclares" model="kst.lessee">
+        <field name="name">MYRA OCLARES</field>
+    </record>
+
+    <record id="lessee_melissa_embile" model="kst.lessee">
+        <field name="name">Melissa Embile</field>
+    </record>
+
+    <record id="lessee_nagayon_general_merchandise" model="kst.lessee">
+        <field name="name">NAGAYON GENERAL MERCHANDISE</field>
+    </record>
+
+    <record id="lessee_nathaniel_garcia" model="kst.lessee">
+        <field name="name">NATHANIEL GARCIA</field>
+    </record>
+
+    <record id="lessee_nazareno_cristobal_dizon" model="kst.lessee">
+        <field name="name">NAZARENO CRISTOBAL DIZON</field>
+    </record>
+
+    <record id="lessee_nelson_caponpon" model="kst.lessee">
+        <field name="name">NELSON CAPONPON</field>
+    </record>
+
+    <record id="lessee_nelson_lim_gasco" model="kst.lessee">
+        <field name="name">NELSON LIM GASCO</field>
+    </record>
+
+    <record id="lessee_nelson_nunez_jr" model="kst.lessee">
+        <field name="name">NELSON NUNEZ JR.</field>
+    </record>
+
+    <record id="lessee_nerelyn_ordinez" model="kst.lessee">
+        <field name="name">NERELYN ORDINEZ</field>
+    </record>
+
+    <record id="lessee_nerissa_b_mapula" model="kst.lessee">
+        <field name="name">NERISSA B. MAPULA</field>
+    </record>
+
+    <record id="lessee_nerissa_mapula" model="kst.lessee">
+        <field name="name">NERISSA MAPULA</field>
+    </record>
+
+    <record id="lessee_nermy_mendoza" model="kst.lessee">
+        <field name="name">NERMY MENDOZA</field>
+    </record>
+
+    <record id="lessee_nestor_colstelo" model="kst.lessee">
+        <field name="name">NESTOR COLSTELO</field>
+    </record>
+
+    <record id="lessee_nicah_lodripas" model="kst.lessee">
+        <field name="name">NICAH LODRIPAS</field>
+    </record>
+
+    <record id="lessee_ni_a_rose_abiquibil" model="kst.lessee">
+        <field name="name">NIÑA ROSE ABIQUIBIL</field>
+    </record>
+
+    <record id="lessee_ni_o_luis_jamili" model="kst.lessee">
+        <field name="name">NIÑO LUIS JAMILI</field>
+    </record>
+
+    <record id="lessee_no_name" model="kst.lessee">
+        <field name="name">NO NAME</field>
+    </record>
+
+    <record id="lessee_noel_canufin" model="kst.lessee">
+        <field name="name">NOEL CANUFIN</field>
+    </record>
+
+    <record id="lessee_noel_hadlocon" model="kst.lessee">
+        <field name="name">NOEL HADLOCON</field>
+    </record>
+
+    <record id="lessee_noel_nathaniel_c_napa" model="kst.lessee">
+        <field name="name">NOEL NATHANIEL C. NAPA</field>
+    </record>
+
+    <record id="lessee_noel_nathaniel_napa" model="kst.lessee">
+        <field name="name">NOEL NATHANIEL NAPA</field>
+    </record>
+
+    <record id="lessee_norielyn_sadicon" model="kst.lessee">
+        <field name="name">NORIELYN SADICON</field>
+    </record>
+
+    <record id="lessee_norma_o_vargas" model="kst.lessee">
+        <field name="name">NORMA O. VARGAS</field>
+    </record>
+
+    <record id="lessee_normina_aglibut" model="kst.lessee">
+        <field name="name">NORMINA AGLIBUT</field>
+    </record>
+
+    <record id="lessee_nornecita_reyes" model="kst.lessee">
+        <field name="name">NORNECITA REYES</field>
+    </record>
+
+    <record id="lessee_o_d_trucking_services_corp_clemente_clark_t_ong_jr" model="kst.lessee">
+        <field name="name">O.D TRUCKING SERVICES CORP. / CLEMENTE CLARK T. ONG JR.</field>
+    </record>
+
+    <record id="lessee_palmeo_corporation_mary_grace_c_joya" model="kst.lessee">
+        <field name="name">PALMEO CORPORATION / MARY GRACE C. JOYA</field>
+    </record>
+
+    <record id="lessee_pamela_a_simpas" model="kst.lessee">
+        <field name="name">PAMELA A. SIMPAS</field>
+    </record>
+
+    <record id="lessee_pamela_olaso" model="kst.lessee">
+        <field name="name">PAMELA OLASO</field>
+    </record>
+
+    <record id="lessee_patrick_fernandez" model="kst.lessee">
+        <field name="name">PATRICK FERNANDEZ</field>
+    </record>
+
+    <record id="lessee_patrick_jayson_fernandez" model="kst.lessee">
+        <field name="name">PATRICK JAYSON FERNANDEZ</field>
+    </record>
+
+    <record id="lessee_paula_mae_fragata_cabeltes" model="kst.lessee">
+        <field name="name">PAULA MAE FRAGATA CABELTES</field>
+    </record>
+
+    <record id="lessee_pauleen_ann_salapayne_espeleta" model="kst.lessee">
+        <field name="name">PAULEEN ANN SALAPAYNE ESPELETA</field>
+    </record>
+
+    <record id="lessee_phia_mae_del_rosario" model="kst.lessee">
+        <field name="name">PHIA MAE DEL ROSARIO</field>
+    </record>
+
+    <record id="lessee_philwise_company_ltd_corp_voulther_a_banagua" model="kst.lessee">
+        <field name="name">PHILWISE COMPANY LTD.CORP / VOULTHER A. BANAGUA</field>
+    </record>
+
+    <record id="lessee_polaris_x_printing_services" model="kst.lessee">
+        <field name="name">POLARIS X PRINTING  SERVICES</field>
+    </record>
+
+    <record id="lessee_polaris_x_printing_services_storage" model="kst.lessee">
+        <field name="name">POLARIS X PRINTING SERVICES | STORAGE</field>
+    </record>
+
+    <record id="lessee_precious_joyce_onrade" model="kst.lessee">
+        <field name="name">PRECIOUS JOYCE ONRADE</field>
+    </record>
+
+    <record id="lessee_promark_process_international_corp" model="kst.lessee">
+        <field name="name">PROMARK PROCESS INTERNATIONAL CORP.</field>
+    </record>
+
+    <record id="lessee_promec_water_solutions_inc" model="kst.lessee">
+        <field name="name">PROMEC WATER SOLUTIONS, INC.</field>
+    </record>
+
+    <record id="lessee_pts_gadget_pawnshop_inc" model="kst.lessee">
+        <field name="name">PTS GADGET PAWNSHOP INC.</field>
+    </record>
+
+    <record id="lessee_r_and_d_massage_and_spa" model="kst.lessee">
+        <field name="name">R AND D MASSAGE AND SPA</field>
+    </record>
+
+    <record id="lessee_ramonito_s_lauta" model="kst.lessee">
+        <field name="name">RAMONITO S. LAUTA</field>
+    </record>
+
+    <record id="lessee_rana_sahail_siddiq" model="kst.lessee">
+        <field name="name">RANA SAHAIL SIDDIQ</field>
+    </record>
+
+    <record id="lessee_randulph_polloso" model="kst.lessee">
+        <field name="name">RANDULPH POLLOSO</field>
+    </record>
+
+    <record id="lessee_randy_boy_delgado_antonio" model="kst.lessee">
+        <field name="name">RANDY BOY DELGADO ANTONIO</field>
+    </record>
+
+    <record id="lessee_ray_benedicto_cornejo" model="kst.lessee">
+        <field name="name">RAY BENEDICTO CORNEJO</field>
+    </record>
+
+    <record id="lessee_raymond_domingo" model="kst.lessee">
+        <field name="name">RAYMOND DOMINGO</field>
+    </record>
+
+    <record id="lessee_raymond_zamora_domingo" model="kst.lessee">
+        <field name="name">RAYMOND ZAMORA DOMINGO</field>
+    </record>
+
+    <record id="lessee_rdsj_bakery" model="kst.lessee">
+        <field name="name">RDSJ BAKERY</field>
+    </record>
+
+    <record id="lessee_rea_t_toribio" model="kst.lessee">
+        <field name="name">REA T. TORIBIO</field>
+    </record>
+
+    <record id="lessee_reagan_s_cruz" model="kst.lessee">
+        <field name="name">REAGAN S. CRUZ</field>
+    </record>
+
+    <record id="lessee_rechel_obligado" model="kst.lessee">
+        <field name="name">RECHEL OBLIGADO</field>
+    </record>
+
+    <record id="lessee_redeemed_requalification_enterprise" model="kst.lessee">
+        <field name="name">REDEEMED REQUALIFICATION ENTERPRISE</field>
+    </record>
+
+    <record id="lessee_reginald_j_ronquillo" model="kst.lessee">
+        <field name="name">REGINALD J. RONQUILLO</field>
+    </record>
+
+    <record id="lessee_reisah_ramos" model="kst.lessee">
+        <field name="name">REISAH RAMOS</field>
+    </record>
+
+    <record id="lessee_rekha_kalwani" model="kst.lessee">
+        <field name="name">REKHA KALWANI</field>
+    </record>
+
+    <record id="lessee_rempsis_general_merchandise_jermie_f_infeliz" model="kst.lessee">
+        <field name="name">REMPSIS GENERAL MERCHANDISE / JERMIE F. INFELIZ</field>
+    </record>
+
+    <record id="lessee_renan_rosales_mendoza" model="kst.lessee">
+        <field name="name">RENAN ROSALES MENDOZA</field>
+    </record>
+
+    <record id="lessee_renann_baldovino" model="kst.lessee">
+        <field name="name">RENANN BALDOVINO</field>
+    </record>
+
+    <record id="lessee_renie_construction" model="kst.lessee">
+        <field name="name">RENIE CONSTRUCTION</field>
+    </record>
+
+    <record id="lessee_reshell_p_ba_acia" model="kst.lessee">
+        <field name="name">RESHELL P. BAÑACIA</field>
+    </record>
+
+    <record id="lessee_revelyn_t_danao" model="kst.lessee">
+        <field name="name">REVELYN T. DANAO</field>
+    </record>
+
+    <record id="lessee_rey_bernard_r_calam" model="kst.lessee">
+        <field name="name">REY BERNARD R. CALAM</field>
+    </record>
+
+    <record id="lessee_reynaldo_diaz" model="kst.lessee">
+        <field name="name">REYNALDO DIAZ</field>
+    </record>
+
+    <record id="lessee_rhea_claire_bejer_bantolo" model="kst.lessee">
+        <field name="name">RHEA CLAIRE BEJER BANTOLO</field>
+    </record>
+
+    <record id="lessee_rhylee_mover_s_tracking_services_rosalyn_samson" model="kst.lessee">
+        <field name="name">RHYLEE MOVER&apos;S TRACKING SERVICES / ROSALYN SAMSON</field>
+    </record>
+
+    <record id="lessee_ric_justine_seco_costuna" model="kst.lessee">
+        <field name="name">RIC JUSTINE SECO COSTUNA</field>
+    </record>
+
+    <record id="lessee_ricardo_richard_dela_cruz" model="kst.lessee">
+        <field name="name">RICARDO &quot;Richard&quot; DELA CRUZ</field>
+    </record>
+
+    <record id="lessee_riccar_s_samonte" model="kst.lessee">
+        <field name="name">RICCAR S. SAMONTE</field>
+    </record>
+
+    <record id="lessee_richelle_ramos" model="kst.lessee">
+        <field name="name">RICHELLE RAMOS</field>
+    </record>
+
+    <record id="lessee_richzen_hardware" model="kst.lessee">
+        <field name="name">RICHZEN HARDWARE</field>
+    </record>
+
+    <record id="lessee_ricky_asuncion" model="kst.lessee">
+        <field name="name">RICKY ASUNCION</field>
+    </record>
+
+    <record id="lessee_rigel_kristoffer_andaya" model="kst.lessee">
+        <field name="name">RIGEL KRISTOFFER ANDAYA</field>
+    </record>
+
+    <record id="lessee_rigil_kent_l_galigao" model="kst.lessee">
+        <field name="name">RIGIL KENT L. GALIGAO</field>
+    </record>
+
+    <record id="lessee_rita_vicera_begonia" model="kst.lessee">
+        <field name="name">RITA VICERA BEGONIA</field>
+    </record>
+
+    <record id="lessee_roanadi_amor_s_arias" model="kst.lessee">
+        <field name="name">ROANADI AMOR S. ARIAS</field>
+    </record>
+
+    <record id="lessee_rochelle_ortiz" model="kst.lessee">
+        <field name="name">ROCHELLE ORTIZ</field>
+    </record>
+
+    <record id="lessee_rodel_r_desuyo" model="kst.lessee">
+        <field name="name">RODEL R. DESUYO</field>
+    </record>
+
+    <record id="lessee_roderick_clemente_ferrer" model="kst.lessee">
+        <field name="name">RODERICK CLEMENTE FERRER</field>
+    </record>
+
+    <record id="lessee_rodolfo_j_mago" model="kst.lessee">
+        <field name="name">RODOLFO J. MAGO</field>
+    </record>
+
+    <record id="lessee_rodolfo_mago" model="kst.lessee">
+        <field name="name">RODOLFO MAGO</field>
+    </record>
+
+    <record id="lessee_roi_john_somigao" model="kst.lessee">
+        <field name="name">ROI JOHN SOMIGAO</field>
+    </record>
+
+    <record id="lessee_roland_winlove_l_orbe" model="kst.lessee">
+        <field name="name">ROLAND WINLOVE L. ORBE</field>
+    </record>
+
+    <record id="lessee_rolylyn_dela_cruz" model="kst.lessee">
+        <field name="name">ROLYLYN DELA CRUZ</field>
+    </record>
+
+    <record id="lessee_rolyne_l_a_onuevo" model="kst.lessee">
+        <field name="name">ROLYNE L. AÑONUEVO</field>
+    </record>
+
+    <record id="lessee_romeo_m_agustin" model="kst.lessee">
+        <field name="name">ROMEO M. AGUSTIN</field>
+    </record>
+
+    <record id="lessee_romeo_p_mariano" model="kst.lessee">
+        <field name="name">ROMEO P. MARIANO</field>
+    </record>
+
+    <record id="lessee_romeo_pineda" model="kst.lessee">
+        <field name="name">ROMEO PINEDA</field>
+    </record>
+
+    <record id="lessee_rommer_l_bauca" model="kst.lessee">
+        <field name="name">ROMMER L. BAUCA</field>
+    </record>
+
+    <record id="lessee_ronald_sarion" model="kst.lessee">
+        <field name="name">RONALD SARION</field>
+    </record>
+
+    <record id="lessee_ronald_soldivillo" model="kst.lessee">
+        <field name="name">RONALD SOLDIVILLO</field>
+    </record>
+
+    <record id="lessee_ronnel_caponpon" model="kst.lessee">
+        <field name="name">RONNEL CAPONPON</field>
+    </record>
+
+    <record id="lessee_ronnie_delgado" model="kst.lessee">
+        <field name="name">RONNIE DELGADO</field>
+    </record>
+
+    <record id="lessee_rosalina_estorgio" model="kst.lessee">
+        <field name="name">ROSALINA ESTORGIO</field>
+    </record>
+
+    <record id="lessee_rosalina_m_estorgio" model="kst.lessee">
+        <field name="name">ROSALINA M. ESTORGIO</field>
+    </record>
+
+    <record id="lessee_rosalyn_c_marasigan" model="kst.lessee">
+        <field name="name">ROSALYN C. MARASIGAN</field>
+    </record>
+
+    <record id="lessee_rosalynn_espinosa" model="kst.lessee">
+        <field name="name">ROSALYNN ESPINOSA</field>
+    </record>
+
+    <record id="lessee_roselyn_sevilla" model="kst.lessee">
+        <field name="name">ROSELYN SEVILLA</field>
+    </record>
+
+    <record id="lessee_rosenie_a_udani" model="kst.lessee">
+        <field name="name">ROSENIE A. UDANI</field>
+    </record>
+
+    <record id="lessee_rosenie_agustin_udani" model="kst.lessee">
+        <field name="name">ROSENIE AGUSTIN UDANI</field>
+    </record>
+
+    <record id="lessee_rovilin_mance_lagamayo" model="kst.lessee">
+        <field name="name">ROVILIN MANCE LAGAMAYO</field>
+    </record>
+
+    <record id="lessee_rowell_e_villamayor" model="kst.lessee">
+        <field name="name">ROWELL E. VILLAMAYOR</field>
+    </record>
+
+    <record id="lessee_rowena_dl_fuentes" model="kst.lessee">
+        <field name="name">ROWENA DL. FUENTES</field>
+    </record>
+
+    <record id="lessee_rowena_fuentes" model="kst.lessee">
+        <field name="name">ROWENA FUENTES</field>
+    </record>
+
+    <record id="lessee_roxanne_cortez" model="kst.lessee">
+        <field name="name">ROXANNE CORTEZ</field>
+    </record>
+
+    <record id="lessee_royal_vows_international_placement_agency_corp" model="kst.lessee">
+        <field name="name">ROYAL VOWS INTERNATIONAL PLACEMENT AGENCY CORP</field>
+    </record>
+
+    <record id="lessee_royal_vows_international_placement_agency_corp" model="kst.lessee">
+        <field name="name">ROYAL VOWS INTERNATIONAL PLACEMENT AGENCY CORP.</field>
+    </record>
+
+    <record id="lessee_ruel_vergano" model="kst.lessee">
+        <field name="name">RUEL VERGANO</field>
+    </record>
+
+    <record id="lessee_runto_technology_inc" model="kst.lessee">
+        <field name="name">RUNTO TECHNOLOGY INC.</field>
+    </record>
+
+    <record id="lessee_ruth_s_lo" model="kst.lessee">
+        <field name="name">RUTH S. LO</field>
+    </record>
+
+    <record id="lessee_ryan_jomero" model="kst.lessee">
+        <field name="name">RYAN JOMERO</field>
+    </record>
+
+    <record id="lessee_salvador_lopez" model="kst.lessee">
+        <field name="name">SALVADOR LOPEZ</field>
+    </record>
+
+    <record id="lessee_sanctified_enterprises_-_elmer_john_q_duque" model="kst.lessee">
+        <field name="name">SANCTIFIED ENTERPRISES - ELMER JOHN Q. DUQUE</field>
+    </record>
+
+    <record id="lessee_sarah_delos_santos" model="kst.lessee">
+        <field name="name">SARAH DELOS SANTOS</field>
+    </record>
+
+    <record id="lessee_sarah_maximo" model="kst.lessee">
+        <field name="name">SARAH MAXIMO</field>
+    </record>
+
+    <record id="lessee_servant_community_seed_of_god" model="kst.lessee">
+        <field name="name">SERVANT COMMUNITY SEED OF GOD</field>
+    </record>
+
+    <record id="lessee_shantal_s_tailoring" model="kst.lessee">
+        <field name="name">SHANTAL&apos;S TAILORING</field>
+    </record>
+
+    <record id="lessee_sharmaine_joy_arabit" model="kst.lessee">
+        <field name="name">SHARMAINE JOY ARABIT</field>
+    </record>
+
+    <record id="lessee_sharon_t_cabrales" model="kst.lessee">
+        <field name="name">SHARON T. CABRALES</field>
+    </record>
+
+    <record id="lessee_sheena_gagarin" model="kst.lessee">
+        <field name="name">SHEENA GAGARIN</field>
+    </record>
+
+    <record id="lessee_shiela_mae_a_ba_ados" model="kst.lessee">
+        <field name="name">SHIELA MAE A. BAÑADOS</field>
+    </record>
+
+    <record id="lessee_shirleen_ramirez" model="kst.lessee">
+        <field name="name">SHIRLEEN RAMIREZ</field>
+    </record>
+
+    <record id="lessee_silver_meadows_corporation_parking" model="kst.lessee">
+        <field name="name">SILVER MEADOWS CORPORATION (PARKING)</field>
+    </record>
+
+    <record id="lessee_singh_satwant" model="kst.lessee">
+        <field name="name">SINGH SATWANT</field>
+    </record>
+
+    <record id="lessee_smart_communications_inc" model="kst.lessee">
+        <field name="name">SMART COMMUNICATIONS INC.</field>
+    </record>
+
+    <record id="lessee_sta_martha_dev_inc" model="kst.lessee">
+        <field name="name">STA. MARTHA DEV. INC</field>
+    </record>
+
+    <record id="lessee_sucor_sultan_magarang" model="kst.lessee">
+        <field name="name">SUCOR SULTAN MAGARANG</field>
+    </record>
+
+    <record id="lessee_sumulong_baptist" model="kst.lessee">
+        <field name="name">SUMULONG BAPTIST</field>
+    </record>
+
+    <record id="lessee_sykai_hardware" model="kst.lessee">
+        <field name="name">SYKAI HARDWARE</field>
+    </record>
+
+    <record id="lessee_takumi_japanese_language_center_corporation" model="kst.lessee">
+        <field name="name">TAKUMI JAPANESE LANGUAGE CENTER CORPORATION</field>
+    </record>
+
+    <record id="lessee_teresita_b_trono" model="kst.lessee">
+        <field name="name">TERESITA B. TRONO</field>
+    </record>
+
+    <record id="lessee_tiongwoon_phils_inc" model="kst.lessee">
+        <field name="name">TIONGWOON PHILS. INC.</field>
+    </record>
+
+    <record id="lessee_tof_trading" model="kst.lessee">
+        <field name="name">TOF TRADING</field>
+    </record>
+
+    <record id="lessee_tolit_s_hardware_construction_supplies" model="kst.lessee">
+        <field name="name">TOLIT&apos;S HARDWARE &amp; CONSTRUCTION SUPPLIES</field>
+    </record>
+
+    <record id="lessee_toyota_global_bgc" model="kst.lessee">
+        <field name="name">TOYOTA GLOBAL BGC</field>
+    </record>
+
+    <record id="lessee_trisha_andrea_g_cruz" model="kst.lessee">
+        <field name="name">TRISHA ANDREA G. CRUZ</field>
+    </record>
+
+    <record id="lessee_trisha_carmela_p_par" model="kst.lessee">
+        <field name="name">TRISHA CARMELA P. PAR</field>
+    </record>
+
+    <record id="lessee_twist_of_fate_brian_pineda" model="kst.lessee">
+        <field name="name">TWIST OF FATE / BRIAN PINEDA</field>
+    </record>
+
+    <record id="lessee_umar_i_hussain" model="kst.lessee">
+        <field name="name">UMAR I. HUSSAIN</field>
+    </record>
+
+    <record id="lessee_vacant_since_june_2022" model="kst.lessee">
+        <field name="name">VACANT SINCE JUNE 2022</field>
+    </record>
+
+    <record id="lessee_val_jugo" model="kst.lessee">
+        <field name="name">VAL JUGO</field>
+    </record>
+
+    <record id="lessee_vapestopp_vapeshop" model="kst.lessee">
+        <field name="name">VAPESTOPP VAPESHOP</field>
+    </record>
+
+    <record id="lessee_venz_luis_delos_reyes" model="kst.lessee">
+        <field name="name">VENZ LUIS DELOS REYES</field>
+    </record>
+
+    <record id="lessee_vermont_r_perez" model="kst.lessee">
+        <field name="name">VERMONT R. PEREZ</field>
+    </record>
+
+    <record id="lessee_vilma_c_morate" model="kst.lessee">
+        <field name="name">VILMA C. MORATE</field>
+    </record>
+
+    <record id="lessee_vincent_matondo" model="kst.lessee">
+        <field name="name">VINCENT MATONDO</field>
+    </record>
+
+    <record id="lessee_violeta_melivo" model="kst.lessee">
+        <field name="name">VIOLETA MELIVO</field>
+    </record>
+
+    <record id="lessee_violeta_melivo_kst" model="kst.lessee">
+        <field name="name">VIOLETA MELIVO (KST)</field>
+    </record>
+
+    <record id="lessee_virginia_garcia" model="kst.lessee">
+        <field name="name">VIRGINIA GARCIA</field>
+    </record>
+
+    <record id="lessee_virginia_garcia_-_bell_pepper_inc" model="kst.lessee">
+        <field name="name">VIRGINIA GARCIA - BELL PEPPER INC.</field>
+    </record>
+
+    <record id="lessee_virtual_internet_caf_inc" model="kst.lessee">
+        <field name="name">VIRTUAL INTERNET CAFÉ INC.</field>
+    </record>
+
+    <record id="lessee_vm_buno_sari_-_sari_store" model="kst.lessee">
+        <field name="name">VM BUNO SARI - SARI STORE</field>
+    </record>
+
+    <record id="lessee_vm_bu_o_sari_-_sari_store" model="kst.lessee">
+        <field name="name">VM BUÑO SARI - SARI STORE</field>
+    </record>
+
+    <record id="lessee_voulban_agricultural_products_trading_voulther_a_b" model="kst.lessee">
+        <field name="name">VOULBAN AGRICULTURAL PRODUCTS TRADING			  / VOULTHER A. BANAGUA</field>
+    </record>
+
+    <record id="lessee_wargods_internet_caf_mr_ryan_lai" model="kst.lessee">
+        <field name="name">WARGODS INTERNET CAFÉ/ MR. RYAN LAI</field>
+    </record>
+
+    <record id="lessee_wilfredo_l_viray" model="kst.lessee">
+        <field name="name">WILFREDO L. VIRAY</field>
+    </record>
+
+    <record id="lessee_wilia_lee" model="kst.lessee">
+        <field name="name">WILIA LEE</field>
+    </record>
+
+    <record id="lessee_william_alcanzarin" model="kst.lessee">
+        <field name="name">WILLIAM ALCANZARIN</field>
+    </record>
+
+    <record id="lessee_xena_rose_bobis_budiit_mec" model="kst.lessee">
+        <field name="name">XENA ROSE BOBIS BUDIIT (MEC)</field>
+    </record>
+
+    <record id="lessee_ysabel_job_placement_services_co_isabel_kristina_a" model="kst.lessee">
+        <field name="name">YSABEL JOB PLACEMENT SERVICES CO. / ISABEL KRISTINA A. INOCENCIO</field>
+    </record>
+
+    <record id="lessee_yvonne_mary_d_cango" model="kst.lessee">
+        <field name="name">YVONNE MARY D. CANGO</field>
+    </record>
+
+    <record id="lessee_zagu" model="kst.lessee">
+        <field name="name">ZAGU</field>
+    </record>
+
+    <record id="lessee_zitech_computer_system_company" model="kst.lessee">
+        <field name="name">ZITECH COMPUTER SYSTEM COMPANY</field>
+    </record>
+
+</odoo>
