@@ -2484,4 +2484,3403 @@
         <field name="name">ZITECH COMPUTER SYSTEM COMPANY</field>
     </record>
 
+    <!-- Units (from extracted CSV) -->
+    <record id="unit_malate" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kst"/>
+        <field name="category_id" ref="04"/>
+        <field name="unit_specified">2A</field>
+        <field name="address">1313 M.H. Del Pilar St, Brgy. 668, Zone 72, Ermita, Manila</field>
+        <field name="size">67.00</field>
+        <field name="soa_bank_account_number">000-000214-684</field>
+    </record>
+
+    <record id="unit_malate_1" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kst"/>
+        <field name="category_id" ref="04"/>
+        <field name="unit_specified">2B</field>
+        <field name="address">1313 M.H. Del Pilar St, Brgy. 668, Zone 72, Ermita, Manila</field>
+        <field name="size">72.00</field>
+        <field name="soa_bank_account_number">000-000214-684</field>
+    </record>
+
+    <record id="unit_malate_2" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kst"/>
+        <field name="category_id" ref="04"/>
+        <field name="unit_specified">2C</field>
+        <field name="address">1313 M.H. Del Pilar St, Brgy. 668, Zone 72, Ermita, Manila</field>
+        <field name="size">60.00</field>
+        <field name="soa_bank_account_number">000-000214-684</field>
+    </record>
+
+    <record id="unit_malate_3" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kst"/>
+        <field name="category_id" ref="04"/>
+        <field name="unit_specified">2D</field>
+        <field name="address">1313 MH DEL PILAR STREET, MALATE MANILA</field>
+        <field name="size">67.00</field>
+        <field name="soa_bank_account_number">000-000214-684</field>
+    </record>
+
+    <record id="unit_bagong_barrio_2f_-_a" model="kst.unit">
+        <field name="lessor_id" ref="lessor_bbh"/>
+        <field name="category_id" ref="04"/>
+        <field name="unit_specified">A</field>
+        <field name="address">ZAPOTE STREET, CORNER MALOLOS AVENUE, BAGONG BARRIO CALOOCAN CITY</field>
+        <field name="soa_bank_account_number">0511-029-847-001</field>
+    </record>
+
+    <record id="unit_kalayaan_-_2f" model="kst.unit">
+        <field name="lessor_id" ref="lessor_ktc"/>
+        <field name="category_id" ref="07"/>
+        <field name="unit_specified">AB</field>
+        <field name="address">9642 KALAYAAN AVENUE, GUADALUPE NUEVO, MAKATI CITY</field>
+        <field name="description">COMMERCIAL-OFFICE</field>
+        <field name="soa_bank_account_number">0611-0163-24-001</field>
+    </record>
+
+    <record id="unit_bagong_barrio_2f" model="kst.unit">
+        <field name="lessor_id" ref="lessor_bbh"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">B</field>
+        <field name="address">ZAPOTE STREET, CORNER MALOLOS AVENUE, BAGONG BARRIO</field>
+        <field name="description">RESIDENTIAL UNIT</field>
+        <field name="soa_bank_account_number">0511-029-847-001</field>
+    </record>
+
+    <record id="unit_kalayaan_-_2f_7" model="kst.unit">
+        <field name="lessor_id" ref="lessor_ktc"/>
+        <field name="category_id" ref="07"/>
+        <field name="unit_specified">K</field>
+        <field name="address">9642 KALAYAAN AVENUE, GUADALUPE NUEVO, MAKATI CITY</field>
+        <field name="description">COMMERCIAL - CORPORATE MERCHANDISE</field>
+        <field name="soa_bank_account_number">0611-0163-24-001</field>
+    </record>
+
+    <record id="unit_kalayaan_-_2f_8" model="kst.unit">
+        <field name="lessor_id" ref="lessor_ktc"/>
+        <field name="category_id" ref="07"/>
+        <field name="unit_specified">LM</field>
+        <field name="address">9642 KALAYAAN AVENUE, GUADALUPE NUEVO, MAKATI CITY</field>
+        <field name="description">COMMERCIAL- CONSTRUCTION OFFICE</field>
+        <field name="soa_bank_account_number">0611-0163-24-001</field>
+    </record>
+
+    <record id="unit_kalayaan_-_2f_9" model="kst.unit">
+        <field name="lessor_id" ref="lessor_ktc"/>
+        <field name="category_id" ref="07"/>
+        <field name="unit_specified">O</field>
+        <field name="address">9642 KALAYAAN AVENUE, GUADALUPE NUEVO, MAKATI CITY</field>
+        <field name="soa_bank_account_number">0611-0163-24-001</field>
+    </record>
+
+    <record id="unit_kalayaan_-_2f_10" model="kst.unit">
+        <field name="lessor_id" ref="lessor_ktc"/>
+        <field name="category_id" ref="07"/>
+        <field name="unit_specified">P</field>
+        <field name="address">9642 KALAYAAN AVENUE, GUADALUPE NUEVO, MAKATI CITY</field>
+        <field name="description">COMMERCIAL</field>
+        <field name="soa_bank_account_number">0611-0163-24-001</field>
+    </record>
+
+    <record id="unit_kalayaan_-_2f_11" model="kst.unit">
+        <field name="lessor_id" ref="lessor_ktc"/>
+        <field name="category_id" ref="07"/>
+        <field name="unit_specified">Q</field>
+        <field name="address">9642 KALAYAAN AVENUE, GUADALUPE NUEVO MAKATI CITY</field>
+    </record>
+
+    <record id="unit_kalayaan_-_2f_12" model="kst.unit">
+        <field name="lessor_id" ref="lessor_ktc"/>
+        <field name="category_id" ref="07"/>
+        <field name="unit_specified">R</field>
+        <field name="address">9642 KALAYAAN AVENUE, GUADALUPE NUEVO, MAKATI CITY</field>
+        <field name="description">COMMERCIAL</field>
+        <field name="size">7.00</field>
+    </record>
+
+    <record id="unit_hdg" model="kst.unit">
+        <field name="lessor_id" ref="lessor_vmb"/>
+        <field name="category_id" ref="07"/>
+        <field name="unit_specified">2F 2A</field>
+        <field name="address"># 192 HEROES DEL 96 BRGY. 74 CALOOCAN CITY</field>
+        <field name="description">COMMERCIAL USE</field>
+        <field name="soa_bank_account_number">511-023517-001</field>
+    </record>
+
+    <record id="unit_hdg_14" model="kst.unit">
+        <field name="lessor_id" ref="lessor_vmb"/>
+        <field name="category_id" ref="07"/>
+        <field name="unit_specified">2F 2B</field>
+        <field name="address">#192 HEROES DEL 96 BRGY. 74 CALOOCAN CITY</field>
+        <field name="description">COMMERCIAL USE</field>
+        <field name="soa_bank_account_number">511-023517-001</field>
+    </record>
+
+    <record id="unit_hdg_15" model="kst.unit">
+        <field name="lessor_id" ref="lessor_vmb"/>
+        <field name="category_id" ref="07"/>
+        <field name="unit_specified">2F 2C</field>
+        <field name="address"># 192 HEROES DEL 96 BRGY. 74 CALOOCAN CITY</field>
+        <field name="description">COMMERCIAL USE</field>
+        <field name="soa_bank_account_number">511-023517-001</field>
+    </record>
+
+    <record id="unit_kalayaan_-_2f_16" model="kst.unit">
+        <field name="lessor_id" ref="lessor_ktc"/>
+        <field name="category_id" ref="07"/>
+        <field name="unit_specified">F</field>
+        <field name="address">9642 KALAYAAN AVENUE, GUADALUPE NUEVO MAKATI CITY</field>
+        <field name="description">COMMERCIAL</field>
+        <field name="size">10.00</field>
+    </record>
+
+    <record id="unit_kalayaan_-2f" model="kst.unit">
+        <field name="lessor_id" ref="lessor_ktc"/>
+        <field name="category_id" ref="07"/>
+        <field name="unit_specified">NOPQ</field>
+        <field name="address">9462 KALAYAAN AVENUE,GUADALUPE NUEVO, MAKATI CITY</field>
+        <field name="description">COMMERCIAL OFFICE</field>
+        <field name="size">31.00</field>
+    </record>
+
+    <record id="unit_hdg_18" model="kst.unit">
+        <field name="lessor_id" ref="lessor_vmb"/>
+        <field name="category_id" ref="07"/>
+        <field name="unit_specified">2F-2A</field>
+        <field name="address"># 192 HEROES DEL 96, BRGY. 74 CALOOCAN CITY</field>
+        <field name="description">COMMERCIAL USE</field>
+        <field name="size">1.00</field>
+        <field name="soa_bank_account_number">511-023517-001</field>
+    </record>
+
+    <record id="unit_hdg_19" model="kst.unit">
+        <field name="lessor_id" ref="lessor_vmb"/>
+        <field name="category_id" ref="07"/>
+        <field name="unit_specified">2B</field>
+        <field name="address"># 192 HEROES DEL 96, BRGY. 74 CALOOCAN CITY</field>
+        <field name="description">COMMERCIAL SPACE</field>
+        <field name="size">1.00</field>
+        <field name="soa_bank_account_number">511-023517-001</field>
+    </record>
+
+    <record id="unit_hdg_20" model="kst.unit">
+        <field name="lessor_id" ref="lessor_vmb"/>
+        <field name="category_id" ref="07"/>
+        <field name="unit_specified">2C</field>
+        <field name="address"># 192 HEROES DEL 96, BRGY. 74 CALOOCAN CITY</field>
+        <field name="description">COMMERCIAL SPACE.</field>
+        <field name="size">1.00</field>
+        <field name="soa_bank_account_number">511-023517-001</field>
+    </record>
+
+    <record id="unit_kalayaan_-_2f_21" model="kst.unit">
+        <field name="lessor_id" ref="lessor_ktc"/>
+        <field name="category_id" ref="06"/>
+        <field name="unit_specified">J</field>
+        <field name="address">9642 KALAYAAN AVENUE, GUADALUPE NUEVO, MAKATI CITY</field>
+        <field name="size">2.00</field>
+        <field name="soa_bank_account_number">0611-0163-24-001</field>
+    </record>
+
+    <record id="unit_kalayaan_2f-n" model="kst.unit">
+        <field name="lessor_id" ref="lessor_ktc"/>
+        <field name="category_id" ref="07"/>
+        <field name="unit_specified">N</field>
+        <field name="address">9642 KALAYAAN AVENUE GUADALUPE NUEVO MAKATI CITY</field>
+    </record>
+
+    <record id="unit_kalayaan_-_3f" model="kst.unit">
+        <field name="lessor_id" ref="lessor_ktc"/>
+        <field name="category_id" ref="10"/>
+        <field name="unit_specified">F</field>
+        <field name="address">9642 KALAYAAN AVENUE, GUADALUPE NUEVO, MAKATI CITY</field>
+        <field name="description">Commercial</field>
+        <field name="soa_bank_account_number">0611-0163-24-001</field>
+    </record>
+
+    <record id="unit_malate_24" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kst"/>
+        <field name="category_id" ref="04"/>
+        <field name="unit_specified">3A</field>
+        <field name="address">1313 MH DEL PILAR STREET, MALATE MANILA</field>
+        <field name="description">COMMERCIAL</field>
+        <field name="size">67.00</field>
+        <field name="soa_bank_account_number">000-000214-684</field>
+    </record>
+
+    <record id="unit_malate_25" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kst"/>
+        <field name="category_id" ref="04"/>
+        <field name="unit_specified">3B</field>
+        <field name="address">1313 MH DEL PILAR STREET, MALATE MANILA</field>
+        <field name="size">72.00</field>
+        <field name="soa_bank_account_number">000-000214-684</field>
+    </record>
+
+    <record id="unit_malate_26" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kst"/>
+        <field name="category_id" ref="04"/>
+        <field name="unit_specified">3C</field>
+        <field name="address">1313 MH DEL PILAR STREET, MALATE MANILA</field>
+        <field name="size">60.00</field>
+        <field name="soa_bank_account_number">000-000214-684</field>
+    </record>
+
+    <record id="unit_malate_27" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kst"/>
+        <field name="category_id" ref="04"/>
+        <field name="unit_specified">3D</field>
+        <field name="address">1313 MH DEL PILAR STREET, MALATE MANILA</field>
+        <field name="size">67.00</field>
+        <field name="soa_bank_account_number">000-000214-684</field>
+    </record>
+
+    <record id="unit_bagong_barrio_3f-a" model="kst.unit">
+        <field name="lessor_id" ref="lessor_bbh"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">A</field>
+        <field name="address">ZAPOTE STREET, CORNER MALOLOS AVENUE, BAGONG BARRIO</field>
+        <field name="description">RESIDENTIAL UNIT</field>
+        <field name="soa_bank_account_number">0511-029-847-001</field>
+    </record>
+
+    <record id="unit_bagong_barrio_3" model="kst.unit">
+        <field name="lessor_id" ref="lessor_bbh"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">B</field>
+        <field name="address">ZAPOTE STREET, CORNER MALOLOS AVENUE, BAGONG BARRIO</field>
+        <field name="soa_bank_account_number">0511-029-847-001</field>
+    </record>
+
+    <record id="unit_ret_-_4" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kstk3"/>
+        <field name="category_id" ref="04"/>
+        <field name="unit_specified">RET - 4</field>
+        <field name="address">9446 RETIRO ST. GUADALUPE NUEVO MAKATI CITY</field>
+        <field name="soa_bank_account_number">0511-027603-001</field>
+    </record>
+
+    <record id="unit_malate_31" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kst"/>
+        <field name="category_id" ref="04"/>
+        <field name="unit_specified">4A</field>
+        <field name="address">1313 MH DEL PILAR STREET, MALATE MANILA</field>
+        <field name="size">67.00</field>
+        <field name="soa_bank_account_number">000-000214-684</field>
+    </record>
+
+    <record id="unit_malate_32" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kst"/>
+        <field name="category_id" ref="04"/>
+        <field name="unit_specified">4B</field>
+        <field name="address">1313 MH DEL PILAR STREET, MALATE MANILA</field>
+        <field name="size">72.00</field>
+        <field name="soa_bank_account_number">000-000214-684</field>
+    </record>
+
+    <record id="unit_malate_33" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kst"/>
+        <field name="category_id" ref="04"/>
+        <field name="unit_specified">4C</field>
+        <field name="address">1313 MH DEL PILAR STREET, MALATE MANILA</field>
+        <field name="description">COMMERCIAL</field>
+        <field name="size">60.00</field>
+        <field name="soa_bank_account_number">000-000214-684</field>
+    </record>
+
+    <record id="unit_malate_34" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kst"/>
+        <field name="category_id" ref="04"/>
+        <field name="unit_specified">4D</field>
+        <field name="address">1313 MH DEL PILAR STREET, MALATE MANILA</field>
+        <field name="description">COMMERCIAL</field>
+        <field name="size">67.00</field>
+        <field name="soa_bank_account_number">000-000214-684</field>
+    </record>
+
+    <record id="unit_espa_a_tower" model="kst.unit">
+        <field name="lessor_id" ref="lessor_tst"/>
+        <field name="category_id" ref="08"/>
+        <field name="unit_specified">5F SLOT 3</field>
+        <field name="address">ESPAÑA BOULEVARD, COR. JOSEFINA STREET, SAMPALOC MANILA</field>
+        <field name="soa_bank_account_number">000030</field>
+    </record>
+
+    <record id="unit_bagong_barrio_a-1" model="kst.unit">
+        <field name="lessor_id" ref="lessor_bbh"/>
+        <field name="category_id" ref="07"/>
+        <field name="unit_specified">1</field>
+        <field name="address">ZAPOTE STREET, CORNER MALOLOS AVENUE, BAGONG BARRIO, CALOOCAN CITY</field>
+        <field name="description">COMMERCIAL SPACE</field>
+        <field name="size">18.00</field>
+        <field name="soa_bank_account_number">0511-029-847-001</field>
+    </record>
+
+    <record id="unit_bagong_barrio_a_5" model="kst.unit">
+        <field name="lessor_id" ref="lessor_bbh"/>
+        <field name="category_id" ref="07"/>
+        <field name="unit_specified">5</field>
+        <field name="address">ZAPOTE STREET, CORNER MALOLOS AVENUE, BAGONG BARRIO, CALOOCAN CITY</field>
+        <field name="description">COMMERCIAL-STORAGE</field>
+        <field name="soa_bank_account_number">0511-029-847-001</field>
+    </record>
+
+    <record id="unit_ang_-_wh" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kstvb"/>
+        <field name="category_id" ref="07"/>
+        <field name="unit_specified">ANG - WH</field>
+        <field name="address">BRGY. SAN ISIDRO, ANGONO RIZAL</field>
+        <field name="soa_bank_account_number">0511-0276-03-001</field>
+    </record>
+
+    <record id="unit_b1_-_a" model="kst.unit">
+        <field name="lessor_id" ref="lessor_tst"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">A</field>
+        <field name="address">1112 Bataan Guadalupe, Makati City</field>
+        <field name="description">RESIDENTIAL - APARTMENT</field>
+        <field name="size">30.00</field>
+        <field name="soa_bank_account_number">000-00123-14-840</field>
+    </record>
+
+    <record id="unit_bataan_1_-_1112" model="kst.unit">
+        <field name="lessor_id" ref="lessor_tst"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">B</field>
+        <field name="address">1112 BATAAN GUADALUPE, MAKATI CITY</field>
+        <field name="size">30.00</field>
+        <field name="soa_bank_account_number">000-00123-14-840</field>
+    </record>
+
+    <record id="unit_bataan_1_-_1112_41" model="kst.unit">
+        <field name="lessor_id" ref="lessor_tst"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">C</field>
+        <field name="address">1112 BATAAN GUADALUPE NUEVO, MAKATI CITY</field>
+        <field name="description">RESIDENTIAL - APARTMENT</field>
+        <field name="size">30.00</field>
+        <field name="soa_bank_account_number">000-00123-14-840</field>
+    </record>
+
+    <record id="unit_bbh" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kst"/>
+        <field name="category_id" ref="04"/>
+        <field name="unit_specified">BBH</field>
+        <field name="address">BAGONG BARIO WET AND DRY MARKET</field>
+        <field name="description">COMMERCIAL BUILDING - 4 STOREY WET AND DRY MARKET</field>
+        <field name="soa_bank_account_number">0511-0276-03-001</field>
+    </record>
+
+    <record id="unit_binan_laguna" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kst"/>
+        <field name="category_id" ref="04"/>
+        <field name="unit_specified">1 AB</field>
+        <field name="address">PLAZA RIZAL - GF POBLACION, BINAN LAGUNA</field>
+        <field name="description">COMMERCIAL BUILDING</field>
+        <field name="soa_bank_account_number">0511-0276-03-001</field>
+    </record>
+
+    <record id="unit_binan_laguna_44" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kstvb"/>
+        <field name="category_id" ref="04"/>
+        <field name="unit_specified">2</field>
+        <field name="address">PLAZA RIZAL-FG POBLACAION, BINAN LAGUNA</field>
+        <field name="description">COMMERCIAL BUILDING</field>
+        <field name="soa_bank_account_number">0511-0276-03-001</field>
+    </record>
+
+    <record id="unit_bi_an_laguna" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kst"/>
+        <field name="category_id" ref="04"/>
+        <field name="unit_specified">2 A</field>
+        <field name="address">PLAZA RIZAL - FG POBLACION, BINAN LAGUNA</field>
+        <field name="description">COMMERCIAL BUILDING</field>
+        <field name="soa_bank_account_number">0511-0276-03-001</field>
+    </record>
+
+    <record id="unit_bi_an_laguna_46" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kst"/>
+        <field name="category_id" ref="04"/>
+        <field name="unit_specified">2 B</field>
+        <field name="address">PLAZA RIZAL - FG POBLACION, BINAN LAGUNA</field>
+        <field name="description">COMMERCIAL BUILDING</field>
+        <field name="soa_bank_account_number">0511-0276-03-001</field>
+    </record>
+
+    <record id="unit_bi_an_laguna_47" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kst"/>
+        <field name="category_id" ref="04"/>
+        <field name="unit_specified">2 C</field>
+        <field name="address">PLAZA RIZAL - FG POBLACION, BIÑAN LAGUNA</field>
+        <field name="description">COMMERCIAL BUILDING</field>
+        <field name="soa_bank_account_number">0511-0276-03-001</field>
+    </record>
+
+    <record id="unit_bi_an_laguna_48" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kst"/>
+        <field name="category_id" ref="04"/>
+        <field name="unit_specified">3</field>
+        <field name="address">PLAZA RIZAL - FG POBLACION, BIÑAN LAGUNA</field>
+        <field name="description">COMMERCIAL BUILDING</field>
+        <field name="soa_bank_account_number">0511-0276-03-001</field>
+    </record>
+
+    <record id="unit_bi_an_laguna_49" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kst"/>
+        <field name="category_id" ref="04"/>
+        <field name="unit_specified">4</field>
+        <field name="address">PLAZA RIZAL - FG POBLACION, BIÑAN LAGUNA</field>
+        <field name="description">COMMERCIAL BUILDING</field>
+        <field name="soa_bank_account_number">0511-0276-03-001</field>
+    </record>
+
+    <record id="unit_binan_laguna_50" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kst"/>
+        <field name="category_id" ref="04"/>
+        <field name="unit_specified">5</field>
+        <field name="address">PLAZA RIZAL - FG POBLACION, BIÑAN LAGUNA</field>
+        <field name="description">COMMERCIAL BUILDING</field>
+        <field name="soa_bank_account_number">0511-0276-03-001</field>
+    </record>
+
+    <record id="unit_bi_an_laguna_51" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kst"/>
+        <field name="category_id" ref="04"/>
+        <field name="unit_specified">6</field>
+        <field name="address">PLAZA RIZAL - FG POBLACION, BIÑAN LAGUNA</field>
+        <field name="description">COMMERCIAL BUILDING</field>
+        <field name="soa_bank_account_number">0511-0276-03-001</field>
+    </record>
+
+    <record id="unit_bi_an_laguna_52" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kst"/>
+        <field name="category_id" ref="04"/>
+        <field name="unit_specified">7</field>
+        <field name="address">PLAZA RIZAL - FG POBLACION, BIÑAN LAGUNA</field>
+        <field name="description">COMMERCIAL BUILDING</field>
+        <field name="soa_bank_account_number">0511-0276-03-001</field>
+    </record>
+
+    <record id="unit_bi_an_laguna_53" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kst"/>
+        <field name="category_id" ref="04"/>
+        <field name="unit_specified">8</field>
+        <field name="address">PLAZA RIZAL - FG POBLACION, BIÑAN LAGUNA</field>
+        <field name="description">COMMERCIAL BUILDING</field>
+        <field name="soa_bank_account_number">0511-0276-03-001</field>
+    </record>
+
+    <record id="unit_bi_an_laguna_54" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kst"/>
+        <field name="category_id" ref="04"/>
+        <field name="unit_specified">9</field>
+        <field name="address">PLAZA RIZAL - FG POBLACION, BIÑAN LAGUNA</field>
+        <field name="description">COMMERCIAL BUILDING</field>
+        <field name="soa_bank_account_number">0511-0276-03-001</field>
+    </record>
+
+    <record id="unit_bi_an_laguna_55" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kst"/>
+        <field name="category_id" ref="04"/>
+        <field name="unit_specified">10</field>
+        <field name="address">PLAZA RIZAL - FG POBLACION, BIÑAN LAGUNA</field>
+        <field name="description">COMMERCIAL BUILDING</field>
+        <field name="soa_bank_account_number">0511-0276-03-001</field>
+    </record>
+
+    <record id="unit_bnl_-11" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kstvb"/>
+        <field name="category_id" ref="06"/>
+        <field name="unit_specified">11</field>
+        <field name="address">PLAZA RIZAL - GF POBLACION, BINAN LAGUNA</field>
+        <field name="soa_bank_account_number">0511-027603-001</field>
+    </record>
+
+    <record id="unit_kalayaan_-_bse" model="kst.unit">
+        <field name="lessor_id" ref="lessor_ktc"/>
+        <field name="category_id" ref="07"/>
+        <field name="unit_specified">6</field>
+        <field name="address">9642 KALAYAAN AVENUE, GUADALUPE NUEVO, MAKATI CITY</field>
+        <field name="description">COMMERCIAL - MOTORCYCLE PARTS</field>
+        <field name="soa_bank_account_number">0611-0163-24-001</field>
+    </record>
+
+    <record id="unit_btng" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kstk3"/>
+        <field name="category_id" ref="03"/>
+        <field name="unit_specified">-</field>
+        <field name="address">E. Mendoza Street, Barangay Buting, Pasig City</field>
+        <field name="description">LOT ONLY - CELL SITE</field>
+        <field name="size">400.00</field>
+        <field name="soa_bank_account_number">0511-0276-03-001</field>
+    </record>
+
+    <record id="unit_id_2" model="kst.unit">
+        <field name="lessor_id" ref="lessor_bbh"/>
+        <field name="category_id" ref="06"/>
+        <field name="unit_specified">C-2</field>
+        <field name="address">MALOLOS CORNER ZAPOTE STREET CALOOCAN CITY</field>
+    </record>
+
+    <record id="unit_cam" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kstvb"/>
+        <field name="category_id" ref="07"/>
+        <field name="unit_specified">CAM</field>
+        <field name="address">1618 (A) CAMINO DELA FE STREET, GUADALUPE NUEVO, MAKATI CITY</field>
+        <field name="soa_bank_account_number">0511027603001</field>
+    </record>
+
+    <record id="unit_cam_2" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kstvb"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">CAM 2</field>
+        <field name="address">1618 (B) CAMINO DELA FE STREET, GUADALUPE NUEVO, MAKATI CITY</field>
+        <field name="soa_bank_account_number">0511027603001</field>
+    </record>
+
+    <record id="unit_cbmn" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kst"/>
+        <field name="category_id" ref="05"/>
+        <field name="unit_specified">CBMN</field>
+        <field name="address">LABOGON STREET, BRGY., BASAK MANDAUE CITY</field>
+        <field name="description">COMMERCIAL LOT &amp; WAREHOUSE UNIT</field>
+        <field name="size">1079.00</field>
+        <field name="soa_bank_account_number">0511-0276-03-001</field>
+    </record>
+
+    <record id="unit_cabuyao" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kstk3"/>
+        <field name="category_id" ref="03"/>
+        <field name="unit_specified">A 1</field>
+        <field name="address">National Highway, Niugan Pulo, Cabuyao, Laguna</field>
+        <field name="size">1260.00</field>
+        <field name="soa_bank_account_number">0511-0276-03-001</field>
+    </record>
+
+    <record id="unit_cabuyao_64" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kstk3"/>
+        <field name="category_id" ref="03"/>
+        <field name="unit_specified">A 2</field>
+        <field name="address">National Highway, Niugan Pulo, Cabuyao, Laguna</field>
+        <field name="description">PARKING FOR HEAVY EQUIPMENT &amp; OTHER MATERIALS</field>
+        <field name="size">1000.00</field>
+        <field name="soa_bank_account_number">0511-0276-03-001</field>
+    </record>
+
+    <record id="unit_cabuyao_65" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kstk3"/>
+        <field name="category_id" ref="03"/>
+        <field name="unit_specified">A 3</field>
+        <field name="address">National Highway, Niugan Pulo, Cabuyao, Laguna</field>
+        <field name="description">PARKING FOR BUSES</field>
+        <field name="size">1500.00</field>
+        <field name="soa_bank_account_number">0511-0276-03-001</field>
+    </record>
+
+    <record id="unit_cabuyao_66" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kstk3"/>
+        <field name="category_id" ref="03"/>
+        <field name="unit_specified">A4</field>
+        <field name="address">National Highway. Niugan Pulo, Cabuyao, Laguna</field>
+        <field name="description">PARKING FOR BUSES</field>
+        <field name="size">500.00</field>
+        <field name="soa_bank_account_number">0511-0276-03-001</field>
+    </record>
+
+    <record id="unit_cabuyao_67" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kstk3"/>
+        <field name="category_id" ref="03"/>
+        <field name="unit_specified">A4 B</field>
+        <field name="address">National Highway, Niugan Pulo, Cabuyao, Laguna</field>
+        <field name="description">PARKING FOR BUSES</field>
+        <field name="size">500.00</field>
+        <field name="soa_bank_account_number">0511-0276-03-001</field>
+    </record>
+
+    <record id="unit_cabuyao_68" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kstk3"/>
+        <field name="category_id" ref="03"/>
+        <field name="unit_specified">A 5</field>
+        <field name="address">National Highway, Niugan Pulo, Cabuyao, Laguna</field>
+        <field name="description">PARKING FOR BUSES</field>
+        <field name="size">300.00</field>
+        <field name="soa_bank_account_number">0511-0276-03-001</field>
+    </record>
+
+    <record id="unit_cabuyao_69" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kstk3"/>
+        <field name="category_id" ref="03"/>
+        <field name="unit_specified">A5 A</field>
+        <field name="address">National Highway, Niugan Pulo, Cabuyao, Laguna</field>
+        <field name="description">PARKING FOR BUSES</field>
+        <field name="size">600.00</field>
+        <field name="soa_bank_account_number">0511-0276-03-001</field>
+    </record>
+
+    <record id="unit_cabuyao_70" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kstk3"/>
+        <field name="category_id" ref="03"/>
+        <field name="unit_specified">A5 B</field>
+        <field name="address">National Highway, Niugan Pulo, Cabuyao, Laguna</field>
+        <field name="description">PARKING FOR BUSES</field>
+        <field name="size">600.00</field>
+        <field name="soa_bank_account_number">0511-0276-03-001</field>
+    </record>
+
+    <record id="unit_cby_-_a5_b_ext" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kst"/>
+        <field name="category_id" ref="03"/>
+        <field name="unit_specified">EXT.</field>
+        <field name="address">Niugan Pulo National Hiway Cabuyao Laguna</field>
+        <field name="size">498.00</field>
+        <field name="soa_bank_account_number">0511027603001</field>
+    </record>
+
+    <record id="unit_cabuyao_72" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kstk3"/>
+        <field name="category_id" ref="03"/>
+        <field name="unit_specified">B 1</field>
+        <field name="address">National Highway, Niugan Pulo, Cabuyao, Laguna</field>
+        <field name="description">PARKING FOR BUSINESS</field>
+        <field name="size">3100.00</field>
+        <field name="soa_bank_account_number">0511-0276-03-001</field>
+    </record>
+
+    <record id="unit_cabuyao_73" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kstk3"/>
+        <field name="category_id" ref="03"/>
+        <field name="unit_specified">B2</field>
+        <field name="address">National Highway, Niugan Pulo, Cabuyao, Laguna</field>
+        <field name="description">PARKING FOR BUSES</field>
+        <field name="size">3000.00</field>
+        <field name="soa_bank_account_number">0511-0276-03-001</field>
+    </record>
+
+    <record id="unit_cabuyao_74" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kstk3"/>
+        <field name="category_id" ref="03"/>
+        <field name="unit_specified">C1</field>
+        <field name="address">National Highway, Niugan Pulo, Cabuyao, Laguna</field>
+        <field name="description">PARKING FOR BUSES</field>
+        <field name="size">2000.00</field>
+        <field name="soa_bank_account_number">0511-0276-03-001</field>
+    </record>
+
+    <record id="unit_cabuyao_75" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kstk3"/>
+        <field name="category_id" ref="03"/>
+        <field name="unit_specified">C2</field>
+        <field name="address">National Highway, Niugan Pulo, Cabuyao, Laguna</field>
+        <field name="size">1000.00</field>
+        <field name="soa_bank_account_number">0511-0276-03-001</field>
+    </record>
+
+    <record id="unit_cabuyao_76" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kstk3"/>
+        <field name="category_id" ref="03"/>
+        <field name="unit_specified">C3</field>
+        <field name="address">National Highway, Niugan Pulo, Cabuyao, Laguna</field>
+        <field name="description">OFFICE</field>
+        <field name="size">1000.00</field>
+        <field name="soa_bank_account_number">0511-0276-03-001</field>
+    </record>
+
+    <record id="unit_cabuyao_77" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kstk3"/>
+        <field name="category_id" ref="03"/>
+        <field name="unit_specified">C3 A</field>
+        <field name="address">National Highway, Niugan Pulo, Cabuyao, Laguna</field>
+        <field name="description">OFFICE</field>
+        <field name="size">1000.00</field>
+        <field name="soa_bank_account_number">0511-0276-03-001</field>
+    </record>
+
+    <record id="unit_cabuyao_78" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kst"/>
+        <field name="category_id" ref="08"/>
+        <field name="unit_specified">C3 B</field>
+        <field name="soa_bank_account_number">0511-0276-03-001</field>
+    </record>
+
+    <record id="unit_cabuyao_79" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kstk3"/>
+        <field name="category_id" ref="03"/>
+        <field name="unit_specified">D</field>
+        <field name="address">National Highway, Niugan Pulo, Cabuyao, Laguna</field>
+        <field name="description">CAR PARKING</field>
+        <field name="size">100.00</field>
+        <field name="soa_bank_account_number">0511-0276-03-001</field>
+    </record>
+
+    <record id="unit_cabuyao_80" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kstk3"/>
+        <field name="category_id" ref="03"/>
+        <field name="unit_specified">E</field>
+        <field name="address">National Higway, Niugan Pulo, Cabuyao, Laguna</field>
+        <field name="description">CAR PARKING</field>
+        <field name="size">100.00</field>
+        <field name="soa_bank_account_number">0511-0276-03-001</field>
+    </record>
+
+    <record id="unit_cabuyao_81" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kstk3"/>
+        <field name="category_id" ref="03"/>
+        <field name="unit_specified">F</field>
+        <field name="address">National Highway, Niugan Pulo, Cabuyao, Laguna</field>
+        <field name="description">CAR PARKING</field>
+        <field name="size">160.00</field>
+        <field name="soa_bank_account_number">0511-0276-03-001</field>
+    </record>
+
+    <record id="unit_constancia_-_8265" model="kst.unit">
+        <field name="lessor_id" ref="lessor_tst"/>
+        <field name="category_id" ref="02"/>
+        <field name="unit_specified">F</field>
+        <field name="address">8265 CONSTANCIA ST. OLYMPIA, MAKATI CITY</field>
+        <field name="size">41.00</field>
+        <field name="soa_bank_account_number">000-00123-14-840</field>
+    </record>
+
+    <record id="unit_cord_-_48" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kstk3"/>
+        <field name="category_id" ref="09"/>
+        <field name="unit_specified">CORD - 48</field>
+        <field name="address">48 CORDILLERA STREET, BRGY. MALAMIG, MANDALUYONG CITY</field>
+        <field name="size">626.00</field>
+        <field name="soa_bank_account_number">0511-0276-03-001</field>
+    </record>
+
+    <record id="unit_chateau_verde" model="kst.unit">
+        <field name="lessor_id" ref="lessor_tst"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">239</field>
+        <field name="address">CHATEAU VERDE, VALLE VERDE 1, PASIG CITY</field>
+        <field name="description">TOWNHOUSE</field>
+        <field name="size">30.00</field>
+        <field name="soa_bank_account_number">000-00123-14-840</field>
+    </record>
+
+    <record id="unit_cv_-_133" model="kst.unit">
+        <field name="lessor_id" ref="lessor_lrt"/>
+        <field name="category_id" ref="02"/>
+        <field name="unit_specified">133</field>
+        <field name="address">Unit 133 Chateau Verde, Valle Verde 1</field>
+        <field name="size">80.00</field>
+        <field name="soa_bank_account_number">0511-027603-001</field>
+    </record>
+
+    <record id="unit_cv_340" model="kst.unit">
+        <field name="lessor_id" ref="lessor_tst"/>
+        <field name="category_id" ref="02"/>
+        <field name="unit_specified">340</field>
+        <field name="address">UNIT 340, CHATAEU VERDE, VALLE VERDE 1, BRGY. UGONG, PASIG CITY</field>
+        <field name="size">57.00</field>
+        <field name="soa_bank_account_number">000-001-2314-840</field>
+    </record>
+
+    <record id="unit_bagong_barrio" model="kst.unit">
+        <field name="lessor_id" ref="lessor_bbh"/>
+        <field name="category_id" ref="07"/>
+        <field name="unit_specified">7</field>
+        <field name="address">ZAPOTE STREET, CORNER MALOLOS AVENUE, BAGONG BARRIO, CALOOCAN CITY</field>
+        <field name="size">118.00</field>
+        <field name="soa_bank_account_number">0511-029-847-001</field>
+    </record>
+
+    <record id="unit_dnd" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kst"/>
+        <field name="category_id" ref="04"/>
+        <field name="unit_specified">DND</field>
+        <field name="address">DONADA STREET</field>
+        <field name="description">MEC</field>
+        <field name="soa_bank_account_number">0511-0276-03-001</field>
+    </record>
+
+    <record id="unit_dnd_p_-_1" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kstvb"/>
+        <field name="category_id" ref="08"/>
+        <field name="unit_specified">1</field>
+        <field name="address">1751 Donada St., Pasay City</field>
+        <field name="soa_bank_account_number">0511-027603-001</field>
+    </record>
+
+    <record id="unit_dnd_p_-_2" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kstvb"/>
+        <field name="category_id" ref="08"/>
+        <field name="unit_specified">2</field>
+        <field name="address">1751 DONADA ST., PASAY CITY</field>
+        <field name="soa_bank_account_number">0511-027603-001</field>
+    </record>
+
+    <record id="unit_dnd_p_-_23" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kstvb"/>
+        <field name="category_id" ref="08"/>
+        <field name="unit_specified">23</field>
+        <field name="address">1751 DONADA STREET, PASAY CITY</field>
+        <field name="description">PARKING ONLY</field>
+        <field name="soa_bank_account_number">0511027603001</field>
+    </record>
+
+    <record id="unit_dnd_p_-_3" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kstvb"/>
+        <field name="category_id" ref="08"/>
+        <field name="unit_specified">3</field>
+        <field name="address">1751 DONADA ST., PASAY CITY</field>
+        <field name="soa_bank_account_number">0511-027603-003</field>
+    </record>
+
+    <record id="unit_dnd_p_-_4" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kstvb"/>
+        <field name="category_id" ref="08"/>
+        <field name="unit_specified">4</field>
+        <field name="address">1751 DONADA ST., PASAY CITY</field>
+        <field name="soa_bank_account_number">0511-027603-001</field>
+    </record>
+
+    <record id="unit_dnd_p_-_5" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kstvb"/>
+        <field name="category_id" ref="08"/>
+        <field name="unit_specified">5</field>
+        <field name="address">1751 DONADA ST., PASAY CITY</field>
+        <field name="soa_bank_account_number">0511-027603-001</field>
+    </record>
+
+    <record id="unit_dnd_p_-_6" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kst"/>
+        <field name="category_id" ref="08"/>
+        <field name="unit_specified">6</field>
+        <field name="address">1751 DONADA ST., PASAY CITY</field>
+        <field name="description">PARKING</field>
+        <field name="soa_bank_account_number">0511-027603-001</field>
+    </record>
+
+    <record id="unit_dnd_p_-_7" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kstvb"/>
+        <field name="category_id" ref="08"/>
+        <field name="unit_specified">7</field>
+        <field name="address">1751 DONADA ST., PASAY CITY</field>
+        <field name="soa_bank_account_number">0511-027603-001</field>
+    </record>
+
+    <record id="unit_dnd_p_-_8" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kstvb"/>
+        <field name="category_id" ref="08"/>
+        <field name="unit_specified">8</field>
+        <field name="address">1751 DONADA ST., PASAY CITY</field>
+        <field name="soa_bank_account_number">0511-027603-001</field>
+    </record>
+
+    <record id="unit_dnd_p_-_9" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kstvb"/>
+        <field name="category_id" ref="08"/>
+        <field name="unit_specified">9</field>
+        <field name="address">1751 DONADA ST., PASAY CITY</field>
+        <field name="soa_bank_account_number">0511-027603-001</field>
+    </record>
+
+    <record id="unit_dnd_p_-10" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kstvb"/>
+        <field name="category_id" ref="08"/>
+        <field name="unit_specified">10</field>
+        <field name="address">1751 DONADA ST., PASAY CITY</field>
+        <field name="soa_bank_account_number">0511-027603-001</field>
+    </record>
+
+    <record id="unit_dnd_p_-11" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kstvb"/>
+        <field name="category_id" ref="08"/>
+        <field name="unit_specified">11</field>
+        <field name="address">1751 DONADA ST., PASAY CITY</field>
+        <field name="soa_bank_account_number">0511-027603-001</field>
+    </record>
+
+    <record id="unit_dnd_p_-12" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kstvb"/>
+        <field name="category_id" ref="08"/>
+        <field name="unit_specified">12</field>
+        <field name="address">1751 DONADA ST., PASAY CITY</field>
+        <field name="soa_bank_account_number">0511-027603-001</field>
+    </record>
+
+    <record id="unit_dnd_p_-13" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kstvb"/>
+        <field name="category_id" ref="08"/>
+        <field name="unit_specified">13</field>
+        <field name="address">1751 Donada St., Pasay City</field>
+        <field name="soa_bank_account_number">0511-027603-001</field>
+    </record>
+
+    <record id="unit_dnd_p_-14" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kstvb"/>
+        <field name="category_id" ref="08"/>
+        <field name="unit_specified">14</field>
+        <field name="address">1751 DONADA ST. PASAY CITY</field>
+        <field name="soa_bank_account_number">0511-027603-001</field>
+    </record>
+
+    <record id="unit_dnd_p_-15" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kstvb"/>
+        <field name="category_id" ref="08"/>
+        <field name="unit_specified">15</field>
+        <field name="address">1751 DONADA ST. PASAY CITY</field>
+        <field name="soa_bank_account_number">0511-027603-001</field>
+    </record>
+
+    <record id="unit_dnd_p_-16" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kstvb"/>
+        <field name="category_id" ref="08"/>
+        <field name="unit_specified">16</field>
+        <field name="address">1751 DONADA ST., PASAY CITY</field>
+        <field name="soa_bank_account_number">0511-027603-001</field>
+    </record>
+
+    <record id="unit_dnd_p_-17" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kstvb"/>
+        <field name="category_id" ref="08"/>
+        <field name="unit_specified">17</field>
+        <field name="address">1751 DONADA ST., PASAY CITY</field>
+        <field name="soa_bank_account_number">0511-027603-001</field>
+    </record>
+
+    <record id="unit_dnd_p_-18" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kstvb"/>
+        <field name="category_id" ref="08"/>
+        <field name="unit_specified">18</field>
+        <field name="address">1751 DONADA ST., PASAY CITY</field>
+        <field name="soa_bank_account_number">0511-027603-001</field>
+    </record>
+
+    <record id="unit_dnd_p_-19" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kstvb"/>
+        <field name="category_id" ref="08"/>
+        <field name="unit_specified">19</field>
+        <field name="address">1751 Donada St., Pasay City</field>
+        <field name="soa_bank_account_number">0511-027603-001</field>
+    </record>
+
+    <record id="unit_dnd_p_-20" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kstvb"/>
+        <field name="category_id" ref="08"/>
+        <field name="unit_specified">20</field>
+        <field name="address">1751 Donada St., Pasay City</field>
+        <field name="soa_bank_account_number">0511-027603-001</field>
+    </record>
+
+    <record id="unit_dnd_p_-21" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kstvb"/>
+        <field name="category_id" ref="08"/>
+        <field name="unit_specified">21</field>
+        <field name="address">1751 DONADA ST. PASAY CITY</field>
+        <field name="soa_bank_account_number">0511-027603-001</field>
+    </record>
+
+    <record id="unit_dnd_p_-22" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kstvb"/>
+        <field name="category_id" ref="08"/>
+        <field name="unit_specified">22</field>
+        <field name="address">1751 DONADA ST., PASAY CITY</field>
+        <field name="soa_bank_account_number">0511-027603-001</field>
+    </record>
+
+    <record id="unit_eln" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kst"/>
+        <field name="category_id" ref="04"/>
+        <field name="unit_specified">ELN</field>
+        <field name="address">BARANGAY CORONG CORONG EL NIDO, 5313 PALAWAN</field>
+        <field name="soa_bank_account_number">0511027603001</field>
+    </record>
+
+    <record id="unit_esc_-_1b" model="kst.unit">
+        <field name="lessor_id" ref="lessor_tst"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">1B</field>
+        <field name="address">1758 ESCUELA STREET, GUADALUPE NUEVO, MAKATI CITY</field>
+        <field name="soa_bank_account_number">000-00123-14840</field>
+    </record>
+
+    <record id="unit_esc_-_1c" model="kst.unit">
+        <field name="lessor_id" ref="lessor_tst"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">1C</field>
+        <field name="address">1758 ESCUELA STREET, GUADALUPE NUEVO, MAKATI CITY</field>
+        <field name="soa_bank_account_number">000-00123-14840</field>
+    </record>
+
+    <record id="unit_esc_-_2a" model="kst.unit">
+        <field name="lessor_id" ref="lessor_tst"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">ESC - 2A</field>
+        <field name="address">1758 ESCUELA STREET, GUADALUPE NUEVO, MAKATI CITY</field>
+        <field name="soa_bank_account_number">0000012314840</field>
+    </record>
+
+    <record id="unit_esc_-_2b" model="kst.unit">
+        <field name="lessor_id" ref="lessor_tst"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">ESC - 2A</field>
+        <field name="address">1758 ESCUELA STREET, GUADALUPE NUEVO, MAKATI CITY</field>
+        <field name="soa_bank_account_number">0000012314840</field>
+    </record>
+
+    <record id="unit_esc_-_2c" model="kst.unit">
+        <field name="lessor_id" ref="lessor_tst"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">ESC - 2C</field>
+        <field name="address">1758 ESCUELA STREET, GUADALUPE NUEVO, MAKATI CITY</field>
+        <field name="soa_bank_account_number">000-00123-14840</field>
+    </record>
+
+    <record id="unit_esc_-_2d" model="kst.unit">
+        <field name="lessor_id" ref="lessor_tst"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">ESC - 2A</field>
+        <field name="address">1758 ESCUELA STREET, GUADALUPE NUEVO, MAKATI CITY</field>
+        <field name="soa_bank_account_number">000012314840</field>
+    </record>
+
+    <record id="unit_esc_-_2e" model="kst.unit">
+        <field name="lessor_id" ref="lessor_tst"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">2E</field>
+        <field name="address">1758 ESCUELA STREET, GUADALUPE NUEVO, MAKATI CITY</field>
+        <field name="soa_bank_account_number">000-00123-14840</field>
+    </record>
+
+    <record id="unit_escuela_-_1758" model="kst.unit">
+        <field name="lessor_id" ref="lessor_tst"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">A</field>
+        <field name="address">1758 ESCUELA STREET , GUADALUPE NUEVO MAKATI CITY</field>
+        <field name="description">RESIDENTIAL - APARTMENT</field>
+        <field name="size">22.00</field>
+        <field name="soa_bank_account_number">000-00123-14-840</field>
+    </record>
+
+    <record id="unit_escuela_-_1758_121" model="kst.unit">
+        <field name="lessor_id" ref="lessor_tst"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">B</field>
+        <field name="address">1758 Escuela Street, Guadalupe Nuevo, Makati City</field>
+        <field name="description">RESIDENTIAL - APARTMENT</field>
+        <field name="size">8.00</field>
+        <field name="soa_bank_account_number">000-00123-14-840</field>
+    </record>
+
+    <record id="unit_escuela_-_1758_122" model="kst.unit">
+        <field name="lessor_id" ref="lessor_tst"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">C</field>
+        <field name="address">1758 Escuela Street, Guadalupe Nuevo Makati City</field>
+        <field name="description">RESIDENTIAL - APARTMENT</field>
+        <field name="size">7.00</field>
+        <field name="soa_bank_account_number">000-00123-14-840</field>
+    </record>
+
+    <record id="unit_escuela_-_1758_123" model="kst.unit">
+        <field name="lessor_id" ref="lessor_tst"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">D</field>
+        <field name="address">1758 Escuela Street, Guadalupe Nuevo, Makati City</field>
+        <field name="description">RESIDENTIAL - APARTMENT</field>
+        <field name="size">16.00</field>
+        <field name="soa_bank_account_number">000-00123-14-840</field>
+    </record>
+
+    <record id="unit_esc_-_d_2" model="kst.unit">
+        <field name="lessor_id" ref="lessor_tst"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">D (2)</field>
+        <field name="address">1758 ESCUELA ST. GUADALUPE NUEVO MAKATI CITY</field>
+        <field name="soa_bank_account_number">000-0012314-840</field>
+    </record>
+
+    <record id="unit_escuela_-_1758_125" model="kst.unit">
+        <field name="lessor_id" ref="lessor_tst"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">E</field>
+        <field name="address">1758 Escuela Street, Guadalupe Nuevo, Makati City</field>
+        <field name="description">RESIDENTIAL - APARTMENT</field>
+        <field name="size">14.00</field>
+        <field name="soa_bank_account_number">000-00123-14-840</field>
+    </record>
+
+    <record id="unit_escuela_-_1758_126" model="kst.unit">
+        <field name="lessor_id" ref="lessor_tst"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">E</field>
+        <field name="address">1758 ESCUELA STREET, GUADALUPE NUEVO MAKATI CITY</field>
+        <field name="size">12.00</field>
+        <field name="soa_bank_account_number">000-00123-14-840</field>
+    </record>
+
+    <record id="unit_espa_a_tower_127" model="kst.unit">
+        <field name="lessor_id" ref="lessor_tst"/>
+        <field name="category_id" ref="02"/>
+        <field name="unit_specified">2904</field>
+        <field name="address">2904 ESPAÑA BOULEVARD, COR., JOSEFINA ST, SAMPALOC MANILA</field>
+        <field name="size">18.00</field>
+        <field name="soa_bank_account_number">000082</field>
+    </record>
+
+    <record id="unit_espa_a_tower_128" model="kst.unit">
+        <field name="lessor_id" ref="lessor_tst"/>
+        <field name="category_id" ref="02"/>
+        <field name="unit_specified">1905</field>
+        <field name="address">ESPAÑA BOULEVARD, COR. JOSEFINA STREET, SAMPALOC, MANILA</field>
+        <field name="size">19.00</field>
+        <field name="soa_bank_account_number">000083</field>
+    </record>
+
+    <record id="unit_espa_a_tower_129" model="kst.unit">
+        <field name="lessor_id" ref="lessor_tst"/>
+        <field name="category_id" ref="08"/>
+        <field name="unit_specified">ESPAÑA TOWER</field>
+        <field name="address">ESPAÑA BOULEVARD, COR. JOSEFINA STREET, SAMPALOC, MANILA</field>
+        <field name="description">Unit: 2902 B / 1905 C-5F Slot 3 &amp; 5F Slot 4</field>
+        <field name="soa_bank_account_number">000084</field>
+    </record>
+
+    <record id="unit_espa_a_tower_130" model="kst.unit">
+        <field name="lessor_id" ref="lessor_tst"/>
+        <field name="category_id" ref="08"/>
+        <field name="unit_specified">5F SLOT 3</field>
+        <field name="address">ESPANA BOULEVARD, COR. JOSEFINA STREET, SAMPALOC, MANILA</field>
+        <field name="soa_bank_account_number">000085</field>
+    </record>
+
+    <record id="unit_espa_a_tower_131" model="kst.unit">
+        <field name="lessor_id" ref="lessor_tst"/>
+        <field name="category_id" ref="08"/>
+        <field name="unit_specified">5F SLOT 4</field>
+        <field name="address">ESPAÑA BOULEVARD, COR. JOSEFINA STREET, SAMPALOC MANILA</field>
+        <field name="soa_bank_account_number">000086</field>
+    </record>
+
+    <record id="unit_espa_a_tower_132" model="kst.unit">
+        <field name="lessor_id" ref="lessor_tst"/>
+        <field name="category_id" ref="08"/>
+        <field name="unit_specified">2902 B / 1905 C - 5F LOT 3&amp;4</field>
+        <field name="address">ESPAÑA BOULEVARD, COR. JOSEFINA STREET, SAMPALOC, MANILA</field>
+        <field name="soa_bank_account_number">000087</field>
+    </record>
+
+    <record id="unit_exr_-_02" model="kst.unit">
+        <field name="lessor_id" ref="lessor_tst"/>
+        <field name="category_id" ref="09"/>
+        <field name="unit_specified">EXECUTIVE ROW - 2</field>
+        <field name="address"># 02 Executive Row, Valle Verde 1, Pasig City</field>
+        <field name="soa_bank_account_number">000-00123-14-840</field>
+    </record>
+
+    <record id="unit_exr_-_02_1" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kstvb"/>
+        <field name="category_id" ref="09"/>
+        <field name="unit_specified">EXR - 02 (1)</field>
+        <field name="address">#02 Executive Row Valle Verde 1, Pasig City</field>
+        <field name="soa_bank_account_number">0511-027603-001</field>
+    </record>
+
+    <record id="unit_executive_row_5" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kstk3"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">5</field>
+        <field name="address">#05 EXECUTIVE ROW, VALLE VERDE 1, PASIG CITY</field>
+        <field name="soa_bank_account_number">000089</field>
+    </record>
+
+    <record id="unit_fp1_-_2f" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kstvb"/>
+        <field name="category_id" ref="07"/>
+        <field name="unit_specified">2F</field>
+        <field name="address">9396 FELIPE ST. GUADALUPE NUEVO MAKATI CITY</field>
+        <field name="soa_bank_account_number">0511-0276-03-001</field>
+    </record>
+
+    <record id="unit_fp1_-_2f_a" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kstvb"/>
+        <field name="category_id" ref="07"/>
+        <field name="unit_specified">2F A</field>
+        <field name="address">9396 FELIPE STREET, GUADALUPE NUEVO,  MAKATI CITY</field>
+        <field name="soa_bank_account_number">0511027603001</field>
+    </record>
+
+    <record id="unit_felipe_2" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kstvb"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">1A</field>
+        <field name="address">9593 FELIPE ST. GUADALUPE NUEVO MAKATI CITY</field>
+        <field name="description">APARTMENT</field>
+        <field name="size">16.00</field>
+        <field name="soa_bank_account_number">0511-0276-03-001</field>
+    </record>
+
+    <record id="unit_felipe_2_139" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kstvb"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">1B</field>
+        <field name="address">9593 FELIPE ST. GUADALUPE NUEVO MAKATI CITY</field>
+        <field name="description">RESIDENTIAL</field>
+        <field name="size">16.00</field>
+        <field name="soa_bank_account_number">0511-0276-03-001</field>
+    </record>
+
+    <record id="unit_felipe_2_140" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kstvb"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">1C</field>
+        <field name="address">9593 FELIPE ST. GUADALUPE NUEVO MAKATI CITY</field>
+        <field name="size">16.00</field>
+        <field name="soa_bank_account_number">0511-0276-03-001</field>
+    </record>
+
+    <record id="unit_felipe_2_141" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kstvb"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">1D</field>
+        <field name="address">9593 FELIPE ST. GUADALUPE NUEVO MAKATI CITY</field>
+        <field name="size">15.00</field>
+        <field name="soa_bank_account_number">0511-0276-03-001</field>
+    </record>
+
+    <record id="unit_felipe_2_142" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kstvb"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">1E</field>
+        <field name="address">9593 FELIPE ST. GUADALUPE NUEVO MAKATI CITY</field>
+        <field name="size">20.00</field>
+        <field name="soa_bank_account_number">0511-0276-03-001</field>
+    </record>
+
+    <record id="unit_felipe_2_143" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kstvb"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">1F</field>
+        <field name="address">9395 FELIPE ST. GUADALUPE NUEVO MAKATI CITY</field>
+        <field name="size">13.00</field>
+        <field name="soa_bank_account_number">0511-0276-03-001</field>
+    </record>
+
+    <record id="unit_felipe_2_144" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kstvb"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">1G</field>
+        <field name="address">9395 FELIPE ST. GUADALUPE NUEVO MAKATI CITY</field>
+        <field name="size">17.00</field>
+        <field name="soa_bank_account_number">0511-0276-03-001</field>
+    </record>
+
+    <record id="unit_felipe_2_145" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kstvb"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">2A</field>
+        <field name="address">9395 FELIPE ST. GUADALUPE NUEVO MAKATI CITY</field>
+        <field name="size">18.00</field>
+        <field name="soa_bank_account_number">0511-0276-03-001</field>
+    </record>
+
+    <record id="unit_felipe_2_146" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kstvb"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">2B</field>
+        <field name="address">9395 FELIPE ST. GUADALUPE NUEVO MAKATI CITY</field>
+        <field name="size">18.00</field>
+        <field name="soa_bank_account_number">0511-0276-03-001</field>
+    </record>
+
+    <record id="unit_felipe_2_147" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kstvb"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">2C</field>
+        <field name="address">9395 FELIPE ST. GUADALUPE NUEVO MAKATI CITY</field>
+        <field name="size">15.00</field>
+        <field name="soa_bank_account_number">0511-0276-03-001</field>
+    </record>
+
+    <record id="unit_felipe_2_148" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kstvb"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">2D</field>
+        <field name="address">9395 FELIPE ST. GUADALUPE NUEVO MAKATI CITY</field>
+        <field name="size">14.00</field>
+        <field name="soa_bank_account_number">0511-0276-03-001</field>
+    </record>
+
+    <record id="unit_felipe_2_149" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kstvb"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">2E</field>
+        <field name="address">9395 FELIPE ST. GUADALUPE NUEVO MAKATI CITY</field>
+        <field name="size">16.00</field>
+        <field name="soa_bank_account_number">0511-0276-03-001</field>
+    </record>
+
+    <record id="unit_felipe_2_150" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kstvb"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">2F</field>
+        <field name="address">9395 FELIPE ST. GUADALUPE NUEVO MAKATI CITY</field>
+        <field name="size">16.00</field>
+        <field name="soa_bank_account_number">0511-0276-03-001</field>
+    </record>
+
+    <record id="unit_felipe_2_151" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kstvb"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">2G</field>
+        <field name="address">9395 FELIPE ST. GUADALUPE NUEVO MAKATI CITY</field>
+        <field name="size">18.00</field>
+        <field name="soa_bank_account_number">0511-0276-03-001</field>
+    </record>
+
+    <record id="unit_felipe_2_152" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kstvb"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">2H</field>
+        <field name="address">9395 FELIPE ST. GUADALUPE NUEVO MAKATI CITY</field>
+        <field name="size">16.00</field>
+        <field name="soa_bank_account_number">0511-0276-03-001</field>
+    </record>
+
+    <record id="unit_felipe_2_153" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kstvb"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">2I</field>
+        <field name="address">9395 FELIPE ST. GUADALUPE  NUEVO MAKATI CITY</field>
+        <field name="size">21.00</field>
+        <field name="soa_bank_account_number">0511-0276-03-001</field>
+    </record>
+
+    <record id="unit_fp3_-_1a" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kstvb"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">1A</field>
+        <field name="address">9394 FELIPE ST. GUADALUPE NUEVO MAKATI CITY</field>
+        <field name="description">RESIDENTIAL</field>
+        <field name="size">25.00</field>
+        <field name="soa_bank_account_number">0511-027603-001</field>
+    </record>
+
+    <record id="unit_fp3_-_1b" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kstvb"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">1B</field>
+        <field name="address">9394 FELIPE ST. GUADALUPE NUEVO MAKATI CITY</field>
+        <field name="size">25.00</field>
+        <field name="soa_bank_account_number">0511-027603-001</field>
+    </record>
+
+    <record id="unit_fp3_-_1c" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kstvb"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">1C</field>
+        <field name="address">9394 FELIPE ST. GUADALUPE NUEVO MAKATI CITY</field>
+        <field name="size">22.00</field>
+        <field name="soa_bank_account_number">0511-027603-001</field>
+    </record>
+
+    <record id="unit_fp3_-_2a" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kstvb"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">1C</field>
+        <field name="address">9394 FELIPE ST. GUADALUPE NUEVO MAKATI CITY</field>
+        <field name="size">14.00</field>
+        <field name="soa_bank_account_number">0511-027603-001</field>
+    </record>
+
+    <record id="unit_fp3_-_2b" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kstvb"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">2B</field>
+        <field name="address">9394 FELIPE GUADALUPE NUEVO MAKATI CITY</field>
+        <field name="size">15.00</field>
+        <field name="soa_bank_account_number">0511-027603-001</field>
+    </record>
+
+    <record id="unit_fp3_-_2c" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kstvb"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">2C</field>
+        <field name="address">9394 FELIPE ST. GUADALUPE NUEVO MAKATI CITY</field>
+        <field name="size">15.00</field>
+        <field name="soa_bank_account_number">0511-027603-001</field>
+    </record>
+
+    <record id="unit_fp3_-_b2" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kstvb"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">B2</field>
+        <field name="address">9394 FELIPE ST. GUADALUPE NUEVO MAKATI CITY</field>
+        <field name="description">RESIDENTIAL TYPE (STUDIO UNIT)</field>
+        <field name="size">16.00</field>
+        <field name="soa_bank_account_number">0511-027603-001</field>
+    </record>
+
+    <record id="unit_fp3_-_bs_1" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kstvb"/>
+        <field name="category_id" ref="11"/>
+        <field name="unit_specified">BS 1</field>
+        <field name="address">9394 FELIPE ST. GUADALUPE NUEVO MAKATI CITY</field>
+        <field name="description">BES SPACE</field>
+        <field name="soa_bank_account_number">0511-027603-001</field>
+    </record>
+
+    <record id="unit_fp3_-_bs_2" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kstvb"/>
+        <field name="category_id" ref="11"/>
+        <field name="unit_specified">BS 2</field>
+        <field name="address">9394 FELIPE ST. GUADALUPE NUEVO MAKATI CITY</field>
+        <field name="description">BED SPACE</field>
+        <field name="soa_bank_account_number">0511-027603-001</field>
+    </record>
+
+    <record id="unit_fp3_-_bs_3" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kstvb"/>
+        <field name="category_id" ref="11"/>
+        <field name="unit_specified">BS 3</field>
+        <field name="address">9394 FELIPE ST. GUADALUPE NUEVO MAKATI CITY</field>
+        <field name="description">BED SPACE</field>
+        <field name="soa_bank_account_number">0511-027603-001</field>
+    </record>
+
+    <record id="unit_fp3_-_bs_4" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kstvb"/>
+        <field name="category_id" ref="11"/>
+        <field name="unit_specified">FP3 - BS 4</field>
+        <field name="address">9394 FELIPE ST. GUADALUPE NUEVO MAKATI CITY</field>
+        <field name="soa_bank_account_number">0511-027603-001</field>
+    </record>
+
+    <record id="unit_fp3_-_bs_5" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kstvb"/>
+        <field name="category_id" ref="11"/>
+        <field name="unit_specified">FP3 - BS 5</field>
+        <field name="address">9394 FELIPE ST. GUADALUPE NUEVO MAKATI CITY</field>
+        <field name="soa_bank_account_number">0511-027603-001</field>
+    </record>
+
+    <record id="unit_fp3_-_bs_6" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kstvb"/>
+        <field name="category_id" ref="11"/>
+        <field name="unit_specified">6</field>
+        <field name="address">9394 FELIPE ST. GUADALUPE NUEVO MAKATI CITY</field>
+        <field name="soa_bank_account_number">0511-027603-001</field>
+    </record>
+
+    <record id="unit_ferrer_-_1935" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kstvb"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">2 A</field>
+        <field name="address">1935 Captain M.  Reyes Street, Bangkal, Makati City</field>
+        <field name="size">17.00</field>
+        <field name="soa_bank_account_number">0511-0276-03-001</field>
+    </record>
+
+    <record id="unit_ferrer_-_1935_168" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kstvb"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">2 B</field>
+        <field name="address">1935 Captain M. Reyes Street, Bangkal, Makati City</field>
+        <field name="size">17.00</field>
+        <field name="soa_bank_account_number">0511-0276-03-001</field>
+    </record>
+
+    <record id="unit_ferrer_-_1935_169" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kstvb"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">2 C</field>
+        <field name="address">1935 Captain M. Reyes Street, Bangkal, Makati City</field>
+        <field name="size">16.00</field>
+        <field name="soa_bank_account_number">0511-0276-03-001</field>
+    </record>
+
+    <record id="unit_ferrer_-_1935_170" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kstvb"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">2 D</field>
+        <field name="address">1935 Captain M. Reyes Street, Bangkal, Makati City</field>
+        <field name="size">28.00</field>
+        <field name="soa_bank_account_number">0511-0276-03-001</field>
+    </record>
+
+    <record id="unit_ferrer_-_1935_171" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kstvb"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">2 E</field>
+        <field name="address">1935 Captain M. Reyes Street, Bangkal, Makati City</field>
+        <field name="size">25.00</field>
+        <field name="soa_bank_account_number">0511-0276-03-001</field>
+    </record>
+
+    <record id="unit_ferrer-_1935" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kstvb"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">2 F</field>
+        <field name="address">1935 CAPTAIN M. REYES STREET, BANGKAL, MAKATI CITY</field>
+        <field name="description">RESIDENTIAL-APARTMENT</field>
+        <field name="soa_bank_account_number">0511-0276-03-001</field>
+    </record>
+
+    <record id="unit_ferrer_-_1935_173" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kstvb"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">2 G</field>
+        <field name="address">1935 Captain M. Reyes Street, Bangkal, Makati City</field>
+        <field name="size">26.00</field>
+        <field name="soa_bank_account_number">0511-0276-03-001</field>
+    </record>
+
+    <record id="unit_ferrer_-_1935_174" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kstvb"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">3 A</field>
+        <field name="address">1935 Captain M. Reyes Street, Bangkal, Makati City</field>
+        <field name="soa_bank_account_number">0511-0276-03-001</field>
+    </record>
+
+    <record id="unit_ferrer_-_1935_175" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kstvb"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">3 B</field>
+        <field name="address">1935 Captain M. Reyes Street, Bangkal, Makati City</field>
+        <field name="soa_bank_account_number">0511-0276-03-001</field>
+    </record>
+
+    <record id="unit_ferrer" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kstvb"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">3C</field>
+        <field name="address">1935 CAPTAIN M. REYES STREET, BANGKAL, MAKATI CITY</field>
+        <field name="soa_bank_account_number">0511027603001</field>
+    </record>
+
+    <record id="unit_ferrer_-_1935_177" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kstk3"/>
+        <field name="category_id" ref="03"/>
+        <field name="unit_specified">G 1</field>
+        <field name="address">1935 Captain M. Reyes Street, Bangkal, Makati City</field>
+        <field name="description">CELLPHONE STORE</field>
+        <field name="size">21.00</field>
+        <field name="soa_bank_account_number">0511-0276-03-001</field>
+    </record>
+
+    <record id="unit_ferrer_-_1935_178" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kstk3"/>
+        <field name="category_id" ref="03"/>
+        <field name="unit_specified">G 2</field>
+        <field name="address">1935 Captain M. Reyes Street, Bangkal, Makati City</field>
+        <field name="description">CELLPHONE STORE</field>
+        <field name="size">19.00</field>
+        <field name="soa_bank_account_number">0511-0276-03-001</field>
+    </record>
+
+    <record id="unit_ferrer_-_1935_179" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kst"/>
+        <field name="category_id" ref="03"/>
+        <field name="unit_specified">G 3</field>
+        <field name="address">1935 CAPTAIN M. REYES STREET, BANGKAL, MAKATI CITY</field>
+        <field name="soa_bank_account_number">0511-0276-03-001</field>
+    </record>
+
+    <record id="unit_ferrer_-_1935_180" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kstvb"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">G 4</field>
+        <field name="address">1935 Captain M. Reyes Street, Bangkal, Makati City</field>
+        <field name="size">18.00</field>
+        <field name="soa_bank_account_number">0511-0276-03-001</field>
+    </record>
+
+    <record id="unit_ferrer_-_1935_181" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kstvb"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">G 5</field>
+        <field name="address">1935 Captain M. Reyes Street, Bangkal, Makati City</field>
+        <field name="size">20.00</field>
+        <field name="soa_bank_account_number">0511-0276-03-001</field>
+    </record>
+
+    <record id="unit_ferrer_-_1935_182" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kstvb"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">G 6</field>
+        <field name="address">1935 CAPTAIN M. REYES STREET, BANGKAL, MAKATI CITY</field>
+        <field name="description">RESIDENTIAL - APARTMENT</field>
+        <field name="size">20.00</field>
+        <field name="soa_bank_account_number">0511-0276-03-001</field>
+    </record>
+
+    <record id="unit_ferrer_-_1935_183" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kstvb"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">G 7</field>
+        <field name="address">1935 Captain M. Reyes Street, Bangkal, Makati City</field>
+        <field name="size">20.00</field>
+        <field name="soa_bank_account_number">0511-0276-03-001</field>
+    </record>
+
+    <record id="unit_ferrer_-_1935_184" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kstvb"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">G 8</field>
+        <field name="address">1935 Captain M. Reyes Street, Bangkal, Makati City</field>
+        <field name="size">20.00</field>
+        <field name="soa_bank_account_number">0511-0276-03-001</field>
+    </record>
+
+    <record id="unit_malate_185" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kst"/>
+        <field name="category_id" ref="04"/>
+        <field name="unit_specified">1A</field>
+        <field name="address">1313 M.H. Del Pilar St, Brgy. 668, Zone 72, Ermita, Manila</field>
+        <field name="size">160.00</field>
+        <field name="soa_bank_account_number">000-000214-684</field>
+    </record>
+
+    <record id="unit_malate_186" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kst"/>
+        <field name="category_id" ref="04"/>
+        <field name="unit_specified">1B</field>
+        <field name="address">1313 M.H. Del Pilar St, Brgy. 668, Zone 72, Ermita, Manila</field>
+        <field name="size">155.00</field>
+        <field name="soa_bank_account_number">000-000214-684</field>
+    </record>
+
+    <record id="unit_hdg_187" model="kst.unit">
+        <field name="lessor_id" ref="lessor_vmb"/>
+        <field name="category_id" ref="07"/>
+        <field name="unit_specified">GF 1B</field>
+        <field name="address"># 192 HEROES DEL 96 BRGY. 74 CALOOCAN CITY</field>
+        <field name="description">COMMERCIAL USE.</field>
+        <field name="soa_bank_account_number">511-023517-001</field>
+    </record>
+
+    <record id="unit_hdg_188" model="kst.unit">
+        <field name="lessor_id" ref="lessor_vmb"/>
+        <field name="category_id" ref="07"/>
+        <field name="unit_specified">1A</field>
+        <field name="address"># 192 HEROES DEL 96, BRGY. 74 CALOOCAN CITY</field>
+        <field name="description">COMMERCIAL SPACE</field>
+        <field name="size">1.00</field>
+        <field name="soa_bank_account_number">511-023517-001</field>
+    </record>
+
+    <record id="unit_grand_tower_-_2804" model="kst.unit">
+        <field name="lessor_id" ref="lessor_tst"/>
+        <field name="category_id" ref="02"/>
+        <field name="unit_specified">2804</field>
+        <field name="address">2804 GRAND TOWER, LEVISTE ST. MAKATI CITY</field>
+        <field name="size">41.00</field>
+        <field name="soa_bank_account_number">000-00123-14-840</field>
+    </record>
+
+    <record id="unit_iba_-_z2" model="kst.unit">
+        <field name="lessor_id" ref="lessor_lrt"/>
+        <field name="category_id" ref="09"/>
+        <field name="unit_specified">Z2</field>
+        <field name="address">Purok 6 Korokan Lipay Dingin, Iba Zambales</field>
+        <field name="description">Residential type</field>
+        <field name="soa_bank_account_number">0511-0276-03-003</field>
+    </record>
+
+    <record id="unit_jestra_-_42" model="kst.unit">
+        <field name="lessor_id" ref="lessor_tst"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">G</field>
+        <field name="address">42 J.T. VERGARA ST. JESTRA VILLA 1 SUBD. SAV 5 SN A M.M.</field>
+        <field name="size">41.00</field>
+        <field name="soa_bank_account_number">000-00123-14-840</field>
+    </record>
+
+    <record id="unit_kalayaan_1_-_9648" model="kst.unit">
+        <field name="lessor_id" ref="lessor_tst"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">A</field>
+        <field name="address">9648 KALAYAAN AVENUE, GUADALUPE NUEVO MAKATI CITY</field>
+        <field name="size">40.00</field>
+        <field name="soa_bank_account_number">000-00123-14-840</field>
+    </record>
+
+    <record id="unit_kalayaan_1_-_9648_193" model="kst.unit">
+        <field name="lessor_id" ref="lessor_tst"/>
+        <field name="category_id" ref="07"/>
+        <field name="unit_specified">A1</field>
+        <field name="address">9648 KALAYAAN AVENUE, GUADALUPE NUEVO MAKATI CITY</field>
+        <field name="description">GROCERY</field>
+        <field name="size">40.00</field>
+        <field name="soa_bank_account_number">000-00123-14-840</field>
+    </record>
+
+    <record id="unit_k1_-_a2" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kstvb"/>
+        <field name="category_id" ref="07"/>
+        <field name="unit_specified">A2</field>
+        <field name="address">9648 KALAYAAN AVENUE, GUADALUPE NUEVO MAKATI CITY</field>
+        <field name="soa_bank_account_number">0511-027603-001</field>
+    </record>
+
+    <record id="unit_kalayaan_1-_9648" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kst"/>
+        <field name="category_id" ref="07"/>
+        <field name="unit_specified">A 3</field>
+        <field name="address">9648 KALAYAAN AVENUE, GUADALUPE NUEVO, MAKATI CITY</field>
+        <field name="description">COMMERCIAL SPACE -CHICKEN STALL</field>
+        <field name="size">8.00</field>
+        <field name="soa_bank_account_number">000132</field>
+    </record>
+
+    <record id="unit_kalayaan_1_-_9648_196" model="kst.unit">
+        <field name="lessor_id" ref="lessor_tst"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">B</field>
+        <field name="address">9648 KALAYAAN AVENUE, GUADALUPE NUEVO, MAKATI CITY</field>
+        <field name="size">40.00</field>
+        <field name="soa_bank_account_number">000-00123-14-840</field>
+    </record>
+
+    <record id="unit_kalayaan_1_-_9648_197" model="kst.unit">
+        <field name="lessor_id" ref="lessor_tst"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">C</field>
+        <field name="address">9648 KALAYAAN AVENUE, GUADALUPE NUEVO, MAKATI CITY</field>
+        <field name="size">40.00</field>
+        <field name="soa_bank_account_number">000-00123-14-840</field>
+    </record>
+
+    <record id="unit_kalayaan_1_-_9648_198" model="kst.unit">
+        <field name="lessor_id" ref="lessor_tst"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">D</field>
+        <field name="address">9648 KALAYAAN AVENUE, GUADALUPE NUEVO, MAKATI CITY</field>
+        <field name="size">38.00</field>
+        <field name="soa_bank_account_number">000-00123-14-840</field>
+    </record>
+
+    <record id="unit_kalayaan_1_-_9648_199" model="kst.unit">
+        <field name="lessor_id" ref="lessor_tst"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">E</field>
+        <field name="address">9648 KALAYAAN AVENUE, GUADALUPE NUEVO, MAKATI CITY</field>
+        <field name="size">36.00</field>
+        <field name="soa_bank_account_number">000-00123-14-840</field>
+    </record>
+
+    <record id="unit_kalayaan_1_-_9648_200" model="kst.unit">
+        <field name="lessor_id" ref="lessor_tst"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">F</field>
+        <field name="address">9648 KALAYAAN AVENUE, GUADALUPE NUEVO, MAKATI CITY</field>
+        <field name="size">35.00</field>
+        <field name="soa_bank_account_number">000-00123-14-840</field>
+    </record>
+
+    <record id="unit_kalayaan_1_-_9648_201" model="kst.unit">
+        <field name="lessor_id" ref="lessor_tst"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">H</field>
+        <field name="address">9648 KALAYAAN AVENUE, GUADALUPE NUEVO, MAKATI CITY</field>
+        <field name="soa_bank_account_number">000-00123-14-840</field>
+    </record>
+
+    <record id="unit_kalayaan_2_-_9556" model="kst.unit">
+        <field name="lessor_id" ref="lessor_tst"/>
+        <field name="category_id" ref="07"/>
+        <field name="unit_specified">A1</field>
+        <field name="address">9556 KALAYAAN AVENUE, GUADALUPE NUEVO MAKATI CITY</field>
+        <field name="size">36.00</field>
+        <field name="soa_bank_account_number">000-00123-14-840</field>
+    </record>
+
+    <record id="unit_kalayaan_2_-_9556_203" model="kst.unit">
+        <field name="lessor_id" ref="lessor_tst"/>
+        <field name="category_id" ref="07"/>
+        <field name="unit_specified">A2</field>
+        <field name="address">9556 KALAYAAN AVENUE, GUADALUPE NUEVO MAKATI CITY</field>
+        <field name="size">34.00</field>
+        <field name="soa_bank_account_number">000-00123-14-840</field>
+    </record>
+
+    <record id="unit_kalayaan_2_-_9556_204" model="kst.unit">
+        <field name="lessor_id" ref="lessor_tst"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">B</field>
+        <field name="address">9556 KALAYAAN AVENUE, GUADALUPE NUEVO MAKATI CITY</field>
+        <field name="size">40.00</field>
+        <field name="soa_bank_account_number">000-00123-14-840</field>
+    </record>
+
+    <record id="unit_kalayaan_2_-_9556_205" model="kst.unit">
+        <field name="lessor_id" ref="lessor_tst"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">C</field>
+        <field name="address">9556 KALAYAAN AVENUE, GUADALUPE NUEVO MAKATI CITY</field>
+        <field name="size">28.00</field>
+        <field name="soa_bank_account_number">000-00123-14-840</field>
+    </record>
+
+    <record id="unit_kalayaan_2_-_9556_206" model="kst.unit">
+        <field name="lessor_id" ref="lessor_tst"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">D</field>
+        <field name="address">9556 KALAYAAN AVENUE, GUADALUPE NUEVO MAKATI CITY</field>
+        <field name="size">30.00</field>
+        <field name="soa_bank_account_number">000-00123-14-840</field>
+    </record>
+
+    <record id="unit_kalayaan_2_-_9556_207" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kstvb"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">E</field>
+        <field name="address">9556 KALAYAAN AVENUE, GUADALUPE NUEVO MAKATI CITY</field>
+        <field name="size">28.00</field>
+        <field name="soa_bank_account_number">000-00123-14-840</field>
+    </record>
+
+    <record id="unit_kalayaan_2_-_9556_208" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kstvb"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">F</field>
+        <field name="address">9556 KALAYAAN AVENUE, GUADALUPE NUEVO MAKATI CITY</field>
+        <field name="size">40.00</field>
+        <field name="soa_bank_account_number">0511-027603-001</field>
+    </record>
+
+    <record id="unit_kalayaan_3_-_9642" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kst"/>
+        <field name="category_id" ref="04"/>
+        <field name="unit_specified">BLDG</field>
+        <field name="address">9642 KALAYAAN AVENUE, GUADALUPE NUEVO, MAKATI CITY</field>
+        <field name="description">COMMERCIAL BUILDING - 4 STOREY WET AND DRY MARKET</field>
+        <field name="soa_bank_account_number">0511-0276-03-001</field>
+    </record>
+
+    <record id="unit_k3f" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kst"/>
+        <field name="category_id" ref="10"/>
+        <field name="unit_specified">F</field>
+        <field name="address">9642 Kalayaan Ave., Guadalupe Nuevo, Makati City</field>
+        <field name="description">Religious Services</field>
+        <field name="soa_bank_account_number">000147</field>
+    </record>
+
+    <record id="unit_kalayaan_-_4_9573" model="kst.unit">
+        <field name="lessor_id" ref="lessor_tst"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">K4</field>
+        <field name="address">9573 KALAYAAN AVE., GUADALUPE NUEVO MAKATI CITY</field>
+        <field name="soa_bank_account_number">000-00123-14-840</field>
+    </record>
+
+    <record id="unit_kalayaan_4_-_9573" model="kst.unit">
+        <field name="lessor_id" ref="lessor_tst"/>
+        <field name="category_id" ref="07"/>
+        <field name="unit_specified">A</field>
+        <field name="address">9573 KALAYAAN AVENUE, GUADALUPE NUEVO, MAKATI CITY</field>
+        <field name="description">PRINTING COMPANY</field>
+        <field name="size">59.00</field>
+        <field name="soa_bank_account_number">000149</field>
+    </record>
+
+    <record id="unit_kalayaan_4" model="kst.unit">
+        <field name="lessor_id" ref="lessor_tst"/>
+        <field name="category_id" ref="07"/>
+        <field name="unit_specified">B</field>
+        <field name="address">9573 KALAYAAN AVENUE, GUADALUPE NUEVO MAKATI CITY</field>
+        <field name="size">59.00</field>
+        <field name="soa_bank_account_number">000150</field>
+    </record>
+
+    <record id="unit_kalayaan_4_-_9573_214" model="kst.unit">
+        <field name="lessor_id" ref="lessor_tst"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">C</field>
+        <field name="address">9573 KALAYAAN AVENUE, GUADALUPE NUEVO MAKATI CITY</field>
+        <field name="size">14.00</field>
+        <field name="soa_bank_account_number">000151</field>
+    </record>
+
+    <record id="unit_kalayaan_4_-_9573_215" model="kst.unit">
+        <field name="lessor_id" ref="lessor_tst"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">D</field>
+        <field name="address">9573 KALAYAAN AVENUE, GUADALUPE NUEVO MAKATI CITY</field>
+        <field name="size">14.00</field>
+        <field name="soa_bank_account_number">000152</field>
+    </record>
+
+    <record id="unit_kalayaan_4_-_9573_216" model="kst.unit">
+        <field name="lessor_id" ref="lessor_tst"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">E</field>
+        <field name="address">9573 KALAYAAN AVENUE, GUADALUPE NUEVO, MAKATI CITY</field>
+        <field name="size">14.00</field>
+        <field name="soa_bank_account_number">000153</field>
+    </record>
+
+    <record id="unit_k4_-_ext" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kstvb"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">K4 - EXT.</field>
+        <field name="address">9573 KALAYAAN AVENUE, GUADALUPE NUEVO, MAKATI CITY</field>
+        <field name="description">TOYOTA GLOBAL - BARRACKS</field>
+        <field name="soa_bank_account_number">0511-0276-03-001</field>
+    </record>
+
+    <record id="unit_kalayaan_4_-_9573_218" model="kst.unit">
+        <field name="lessor_id" ref="lessor_tst"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">F</field>
+        <field name="address">9573 KALAYAAN AVENUE, GUADALUPE NUEVO MAKATI CITY</field>
+        <field name="size">11.00</field>
+        <field name="soa_bank_account_number">000155</field>
+    </record>
+
+    <record id="unit_kalayaan_5_-_9646" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kstvb"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">1 AB</field>
+        <field name="address">9646 Kalayaan Avenue, Guadalupe Nuevo, Makati City</field>
+        <field name="size">92.00</field>
+        <field name="soa_bank_account_number">0511-0276-03-001</field>
+    </record>
+
+    <record id="unit_kalayaan_5_-_9646_220" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kstk3"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">1 C</field>
+        <field name="address">9646 Kalayaan Avenue, Guadalupe Nuevo, Makati City</field>
+        <field name="size">40.00</field>
+        <field name="soa_bank_account_number">0511-0276-03-001</field>
+    </record>
+
+    <record id="unit_kalayaan_5_-_9646_221" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kstvb"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">2A</field>
+        <field name="address">9646 Kalayaan Avenue, Guadalupe Nuevo, Makati City</field>
+        <field name="soa_bank_account_number">0511-0276-03-001</field>
+    </record>
+
+    <record id="unit_kalayaan_5_-_9646_222" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kstvb"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">2 B</field>
+        <field name="address">9646 Kalayaan Avenue, Guadalupe Nuevo, Makati City</field>
+        <field name="size">47.00</field>
+        <field name="soa_bank_account_number">0511-0276-03-001</field>
+    </record>
+
+    <record id="unit_kalayaan_5_-_9646_223" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kstvb"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">2 C</field>
+        <field name="address">9646 Kalayaan Avenue, Guadalupe Nuevo, Makati City</field>
+        <field name="size">47.00</field>
+        <field name="soa_bank_account_number">0511-0276-03-001</field>
+    </record>
+
+    <record id="unit_kalayaan_5_-_9646_224" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kstvb"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">3 A</field>
+        <field name="address">9646 Kalayaan Avenue, Guadalupe Nuevo, Makati City</field>
+        <field name="soa_bank_account_number">0511-0276-03-001</field>
+    </record>
+
+    <record id="unit_kalayaan_5_-_9646_225" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kstvb"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">3 B</field>
+        <field name="address">9646 Kalayaan Avenue, Guadalupe Nuevo, Makati City</field>
+        <field name="size">47.00</field>
+        <field name="soa_bank_account_number">0511-0276-03-001</field>
+    </record>
+
+    <record id="unit_kalayaan_5_-_9646_226" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kstvb"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">3 C</field>
+        <field name="address">9646 Kalayaan Avenue, Guadalupe Nuevo, Makati City</field>
+        <field name="size">47.00</field>
+        <field name="soa_bank_account_number">0511-0276-03-001</field>
+    </record>
+
+    <record id="unit_kalayaan_5" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kstvb"/>
+        <field name="category_id" ref="08"/>
+        <field name="unit_specified">3C (P)</field>
+        <field name="address">9646 KALAYAAN AVENUE, GUADALUPE NUEVO MAKATI CITY</field>
+        <field name="description">PARKING</field>
+        <field name="soa_bank_account_number">0511-0276-03-001</field>
+    </record>
+
+    <record id="unit_kalayaan_5_-_9646_228" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kstvb"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">4 A</field>
+        <field name="address">9646 Kalayaan Avenue, Guadalupe Nuevo, Makati City</field>
+        <field name="size">47.00</field>
+        <field name="soa_bank_account_number">0511-0276-03-001</field>
+    </record>
+
+    <record id="unit_kalayaan_5_-_9646_229" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kstvb"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">4 B</field>
+        <field name="address">9646 Kalayaan Avenue, Guadalupe Nuevo, Makati City</field>
+        <field name="size">47.00</field>
+        <field name="soa_bank_account_number">0511-0276-03-001</field>
+    </record>
+
+    <record id="unit_kalayaan_5_-_9646_230" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kstvb"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">4 C</field>
+        <field name="address">9646 Kalayaan Avenu, Guadalupe Nuevo, Makati City</field>
+        <field name="size">47.00</field>
+        <field name="soa_bank_account_number">0511-0276-03-001</field>
+    </record>
+
+    <record id="unit_kalayaan_5_-_9646_231" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kstvb"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">5 A</field>
+        <field name="address">9646 Kalayaan Avenue, Guadalupe Nuevo, Makati City</field>
+        <field name="size">40.00</field>
+        <field name="soa_bank_account_number">0511-0276-03-001</field>
+    </record>
+
+    <record id="unit_kalayaan_6_-_9572" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kstvb"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">1A</field>
+        <field name="address">9572 Kalayaan Avenue, Guadalupe Nuevo, Makati City</field>
+        <field name="size">8.00</field>
+        <field name="soa_bank_account_number">0511-0276-03-001</field>
+    </record>
+
+    <record id="unit_kalayaan_6_-_9572_233" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kstvb"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">1B</field>
+        <field name="address">9572 Kalayaan Avenue, Guadalupe Nuevo, Makati City</field>
+        <field name="size">13.00</field>
+        <field name="soa_bank_account_number">0511-0276-03-001</field>
+    </record>
+
+    <record id="unit_kalayaan_6_-_9572_234" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kstvb"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">1C</field>
+        <field name="address">9572 Kalayaan Avenue, Guadalupe Nuevo, Makati City</field>
+        <field name="size">13.00</field>
+        <field name="soa_bank_account_number">0511-0276-03-001</field>
+    </record>
+
+    <record id="unit_kalayaan_6_-_9572_235" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kstvb"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">1D</field>
+        <field name="address">9572 Kalayaan Avenue, Guadalupe Nuevo, Makati City</field>
+        <field name="soa_bank_account_number">0511-0276-03-001</field>
+    </record>
+
+    <record id="unit_kalayaan_6_-_9572_236" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kstvb"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">1E</field>
+        <field name="address">9572 Kalayaan Avenue, Guadalupe Nuevo, Makati City</field>
+        <field name="soa_bank_account_number">0511-0276-03-001</field>
+    </record>
+
+    <record id="unit_k6_-_if" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kstvb"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">1F</field>
+        <field name="address">9572 KALAYAAN AVENUE, GUADALUPE NUEVO MAKATI CITY]</field>
+        <field name="soa_bank_account_number">0511-0276-03-001</field>
+    </record>
+
+    <record id="unit_kalayaan_6_-_9572_238" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kstvb"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">2A</field>
+        <field name="address">9572 Kalayaan Avebue, Guadalupe Nuevo, Makati City</field>
+        <field name="soa_bank_account_number">0511-0276-03-001</field>
+    </record>
+
+    <record id="unit_kalayaan_6_-_9572_239" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kstvb"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">2B</field>
+        <field name="address">9572 Kalayaan Avenue, Guadalupe Nuevo, Makati City</field>
+        <field name="size">17.00</field>
+        <field name="soa_bank_account_number">0511-0276-03-001</field>
+    </record>
+
+    <record id="unit_kalayaan_6_-_9572_240" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kstvb"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">2C</field>
+        <field name="address">9572 KALAYAAN AVENUE, GUADALUPE NUEVO, MAKATI CITY</field>
+        <field name="size">10.00</field>
+        <field name="soa_bank_account_number">0511-0276-03-001</field>
+    </record>
+
+    <record id="unit_kalayaan_6_-_9572_241" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kstvb"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">2D</field>
+        <field name="address">9572 KALAYAAN AVENUE, GUADALUPE NUEVO, MAKATI CITY</field>
+        <field name="size">29.00</field>
+        <field name="soa_bank_account_number">0511-0276-03-001</field>
+    </record>
+
+    <record id="unit_bagong_barrio_l_1" model="kst.unit">
+        <field name="lessor_id" ref="lessor_bbh"/>
+        <field name="category_id" ref="07"/>
+        <field name="unit_specified">L 1</field>
+        <field name="address">ZAPOTE STREET, CORNER MALOLOS AVENUE, BAGONG BARRIO, CALOOCAN CITY</field>
+        <field name="soa_bank_account_number">0511-029-847-001</field>
+    </record>
+
+    <record id="unit_bagong_barrio_245" model="kst.unit">
+        <field name="lessor_id" ref="lessor_bbh"/>
+        <field name="category_id" ref="07"/>
+        <field name="unit_specified">L 3</field>
+        <field name="address">ZAPOTE STREET, CORNER MALOLOS AVENUE, BAGONG BARRIO, CALOOCAN CITY</field>
+        <field name="size">118.00</field>
+        <field name="soa_bank_account_number">0511-029-847-001</field>
+    </record>
+
+    <record id="unit_bagong_barrio_246" model="kst.unit">
+        <field name="lessor_id" ref="lessor_bbh"/>
+        <field name="category_id" ref="08"/>
+        <field name="unit_specified">3P</field>
+        <field name="address">ZAPOTE STREET, MALOLOS CORNER, BAGONG BARRIO</field>
+        <field name="size">2.00</field>
+        <field name="soa_bank_account_number">0511-029-847-001</field>
+    </record>
+
+    <record id="unit_lgv" model="kst.unit">
+        <field name="lessor_id" ref="lessor_tst"/>
+        <field name="category_id" ref="09"/>
+        <field name="unit_specified">33</field>
+        <field name="address">33 MOSCOW ST., LOYOLA GRAND VILLA MARIKINA CITY</field>
+        <field name="description">RESIDENTIAL HOUSE AND LOT</field>
+        <field name="soa_bank_account_number">00000-12314-840</field>
+    </record>
+
+    <record id="unit_bagong_barrio_3_248" model="kst.unit">
+        <field name="lessor_id" ref="lessor_bbh"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">1</field>
+        <field name="address">ZAPOTE STREET, CORNER MALOLOS AVENUE, BAGONG BARRIO</field>
+        <field name="soa_bank_account_number">0511-029-847-001</field>
+    </record>
+
+    <record id="unit_bagong_barrio_3_249" model="kst.unit">
+        <field name="lessor_id" ref="lessor_bbh"/>
+        <field name="category_id" ref="07"/>
+        <field name="unit_specified">3</field>
+        <field name="address">ZAPOTE STREET, MALOLOS CORNER AVENUE, BAGONG BARRIO</field>
+        <field name="size">2.00</field>
+        <field name="soa_bank_account_number">0511-029-847-001</field>
+    </record>
+
+    <record id="unit_bagong_barrio_3_250" model="kst.unit">
+        <field name="lessor_id" ref="lessor_bbh"/>
+        <field name="category_id" ref="07"/>
+        <field name="unit_specified">4</field>
+        <field name="address">ZAPOTE STREET, MALOLOS CORNER, BAGONG BARRIO</field>
+        <field name="size">2.00</field>
+        <field name="soa_bank_account_number">0511-029-847-001</field>
+    </record>
+
+    <record id="unit_m_-_5" model="kst.unit">
+        <field name="lessor_id" ref="lessor_bbh"/>
+        <field name="category_id" ref="07"/>
+        <field name="unit_specified">M - 5</field>
+        <field name="address">MALOLOS AVE. COR., ZAPOTE ST., BAGONG BARRIO, CALOOCAN CITY</field>
+        <field name="soa_bank_account_number">0511029847001</field>
+    </record>
+
+    <record id="unit_bagong_barrio_252" model="kst.unit">
+        <field name="lessor_id" ref="lessor_bbh"/>
+        <field name="category_id" ref="07"/>
+        <field name="unit_specified">7</field>
+        <field name="address">ZAPOTE STREET, CORNER MALOLOS AVENUE, BAGONG BARRIO, CALOOCAN CITY</field>
+        <field name="description">COMMERCIAL-STALL</field>
+        <field name="soa_bank_account_number">0511-029-847-001</field>
+    </record>
+
+    <record id="unit_bagong_barrio_3_253" model="kst.unit">
+        <field name="lessor_id" ref="lessor_bbh"/>
+        <field name="category_id" ref="06"/>
+        <field name="unit_specified">8</field>
+        <field name="address">MALOLOS CORNER ZAPOTE STREET  BAGONG BARRIO CALOOCAN CITY</field>
+        <field name="soa_bank_account_number">0511-029-847-001</field>
+    </record>
+
+    <record id="unit_bagong_barrio_3_254" model="kst.unit">
+        <field name="lessor_id" ref="lessor_bbh"/>
+        <field name="category_id" ref="06"/>
+        <field name="unit_specified">9</field>
+        <field name="address">MALOLOS CORNER ZAPOTE STREET, BAGONG BARRIO, CALOOCAN CITY</field>
+        <field name="soa_bank_account_number">0511-029-847-001</field>
+    </record>
+
+    <record id="unit_id_7" model="kst.unit">
+        <field name="lessor_id" ref="lessor_bbh"/>
+        <field name="category_id" ref="06"/>
+        <field name="unit_specified">M-7</field>
+        <field name="address">MALOLOS CORNER ZAPOTE STREET BAGONG BARRIO CALOOCAN CITY</field>
+    </record>
+
+    <record id="unit_magsaysay_2000" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kstk3"/>
+        <field name="category_id" ref="04"/>
+        <field name="unit_specified">BUILDING</field>
+        <field name="address">2000 MAGSAYSAY 7 YABUT STS. GUADALUPE NUEVO MAKATI CITY</field>
+        <field name="description">COMMERCIAL</field>
+        <field name="soa_bank_account_number">0511-0276-03-001</field>
+    </record>
+
+    <record id="unit_magsaysay_2000_257" model="kst.unit">
+        <field name="lessor_id" ref="lessor_mccbu"/>
+        <field name="category_id" ref="07"/>
+        <field name="unit_specified">2F 201-206</field>
+        <field name="address">2000 MAGSAYSAY &amp; YABUT ST. GUADALUPE NUEVO MAKATI CITY</field>
+        <field name="description">COMMERCIAL</field>
+        <field name="size">83.00</field>
+        <field name="soa_bank_account_number">000-0002185-388</field>
+    </record>
+
+    <record id="unit_sta_martha" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kstvb"/>
+        <field name="category_id" ref="07"/>
+        <field name="unit_specified">2F 03/04</field>
+        <field name="address">2000 MAGSAYSAY &amp; YABUT STREET, GUADALUPE NUEVO, MAKATI CITY</field>
+        <field name="soa_bank_account_number">000-000-2185388</field>
+    </record>
+
+    <record id="unit_magsaysay_2000_259" model="kst.unit">
+        <field name="lessor_id" ref="lessor_mccbu"/>
+        <field name="category_id" ref="07"/>
+        <field name="unit_specified">MCC 2F 02/05</field>
+        <field name="address">2000 MAGSAYSAY &amp; YABUT ST. GUADALUPE NUEVO MAKATI CITY</field>
+        <field name="description">COMMERCIAL</field>
+        <field name="size">194.00</field>
+        <field name="soa_bank_account_number">000-0002185-388</field>
+    </record>
+
+    <record id="unit_magsaysay_2000_260" model="kst.unit">
+        <field name="lessor_id" ref="lessor_mccbu"/>
+        <field name="category_id" ref="07"/>
+        <field name="unit_specified">2F 210-213</field>
+        <field name="address">2000 MAGSAYSAY &amp; YABUT ST. GUADALUPE NUEVO MAKATI CITY</field>
+        <field name="description">COMMERCIAL</field>
+        <field name="size">72.00</field>
+        <field name="soa_bank_account_number">000-0002185-388</field>
+    </record>
+
+    <record id="unit_magsaysay_2000_261" model="kst.unit">
+        <field name="lessor_id" ref="lessor_mccbu"/>
+        <field name="category_id" ref="07"/>
+        <field name="unit_specified">GF-101-106</field>
+        <field name="address">2000 MAGSAYSAY &amp; YABUT STS. GUADALUPE NUEVO MAKATI CITY</field>
+        <field name="description">COMMERCIAL</field>
+        <field name="size">83.00</field>
+        <field name="soa_bank_account_number">000-0002185-388</field>
+    </record>
+
+    <record id="unit_magsaysay_2000_262" model="kst.unit">
+        <field name="lessor_id" ref="lessor_mccbu"/>
+        <field name="category_id" ref="07"/>
+        <field name="unit_specified">H</field>
+        <field name="address">2000 MAGSAYSAY &amp; YABUT STS. GUADALUPE NUEVO MAKATI CITY</field>
+        <field name="size">11.00</field>
+        <field name="soa_bank_account_number">000-0002185-388</field>
+    </record>
+
+    <record id="unit_magsaysay_2000_263" model="kst.unit">
+        <field name="lessor_id" ref="lessor_mccbu"/>
+        <field name="category_id" ref="07"/>
+        <field name="unit_specified">C</field>
+        <field name="address">2000 MAGSAYSAY &amp; YABUT STS. GUADALUPE NUEVO MAKATI CITY</field>
+        <field name="size">12.00</field>
+        <field name="soa_bank_account_number">0000002185388</field>
+    </record>
+
+    <record id="unit_magsaysay_2000_264" model="kst.unit">
+        <field name="lessor_id" ref="lessor_mccbu"/>
+        <field name="category_id" ref="07"/>
+        <field name="unit_specified">B</field>
+        <field name="address">2000 MAGSAYSAY &amp; YABUT STS. GUADALUPE NUEVO MAKATI CITY</field>
+        <field name="size">7.00</field>
+        <field name="soa_bank_account_number">000-002185-388</field>
+    </record>
+
+    <record id="unit_sta_martha_265" model="kst.unit">
+        <field name="lessor_id" ref="lessor_mgy"/>
+        <field name="category_id" ref="04"/>
+        <field name="unit_specified">GF 01 (D)</field>
+        <field name="address">2000 MAGSAYSAY &amp; YABUT STREET, GUADALUPE NUEVO, MAKATI CITY</field>
+        <field name="size">10.00</field>
+    </record>
+
+    <record id="unit_mcc_gf_01_e" model="kst.unit">
+        <field name="lessor_id" ref="lessor_mgy"/>
+        <field name="category_id" ref="07"/>
+        <field name="unit_specified">E</field>
+        <field name="address">2000 MAGSAYSAY &amp; YABUT ST. GUADALUPE NUEVO MAKATI CITY</field>
+        <field name="size">10.00</field>
+    </record>
+
+    <record id="unit_mcc_gf_01_f" model="kst.unit">
+        <field name="lessor_id" ref="lessor_mgy"/>
+        <field name="category_id" ref="07"/>
+        <field name="unit_specified">F</field>
+        <field name="address">2000 MAGSAYSAY &amp; YABUT ST. GUADALUPE NUEVO MAKATI CITY</field>
+        <field name="size">10.00</field>
+    </record>
+
+    <record id="unit_mcc_gf_01_g" model="kst.unit">
+        <field name="lessor_id" ref="lessor_mccbu"/>
+        <field name="category_id" ref="07"/>
+        <field name="unit_specified">G</field>
+        <field name="address">2000 MAGSAYSAY &amp; YABUT STREETS, GUADALUPE NUEVO, MAKATI CITY</field>
+        <field name="soa_bank_account_number">000-000-2185388</field>
+    </record>
+
+    <record id="unit_magsaysay_2000_269" model="kst.unit">
+        <field name="lessor_id" ref="lessor_mccbu"/>
+        <field name="category_id" ref="07"/>
+        <field name="unit_specified">A</field>
+        <field name="address">2000 MAGSAYSAY &amp; YABUT STS. GUADALUPE NUEVO MAKATI CITY</field>
+        <field name="size">7.00</field>
+        <field name="soa_bank_account_number">000-0002185-388</field>
+    </record>
+
+    <record id="unit_magsaysay_2000_270" model="kst.unit">
+        <field name="lessor_id" ref="lessor_mccbu"/>
+        <field name="category_id" ref="07"/>
+        <field name="unit_specified">MCC GF 111-114</field>
+        <field name="address">2000  MAGSAYSAY &amp; YABUT ST. GUADALUPE NUEVO MAKATI CITY</field>
+        <field name="description">COMMERCIAL</field>
+        <field name="size">60.00</field>
+        <field name="soa_bank_account_number">000-0002185-388</field>
+    </record>
+
+    <record id="unit_sta_martha_271" model="kst.unit">
+        <field name="lessor_id" ref="lessor_mgy"/>
+        <field name="category_id" ref="07"/>
+        <field name="unit_specified">GF 05</field>
+        <field name="address">2000 MAGSAYSAY &amp; YABUT STREET, GUADALUPE NUEVO, MAKATI CITY</field>
+        <field name="soa_bank_account_number">000-000-2185388</field>
+    </record>
+
+    <record id="unit_magsaysay_2000_272" model="kst.unit">
+        <field name="lessor_id" ref="lessor_mccbu"/>
+        <field name="category_id" ref="04"/>
+        <field name="unit_specified">MCC GF 117-120</field>
+        <field name="address">LOT 6 &amp; 7 BLK 55 MAGSAYSAY &amp; YABUT ST. BRGY. GUADALUPE NUEVO MAKATI CITY</field>
+        <field name="description">COMMERCIAL</field>
+        <field name="size">46.00</field>
+        <field name="soa_bank_account_number">000-0002185-388</field>
+    </record>
+
+    <record id="unit_magsaysay_2000_273" model="kst.unit">
+        <field name="lessor_id" ref="lessor_mccbu"/>
+        <field name="category_id" ref="07"/>
+        <field name="unit_specified">GF 107-110/3F/4F/5F</field>
+        <field name="address">2000 MAGSAYSAY &amp; YABUT ST. GUADALUPE NUEVO MAKATI CITY</field>
+        <field name="description">COMMERCIAL</field>
+        <field name="soa_bank_account_number">000-0002185-388</field>
+    </record>
+
+    <record id="unit_magsaysay_2000_274" model="kst.unit">
+        <field name="lessor_id" ref="lessor_mccbu"/>
+        <field name="category_id" ref="04"/>
+        <field name="unit_specified">GF 107-110/3F/4F/5F</field>
+        <field name="address">2000 MAGSAYSAY &amp; YABUT ST. GUADALUPE NUEVO MAKATI</field>
+        <field name="description">COMMERCIAL</field>
+        <field name="soa_bank_account_number">000-0002185-388</field>
+    </record>
+
+    <record id="unit_magsaysay_2000_275" model="kst.unit">
+        <field name="lessor_id" ref="lessor_mccbu"/>
+        <field name="category_id" ref="07"/>
+        <field name="unit_specified">KIOSK 02</field>
+        <field name="address">2000 MAGSAYSAY &amp; YABUIT ST. GUADALUPE NUEVO MAKATI CITY</field>
+        <field name="description">COMMERCIAL</field>
+        <field name="size">4.00</field>
+        <field name="soa_bank_account_number">000-0002185-388</field>
+    </record>
+
+    <record id="unit_magsaysay_2000_276" model="kst.unit">
+        <field name="lessor_id" ref="lessor_mccbu"/>
+        <field name="category_id" ref="07"/>
+        <field name="unit_specified">KIOSK 03</field>
+        <field name="address">2000 MAGSAYSAY &amp;YABUT ST. GUADALUPE NUEVO MAKATI CITY</field>
+        <field name="description">COMMERCIAL</field>
+        <field name="size">4.00</field>
+        <field name="soa_bank_account_number">000-0002185-388</field>
+    </record>
+
+    <record id="unit_magsaysay_2000_277" model="kst.unit">
+        <field name="lessor_id" ref="lessor_mccbu"/>
+        <field name="category_id" ref="07"/>
+        <field name="unit_specified">GF 03/04</field>
+        <field name="address">2000 MAGSAYSAY &amp;YABUT STS. GUADALUPE NUEVO, MAKATI CITY</field>
+        <field name="description">COMMERCIAL/VAPE SHOP</field>
+        <field name="size">48.00</field>
+        <field name="soa_bank_account_number">000-0002185-388</field>
+    </record>
+
+    <record id="unit_magsaysay_2000_278" model="kst.unit">
+        <field name="lessor_id" ref="lessor_mccbu"/>
+        <field name="category_id" ref="07"/>
+        <field name="unit_specified">KIOSK-01</field>
+        <field name="address">2000 MAGSAYSAY &amp; YABUT STS. GUADALUPE NUEVO, MAKATI CITY</field>
+        <field name="description">COMMERCIAL</field>
+        <field name="size">5.00</field>
+        <field name="soa_bank_account_number">000-0002185-388</field>
+    </record>
+
+    <record id="unit_mck_-_07" model="kst.unit">
+        <field name="lessor_id" ref="lessor_tst"/>
+        <field name="category_id" ref="05"/>
+        <field name="unit_specified">07</field>
+        <field name="address">BLK. 12 LOT 1 UPPER MCKINLEY HILL VILLAGE, TAGUIG CITY</field>
+        <field name="description">BUNKHOUSE AND CONSTRUCTION MATERIALS STORAGE</field>
+        <field name="size">216.00</field>
+        <field name="soa_bank_account_number">000201</field>
+    </record>
+
+    <record id="unit_mer_p_617" model="kst.unit">
+        <field name="lessor_id" ref="lessor_lrt"/>
+        <field name="category_id" ref="08"/>
+        <field name="unit_specified">617</field>
+        <field name="address">Manila Executive Regency Condominium, 1200 Jorge Bocobo St., Ermita Manila</field>
+    </record>
+
+    <record id="unit_mer_p_618" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kstvb"/>
+        <field name="category_id" ref="08"/>
+        <field name="unit_specified">618</field>
+        <field name="address">Manila Executive Regency Condominium, 1200 Jorge Bocobo St., Ermita Manila</field>
+        <field name="soa_bank_account_number">0511-027603-001</field>
+    </record>
+
+    <record id="unit_mer" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kst"/>
+        <field name="category_id" ref="02"/>
+        <field name="unit_specified">01</field>
+        <field name="address">PROJ. C51 UNIT 3510 2F CITYLAND CONDO 10 TOWER 2 156 H.V. DELA COSTA ST. AYALA AVENUE, NORTH MAKATI</field>
+        <field name="description">RESIDENTIAL-CONDOMINIUM UNIT</field>
+        <field name="soa_bank_account_number">0511-027603-001</field>
+    </record>
+
+    <record id="unit_mer_283" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kst"/>
+        <field name="category_id" ref="02"/>
+        <field name="unit_specified">02</field>
+        <field name="address">PRO. C51 3511 2F CITYLAND CONDO 10 TOWER 2 156 H.V. DELA COSTA ST. AYALA AVENUE, NORTH MAKATI</field>
+        <field name="description">RESIDENTIAL - CONDOMINIUM UNIT</field>
+        <field name="soa_bank_account_number">000203</field>
+    </record>
+
+    <record id="unit_manggahan_-_2594" model="kst.unit">
+        <field name="lessor_id" ref="lessor_tst"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">A</field>
+        <field name="address">2594 MANGGAHAN STREET, GUADALUPE NEUVO MAKATI CITY</field>
+        <field name="size">17.00</field>
+        <field name="soa_bank_account_number">000-00123-14-840</field>
+    </record>
+
+    <record id="unit_manggahan_2594" model="kst.unit">
+        <field name="lessor_id" ref="lessor_tst"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">B</field>
+        <field name="address">2594 MANGGAHAN STREET, GUADALUPE NUEVO MAKATI CITY</field>
+        <field name="size">17.00</field>
+        <field name="soa_bank_account_number">000-00123-14-840</field>
+    </record>
+
+    <record id="unit_manggahan_-_2594_286" model="kst.unit">
+        <field name="lessor_id" ref="lessor_tst"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">C</field>
+        <field name="address">2594 MANGGAHAN STREET, GUADALUPE NUEVO MAKATI CITY</field>
+        <field name="size">17.00</field>
+        <field name="soa_bank_account_number">000-00123-14-840</field>
+    </record>
+
+    <record id="unit_manggahan_-_2594_287" model="kst.unit">
+        <field name="lessor_id" ref="lessor_tst"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">D</field>
+        <field name="address">2594 MANGGAHAN STREET, GUADALUPE NUEVO MAKATI CITY</field>
+        <field name="size">17.00</field>
+        <field name="soa_bank_account_number">000-00123-14-840</field>
+    </record>
+
+    <record id="unit_manggahan_-_2594_288" model="kst.unit">
+        <field name="lessor_id" ref="lessor_tst"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">E</field>
+        <field name="address">2594 Manggahan, Guadalupe Nuevo, Makati city</field>
+        <field name="description">RESIDENTIAL - APARTMENT</field>
+        <field name="size">20.00</field>
+        <field name="soa_bank_account_number">000-00123-14-840</field>
+    </record>
+
+    <record id="unit_manggahan_-_2594_289" model="kst.unit">
+        <field name="lessor_id" ref="lessor_tst"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">F</field>
+        <field name="address">2594 MANGGAHAN GUADALUPE NUEVO MAKATI CITY</field>
+        <field name="size">24.00</field>
+        <field name="soa_bank_account_number">000-00123-14-840</field>
+    </record>
+
+    <record id="unit_manggahan_-_2594_290" model="kst.unit">
+        <field name="lessor_id" ref="lessor_tst"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">G</field>
+        <field name="address">2594 MANGGAHAN, GUADALUPE NUEVO MAKATI CITY</field>
+        <field name="size">23.00</field>
+        <field name="soa_bank_account_number">000-00123-14-840</field>
+    </record>
+
+    <record id="unit_manggahan_-_2594_291" model="kst.unit">
+        <field name="lessor_id" ref="lessor_tst"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">H</field>
+        <field name="address">2594 MANGGAHAN, GUADALUPE NUEVO MAKATI CITY</field>
+        <field name="size">8.00</field>
+        <field name="soa_bank_account_number">000-00123-14-840</field>
+    </record>
+
+    <record id="unit_manggahan_-_2594_292" model="kst.unit">
+        <field name="lessor_id" ref="lessor_tst"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">I</field>
+        <field name="address">2594 GUADALUPE, NUEVO MAKATI CITY, MAKATI CITY</field>
+        <field name="size">7.00</field>
+        <field name="soa_bank_account_number">000-0012314-840</field>
+    </record>
+
+    <record id="unit_manggahan" model="kst.unit">
+        <field name="lessor_id" ref="lessor_tst"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">J</field>
+        <field name="address">2594 MANGGAHAN ST. GUADALUPE NUEVO MAKATI CITY</field>
+        <field name="soa_bank_account_number">000-00123-14-840</field>
+    </record>
+
+    <record id="unit_manggahan_-_2594_294" model="kst.unit">
+        <field name="lessor_id" ref="lessor_tst"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">J (1)</field>
+        <field name="address">2594 MANGGAHAN, GUADALUPE NUEVO MAKATI CITY</field>
+        <field name="description">BED SPACE</field>
+        <field name="size">7.00</field>
+        <field name="soa_bank_account_number">000-00123-14-840</field>
+    </record>
+
+    <record id="unit_manggahan_295" model="kst.unit">
+        <field name="lessor_id" ref="lessor_tst"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">J (2)</field>
+        <field name="address">2594 MANGGAHAN ST. GUADALUPE NUEVO MAKATI CITY</field>
+        <field name="description">Bed Space</field>
+        <field name="size">7.00</field>
+        <field name="soa_bank_account_number">000-00123-14-840</field>
+    </record>
+
+    <record id="unit_manggahan_-_2594_296" model="kst.unit">
+        <field name="lessor_id" ref="lessor_tst"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">K</field>
+        <field name="address">2594 Manggahan, Guadalupe Nuevo, Makati city</field>
+        <field name="description">RESIDENTIAL - APARTMENT</field>
+        <field name="size">30.00</field>
+        <field name="soa_bank_account_number">00000-12314-840</field>
+    </record>
+
+    <record id="unit_manggahan_-_2594_297" model="kst.unit">
+        <field name="lessor_id" ref="lessor_tst"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">K (1)</field>
+        <field name="address">2594 MANGGAHAN ST. GUDALUPE NUEVO MAKATI CITY</field>
+        <field name="soa_bank_account_number">000-00123-14-840</field>
+    </record>
+
+    <record id="unit_manggahan_-_2594_298" model="kst.unit">
+        <field name="lessor_id" ref="lessor_tst"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">K (2)</field>
+        <field name="address">2594 MANGGAHAN ST. GUADALUPE NUEVO MAKATI CITY</field>
+        <field name="soa_bank_account_number">000-00123-14-840</field>
+    </record>
+
+    <record id="unit_manggahan_-_2594_299" model="kst.unit">
+        <field name="lessor_id" ref="lessor_tst"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">K (3)</field>
+        <field name="address">2594 MANGGAHAN ST. GUADALUPE NUEVO MAKATI CITY</field>
+        <field name="soa_bank_account_number">000-00123-14-840</field>
+    </record>
+
+    <record id="unit_mg_2_-_1a" model="kst.unit">
+        <field name="lessor_id" ref="lessor_tst"/>
+        <field name="category_id" ref="07"/>
+        <field name="unit_specified">1A</field>
+        <field name="address">2593 MANGGAHAN ST. GUADALUPE NUEVO MAKATI CITY</field>
+        <field name="size">4.00</field>
+        <field name="soa_bank_account_number">00-00012314-840</field>
+    </record>
+
+    <record id="unit_mg_2_-_1b" model="kst.unit">
+        <field name="lessor_id" ref="lessor_tst"/>
+        <field name="category_id" ref="07"/>
+        <field name="unit_specified">1B</field>
+        <field name="address">2593 MANGGAHAN ST. GUADALUPE NUEVO MAKATI CITY</field>
+        <field name="size">7.00</field>
+        <field name="soa_bank_account_number">00-00012314-840</field>
+    </record>
+
+    <record id="unit_mg_2_-_1c" model="kst.unit">
+        <field name="lessor_id" ref="lessor_tst"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">1C</field>
+        <field name="address">2593 MANGGAHAN ST. GUADALUPE NUEVO MAKATI CITY</field>
+        <field name="size">32.00</field>
+        <field name="soa_bank_account_number">00-00012314-840</field>
+    </record>
+
+    <record id="unit_manggahan_2" model="kst.unit">
+        <field name="lessor_id" ref="lessor_tst"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">1C - 1</field>
+        <field name="address">2593 MANGGAHAN STREET, GUADALUPE NUEVO, MAKATI CITY</field>
+        <field name="soa_bank_account_number">0000012314840</field>
+    </record>
+
+    <record id="unit_manggahan_2_304" model="kst.unit">
+        <field name="lessor_id" ref="lessor_tst"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">1C - 2</field>
+        <field name="address">2593 MANGGAHAN STREET, GUADALUPE NUEVO, MAKATI CITY</field>
+        <field name="soa_bank_account_number">0000012314840</field>
+    </record>
+
+    <record id="unit_manggahan_2_305" model="kst.unit">
+        <field name="lessor_id" ref="lessor_tst"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">1C - 3</field>
+        <field name="address">2593 MANGGAHAN STREET, GUADALUPE NUEVO, MAKATI CITY</field>
+        <field name="soa_bank_account_number">0000012314840</field>
+    </record>
+
+    <record id="unit_mg_2_-_1d" model="kst.unit">
+        <field name="lessor_id" ref="lessor_tst"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">1D</field>
+        <field name="address">2593 MANGGAHAN ST. GUADALUPE NUEVO MAKATI CITY</field>
+        <field name="soa_bank_account_number">00000-12314-840</field>
+    </record>
+
+    <record id="unit_mg_2_-_1e" model="kst.unit">
+        <field name="lessor_id" ref="lessor_tst"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">1E</field>
+        <field name="address">2593 MANGGAHAN ST. GUADALUPE NUEVO MAKATI CITY</field>
+        <field name="size">22.00</field>
+        <field name="soa_bank_account_number">00000-12314-840</field>
+    </record>
+
+    <record id="unit_mg_2_-_2a" model="kst.unit">
+        <field name="lessor_id" ref="lessor_tst"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">2A</field>
+        <field name="address">2593 MANGGAHAN ST. GUADALUPE NUEVO MAKATI CITY</field>
+        <field name="size">9.00</field>
+        <field name="soa_bank_account_number">00-00012314-840</field>
+    </record>
+
+    <record id="unit_mg_2_-_2b" model="kst.unit">
+        <field name="lessor_id" ref="lessor_tst"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">2B</field>
+        <field name="address">2593 MANGGAHAN ST. GUADALUPE NUEVO MAKATI CITY</field>
+        <field name="size">16.00</field>
+        <field name="soa_bank_account_number">00-00012314-840</field>
+    </record>
+
+    <record id="unit_mg_2_-_2c" model="kst.unit">
+        <field name="lessor_id" ref="lessor_tst"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">2C</field>
+        <field name="address">2593 MANGGAHAN ST. GUADALUPE NUEVO MAKATI CITY</field>
+        <field name="soa_bank_account_number">00000-12314-840</field>
+    </record>
+
+    <record id="unit_mg_2_-_2d" model="kst.unit">
+        <field name="lessor_id" ref="lessor_tst"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">2D</field>
+        <field name="address">2593 MANGGAHAN ST. GUADALUPE NUEVO MAKATI CITY</field>
+        <field name="soa_bank_account_number">00000-12314-840</field>
+    </record>
+
+    <record id="unit_mg_2_-_3f" model="kst.unit">
+        <field name="lessor_id" ref="lessor_tst"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">3F</field>
+        <field name="address">2593 MANGGAHAN ST. GUADALUPE NUEVO MAKATI CITY</field>
+        <field name="size">16.00</field>
+        <field name="soa_bank_account_number">00-00012314-840</field>
+    </record>
+
+    <record id="unit_miramonte" model="kst.unit">
+        <field name="lessor_id" ref="lessor_k4"/>
+        <field name="category_id" ref="09"/>
+        <field name="unit_specified">MIRAMONTE</field>
+        <field name="address">9014 (RESRT) Block 5 Street, Miramonte Village, Brgy. Pansol, Calamba, 4027, Laguna</field>
+        <field name="soa_bank_account_number">0511153475001</field>
+    </record>
+
+    <record id="unit_mlt" model="kst.unit">
+        <field name="lessor_id" ref="lessor_k3"/>
+        <field name="category_id" ref="04"/>
+        <field name="unit_specified">MLT</field>
+        <field name="address">1313 M.H. DEL PILAR BRGY. 668 ZONE 72 ERMITA, MANILA</field>
+        <field name="description">COMMERCIAL BUILDING</field>
+        <field name="soa_bank_account_number">0511-0276-03-001</field>
+    </record>
+
+    <record id="unit_mandaluyong_-_426" model="kst.unit">
+        <field name="lessor_id" ref="lessor_tst"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">A</field>
+        <field name="address">426 B. FRANCISCO ST. NEW ZANIGA, MANDALUYONG CITY</field>
+        <field name="size">33.00</field>
+        <field name="soa_bank_account_number">000-00123-14-840</field>
+    </record>
+
+    <record id="unit_mandaluyong_-_426_316" model="kst.unit">
+        <field name="lessor_id" ref="lessor_tst"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">B</field>
+        <field name="address">426 B. FRANCISCO ST. NEW ZANIGA, MANDALUYONG CITY</field>
+        <field name="size">33.00</field>
+        <field name="soa_bank_account_number">000-00123-14-840</field>
+    </record>
+
+    <record id="unit_mandaluyong_-_426_317" model="kst.unit">
+        <field name="lessor_id" ref="lessor_tst"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">C</field>
+        <field name="address">426 B. FRANCISCO ST. NEW ZANIGA, MANDALUYONG CITY</field>
+        <field name="size">33.00</field>
+        <field name="soa_bank_account_number">000-00123-14-840</field>
+    </record>
+
+    <record id="unit_mandaluyong_-_426_318" model="kst.unit">
+        <field name="lessor_id" ref="lessor_tst"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">D</field>
+        <field name="address">426 B. FRANCISCO ST. NEW ZANIGA, MADALUYONG CITY</field>
+        <field name="size">33.00</field>
+        <field name="soa_bank_account_number">000-00123-14-840</field>
+    </record>
+
+    <record id="unit_mandaluyong_-_426_319" model="kst.unit">
+        <field name="lessor_id" ref="lessor_tst"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">E</field>
+        <field name="address">426 B. FRANCISCO ST. NEW ZANIGA, MANDALUYONG CITY</field>
+        <field name="size">33.00</field>
+        <field name="soa_bank_account_number">000-00123-14-840</field>
+    </record>
+
+    <record id="unit_mandaluyong_-_426_320" model="kst.unit">
+        <field name="lessor_id" ref="lessor_tst"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">F</field>
+        <field name="address">426 B. FRANCISCO ST. NEW ZANIGA, MANDALUYONG CITY</field>
+        <field name="size">33.00</field>
+        <field name="soa_bank_account_number">000-00123-14-840</field>
+    </record>
+
+    <record id="unit_mandaluyong_-_426_321" model="kst.unit">
+        <field name="lessor_id" ref="lessor_tst"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">G</field>
+        <field name="address">426 B. FRANCISCO ST. NEW ZANIGA, MANDALUYONG CITY</field>
+        <field name="size">33.00</field>
+        <field name="soa_bank_account_number">000-00123-14-840</field>
+    </record>
+
+    <record id="unit_mandaluyong_-_426_322" model="kst.unit">
+        <field name="lessor_id" ref="lessor_tst"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">H</field>
+        <field name="address">426 B. FRANCISCO ST. NEW ZANIGA, MANDALUYONG CITY</field>
+        <field name="size">33.00</field>
+        <field name="soa_bank_account_number">000-00123-14-840</field>
+    </record>
+
+    <record id="unit_mandaluyong_-_426_323" model="kst.unit">
+        <field name="lessor_id" ref="lessor_tst"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">I</field>
+        <field name="address">426 B. FRANCISCO ST. NEW ZANIGA, MANDALUYONG CITY</field>
+        <field name="size">33.00</field>
+        <field name="soa_bank_account_number">000-00123-14-840</field>
+    </record>
+
+    <record id="unit_mandaluyong_-_426_324" model="kst.unit">
+        <field name="lessor_id" ref="lessor_tst"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">J</field>
+        <field name="address">426 B. FRANCISCO ST. ZANIGA, MANDALUYONG CITY</field>
+        <field name="size">33.00</field>
+        <field name="soa_bank_account_number">000-00123-14-840</field>
+    </record>
+
+    <record id="unit_mandaluyong_-_426_325" model="kst.unit">
+        <field name="lessor_id" ref="lessor_tst"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">K</field>
+        <field name="address">426 B. FRANCISCO ST. NEW ZANIGA, MANDALUYONG CITY</field>
+        <field name="size">33.00</field>
+        <field name="soa_bank_account_number">000-00123-14-840</field>
+    </record>
+
+    <record id="unit_mandaluyong_-_426_326" model="kst.unit">
+        <field name="lessor_id" ref="lessor_tst"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">L</field>
+        <field name="address">426 B. FRANCISCO ST. NEW ZANIGA, MANDALUYONG CITY</field>
+        <field name="size">33.00</field>
+        <field name="soa_bank_account_number">000-00123-14-840</field>
+    </record>
+
+    <record id="unit_one_orchard_-_15lm" model="kst.unit">
+        <field name="lessor_id" ref="lessor_tst"/>
+        <field name="category_id" ref="02"/>
+        <field name="unit_specified">15LM</field>
+        <field name="address">ONE ORCHARD ROAD CONDOMINIUM ASSOCIATION INC.</field>
+        <field name="description">1 BR UNIT</field>
+        <field name="soa_bank_account_number">000-00123-14-840</field>
+    </record>
+
+    <record id="unit_bagong_barrio_328" model="kst.unit">
+        <field name="lessor_id" ref="lessor_bbh"/>
+        <field name="category_id" ref="08"/>
+        <field name="unit_specified">1</field>
+        <field name="address">ZAPOTE STREET, MALOLOS CORNER, BAGONG BARRIO</field>
+        <field name="size">5.00</field>
+        <field name="soa_bank_account_number">000234</field>
+    </record>
+
+    <record id="unit_bagong_barrio_329" model="kst.unit">
+        <field name="lessor_id" ref="lessor_bbh"/>
+        <field name="category_id" ref="08"/>
+        <field name="unit_specified">2</field>
+        <field name="address">ZAPOTE STREET, MALOLOS CORNER AVENUE, BAGONG BARRIO</field>
+        <field name="size">5.00</field>
+        <field name="soa_bank_account_number">000235</field>
+    </record>
+
+    <record id="unit_bagong_barrio_330" model="kst.unit">
+        <field name="lessor_id" ref="lessor_bbh"/>
+        <field name="category_id" ref="08"/>
+        <field name="unit_specified">3</field>
+        <field name="address">ZAPOTE STREET, MALOLOS CORNER AVENUE, BAGONG BARRIO</field>
+        <field name="size">5.00</field>
+        <field name="soa_bank_account_number">000236</field>
+    </record>
+
+    <record id="unit_bagong_barrio_331" model="kst.unit">
+        <field name="lessor_id" ref="lessor_bbh"/>
+        <field name="category_id" ref="08"/>
+        <field name="unit_specified">4</field>
+        <field name="address">ZAPOTE STREET, MALOLOS CORNER AVENUE, BAGONG BARRIO</field>
+        <field name="size">5.00</field>
+        <field name="soa_bank_account_number">000237</field>
+    </record>
+
+    <record id="unit_bagong_barrio_332" model="kst.unit">
+        <field name="lessor_id" ref="lessor_bbh"/>
+        <field name="category_id" ref="08"/>
+        <field name="unit_specified">5</field>
+        <field name="address">ZAPOTE STREET, MALOLOS CORNER AVENUE, BAGONG BARRIO</field>
+        <field name="size">5.00</field>
+        <field name="soa_bank_account_number">000238</field>
+    </record>
+
+    <record id="unit_kalayaan_-_p" model="kst.unit">
+        <field name="lessor_id" ref="lessor_ktc"/>
+        <field name="category_id" ref="06"/>
+        <field name="unit_specified">P-6</field>
+        <field name="address">9642 KALAYAAN AVENUE, GUADALUPE NUEVO, MAKATI CITY</field>
+        <field name="soa_bank_account_number">000239</field>
+    </record>
+
+    <record id="unit_pembo" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kstvb"/>
+        <field name="category_id" ref="09"/>
+        <field name="unit_specified">PEMBO</field>
+        <field name="address">SAMPAGUITA STREET, ZONE 7, RBGY. PEMBO, MAKATI CITY</field>
+        <field name="soa_bank_account_number">0511027603001</field>
+    </record>
+
+    <record id="unit_philam" model="kst.unit">
+        <field name="lessor_id" ref="lessor_tst"/>
+        <field name="category_id" ref="09"/>
+        <field name="unit_specified">6</field>
+        <field name="address">#06 BAGUIO STREET, PHILAM HOMES, QC.</field>
+        <field name="soa_bank_account_number">000-00123-14-840</field>
+    </record>
+
+    <record id="unit_perla_mansion_-_309" model="kst.unit">
+        <field name="lessor_id" ref="lessor_tst"/>
+        <field name="category_id" ref="02"/>
+        <field name="unit_specified">309</field>
+        <field name="address">117 CARLOS PALANCA JR. ST. LEGASPI VILLAGE, MAKATI CITY</field>
+        <field name="size">33.00</field>
+        <field name="soa_bank_account_number">000241</field>
+    </record>
+
+    <record id="unit_perla_mansion_parking" model="kst.unit">
+        <field name="lessor_id" ref="lessor_tst"/>
+        <field name="category_id" ref="08"/>
+        <field name="unit_specified">B219</field>
+        <field name="address">B219</field>
+        <field name="soa_bank_account_number">000-00123-14-840</field>
+    </record>
+
+    <record id="unit_reposo" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kstvb"/>
+        <field name="category_id" ref="08"/>
+        <field name="unit_specified">REPOSO</field>
+        <field name="address">0928 REPOSO ST., GUADALUPE NUEVO MAKATI CITY</field>
+        <field name="soa_bank_account_number">0511-0276-03-001</field>
+    </record>
+
+    <record id="unit_retiro" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kst"/>
+        <field name="category_id" ref="08"/>
+        <field name="unit_specified">2</field>
+        <field name="address">RETIRO</field>
+        <field name="description">PARKING</field>
+        <field name="soa_bank_account_number">0511-0276-03-001</field>
+    </record>
+
+    <record id="unit_ret_-_4_340" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kstk3"/>
+        <field name="category_id" ref="04"/>
+        <field name="unit_specified">RET - 4</field>
+        <field name="address">9446 RETIRO ST. GUADALUPE NUEVO MAKATI CITY</field>
+        <field name="soa_bank_account_number">0511-027603-001</field>
+    </record>
+
+    <record id="unit_retiro_-_0928" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kst"/>
+        <field name="category_id" ref="08"/>
+        <field name="unit_specified">P2</field>
+        <field name="address">RETIRO</field>
+        <field name="description">PARKING</field>
+        <field name="soa_bank_account_number">000245</field>
+    </record>
+
+    <record id="unit_ret3-2f_b" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kst"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">2F - A</field>
+        <field name="address">9441 RETIRO ST. GUADALUPE NUEVO, MAKATI CITY</field>
+        <field name="description">RESIDENTIAL</field>
+    </record>
+
+    <record id="unit_ret3-2f_b_343" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kst"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">2F - B</field>
+        <field name="address">9441 ReTIRO St. Guadalupe Nuevo Makati City</field>
+    </record>
+
+    <record id="unit_ret3-2f_c" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kst"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">2F - C</field>
+        <field name="address">9441 Retiro St. Guadalupe Nuevo Makati City</field>
+        <field name="description">RESIDENTIAL</field>
+        <field name="size">13.00</field>
+    </record>
+
+    <record id="unit_ret3_-_2f_d" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kst"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">D</field>
+        <field name="address">9441 Retiro St. Guadalupe Nuevo Makati City</field>
+        <field name="description">RESIDENTIAL</field>
+        <field name="size">15.00</field>
+    </record>
+
+    <record id="unit_ret3_-_2f_e" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kst"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">E</field>
+        <field name="address">9441 Retiro St. Guadalupe Nuevo Makati City</field>
+        <field name="description">RESIDENTIAL</field>
+        <field name="size">16.00</field>
+    </record>
+
+    <record id="unit_retiro_3_-_9441" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kst"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">A</field>
+        <field name="address">9441 RETIRO STREET, GUADALUPE NUEVO, MAKATI CITY</field>
+        <field name="soa_bank_account_number">0511-0276-03-001</field>
+    </record>
+
+    <record id="unit_retiro_3_-9441" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kstvb"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">B</field>
+        <field name="address">9441 RETIRO STREET, GUADALUPE NUEVO, MAKATI CITY</field>
+        <field name="soa_bank_account_number">0511-0276-03-001</field>
+    </record>
+
+    <record id="unit_retiro_3_-9441_349" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kstvb"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">C</field>
+        <field name="address">9441 RETIRO STREET, GUADALUPE NEUVO, MAKATI CITY</field>
+        <field name="soa_bank_account_number">0511-0276-03-001</field>
+    </record>
+
+    <record id="unit_retiro_3_-9441_350" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kst"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">D</field>
+        <field name="address">9441 RETIRO STREET, GUADALUPE NUEVO, MAKATI CITY</field>
+        <field name="description">RESIDENTIAL APARTMENT</field>
+        <field name="soa_bank_account_number">0511-0276-03-001</field>
+    </record>
+
+    <record id="unit_retiro_3-_9441" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kst"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">E</field>
+        <field name="address">9441 RETIRO STREET, GUADALUPE NUEVO, MAKATI CITY</field>
+        <field name="description">RESIDENTIAL APARTMENT</field>
+        <field name="soa_bank_account_number">0511-0276-03-001</field>
+    </record>
+
+    <record id="unit_retiro_3_-_9441_352" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kst"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">F</field>
+        <field name="address">9441 RETIRO STREET, GUADALUPE NUEVO, MAKATI CITY</field>
+        <field name="description">RESIDENTIAL APARTMENT</field>
+        <field name="soa_bank_account_number">0511-0276-03-001</field>
+    </record>
+
+    <record id="unit_retiro_3_-_9441_353" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kst"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">G</field>
+        <field name="address">9441 RETIRO STREET, GUADALUPE NUEVO, MAKATI CITY</field>
+        <field name="description">RESIDENTIAL APARTMENT</field>
+        <field name="soa_bank_account_number">0511-0276-03-001</field>
+    </record>
+
+    <record id="unit_ret3-h" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kst"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">H</field>
+        <field name="address">9441 Retiro St. Guadalupe Nuevo Makati City</field>
+        <field name="description">RESIDENTIAL</field>
+        <field name="size">16.00</field>
+    </record>
+
+    <record id="unit_ret3-i" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kst"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">I</field>
+        <field name="address">9441 Retiro St. Guadalupe Nuevo Makati City</field>
+        <field name="description">RESIDENTIAL</field>
+        <field name="size">13.00</field>
+    </record>
+
+    <record id="unit_standford_-_56" model="kst.unit">
+        <field name="lessor_id" ref="lessor_tst"/>
+        <field name="category_id" ref="04"/>
+        <field name="unit_specified">A</field>
+        <field name="address">56 STANFORD ST. CUBAO QUEZON CITY</field>
+        <field name="description">SECURITY AGENCY OFFICE</field>
+        <field name="size">27.00</field>
+        <field name="soa_bank_account_number">000-00123-14-840</field>
+    </record>
+
+    <record id="unit_stanford_-_56" model="kst.unit">
+        <field name="lessor_id" ref="lessor_tst"/>
+        <field name="category_id" ref="04"/>
+        <field name="unit_specified">BC</field>
+        <field name="address">56 STANFORD ST. CUBAO QUEZON CITY</field>
+        <field name="description">SECURITY AGENCY OFFICE</field>
+        <field name="size">51.00</field>
+        <field name="soa_bank_account_number">000-00123-14-840</field>
+    </record>
+
+    <record id="unit_stanford_-_56_358" model="kst.unit">
+        <field name="lessor_id" ref="lessor_tst"/>
+        <field name="category_id" ref="04"/>
+        <field name="unit_specified">D</field>
+        <field name="address">56 STANFORD ST. CUBAO, QUEZON CITY</field>
+        <field name="description">OFFICE</field>
+        <field name="size">80.00</field>
+        <field name="soa_bank_account_number">000-00123-14-840</field>
+    </record>
+
+    <record id="unit_stanford_-_56_359" model="kst.unit">
+        <field name="lessor_id" ref="lessor_tst"/>
+        <field name="category_id" ref="04"/>
+        <field name="unit_specified">D EXT.</field>
+        <field name="address">56 STANDFORD ST. CUBAO QUEZON CITY</field>
+        <field name="description">OFFICE</field>
+        <field name="size">79.00</field>
+        <field name="soa_bank_account_number">000-00123-14-840</field>
+    </record>
+
+    <record id="unit_stanford_-_56_360" model="kst.unit">
+        <field name="lessor_id" ref="lessor_tst"/>
+        <field name="category_id" ref="04"/>
+        <field name="unit_specified">E</field>
+        <field name="address">56 Stanford St. Cubao, Quezon City</field>
+        <field name="description">OFFICE</field>
+        <field name="size">74.00</field>
+        <field name="soa_bank_account_number">000-00123-14-840</field>
+    </record>
+
+    <record id="unit_stanford_-_56_361" model="kst.unit">
+        <field name="lessor_id" ref="lessor_tst"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">F</field>
+        <field name="address">56 STANDFORD STREET, CUBAO, QUEZON CITY</field>
+        <field name="size">47.00</field>
+    </record>
+
+    <record id="unit_stanford_-_56_362" model="kst.unit">
+        <field name="lessor_id" ref="lessor_tst"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">G</field>
+        <field name="address">56 STANFORD CUBAO, QUEZON CITY</field>
+        <field name="description">MANHATTAN PROJECT</field>
+        <field name="size">140.00</field>
+        <field name="soa_bank_account_number">00000-12314-840</field>
+    </record>
+
+    <record id="unit_stanford_-_58" model="kst.unit">
+        <field name="lessor_id" ref="lessor_tst"/>
+        <field name="category_id" ref="04"/>
+        <field name="unit_specified">A</field>
+        <field name="address">58 Stanford St. Cubao, Quezon City</field>
+        <field name="size">35.00</field>
+        <field name="soa_bank_account_number">000-00123-14-840</field>
+    </record>
+
+    <record id="unit_stanford_-_58_364" model="kst.unit">
+        <field name="lessor_id" ref="lessor_tst"/>
+        <field name="category_id" ref="04"/>
+        <field name="unit_specified">B</field>
+        <field name="address">58 STANFORD ST. CUBAO QUEZON CITY</field>
+        <field name="size">40.00</field>
+        <field name="soa_bank_account_number">000-00123-14-840</field>
+    </record>
+
+    <record id="unit_stanford_-_58_365" model="kst.unit">
+        <field name="lessor_id" ref="lessor_tst"/>
+        <field name="category_id" ref="04"/>
+        <field name="unit_specified">C</field>
+        <field name="address">58 Stanford St. Cubao, Quezon City</field>
+        <field name="size">121.00</field>
+        <field name="soa_bank_account_number">000-00123-14-840</field>
+    </record>
+
+    <record id="unit_san_jose_-_1" model="kst.unit">
+        <field name="lessor_id" ref="lessor_vmb"/>
+        <field name="category_id" ref="07"/>
+        <field name="unit_specified">1</field>
+        <field name="address">8601 SAN JOSE ST. GUADALUPE NUEVO MAKATI CITY</field>
+        <field name="soa_bank_account_number">0511-027603-001</field>
+    </record>
+
+    <record id="unit_san_jose_-_2" model="kst.unit">
+        <field name="lessor_id" ref="lessor_vmb"/>
+        <field name="category_id" ref="07"/>
+        <field name="unit_specified">2</field>
+        <field name="address">8601 SAN JOSE ST. GUADALUPE NUEVO MAKATI CITY</field>
+        <field name="soa_bank_account_number">0511-027603-001</field>
+    </record>
+
+    <record id="unit_sj_-_3" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kstvb"/>
+        <field name="category_id" ref="07"/>
+        <field name="unit_specified">1</field>
+        <field name="address">8601 SAN JOSE ST., GUADALUPE NUEVO, MAKATI CITY</field>
+        <field name="soa_bank_account_number">0511027603001</field>
+    </record>
+
+    <record id="unit_sapangpalay" model="kst.unit">
+        <field name="lessor_id" ref="lessor_tst"/>
+        <field name="category_id" ref="04"/>
+        <field name="unit_specified">-</field>
+        <field name="address">SAPANGPALAY, BULACAN</field>
+        <field name="description">RESIDENTIAL / COMMERCIAL (Construction Warehouse)</field>
+        <field name="soa_bank_account_number">000-00123-14-840</field>
+    </record>
+
+    <record id="unit_spd_-_v1" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kstk3"/>
+        <field name="category_id" ref="09"/>
+        <field name="unit_specified">SPD - V1</field>
+        <field name="address">VICTORIA STREET, SPRINGDALE VILLAGE, LOS BAÑOS LAGUNA</field>
+        <field name="size">640.00</field>
+        <field name="soa_bank_account_number">000265</field>
+    </record>
+
+    <record id="unit_spd_-_v1_ext" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kstk3"/>
+        <field name="category_id" ref="09"/>
+        <field name="unit_specified">SPD - V1 EXT</field>
+        <field name="address">VICTORIA STREET. SPRINGDALE VILLAGE. LOS BAÑOS LAGUNA</field>
+        <field name="soa_bank_account_number">000266</field>
+    </record>
+
+    <record id="unit_tiffany_mansion_-_208" model="kst.unit">
+        <field name="lessor_id" ref="lessor_tst"/>
+        <field name="category_id" ref="02"/>
+        <field name="unit_specified">208</field>
+        <field name="address">TIFFANY MANSION CONDOMINIUM, EISENHOWER ST. GREENHILLS SAN JUAN METRO MANILA</field>
+        <field name="soa_bank_account_number">000-00123-14-840</field>
+    </record>
+
+    <record id="unit_tiffany_mansion_parking" model="kst.unit">
+        <field name="lessor_id" ref="lessor_tst"/>
+        <field name="category_id" ref="08"/>
+        <field name="unit_specified">PARKING 23 BASEMENT 2</field>
+        <field name="address">208 EISENHOWER ST. GREENHILLS SAN JUAN, METRO MANILA</field>
+        <field name="soa_bank_account_number">000-00123-14-840</field>
+    </record>
+
+    <record id="unit_tgy_-_mh" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kst"/>
+        <field name="unit_specified">TGY - MH</field>
+        <field name="address">TAGAYTAY MAHOGANY</field>
+        <field name="description">MEC-TWIN LAKES</field>
+        <field name="soa_bank_account_number">000269</field>
+    </record>
+
+    <record id="unit_kalayaan_-_ug" model="kst.unit">
+        <field name="lessor_id" ref="lessor_ktc"/>
+        <field name="category_id" ref="07"/>
+        <field name="unit_specified">O P</field>
+        <field name="address">9642 KALAYAAN AVENUE, GUADALUPE NUEVO, MAKATI CITY</field>
+        <field name="description">COMMERCIAL - GEN. MERCHANDISE</field>
+        <field name="soa_bank_account_number">000270</field>
+    </record>
+
+    <record id="unit_kalayaan_-_ug_376" model="kst.unit">
+        <field name="lessor_id" ref="lessor_ktc"/>
+        <field name="category_id" ref="06"/>
+        <field name="unit_specified">2/7</field>
+        <field name="address">9642 KALAYAAN AVENUE, GUADALUPE NUEVO, MAKATI CITY</field>
+        <field name="soa_bank_account_number">0611-0163-24-001</field>
+    </record>
+
+    <record id="unit_kalayaan_-_ug_377" model="kst.unit">
+        <field name="lessor_id" ref="lessor_ktc"/>
+        <field name="category_id" ref="06"/>
+        <field name="unit_specified">I/J</field>
+        <field name="address">9642 KALAYAAN AVENUE, GUADALUPE NUEVO, MAKATI CITY</field>
+        <field name="size">2.00</field>
+        <field name="soa_bank_account_number">0611-0163-24-001</field>
+    </record>
+
+    <record id="unit_kalayaan_-_ug_378" model="kst.unit">
+        <field name="lessor_id" ref="lessor_ktc"/>
+        <field name="category_id" ref="06"/>
+        <field name="unit_specified">S</field>
+        <field name="address">9642 KALAYAAN AVENUE, GUADALUPE NUEVO, MAKATI CITY</field>
+        <field name="size">2.00</field>
+        <field name="soa_bank_account_number">0611-0163-24-001</field>
+    </record>
+
+    <record id="unit_kalayaan_-_ug_379" model="kst.unit">
+        <field name="lessor_id" ref="lessor_ktc"/>
+        <field name="category_id" ref="06"/>
+        <field name="unit_specified">T</field>
+        <field name="address">9642 KALAYAAN AVENUE, GUADALUPE NUEVO, MAKATI CITY</field>
+        <field name="size">2.00</field>
+        <field name="soa_bank_account_number">0611-0163-24-001</field>
+    </record>
+
+    <record id="unit_kalayaan_-_ug_380" model="kst.unit">
+        <field name="lessor_id" ref="lessor_ktc"/>
+        <field name="category_id" ref="06"/>
+        <field name="unit_specified">U</field>
+        <field name="address">9642 KALAYAAN AVENUE, GUADALUPE NUEVO, MAKATI CITY</field>
+        <field name="size">2.00</field>
+        <field name="soa_bank_account_number">0611-0163-24-001</field>
+    </record>
+
+    <record id="unit_west_kamias" model="kst.unit">
+        <field name="lessor_id" ref="lessor_tst"/>
+        <field name="category_id" ref="02"/>
+        <field name="unit_specified">T</field>
+        <field name="address">4F TWIN CONDOMINIUM #6 K8th STREET WEST KAMIAS QUEZON CITY</field>
+        <field name="description">2 BR UNIT</field>
+        <field name="soa_bank_account_number">000-0012314-840</field>
+    </record>
+
+    <record id="unit_west_kamias_382" model="kst.unit">
+        <field name="lessor_id" ref="lessor_tst"/>
+        <field name="category_id" ref="02"/>
+        <field name="unit_specified">U</field>
+        <field name="address">4F TWIN CONDOMINIUM #6 K8th STREET WEST KAMIAS, QUEZON CITY</field>
+        <field name="soa_bank_account_number">000-0012314-840</field>
+    </record>
+
+    <record id="unit_yabut_-_8204" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kst"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">8204</field>
+        <field name="address">8204 SGT. FABIAN, YABUT CIRCLE, GUADALUPE NUEVO, MAKATI CITY</field>
+        <field name="size">247.00</field>
+        <field name="soa_bank_account_number">0511-0276-03-001</field>
+    </record>
+
+    <record id="unit_ybt_-_p" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kstvb"/>
+        <field name="category_id" ref="08"/>
+        <field name="unit_specified">YBT - (P)</field>
+        <field name="address">8204 Sgt. Fabian, Yabut Circle, Guadalupe Nuevo Makati City</field>
+        <field name="description">PARKING SPACE</field>
+        <field name="soa_bank_account_number">0511-0276-03-001</field>
+    </record>
+
+    <record id="unit_ybt_2" model="kst.unit">
+        <field name="lessor_id" ref="lessor_kstvb"/>
+        <field name="category_id" ref="01"/>
+        <field name="unit_specified">YBT 2</field>
+        <field name="address">8181 SGT. FABIAN YABUT CIRCLE, GUADALUPE NUEVO, MAKATI CITY</field>
+    </record>
+
 </odoo>

@@ -145,6 +145,116 @@ def generate_lessees_xml(df_lessees):
     return xml_lines
 
 
+def generate_units_xml(df_units):
+    """Generate XML records for units."""
+    xml_lines = []
+    if df_units is None or len(df_units) == 0:
+        return xml_lines
+
+    xml_lines.append('    <!-- Units (from extracted CSV) -->')
+
+    existing_ids = set()
+
+    for idx, row in df_units.iterrows():
+        # Handle NaN/null values properly - check before converting to string
+        lessor_code_raw = row.get("lessor_code")
+        if pd.isna(lessor_code_raw):
+            continue  # Skip rows with missing lessor_code
+        lessor_code = str(lessor_code_raw).strip()
+        if not lessor_code or lessor_code.lower() == 'nan':
+            continue  # Skip empty or "nan" string values
+        
+        unit_code_raw = row.get("unit_code")
+        unit_code = str(unit_code_raw).strip() if pd.notna(unit_code_raw) else ""
+        if unit_code.lower() == 'nan':
+            unit_code = ""
+        
+        unit_specified_raw = row.get("unit_specified")
+        unit_specified = str(unit_specified_raw).strip() if pd.notna(unit_specified_raw) else ""
+        if unit_specified.lower() == 'nan':
+            unit_specified = ""
+        
+        address_raw = row.get("address")
+        address = str(address_raw).strip() if pd.notna(address_raw) else ""
+        if address.lower() == 'nan':
+            address = ""
+        
+        description_raw = row.get("description")
+        description = str(description_raw).strip() if pd.notna(description_raw) else ""
+        if description.lower() == 'nan':
+            description = ""
+        
+        size = row.get("size", 0) if pd.notna(row.get("size", 0)) else 0
+        
+        soa_bank_raw = row.get("soa_bank_account_number")
+        soa_bank = str(soa_bank_raw).strip() if pd.notna(soa_bank_raw) else ""
+        if soa_bank.lower() == 'nan':
+            soa_bank = ""
+
+        # Lessor is required in the Odoo model; skip if missing
+        if not lessor_code:
+            continue
+
+        # Get category_code for category reference
+        category_code_raw = row.get("category_code")
+        category_code = None
+        if pd.notna(category_code_raw):
+            try:
+                # Handle both string and numeric values (pandas may read "04" as float 4.0)
+                # Convert to float first (handles both "4" and 4.0), then to int to remove decimal
+                category_code_float = float(category_code_raw)
+                category_code_int = int(category_code_float)
+                # Convert to zero-padded 2-digit string (e.g., 4 -> "04", 10 -> "10")
+                category_code = f"{category_code_int:02d}"
+            except (ValueError, TypeError):
+                # If conversion fails, skip category reference
+                category_code = None
+
+        # Determine a usable unit identifier
+        base_id_source = unit_code or unit_specified
+        if not base_id_source:
+            base_id_source = f"unit_{idx}"
+
+        xml_id = f"unit_{sanitize_xml_id(base_id_source)}"
+        if xml_id in existing_ids:
+            xml_id = f"{xml_id}_{idx}"
+        existing_ids.add(xml_id)
+
+        xml_lines.append(f'    <record id="{xml_id}" model="kst.unit">')
+
+        # Lessor reference (required)
+        lessor_xml_id = f"lessor_{sanitize_xml_id(lessor_code)}"
+        xml_lines.append(f'        <field name="lessor_id" ref="{lessor_xml_id}"/>')
+
+        # Category reference (optional, if category_code exists)
+        if category_code:
+            # Use numeric ID directly (e.g., "01", "02") matching the CSV format
+            xml_lines.append(f'        <field name="category_id" ref="{category_code}"/>')
+
+        if unit_specified:
+            xml_lines.append(f'        <field name="unit_specified">{escape_xml(unit_specified)}</field>')
+        elif unit_code:
+            xml_lines.append(f'        <field name="unit_specified">{escape_xml(unit_code)}</field>')
+
+        if address:
+            xml_lines.append(f'        <field name="address">{escape_xml(address)}</field>')
+        if description:
+            xml_lines.append(f'        <field name="description">{escape_xml(description)}</field>')
+        try:
+            size_val = float(size)
+            if size_val:
+                xml_lines.append(f'        <field name="size">{size_val:.2f}</field>')
+        except Exception:
+            pass
+        if soa_bank:
+            xml_lines.append(f'        <field name="soa_bank_account_number">{escape_xml(soa_bank)}</field>')
+
+        xml_lines.append('    </record>')
+        xml_lines.append('')
+
+    return xml_lines
+
+
 def main():
     """Main function to convert CSV to XML."""
     print("="*80)
@@ -157,6 +267,7 @@ def main():
     
     lessors_csv = csv_dir / "lessors.csv"
     lessees_csv = csv_dir / "lessees.csv"
+    units_csv = csv_dir / "units.csv"
     output_xml = demo_dir / "masterfiles_demo.xml"
     
     # Check if CSV files exist
@@ -166,6 +277,10 @@ def main():
     
     if not lessees_csv.exists():
         print(f"\n✗ Lessees CSV not found: {lessees_csv}")
+        return
+    
+    if not units_csv.exists():
+        print(f"\n✗ Units CSV not found: {units_csv}")
         return
     
     # Load CSV files
@@ -183,8 +298,15 @@ def main():
     except Exception as e:
         print(f"✗ Error loading lessees CSV: {e}")
         df_lessees = None
+
+    try:
+        df_units = pd.read_csv(units_csv, encoding='utf-8-sig')
+        print(f"✓ Loaded {len(df_units)} units from {units_csv.name}")
+    except Exception as e:
+        print(f"✗ Error loading units CSV: {e}")
+        df_units = None
     
-    if df_lessors is None and df_lessees is None:
+    if df_lessors is None and df_lessees is None and df_units is None:
         print("\n✗ No data to convert")
         return
     
@@ -210,6 +332,12 @@ def main():
         lessees_xml = generate_lessees_xml(df_lessees)
         xml_lines.extend(lessees_xml)
         print(f"✓ Generated {len(df_lessees)} lessee records")
+
+    # Add units
+    if df_units is not None and len(df_units) > 0:
+        units_xml = generate_units_xml(df_units)
+        xml_lines.extend(units_xml)
+        print(f"✓ Generated {len(units_xml)//3} unit records")  # rough count based on record/blank lines
     
     # Close XML
     xml_lines.append('</odoo>')
@@ -229,6 +357,8 @@ def main():
         print(f"  Lessors: {len(df_lessors)} records")
     if df_lessees is not None:
         print(f"  Lessees: {len(df_lessees)} records")
+    if df_units is not None:
+        print(f"  Units: {len(df_units)} records")
     
     print(f"\nNext steps:")
     print(f"  1. Review the generated XML: {output_xml}")

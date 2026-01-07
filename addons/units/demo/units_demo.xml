@@ -2,17 +2,49 @@
 <odoo>
     <!-- Demo Data for Units Module -->
 
-    <!-- Unit Categories -->
-    <record id="category_residential_condo" model="kst.unit.category">
+    <!-- Unit Categories (from fmCategory table) -->
+    <record id="01" model="kst.unit.category">
+        <field name="name">Residential (Apartment)</field>
+    </record>
+
+    <record id="02" model="kst.unit.category">
         <field name="name">Residential (Condo)</field>
     </record>
 
-    <record id="category_commercial" model="kst.unit.category">
-        <field name="name">Commercial</field>
+    <record id="03" model="kst.unit.category">
+        <field name="name">Commercial (Lot)</field>
     </record>
 
-    <record id="category_residential" model="kst.unit.category">
-        <field name="name">Residential</field>
+    <record id="04" model="kst.unit.category">
+        <field name="name">Commercial (Bldg)</field>
+    </record>
+
+    <record id="05" model="kst.unit.category">
+        <field name="name">Warehouse</field>
+    </record>
+
+    <record id="06" model="kst.unit.category">
+        <field name="name">Commercial (Retail)</field>
+    </record>
+
+    <record id="07" model="kst.unit.category">
+        <field name="name">Commercial (Space)</field>
+    </record>
+
+    <record id="08" model="kst.unit.category">
+        <field name="name">Parking Space</field>
+    </record>
+
+    <record id="09" model="kst.unit.category">
+        <field name="name">Residential (House &amp; Lot)</field>
+    </record>
+
+    <record id="10" model="kst.unit.category">
+        <field name="name">Commercial (Religious Services)</field>
+    </record>
+
+    <record id="11" model="kst.unit.category">
+        <field name="name">Bed Space (BS)</field>
     </record>
 </odoo>
 
