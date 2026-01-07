@@ -145,6 +145,74 @@ def generate_lessees_xml(df_lessees):
     return xml_lines
 
 
+def generate_locations_xml(df_locations):
+    """Generate XML records for locations."""
+    xml_lines = []
+    
+    if df_locations is None or len(df_locations) == 0:
+        return xml_lines
+    
+    xml_lines.append('    <!-- Locations (from extracted CSV) -->')
+    
+    for idx, row in df_locations.iterrows():
+        # Handle NaN/null values properly
+        location_code_raw = row.get("location_code")
+        if pd.isna(location_code_raw):
+            continue
+        
+        location_code = str(location_code_raw).strip()
+        if not location_code or location_code.lower() == 'nan':
+            continue
+        
+        # Use location_code as XML ID (numeric, e.g., "01", "02")
+        # Pad with leading zero if needed to ensure 2-digit format
+        # Prefix with "loc" to avoid conflict with category IDs
+        try:
+            location_code_int = int(float(location_code))
+            location_code_padded = f"{location_code_int:02d}"
+            location_xml_id = f"loc{location_code_padded}"  # e.g., "loc01", "loc02"
+        except (ValueError, TypeError):
+            # If not numeric, skip
+            continue
+        
+        description_raw = row.get("description")
+        description = str(description_raw).strip() if pd.notna(description_raw) else ""
+        if description.lower() == 'nan':
+            description = ""
+        
+        company_name_raw = row.get("company_name")
+        company_name = str(company_name_raw).strip() if pd.notna(company_name_raw) else ""
+        if company_name.lower() == 'nan':
+            company_name = ""
+        
+        company_code_raw = row.get("company_code")
+        company_code = str(company_code_raw).strip() if pd.notna(company_code_raw) else ""
+        if company_code.lower() == 'nan':
+            company_code = ""
+        
+        company_address_raw = row.get("company_address")
+        company_address = str(company_address_raw).strip() if pd.notna(company_address_raw) else ""
+        if company_address.lower() == 'nan':
+            company_address = ""
+        
+        xml_lines.append(f'    <record id="{location_xml_id}" model="kst.location">')
+        xml_lines.append(f'        <field name="code">{escape_xml(location_code_padded)}</field>')
+        
+        if description:
+            xml_lines.append(f'        <field name="description">{escape_xml(description)}</field>')
+        if company_name:
+            xml_lines.append(f'        <field name="company_name">{escape_xml(company_name)}</field>')
+        if company_code:
+            xml_lines.append(f'        <field name="company_code">{escape_xml(company_code)}</field>')
+        if company_address:
+            xml_lines.append(f'        <field name="company_address">{escape_xml(company_address)}</field>')
+        
+        xml_lines.append('    </record>')
+        xml_lines.append('')
+    
+    return xml_lines
+
+
 def generate_units_xml(df_units):
     """Generate XML records for units."""
     xml_lines = []
@@ -209,6 +277,21 @@ def generate_units_xml(df_units):
             except (ValueError, TypeError):
                 # If conversion fails, skip category reference
                 category_code = None
+        
+        # Get location_code for location reference
+        location_code_raw = row.get("location_code")
+        location_code = None
+        if pd.notna(location_code_raw):
+            try:
+                # Handle both string and numeric values (pandas may read "10" as float 10.0)
+                # Convert to float first, then to int to remove decimal
+                location_code_float = float(location_code_raw)
+                location_code_int = int(location_code_float)
+                # Convert to zero-padded 2-digit string (e.g., 10 -> "10", 5 -> "05")
+                location_code = f"{location_code_int:02d}"
+            except (ValueError, TypeError):
+                # If conversion fails, skip location reference
+                location_code = None
 
         # Determine a usable unit identifier
         base_id_source = unit_code or unit_specified
@@ -230,6 +313,12 @@ def generate_units_xml(df_units):
         if category_code:
             # Use numeric ID directly (e.g., "01", "02") matching the CSV format
             xml_lines.append(f'        <field name="category_id" ref="{category_code}"/>')
+        
+        # Location reference (optional, if location_code exists)
+        if location_code:
+            # Use prefixed ID (e.g., "loc01", "loc02") to avoid conflict with category IDs
+            location_xml_id = f"loc{location_code}"
+            xml_lines.append(f'        <field name="location_id" ref="{location_xml_id}"/>')
 
         if unit_specified:
             xml_lines.append(f'        <field name="unit_specified">{escape_xml(unit_specified)}</field>')
@@ -267,6 +356,7 @@ def main():
     
     lessors_csv = csv_dir / "lessors.csv"
     lessees_csv = csv_dir / "lessees.csv"
+    locations_csv = csv_dir / "locations.csv"
     units_csv = csv_dir / "units.csv"
     output_xml = demo_dir / "masterfiles_demo.xml"
     
@@ -277,10 +367,6 @@ def main():
     
     if not lessees_csv.exists():
         print(f"\n✗ Lessees CSV not found: {lessees_csv}")
-        return
-    
-    if not units_csv.exists():
-        print(f"\n✗ Units CSV not found: {units_csv}")
         return
     
     # Load CSV files
@@ -300,13 +386,21 @@ def main():
         df_lessees = None
 
     try:
+        df_locations = pd.read_csv(locations_csv, encoding='utf-8-sig') if locations_csv.exists() else None
+        if df_locations is not None:
+            print(f"✓ Loaded {len(df_locations)} locations from {locations_csv.name}")
+    except Exception as e:
+        print(f"⚠ Error loading locations CSV: {e}")
+        df_locations = None
+    
+    try:
         df_units = pd.read_csv(units_csv, encoding='utf-8-sig')
         print(f"✓ Loaded {len(df_units)} units from {units_csv.name}")
     except Exception as e:
         print(f"✗ Error loading units CSV: {e}")
         df_units = None
     
-    if df_lessors is None and df_lessees is None and df_units is None:
+    if df_lessors is None and df_lessees is None and df_locations is None and df_units is None:
         print("\n✗ No data to convert")
         return
     
@@ -332,8 +426,14 @@ def main():
         lessees_xml = generate_lessees_xml(df_lessees)
         xml_lines.extend(lessees_xml)
         print(f"✓ Generated {len(df_lessees)} lessee records")
+    
+    # Add locations (before units so units can reference them)
+    if df_locations is not None and len(df_locations) > 0:
+        locations_xml = generate_locations_xml(df_locations)
+        xml_lines.extend(locations_xml)
+        print(f"✓ Generated {len(df_locations)} location records")
 
-    # Add units
+    # Add units (must come after locations and categories for references to work)
     if df_units is not None and len(df_units) > 0:
         units_xml = generate_units_xml(df_units)
         xml_lines.extend(units_xml)
@@ -357,6 +457,14 @@ def main():
         print(f"  Lessors: {len(df_lessors)} records")
     if df_lessees is not None:
         print(f"  Lessees: {len(df_lessees)} records")
+    if df_locations is not None:
+        print(f"  Locations: {len(df_locations)} records")
+    if df_units is not None:
+        print(f"  Units: {len(df_units)} records")
+    if df_locations is not None:
+        print(f"  Locations: {len(df_locations)} records")
+    if df_units is not None:
+        print(f"  Units: {len(df_units)} records")
     if df_units is not None:
         print(f"  Units: {len(df_units)} records")
     
