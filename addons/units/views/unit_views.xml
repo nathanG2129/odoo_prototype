@@ -45,6 +45,17 @@
                         </group>
                         <group string="Contract Information">
                             <field name="contract_count"/>
+                            <field name="utility_transaction_count"/>
+                        </group>
+                    </group>
+                    <group>
+                        <group string="Electricity Utility">
+                            <field name="electricity_utility_account_id"/>
+                            <field name="default_electricity_rate"/>
+                        </group>
+                        <group string="Water Utility">
+                            <field name="water_utility_account_id"/>
+                            <field name="default_water_rate"/>
                         </group>
                     </group>
                     <group>
@@ -63,6 +74,20 @@
                                     <field name="period_to"/>
                                     <field name="monthly_rate" sum="Total Monthly Rate"/>
                                     <field name="status"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Utility Transactions">
+                            <field name="utility_transaction_ids">
+                                <tree>
+                                    <field name="transaction_date"/>
+                                    <field name="utility_type"/>
+                                    <field name="utility_bill_id"/>
+                                    <field name="consumption"/>
+                                    <field name="applied_rate"/>
+                                    <field name="amount_due" sum="Total Due"/>
+                                    <field name="amount_paid" sum="Total Paid"/>
+                                    <field name="verification_status" widget="badge"/>
                                 </tree>
                             </field>
                         </page>

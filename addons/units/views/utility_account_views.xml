@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Extend Utility Account Form View to show unit relationships -->
+    <record id="view_utility_account_form_units" model="ir.ui.view">
+        <field name="name">kst.utility.account.form.units</field>
+        <field name="model">kst.utility.account</field>
+        <field name="inherit_id" ref="general.view_utility_account_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//sheet" position="inside">
+                <notebook>
+                    <page string="Electricity Units" name="electricity_units" attrs="{'invisible': [('utility_type', '!=', 'electricity')]}">
+                        <field name="electricity_unit_ids" nolabel="1">
+                            <tree>
+                                <field name="full_code"/>
+                                <field name="lessor_id"/>
+                                <field name="location_id"/>
+                                <field name="category_id"/>
+                                <field name="default_electricity_rate"/>
+                            </tree>
+                        </field>
+                    </page>
+                    <page string="Water Units" name="water_units" attrs="{'invisible': [('utility_type', '!=', 'water')]}">
+                        <field name="water_unit_ids" nolabel="1">
+                            <tree>
+                                <field name="full_code"/>
+                                <field name="lessor_id"/>
+                                <field name="location_id"/>
+                                <field name="category_id"/>
+                                <field name="default_water_rate"/>
+                            </tree>
+                        </field>
+                    </page>
+                    <page string="Unit Utility Bills" name="unit_utility_bills">
+                        <field name="unit_utility_bill_ids" nolabel="1">
+                            <tree>
+                                <field name="bill_date"/>
+                                <field name="due_date"/>
+                                <field name="period_covered_from"/>
+                                <field name="period_covered_to"/>
+                                <field name="total_consumption"/>
+                                <field name="total_bill_amount"/>
+                                <field name="collection_status" widget="badge"/>
+                            </tree>
+                        </field>
+                    </page>
+                </notebook>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- Extend Utility Account Tree View to show unit count -->
+    <record id="view_utility_account_tree_units" model="ir.ui.view">
+        <field name="name">kst.utility.account.tree.units</field>
+        <field name="model">kst.utility.account</field>
+        <field name="inherit_id" ref="general.view_utility_account_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='account_name']" position="after">
+                <field name="unit_count" string="Units"/>
+                <field name="unit_utility_bill_count" string="Bills"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>
+

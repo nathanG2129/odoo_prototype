@@ -13,5 +13,9 @@ access_kst_contract_user,kst.contract.user,model_kst_contract,units_group_user,1
 access_kst_contract_manager,kst.contract.manager,model_kst_contract,units_group_manager,1,1,1,1
 access_kst_unit_rent_transaction_user,kst.unit.rent.transaction.user,model_kst_unit_rent_transaction,units_group_user,1,1,1,0
 access_kst_unit_rent_transaction_manager,kst.unit.rent.transaction.manager,model_kst_unit_rent_transaction,units_group_manager,1,1,1,1
+access_kst_unit_utility_bill_user,kst.unit.utility.bill.user,model_kst_unit_utility_bill,units_group_user,1,1,1,0
+access_kst_unit_utility_bill_manager,kst.unit.utility.bill.manager,model_kst_unit_utility_bill,units_group_manager,1,1,1,1
+access_kst_unit_utility_transaction_user,kst.unit.utility.transaction.user,model_kst_unit_utility_transaction,units_group_user,1,1,1,0
+access_kst_unit_utility_transaction_manager,kst.unit.utility.transaction.manager,model_kst_unit_utility_transaction,units_group_manager,1,1,1,1
 
 

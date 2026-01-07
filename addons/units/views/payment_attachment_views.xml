@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Extend Payment Attachment Tree View to show unit transaction reference -->
+    <record id="view_payment_attachment_tree_units" model="ir.ui.view">
+        <field name="name">kst.payment.attachment.tree.units</field>
+        <field name="model">kst.payment.attachment</field>
+        <field name="inherit_id" ref="general.view_payment_attachment_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='attachment_filename']" position="after">
+                <field name="unit_transaction_reference" string="Unit Transaction"/>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- Extend Payment Attachment Form View to show unit transaction field -->
+    <record id="view_payment_attachment_form_units" model="ir.ui.view">
+        <field name="name">kst.payment.attachment.form.units</field>
+        <field name="model">kst.payment.attachment</field>
+        <field name="inherit_id" ref="general.view_payment_attachment_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='notes']" position="before">
+                <group string="Unit Transaction">
+                    <field name="unit_utility_transaction_id"/>
+                </group>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- Unit-specific Payment Attachment Action (filtered to unit transactions) -->
+    <record id="action_payment_attachment_units" model="ir.actions.act_window">
+        <field name="name">Unit Payment Attachments</field>
+        <field name="res_model">kst.payment.attachment</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[('unit_utility_transaction_id', '!=', False)]</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                No unit payment attachments yet
+            </p>
+            <p>
+                Payment attachments are added through unit utility transactions.
+            </p>
+        </field>
+    </record>
+</odoo>
+

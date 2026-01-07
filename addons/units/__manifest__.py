@@ -29,6 +29,10 @@ This module manages:
         'views/unit_views.xml',
         'views/contract_views.xml',
         'views/unit_rent_transaction_views.xml',
+        'views/unit_utility_transaction_views.xml',
+        'views/unit_utility_bill_views.xml',
+        'views/utility_account_views.xml',
+        'views/payment_attachment_views.xml',
     ],
     'demo': [
         'demo/units_demo.xml',

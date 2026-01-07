@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Unit Utility Transaction Form View -->
+    <record id="view_unit_utility_transaction_form" model="ir.ui.view">
+        <field name="name">kst.unit.utility.transaction.form</field>
+        <field name="model">kst.unit.utility.transaction</field>
+        <field name="arch" type="xml">
+            <form string="Unit Utility Transaction">
+                <header>
+                    <button name="action_verify" type="object" string="Verify" 
+                            class="oe_highlight" attrs="{'invisible': [('verification_status', '!=', 'pending')]}"/>
+                    <button name="action_check_bounced" type="object" string="Check Bounced" 
+                            attrs="{'invisible': [('verification_status', '!=', 'pending')]}"/>
+                    <button name="action_reject" type="object" string="Reject" 
+                            attrs="{'invisible': [('verification_status', '!=', 'pending')]}"/>
+                    <button name="action_generate_soa" type="object" string="Generate SOA" 
+                            attrs="{'invisible': [('soa_issuable', '=', False)]}"/>
+                    <field name="verification_status" widget="statusbar" statusbar_visible="pending,verified"/>
+                </header>
+                <sheet>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="unit_id" readonly="1"/>
+                            <span> - </span>
+                            <field name="utility_type" readonly="1"/>
+                        </h1>
+                    </div>
+                    <group>
+                        <group string="Transaction Information">
+                            <field name="unit_id"/>
+                            <field name="utility_bill_id"/>
+                            <field name="transaction_date"/>
+                            <field name="utility_type"/>
+                            <field name="billing_type" readonly="1"/>
+                        </group>
+                        <group string="Related Information">
+                            <field name="lessor_id" readonly="1"/>
+                            <field name="location_id" readonly="1"/>
+                        </group>
+                    </group>
+                    <group>
+                        <group string="Meter Readings">
+                            <field name="previous_reading"/>
+                            <field name="current_reading"/>
+                            <field name="consumption" readonly="1"/>
+                        </group>
+                        <group string="Financial">
+                            <field name="applied_rate"/>
+                            <field name="amount_due" readonly="1"/>
+                            <field name="amount_paid"/>
+                            <field name="soa_issuable" readonly="1"/>
+                        </group>
+                    </group>
+                    <group>
+                        <group string="Receipt">
+                            <field name="receipt_number"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Attachments" name="attachments">
+                            <field name="attachment_ids" nolabel="1">
+                                <tree editable="bottom">
+                                    <field name="name"/>
+                                    <field name="payment_method"/>
+                                    <field name="attachment_file" filename="attachment_filename"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids"/>
+                    <field name="activity_ids"/>
+                    <field name="message_ids"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <!-- Unit Utility Transaction Tree View -->
+    <record id="view_unit_utility_transaction_tree" model="ir.ui.view">
+        <field name="name">kst.unit.utility.transaction.tree</field>
+        <field name="model">kst.unit.utility.transaction</field>
+        <field name="arch" type="xml">
+            <tree string="Unit Utility Transactions" 
+                  decoration-muted="verification_status == 'verified'"
+                  decoration-danger="verification_status == 'rejected'">
+                <field name="transaction_date"/>
+                <field name="unit_id"/>
+                <field name="utility_type"/>
+                <field name="utility_bill_id" optional="show"/>
+                <field name="previous_reading" optional="hide"/>
+                <field name="current_reading" optional="hide"/>
+                <field name="consumption"/>
+                <field name="applied_rate"/>
+                <field name="amount_due" sum="Total Due"/>
+                <field name="amount_paid" sum="Total Paid"/>
+                <field name="verification_status" widget="badge" 
+                       decoration-success="verification_status == 'verified'" 
+                       decoration-warning="verification_status == 'check_bounced'" 
+                       decoration-danger="verification_status == 'rejected'"/>
+                <field name="receipt_number"/>
+                <field name="attachment_count" widget="badge" optional="show"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Unit Utility Transaction Search View -->
+    <record id="view_unit_utility_transaction_search" model="ir.ui.view">
+        <field name="name">kst.unit.utility.transaction.search</field>
+        <field name="model">kst.unit.utility.transaction</field>
+        <field name="arch" type="xml">
+            <search string="Search Unit Utility Transactions">
+                <field name="unit_id"/>
+                <field name="utility_bill_id"/>
+                <field name="utility_type"/>
+                <field name="lessor_id"/>
+                <field name="location_id"/>
+                <separator/>
+                <filter string="Pending" name="pending" domain="[('verification_status', '=', 'pending')]"/>
+                <filter string="Verified" name="verified" domain="[('verification_status', '=', 'verified')]"/>
+                <filter string="Check Bounced" name="check_bounced" domain="[('verification_status', '=', 'check_bounced')]"/>
+                <filter string="Rejected" name="rejected" domain="[('verification_status', '=', 'rejected')]"/>
+                <separator/>
+                <filter string="Electricity" name="electricity" domain="[('utility_type', '=', 'electricity')]"/>
+                <filter string="Water" name="water" domain="[('utility_type', '=', 'water')]"/>
+                <group expand="0" string="Group By">
+                    <filter string="Unit" name="group_unit" context="{'group_by': 'unit_id'}"/>
+                    <filter string="Utility Type" name="group_utility_type" context="{'group_by': 'utility_type'}"/>
+                    <filter string="Utility Bill" name="group_bill" context="{'group_by': 'utility_bill_id'}"/>
+                    <filter string="Lessor" name="group_lessor" context="{'group_by': 'lessor_id'}"/>
+                    <filter string="Location" name="group_location" context="{'group_by': 'location_id'}"/>
+                    <filter string="Transaction Date" name="group_date" context="{'group_by': 'transaction_date:month'}"/>
+                    <filter string="Verification Status" name="group_status" context="{'group_by': 'verification_status'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- Unit Utility Transaction Action -->
+    <record id="action_unit_utility_transaction" model="ir.actions.act_window">
+        <field name="name">Unit Utility Transactions</field>
+        <field name="res_model">kst.unit.utility.transaction</field>
+        <field name="view_mode">tree,form</field>
+        <field name="search_view_id" ref="view_unit_utility_transaction_search"/>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                No utility transactions yet
+            </p>
+            <p>
+                Utility transactions are created from utility bills or can be added manually.
+            </p>
+        </field>
+    </record>
+
+    <!-- Menu Items -->
+    <menuitem id="menu_unit_utility_root" name="Utility Billing" 
+              parent="units.menu_units_root" sequence="30"/>
+    
+    <menuitem id="menu_unit_utility_transaction" name="Utility Transactions" 
+              parent="menu_unit_utility_root" 
+              action="action_unit_utility_transaction" sequence="20"/>
+</odoo>
+

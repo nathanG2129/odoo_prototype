@@ -23,9 +23,29 @@ class Unit(models.Model):
     size = fields.Float('Size', digits=(12, 2), tracking=True)
     soa_bank_account_number = fields.Char('SOA Bank Account Number', tracking=True, help="Statement of Account bank account")
     
+    # Utility Account Foreign Keys (separate for electricity and water)
+    electricity_utility_account_id = fields.Many2one(
+        'kst.utility.account', string='Electricity Utility Account',
+        domain=[('utility_type', '=', 'electricity')], ondelete='restrict', tracking=True,
+        help="Utility account for electricity billing")
+    water_utility_account_id = fields.Many2one(
+        'kst.utility.account', string='Water Utility Account',
+        domain=[('utility_type', '=', 'water')], ondelete='restrict', tracking=True,
+        help="Utility account for water billing")
+    
+    # Default Rates (for flat rate billing when no bill is associated)
+    default_electricity_rate = fields.Float('Default Electricity Rate', digits=(12, 2), tracking=True,
+                                           help="Default rate per kWh for electricity (used when no bill rate)")
+    default_water_rate = fields.Float('Default Water Rate', digits=(12, 2), tracking=True,
+                                     help="Default rate per cubic meter for water (used when no bill rate)")
+    
     # One2many relationships
     contract_ids = fields.One2many('kst.contract', 'unit_id', string='Contracts')
     contract_count = fields.Integer('Number of Contracts', compute='_compute_contract_count')
+    
+    # Utility transaction relationships
+    utility_transaction_ids = fields.One2many('kst.unit.utility.transaction', 'unit_id', string='Utility Transactions')
+    utility_transaction_count = fields.Integer('Utility Transactions', compute='_compute_utility_transaction_count')
 
     @api.depends('kcode_id', 'kcode_id.code', 'unit_specified')
     def _compute_full_code(self):
@@ -43,6 +63,11 @@ class Unit(models.Model):
     def _compute_contract_count(self):
         for record in self:
             record.contract_count = len(record.contract_ids)
+    
+    @api.depends('utility_transaction_ids')
+    def _compute_utility_transaction_count(self):
+        for record in self:
+            record.utility_transaction_count = len(record.utility_transaction_ids)
 
     def name_get(self):
         result = []
